@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>DocGen Agent</title>
+<title>search x</title>
 <style>
   :root {
     --bg: #1a1a1a;
     --bg-2: #1f1f1f;
     --bg-3: #252525;
+    --bg-4: #2b2b2b;
     --border: #2e2e2e;
     --border-light: #383838;
     --text: #e8e6e3;
@@ -29,56 +30,43 @@
     color: var(--text);
     font-family: var(--mono);
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1.55;
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
 
-  /* ---------- TOP BAR ---------- */
+  /* TOP BAR */
   .topbar {
-    height: 40px;
+    height: 44px;
     background: var(--bg-2);
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
-    padding: 0 12px;
-    gap: 12px;
+    padding: 0 16px;
+    gap: 10px;
     flex-shrink: 0;
   }
-  .logo {
-    font-weight: 600;
-    color: var(--accent);
-    letter-spacing: -0.3px;
-    font-size: 13px;
-  }
-  .logo-dot {
-    display: inline-block;
-    width: 8px; height: 8px;
-    background: var(--accent);
-    border-radius: 2px;
-    margin-right: 8px;
-    vertical-align: middle;
-  }
+  .logo { color: var(--accent); font-weight: 600; font-size: 13px; letter-spacing: -0.2px; }
   .topbar-spacer { flex: 1; }
-  .topbar-item {
+  .topbar-btn {
+    background: var(--bg-3);
+    border: 1px solid var(--border-light);
     color: var(--text-dim);
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 3px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: var(--mono);
+    font-size: 11.5px;
     cursor: pointer;
   }
-  .topbar-item:hover { background: var(--bg-3); color: var(--text); }
-  .topbar-item.active { color: var(--accent); }
+  .topbar-btn:hover { background: var(--border); color: var(--text); }
+  .topbar-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .topbar-btn.primary:hover { background: var(--accent-dim); }
 
-  /* ---------- LAYOUT ---------- */
-  .layout {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-  }
+  /* LAYOUT */
+  .layout { display: flex; flex: 1; overflow: hidden; }
 
-  /* ---------- SIDEBAR ---------- */
+  /* SIDEBAR */
   .sidebar {
     width: 260px;
     background: var(--bg-2);
@@ -87,295 +75,305 @@
     flex-direction: column;
     flex-shrink: 0;
   }
-  .sidebar-header {
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border);
-    font-size: 11px;
+  .sidebar-section {
+    padding: 10px 12px 6px;
+    font-size: 10.5px;
     color: var(--text-dimmer);
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
-  .sidebar-header button {
-    background: none;
-    border: none;
-    color: var(--text-dim);
-    cursor: pointer;
-    font-family: var(--mono);
-    font-size: 14px;
-    padding: 0 4px;
-  }
-  .sidebar-header button:hover { color: var(--accent); }
-
-  .app-list {
-    flex: 1;
-    overflow-y: auto;
-    padding: 4px;
-  }
-  .app-item {
-    padding: 6px 10px;
-    border-radius: 3px;
+  .chat-item {
+    padding: 8px 12px;
     cursor: pointer;
     color: var(--text-dim);
-    font-size: 12px;
+    font-size: 12.5px;
     display: flex;
     align-items: center;
     gap: 8px;
+    border-left: 2px solid transparent;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .app-item:hover { background: var(--bg-3); color: var(--text); }
-  .app-item.selected { background: var(--bg-3); color: var(--accent); }
-  .app-item .dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--text-dimmer);
-    flex-shrink: 0;
+  .chat-item:hover { background: var(--bg-3); color: var(--text); }
+  .chat-item.active { background: var(--bg-3); color: var(--text); border-left-color: var(--accent); }
+  .chat-item.pinned {
+    background: rgba(217, 119, 87, 0.06);
+    color: var(--text);
+    font-weight: 600;
+    border-left-color: var(--accent);
   }
-  .app-item .dot.green { background: var(--green); }
-  .app-item .dot.yellow { background: var(--yellow); }
-  .app-item .name { overflow: hidden; text-overflow: ellipsis; }
-  .app-item .src {
+  .chat-item.pinned:hover { background: rgba(217, 119, 87, 0.12); }
+  .chat-item .icon { flex-shrink: 0; font-size: 12px; }
+  .chat-item .label { overflow: hidden; text-overflow: ellipsis; }
+  .chat-item .count {
     margin-left: auto;
-    font-size: 10px;
+    font-size: 10.5px;
     color: var(--text-dimmer);
-    flex-shrink: 0;
+    background: var(--bg-3);
+    padding: 1px 6px;
+    border-radius: 8px;
+  }
+  .chat-item.pinned .count { background: rgba(217, 119, 87, 0.15); color: var(--accent); }
+
+  .sidebar-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 8px 12px;
+  }
+  .sidebar-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 12px;
+  }
+  .sidebar-empty {
+    padding: 20px 14px;
+    color: var(--text-dimmer);
+    font-size: 11.5px;
+    text-align: center;
   }
 
-  /* ---------- MAIN ---------- */
+  /* MAIN */
   .main {
     flex: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
   }
-
-  .toolbar {
+  .main-header {
     height: 44px;
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
-    padding: 0 12px;
-    gap: 8px;
+    padding: 0 20px;
+    gap: 12px;
     flex-shrink: 0;
-    background: var(--bg);
   }
-  .toolbar input {
-    background: var(--bg-2);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-family: var(--mono);
-    font-size: 12px;
-    outline: none;
-  }
-  .toolbar input:focus { border-color: var(--accent-dim); }
-  .toolbar input.repo { width: 220px; }
-  .toolbar input.token { width: 180px; }
-  .toolbar input.ntfy { width: 180px; }
-  .btn {
-    background: var(--bg-3);
-    border: 1px solid var(--border-light);
-    color: var(--text);
-    padding: 5px 12px;
-    border-radius: 3px;
-    font-family: var(--mono);
-    font-size: 12px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-  }
-  .btn:hover { background: var(--border); border-color: var(--border-light); }
-  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .btn.primary:hover { background: var(--accent-dim); border-color: var(--accent-dim); }
-  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-  /* ---------- CONTENT ---------- */
-  .content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px 24px 40px;
-  }
-
-  .page-header {
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border);
-  }
-  .page-title {
-    font-size: 18px;
+  .main-title {
     font-weight: 600;
     color: var(--text);
-    margin-bottom: 6px;
-    letter-spacing: -0.3px;
+    font-size: 13.5px;
+    letter-spacing: -0.2px;
   }
-  .page-meta {
-    font-size: 11px;
+  .badge {
+    background: var(--bg-3);
     color: var(--text-dim);
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10.5px;
   }
-  .page-meta span { color: var(--text-dimmer); }
-  .page-meta strong { color: var(--text); font-weight: 500; }
+  .badge.pin-badge {
+    background: rgba(217, 119, 87, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(217, 119, 87, 0.3);
+  }
 
-  /* ---------- APP DETAIL ---------- */
-  .detail-grid {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 8px 16px;
-    margin-bottom: 24px;
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 28px 60px;
+  }
+
+  /* SEARCH X TABLE */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 12.5px;
   }
-  .detail-grid .key {
+  .table th {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-light);
     color: var(--text-dimmer);
-    padding: 4px 0;
-  }
-  .detail-grid .val {
-    color: var(--text);
-    padding: 4px 0;
-    word-break: break-word;
-  }
-  .detail-grid .val a { color: var(--blue); text-decoration: none; }
-  .detail-grid .val a:hover { text-decoration: underline; }
-
-  .section-title {
-    font-size: 11px;
+    font-weight: 500;
+    font-size: 10.5px;
     text-transform: uppercase;
     letter-spacing: 0.6px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 1;
+  }
+  .table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  .table tr:hover td { background: var(--bg-2); cursor: pointer; }
+  .table tr:hover td:first-child { color: var(--accent); }
+  .table .date { color: var(--text); font-weight: 500; white-space: nowrap; }
+  .table .summary { color: var(--text-dim); }
+  .table .summary.quiet { color: var(--text-dimmer); font-style: italic; }
+  .table .num { text-align: right; color: var(--text-dimmer); white-space: nowrap; }
+
+  /* DAY CHAT */
+  .worklog-toggle {
+    color: var(--text-dim);
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .worklog-toggle:hover { color: var(--accent); }
+  .worklog-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.15s ease;
+    font-size: 10px;
     color: var(--text-dimmer);
-    margin: 20px 0 10px;
+  }
+  .worklog-toggle.open .arrow { transform: rotate(90deg); }
+
+  .worklog-body {
+    display: none;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 12px 14px;
+    margin: 6px 0 20px;
+    font-size: 11.5px;
+    color: var(--text-dim);
+    max-height: 420px;
+    overflow-y: auto;
+  }
+  .worklog-body.open { display: block; }
+  .worklog-line {
+    padding: 2px 0;
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .worklog-line .kind {
+    flex-shrink: 0;
+    width: 55px;
+    font-size: 10.5px;
+    letter-spacing: 0.3px;
+  }
+  .worklog-line .kind.search { color: var(--blue); }
+  .worklog-line .kind.llm { color: var(--accent); }
+  .worklog-line .kind.info { color: var(--yellow); }
+  .worklog-line .body { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; }
+  .worklog-line .status-ok { color: var(--green); }
+  .worklog-line .status-bad { color: var(--red); }
+
+  .section-label {
+    font-size: 10.5px;
+    color: var(--text-dimmer);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 22px 0 10px;
     padding-bottom: 6px;
     border-bottom: 1px solid var(--border);
   }
 
-  .feature-list {
+  .finding {
+    padding: 12px 14px;
+    background: var(--bg-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 3px;
+    margin-bottom: 8px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    align-items: flex-start;
+    gap: 12px;
   }
-  .feature-tag {
-    background: var(--bg-3);
-    border: 1px solid var(--border-light);
-    color: var(--text-dim);
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 11px;
-  }
+  .finding.change { border-left-color: var(--yellow); }
+  .finding.new { border-left-color: var(--green); }
+  .finding .icon { flex-shrink: 0; font-size: 13px; line-height: 1.5; }
+  .finding .content { flex: 1; }
+  .finding .app { color: var(--text); font-weight: 600; font-size: 12.5px; margin-bottom: 2px; }
+  .finding .summary { color: var(--text-dim); font-size: 12px; }
+  .finding .meta { color: var(--text-dimmer); font-size: 10.5px; margin-top: 4px; }
+  .finding a { color: var(--blue); text-decoration: none; }
+  .finding a:hover { text-decoration: underline; }
 
-  .badge {
-    display: inline-block;
-    padding: 1px 7px;
-    border-radius: 3px;
-    font-size: 10.5px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+  .no-findings {
+    color: var(--text-dimmer);
+    font-size: 12.5px;
+    font-style: italic;
+    padding: 20px 0;
   }
-  .badge.green { background: rgba(127, 176, 105, 0.15); color: var(--green); border: 1px solid rgba(127, 176, 105, 0.3); }
-  .badge.red { background: rgba(199, 84, 80, 0.15); color: var(--red); border: 1px solid rgba(199, 84, 80, 0.3); }
-  .badge.yellow { background: rgba(212, 162, 89, 0.15); color: var(--yellow); border: 1px solid rgba(212, 162, 89, 0.3); }
-  .badge.dim { background: var(--bg-3); color: var(--text-dim); border: 1px solid var(--border-light); }
 
   .empty {
-    color: var(--text-dimmer);
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
+    color: var(--text-dimmer);
     font-size: 12.5px;
+    line-height: 1.8;
   }
   .empty code {
     background: var(--bg-3);
     padding: 2px 6px;
     border-radius: 3px;
     color: var(--accent);
-    font-size: 12px;
   }
 
-  /* ---------- STATUS BAR ---------- */
+  /* SETTINGS BAR */
+  .settings-bar {
+    display: none;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 16px;
+    gap: 8px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .settings-bar.open { display: flex; }
+  .settings-bar input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    outline: none;
+  }
+  .settings-bar input:focus { border-color: var(--accent-dim); }
+
+  /* STATUS BAR */
   .statusbar {
-    height: 24px;
+    height: 26px;
     background: var(--bg-2);
     border-top: 1px solid var(--border);
     display: flex;
     align-items: center;
-    padding: 0 12px;
-    gap: 16px;
+    padding: 0 16px;
+    gap: 14px;
     font-size: 11px;
     color: var(--text-dimmer);
     flex-shrink: 0;
   }
-  .statusbar .status-msg { color: var(--text-dim); }
-  .statusbar .status-msg.ok { color: var(--green); }
-  .statusbar .status-msg.err { color: var(--red); }
-  .statusbar .status-msg.busy { color: var(--yellow); }
+  .statusbar .ok { color: var(--green); }
+  .statusbar .err { color: var(--red); }
+  .statusbar .busy { color: var(--yellow); }
   .statusbar-spacer { flex: 1; }
-  .statusbar .pill {
-    padding: 1px 8px;
-    border-radius: 8px;
-    background: var(--bg-3);
-    color: var(--text-dim);
-  }
 
-  /* ---------- SCROLLBAR ---------- */
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; border: 2px solid var(--bg-2); }
   ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
-
-  /* ---------- WELCOME ---------- */
-  .welcome {
-    max-width: 640px;
-    margin: 60px auto;
-    text-align: center;
-  }
-  .welcome h2 {
-    font-size: 20px;
-    color: var(--text);
-    margin-bottom: 8px;
-    font-weight: 500;
-    letter-spacing: -0.3px;
-  }
-  .welcome p {
-    color: var(--text-dim);
-    font-size: 12.5px;
-    margin-bottom: 24px;
-    line-height: 1.7;
-  }
-  .welcome .steps {
-    text-align: left;
-    background: var(--bg-2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 20px 24px;
-    font-size: 12.5px;
-  }
-  .welcome .steps ol { padding-left: 20px; }
-  .welcome .steps li { margin-bottom: 8px; color: var(--text-dim); }
-  .welcome .steps li strong { color: var(--text); }
-  .welcome .steps code {
-    background: var(--bg-3);
-    padding: 1px 6px;
-    border-radius: 3px;
-    color: var(--accent);
-    font-size: 11.5px;
-  }
 </style>
 </head>
 <body>
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <div class="logo"><span class="logo-dot"></span>docgen-agent</div>
-  <div class="topbar-item active">dashboard</div>
-  <div class="topbar-item" id="navChanges">changes</div>
-  <div class="topbar-item" id="navApps">apps</div>
+  <span class="logo">docgen-agent</span>
   <div class="topbar-spacer"></div>
-  <div class="topbar-item" id="navDocs">docs</div>
-  <div class="topbar-item" id="navSettings">settings</div>
+  <button class="topbar-btn" id="settingsBtn">settings</button>
+  <button class="topbar-btn" id="refreshBtn">↻ refresh</button>
+  <button class="topbar-btn primary" id="runBtn">▶ run now</button>
+</div>
+
+<!-- SETTINGS BAR -->
+<div class="settings-bar" id="settingsBar">
+  <input id="repoInput" placeholder="owner/repo" style="width: 240px;" />
+  <input id="tokenInput" type="password" placeholder="gh token (run now)" style="width: 220px;" />
+  <button class="topbar-btn" id="saveSettings">save</button>
 </div>
 
 <!-- LAYOUT -->
@@ -383,290 +381,285 @@
 
   <!-- SIDEBAR -->
   <div class="sidebar">
-    <div class="sidebar-header">
-      <span>tracked apps</span>
-      <button id="refreshBtn" title="Refresh">↻</button>
-    </div>
-    <div class="app-list" id="appList">
-      <div class="app-item" style="color: var(--text-dimmer); cursor: default;">no apps loaded</div>
+    <div id="pinnedArea"></div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">chats</div>
+    <div class="sidebar-list" id="chatList">
+      <div class="sidebar-empty">loading…</div>
     </div>
   </div>
 
   <!-- MAIN -->
   <div class="main">
-
-    <!-- TOOLBAR -->
-    <div class="toolbar">
-      <input id="repoInput" class="repo" placeholder="owner/repo" />
-      <input id="tokenInput" class="token" placeholder="gh token (run now)" type="password" />
-      <input id="ntfyInput" class="ntfy" placeholder="ntfy topic" />
-      <button class="btn" id="saveBtn">save</button>
-      <button class="btn primary" id="runBtn">▶ run now</button>
-      <button class="btn" id="loadBtn">↻ load</button>
+    <div class="main-header" id="mainHeader">
+      <span class="main-title">search x</span>
+      <span class="badge pin-badge">pinned</span>
     </div>
-
-    <!-- CONTENT -->
-    <div class="content" id="content">
-      <div class="welcome">
-        <h2>docgen-agent</h2>
-        <p>Daily intelligence on document generation apps.<br>Autonomous. Free. No card.</p>
-        <div class="steps">
-          <ol>
-            <li>Enter your <code>owner/repo</code> in the top right</li>
-            <li>Click <strong>save</strong>, then <strong>load</strong></li>
-            <li>Or click <strong>run now</strong> with a GitHub token to trigger</li>
-          </ol>
-        </div>
+    <div class="main-content" id="mainContent">
+      <div class="empty">
+        loading…
       </div>
     </div>
-
   </div>
+
 </div>
 
 <!-- STATUS BAR -->
 <div class="statusbar">
   <span class="status-msg" id="statusMsg">ready</span>
-  <span class="statusbar-spacer"></span>
-  <span class="pill" id="appsCount">0 apps</span>
-  <span class="pill" id="lastRun">no run yet</span>
-  <span class="pill" id="modelBadge">—</span>
+  <div class="statusbar-spacer"></div>
+  <span id="lastRun">—</span>
 </div>
 
 <script>
 const $ = (id) => document.getElementById(id);
-
 const config = {
   repo: localStorage.getItem("repo") || "",
   token: localStorage.getItem("token") || "",
-  ntfy: localStorage.getItem("ntfy") || "",
 };
 
-let allApps = [];
-let selectedApp = null;
+let LOG = { chat: "search x", pinned: true, days: [] };
+let view = { type: "pinned" }; // or { type: "day", date: "..." }
 
-// ---- INIT INPUTS ----
 $("repoInput").value = config.repo;
 $("tokenInput").value = config.token;
-$("ntfyInput").value = config.ntfy;
 
-// ---- STATUS ----
 function setStatus(msg, cls) {
   const el = $("statusMsg");
   el.textContent = msg;
   el.className = "status-msg" + (cls ? " " + cls : "");
 }
 
-// ---- SAVE ----
-$("saveBtn").onclick = () => {
+// ---- SETTINGS ----
+$("settingsBtn").onclick = () => $("settingsBar").classList.toggle("open");
+$("saveSettings").onclick = () => {
   config.repo = $("repoInput").value.trim();
   config.token = $("tokenInput").value.trim();
-  config.ntfy = $("ntfyInput").value.trim();
   localStorage.setItem("repo", config.repo);
   localStorage.setItem("token", config.token);
-  localStorage.setItem("ntfy", config.ntfy);
+  $("settingsBar").classList.remove("open");
   setStatus("saved", "ok");
-  startNtfy();
   load();
 };
 
-// ---- LOAD RESULTS ----
+// ---- LOAD ----
 async function load() {
-  if (!config.repo) { setStatus("enter owner/repo first", "err"); return; }
+  if (!config.repo) {
+    render();
+    setStatus("set repo in settings", "err");
+    return;
+  }
   setStatus("loading…", "busy");
   try {
-    const url = `https://raw.githubusercontent.com/${config.repo}/main/results.json?t=${Date.now()}`;
+    const url = `https://raw.githubusercontent.com/${config.repo}/main/log.json?t=${Date.now()}`;
     const r = await fetch(url);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const data = await r.json();
-    render(data);
+    LOG = await r.json();
+    render();
     setStatus("loaded", "ok");
+    const latest = LOG.days?.[0];
+    $("lastRun").textContent = latest?.finished_at
+      ? "last run " + new Date(latest.finished_at).toLocaleString()
+      : "no runs yet";
   } catch (e) {
     setStatus(`load failed: ${e.message}`, "err");
+    render();
   }
 }
-$("loadBtn").onclick = load;
 $("refreshBtn").onclick = load;
 
 // ---- RENDER ----
-function render(data) {
-  allApps = data.apps || [];
-  const meta = data.last_run || {};
+function render() {
+  const days = LOG.days || [];
 
-  $("appsCount").textContent = `${allApps.length} apps`;
-  $("lastRun").textContent = meta.finished_at
-    ? new Date(meta.finished_at).toLocaleString()
-    : "no run yet";
-  $("modelBadge").textContent = meta.searches_used != null
-    ? `${meta.searches_used} searches`
-    : "—";
+  // pinned chat item
+  $("pinnedArea").innerHTML = `
+    <div class="chat-item pinned ${view.type === "pinned" ? "active" : ""}" id="pinnedChat">
+      <span class="icon">📌</span>
+      <span class="label">search x</span>
+      <span class="count">${days.length}</span>
+    </div>
+  `;
+  setTimeout(() => {
+    const el = $("pinnedChat");
+    if (el) el.onclick = () => { view = { type: "pinned" }; render(); };
+  }, 0);
 
-  // sidebar
-  const list = $("appList");
-  list.innerHTML = "";
-  if (!allApps.length) {
-    list.innerHTML = '<div class="app-item" style="color: var(--text-dimmer); cursor: default;">no apps</div>';
-    renderWelcome();
+  // chat list
+  const list = $("chatList");
+  if (!days.length) {
+    list.innerHTML = '<div class="sidebar-empty">no chats yet</div>';
+  } else {
+    list.innerHTML = "";
+    days.forEach(d => {
+      const findings = d.findings || [];
+      const cls = view.type === "day" && view.date === d.date ? "active" : "";
+      const item = document.createElement("div");
+      item.className = "chat-item " + cls;
+      item.innerHTML = `
+        <span class="icon">💬</span>
+        <span class="label">${esc(formatDate(d.date))}</span>
+        <span class="count">${findings.length}</span>
+      `;
+      item.onclick = () => { view = { type: "day", date: d.date }; render(); };
+      list.appendChild(item);
+    });
+  }
+
+  // main header + content
+  if (view.type === "pinned") {
+    $("mainHeader").innerHTML = `
+      <span class="main-title">search x</span>
+      <span class="badge pin-badge">pinned</span>
+      <span class="badge">${days.length} days</span>
+    `;
+    renderSearchX(days);
+  } else {
+    const day = days.find(d => d.date === view.date);
+    if (!day) { view = { type: "pinned" }; render(); return; }
+    $("mainHeader").innerHTML = `
+      <span class="main-title">${esc(formatDate(day.date))}</span>
+      <span class="badge">${(day.findings || []).length} findings</span>
+    `;
+    renderDay(day);
+  }
+}
+
+function renderSearchX(days) {
+  if (!days.length) {
+    $("mainContent").innerHTML = `
+      <div class="empty">
+        no chats yet<br><br>
+        the agent will create one chat per day,<br>
+        even on quiet days
+      </div>`;
     return;
   }
 
-  allApps.forEach((app, i) => {
-    const item = document.createElement("div");
-    item.className = "app-item";
-    const ft = app.free_tier || {};
-    const dotCls = ft.available ? "green" : "yellow";
-    item.innerHTML = `
-      <span class="dot ${dotCls}"></span>
-      <span class="name">${esc(app.app_name || "Unknown")}</span>
-      <span class="src">${esc(app._extracted_by || "?")}</span>
+  const rows = days.map(d => {
+    const findings = d.findings || [];
+    const hasFindings = findings.length > 0;
+    const summary = hasFindings
+      ? summarizeFindings(findings)
+      : `<span class="quiet">— no main findings —</span>`;
+    const cls = hasFindings ? "" : "quiet";
+    return `
+      <tr data-date="${esc(d.date)}">
+        <td class="date">${esc(formatDate(d.date))}</td>
+        <td class="summary ${cls}">${summary}</td>
+        <td class="num">${d.searches || 0}</td>
+      </tr>
     `;
-    item.onclick = () => selectApp(i);
-    list.appendChild(item);
-  });
+  }).join("");
 
-  if (selectedApp != null && allApps[selectedApp]) {
-    renderApp(allApps[selectedApp]);
-  } else {
-    renderOverview(meta);
+  $("mainContent").innerHTML = `
+    <table class="table">
+      <thead>
+        <tr>
+          <th>date</th>
+          <th>main findings</th>
+          <th class="num">searches</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+
+  document.querySelectorAll("tr[data-date]").forEach(tr => {
+    tr.onclick = () => { view = { type: "day", date: tr.getAttribute("data-date") }; render(); };
+  });
+}
+
+function summarizeFindings(findings) {
+  const changes = findings.filter(f => f.type === "change").length;
+  const news = findings.filter(f => f.type === "new").length;
+  const parts = [];
+  if (changes) parts.push(`${changes} change${changes > 1 ? "s" : ""}`);
+  if (news) parts.push(`${news} new app${news > 1 ? "s" : ""}`);
+  return esc(parts.join(", "));
+}
+
+function renderDay(day) {
+  const wl = day.work_log || [];
+  const searches = wl.filter(x => x.kind === "search").length;
+  const llms = wl.filter(x => x.kind === "llm").length;
+  const findings = day.findings || [];
+
+  const findingsHtml = findings.length
+    ? findings.map(renderFinding).join("")
+    : '<div class="no-findings">no main findings</div>';
+
+  $("mainContent").innerHTML = `
+    <div class="worklog-toggle" id="wlToggle">
+      <span class="arrow">▶</span>
+      work log · ${searches} searches · ${llms} llm calls
+    </div>
+    <div class="worklog-body" id="wlBody">
+      ${wl.map(renderLogLine).join("") || '<div style="color: var(--text-dimmer);">no log entries</div>'}
+    </div>
+
+    <div class="section-label">main findings</div>
+    <div class="findings">${findingsHtml}</div>
+  `;
+
+  const toggle = $("wlToggle");
+  const body = $("wlBody");
+  toggle.onclick = () => {
+    toggle.classList.toggle("open");
+    body.classList.toggle("open");
+  };
+}
+
+function renderLogLine(l) {
+  if (l.kind === "search") {
+    const status = l.error
+      ? `<span class="status-bad">✗ ${esc(l.error)}</span>`
+      : `<span class="status-ok">${l.hits} hits</span>`;
+    return `<div class="worklog-line"><span class="kind search">search</span><span class="body">${esc(l.provider || "?")} · ${esc(l.query || "")} · ${status}</span></div>`;
   }
+  if (l.kind === "llm") {
+    const status = l.status === "ok"
+      ? `<span class="status-ok">ok</span>`
+      : `<span class="status-bad">${esc(l.status || "fail")}${l.error ? " · " + esc(l.error) : ""}</span>`;
+    return `<div class="worklog-line"><span class="kind llm">llm</span><span class="body">${esc(l.app || "?")} · ${esc(l.model || "?")} · ${status}</span></div>`;
+  }
+  if (l.kind === "info") {
+    return `<div class="worklog-line"><span class="kind info">info</span><span class="body">${esc(l.message || "")}</span></div>`;
+  }
+  return "";
 }
 
-function renderWelcome() {
-  $("content").innerHTML = `
-    <div class="welcome">
-      <h2>no data yet</h2>
-      <p>Your agent hasn't run yet. Trigger a manual run from GitHub Actions, or click <strong>run now</strong> above.</p>
+function renderFinding(f) {
+  const icon = f.type === "new" ? "🆕" : "🔄";
+  const cls = f.type === "new" ? "new" : "change";
+  const meta = f.extracted_by ? `via ${f.extracted_by}` : "";
+  return `
+    <div class="finding ${cls}">
+      <div class="icon">${icon}</div>
+      <div class="content">
+        <div class="app">${esc(f.app || "?")}</div>
+        <div class="summary">${esc(f.summary || "")}</div>
+        ${meta ? `<div class="meta">${esc(meta)}</div>` : ""}
+      </div>
     </div>
   `;
 }
 
-function renderOverview(meta) {
-  const changed = allApps.filter(a => {
-    // heuristic: show apps that got extracted with low confidence
-    return (a.confidence != null && a.confidence < 0.5);
-  });
-
-  $("content").innerHTML = `
-    <div class="page-header">
-      <div class="page-title">overview</div>
-      <div class="page-meta">
-        <span>last run</span> <strong>${meta.finished_at ? new Date(meta.finished_at).toLocaleString() : "never"}</strong>
-        <span>apps</span> <strong>${allApps.length}</strong>
-        <span>searches</span> <strong>${meta.searches_used || 0}</strong>
-        <span>changes</span> <strong>${meta.changes_detected || 0}</strong>
-      </div>
-    </div>
-
-    <div class="section-title">model usage</div>
-    <div class="feature-list">
-      ${countBy(allApps, "_extracted_by").map(([k, v]) =>
-        `<span class="feature-tag">${esc(k)} · ${v}</span>`
-      ).join("") || '<span class="feature-tag">no data</span>'}
-    </div>
-
-    <div class="section-title">low confidence (< 50%)</div>
-    ${changed.length ? `
-      <div class="feature-list">
-        ${changed.map(a => `<span class="feature-tag">${esc(a.app_name)}</span>`).join("")}
-      </div>
-    ` : '<div style="color: var(--text-dimmer); font-size: 12px;">none</div>'}
-
-    <div class="section-title">quick actions</div>
-    <div class="feature-list">
-      <span class="feature-tag" style="cursor:pointer" onclick="document.getElementById('runBtn').click()">run agent now</span>
-      <span class="feature-tag" style="cursor:pointer" onclick="window.open('https://github.com/${esc(config.repo)}/actions','_blank')">open github actions</span>
-      <span class="feature-tag" style="cursor:pointer" onclick="window.open('https://github.com/${esc(config.repo)}','_blank')">open repo</span>
-    </div>
-  `;
+function formatDate(iso) {
+  if (!iso) return "unknown";
+  try {
+    const d = new Date(iso + "T00:00:00Z");
+    return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  } catch { return iso; }
 }
 
-function renderApp(app) {
-  const ft = app.free_tier || {};
-  const pp = app.paid_pricing || {};
-  const features = app.key_features || [];
-  const formats = app.output_formats || [];
-  const channels = ((app.support || {}).channels) || [];
-  const conf = app.confidence != null ? Math.round(app.confidence * 100) : null;
-
-  $("content").innerHTML = `
-    <div class="page-header">
-      <div class="page-title">${esc(app.app_name || "Unknown")}</div>
-      <div class="page-meta">
-        <span>via</span> <strong>${esc(app._extracted_by || "?")}</strong>
-        ${conf != null ? `<span>confidence</span> <strong>${conf}%</strong>` : ""}
-        ${app._searched_at ? `<span>checked</span> <strong>${new Date(app._searched_at).toLocaleString()}</strong>` : ""}
-      </div>
-    </div>
-
-    <div class="detail-grid">
-      <div class="key">category</div>
-      <div class="val">${esc(app.category || "—")}</div>
-
-      <div class="key">vendor</div>
-      <div class="val">${esc(app.vendor || "—")}</div>
-
-      <div class="key">website</div>
-      <div class="val">${app.website ? `<a href="${esc(app.website)}" target="_blank">${esc(app.website)}</a>` : "—"}</div>
-
-      <div class="key">source</div>
-      <div class="val">${app.source_url ? `<a href="${esc(app.source_url)}" target="_blank">${esc(app.source_url)}</a>` : "—"}</div>
-    </div>
-
-    <div class="section-title">free tier</div>
-    <div class="detail-grid">
-      <div class="key">available</div>
-      <div class="val">${ft.available ? '<span class="badge green">yes</span>' : '<span class="badge red">no</span>'}</div>
-
-      <div class="key">credits</div>
-      <div class="val">${esc(ft.credits || "—")}</div>
-
-      <div class="key">limits</div>
-      <div class="val">${esc(ft.limits || "—")}</div>
-    </div>
-
-    <div class="section-title">paid pricing</div>
-    <div class="detail-grid">
-      <div class="key">cheapest</div>
-      <div class="val">${esc(pp.cheapest_plan || "—")}</div>
-
-      <div class="key">notes</div>
-      <div class="val">${esc(pp.notes || "—")}</div>
-    </div>
-
-    <div class="section-title">features</div>
-    ${features.length ? `<div class="feature-list">${features.map(f => `<span class="feature-tag">${esc(f)}</span>`).join("")}</div>` : '<div style="color: var(--text-dimmer); font-size: 12px;">none listed</div>'}
-
-    <div class="section-title">output formats</div>
-    ${formats.length ? `<div class="feature-list">${formats.map(f => `<span class="feature-tag">${esc(f)}</span>`).join("")}</div>` : '<div style="color: var(--text-dimmer); font-size: 12px;">none listed</div>'}
-
-    <div class="section-title">support</div>
-    ${channels.length ? `<div class="feature-list">${channels.map(c => `<span class="feature-tag">${esc(c)}</span>`).join("")}</div>` : '<div style="color: var(--text-dimmer); font-size: 12px;">none listed</div>'}
-
-    ${app.quality_notes ? `
-      <div class="section-title">quality notes</div>
-      <div style="color: var(--text-dim); font-size: 12.5px;">${esc(app.quality_notes)}</div>
-    ` : ""}
-
-    <div class="section-title">actions</div>
-    <div class="feature-list">
-      <span class="feature-tag" style="cursor:pointer" onclick="document.getElementById('runBtn').click()">re-run agent</span>
-      ${app.source_url ? `<span class="feature-tag" style="cursor:pointer" onclick="window.open('${esc(app.source_url)}','_blank')">visit site</span>` : ""}
-    </div>
-  `;
-}
-
-function selectApp(i) {
-  selectedApp = i;
-  const items = document.querySelectorAll(".app-item");
-  items.forEach((el, idx) => el.classList.toggle("selected", idx === i));
-  renderApp(allApps[i]);
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
 
 // ---- RUN NOW ----
 $("runBtn").onclick = async () => {
-  if (!config.repo || !config.token) {
-    setStatus("need repo + token", "err");
-    return;
-  }
+  if (!config.repo || !config.token) { setStatus("need repo + token", "err"); return; }
   setStatus("triggering…", "busy");
   try {
     const [owner, repo] = config.repo.split("/");
@@ -683,90 +676,14 @@ $("runBtn").onclick = async () => {
       }
     );
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    setStatus("triggered · refresh in ~60s", "ok");
-    setTimeout(load, 60000);
+    setStatus("triggered · refresh in ~90s", "ok");
+    setTimeout(load, 90000);
   } catch (e) {
     setStatus(`run failed: ${e.message}`, "err");
   }
 };
 
-// ---- NTFY LIVE ----
-let ntfyES = null;
-function startNtfy() {
-  if (ntfyES) { ntfyES.close(); ntfyES = null; }
-  if (!config.ntfy) return;
-  try {
-    ntfyES = new EventSource(`https://ntfy.sh/${config.ntfy}/sse`);
-    ntfyES.onmessage = (e) => {
-      try {
-        const data = JSON.parse(e.data);
-        if (data.event === "message") {
-          if ("Notification" in window && Notification.permission === "granted") {
-            new Notification(data.title || "docgen-agent", { body: data.message || "" });
-          }
-          setStatus(`alert: ${data.title || "change detected"}`, "ok");
-        }
-      } catch {}
-    };
-  } catch {}
-}
-
-// request notification permission on first user gesture
-document.body.addEventListener("click", () => {
-  if ("Notification" in window && Notification.permission === "default") {
-    Notification.requestPermission();
-  }
-}, { once: true });
-
-// ---- HELPERS ----
-function esc(s) {
-  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-}
-function countBy(arr, key) {
-  const m = {};
-  arr.forEach(a => { const k = a[key] || "unknown"; m[k] = (m[k] || 0) + 1; });
-  return Object.entries(m).sort((a, b) => b[1] - a[1]);
-}
-
-// ---- NAV ----
-$("navApps").onclick = () => {
-  document.querySelectorAll(".topbar-item").forEach(el => el.classList.remove("active"));
-  $("navApps").classList.add("active");
-  if (allApps.length) selectApp(0);
-};
-$("navChanges").onclick = () => {
-  document.querySelectorAll(".topbar-item").forEach(el => el.classList.remove("active"));
-  $("navChanges").classList.add("active");
-  renderChanges();
-};
-$("navDocs").onclick = () => {
-  window.open(`https://github.com/${config.repo}#readme`, "_blank");
-};
-$("navSettings").onclick = () => {
-  window.open(`https://github.com/${config.repo}/settings/secrets/actions`, "_blank");
-};
-$("navApps").addEventListener("click", () => {});
-document.querySelector(".topbar-item").onclick = () => {
-  document.querySelectorAll(".topbar-item").forEach(el => el.classList.remove("active"));
-  document.querySelector(".topbar-item").classList.add("active");
-  if (allApps.length) renderOverview({}); else renderWelcome();
-};
-
-function renderChanges() {
-  $("content").innerHTML = `
-    <div class="page-header">
-      <div class="page-title">changes</div>
-      <div class="page-meta"><span>fetched from</span> <strong>history.json</strong></div>
-    </div>
-    <div class="empty">
-      history view coming soon — check <code>history.json</code> in your repo for now
-    </div>
-  `;
-}
-
-// ---- BOOT ----
-startNtfy();
-if (config.repo) load();
+load();
 </script>
 </body>
 </html>
