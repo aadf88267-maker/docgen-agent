@@ -1,8 +1,6 @@
 """
 DocGenAppWatch Agent - single-file backend.
-
-Search chain:  You.com (keyless) -> Exa -> Firecrawl
-LLM chain:     Nemotron 3 Super -> Gemini 3.5 Flash-Lite -> DeepSeek V4 Flash (Orca) -> Kimi K3 (AIHubMix) -> MiniMax M3 (AIHubMix) -> GLM 5.2 (AIHubMix)
+Creates one daily chat entry per run. Every day appears in search x.
 """
 
 import os
@@ -16,14 +14,17 @@ from openai import OpenAI
 # CONFIG
 # ============================================================
 
+LOG_FILE = Path("log.json")
 RESULTS_FILE = Path("results.json")
-HISTORY_FILE = Path("history.json")
 USAGE_FILE = Path("search_usage.json")
 
 MAX_SEARCHES_PER_RUN = 140
 MONTHLY_CAPS = {"exa": 1200, "firecrawl": 1000}
 
-NTFY_TOPIC = os.getenv("NTFY_TOPIC", "")
+WORK_LOG = []
+
+def log(kind, **kwargs):
+    WORK_LOG.append({"kind": kind, **kwargs})
 
 KNOWN_APPS = [
     {"name": "ChatGPT Work", "url": "https://openai.com/chatgpt/pricing/"},
@@ -187,21 +188,27 @@ def _firecrawl_search(query, num=5):
 
 def search_web(query, num=5):
     try:
-        return _you_search(query, num)
+        out = _you_search(query, num)
+        log("search", query=query, provider="you.com", hits=len(out))
+        return out
     except Exception as e:
-        print(f"[search] You.com failed: {e}")
+        log("search", query=query, provider="you.com", error=str(e)[:120])
 
     if _check_and_increment("exa", MONTHLY_CAPS["exa"]):
         try:
-            return _exa_search(query, num)
+            out = _exa_search(query, num)
+            log("search", query=query, provider="exa", hits=len(out))
+            return out
         except Exception as e:
-            print(f"[search] Exa failed: {e}")
+            log("search", query=query, provider="exa", error=str(e)[:120])
 
     if _check_and_increment("firecrawl", MONTHLY_CAPS["firecrawl"]):
         try:
-            return _firecrawl_search(query, num)
+            out = _firecrawl_search(query, num)
+            log("search", query=query, provider="firecrawl", hits=len(out))
+            return out
         except Exception as e:
-            print(f"[search] Firecrawl failed: {e}")
+            log("search", query=query, provider="firecrawl", error=str(e)[:120])
 
     return []
 
@@ -238,18 +245,15 @@ Return only the JSON object. No markdown. No explanation.
 def _client(base_url, api_key):
     return OpenAI(base_url=base_url, api_key=api_key)
 
-# --- 1. NVIDIA Nemotron 3 Super 120B ---
 def _llm_nemotron(prompt):
     c = _client("https://integrate.api.nvidia.com/v1", os.getenv("NVIDIA_API_KEY"))
     r = c.chat.completions.create(
         model="nvidia/nemotron-3-super-120b-a12b",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,
-        max_tokens=2000,
+        temperature=0.1, max_tokens=2000,
     )
     return r.choices[0].message.content
 
-# --- 2. Gemini 3.5 Flash-Lite ---
 def _llm_gemini(prompt):
     c = _client(
         "https://generativelanguage.googleapis.com/v1beta/openai/",
@@ -258,52 +262,43 @@ def _llm_gemini(prompt):
     r = c.chat.completions.create(
         model="gemini-3.5-flash-lite",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,
-        max_tokens=2000,
+        temperature=0.1, max_tokens=2000,
     )
     return r.choices[0].message.content
 
-# --- 3. DeepSeek V4 Flash Free via Orca Router ---
 def _llm_deepseek_orca(prompt):
     c = _client("https://api.orcarouter.ai/v1", os.getenv("ORCA_API_KEY"))
     r = c.chat.completions.create(
         model="deepseek/deepseek-v4-flash-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,
-        max_tokens=2000,
+        temperature=0.1, max_tokens=2000,
     )
     return r.choices[0].message.content
 
-# --- 4. Kimi K3 Free via AIHubMix ---
 def _llm_kimi_k3(prompt):
     c = _client("https://aihubmix.com/v1", os.getenv("AIHUBMIX_API_KEY"))
     r = c.chat.completions.create(
         model="coding-kimi-k3-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,
-        max_tokens=2000,
+        temperature=0.1, max_tokens=2000,
     )
     return r.choices[0].message.content
 
-# --- 5. MiniMax M3 Free via AIHubMix ---
 def _llm_minimax_m3(prompt):
     c = _client("https://aihubmix.com/v1", os.getenv("AIHUBMIX_API_KEY"))
     r = c.chat.completions.create(
         model="coding-minimax-m3-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,
-        max_tokens=2000,
+        temperature=0.1, max_tokens=2000,
     )
     return r.choices[0].message.content
 
-# --- 6. GLM 5.2 Free via AIHubMix ---
 def _llm_glm_52(prompt):
     c = _client("https://aihubmix.com/v1", os.getenv("AIHUBMIX_API_KEY"))
     r = c.chat.completions.create(
         model="coding-glm-5.2-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,
-        max_tokens=2000,
+        temperature=0.1, max_tokens=2000,
     )
     return r.choices[0].message.content
 
@@ -333,7 +328,7 @@ def extract_app(app_name, search_results):
 
     providers = [
         ("nemotron", _llm_nemotron),
-        ("gemini-3.5-flash-lite", _llm_gemini),
+        ("gemini", _llm_gemini),
         ("deepseek-v4-flash-free", _llm_deepseek_orca),
         ("kimi-k3-free", _llm_kimi_k3),
         ("minimax-m3-free", _llm_minimax_m3),
@@ -344,16 +339,17 @@ def extract_app(app_name, search_results):
         try:
             parsed = _clean_json(fn(prompt))
             if parsed:
+                log("llm", app=app_name, model=name, status="ok")
                 parsed["_extracted_by"] = name
                 return parsed
-            print(f"[llm] {name} returned invalid JSON")
+            log("llm", app=app_name, model=name, status="invalid_json")
         except Exception as e:
-            print(f"[llm] {name} failed: {e}")
+            log("llm", app=app_name, model=name, status="failed", error=str(e)[:120])
 
     return {"error": "all_llms_failed", "app_name": app_name}
 
 # ============================================================
-# DIFF + NOTIFY + STORAGE
+# STORAGE
 # ============================================================
 
 def load_previous_results():
@@ -370,29 +366,24 @@ def save_results(apps, run_meta):
         json.dumps({"last_run": run_meta, "apps": apps}, indent=2)
     )
 
-def append_history(changes, run_meta):
-    history = []
-    if HISTORY_FILE.exists():
-        try:
-            history = json.loads(HISTORY_FILE.read_text())
-        except Exception:
-            history = []
-    history.append({"run": run_meta, "changes": changes})
-    HISTORY_FILE.write_text(json.dumps(history[-90:], indent=2))
-
-def notify_ntfy(title, message):
-    if not NTFY_TOPIC:
-        print("[notify] NTFY_TOPIC not set, skipping")
-        return
+def load_log():
+    if not LOG_FILE.exists():
+        return {"chat": "search x", "pinned": True, "days": []}
     try:
-        requests.post(
-            f"https://ntfy.sh/{NTFY_TOPIC}",
-            data=message.encode("utf-8"),
-            headers={"Title": title, "Tags": "robot"},
-            timeout=10,
-        )
-    except Exception as e:
-        print(f"[notify] failed: {e}")
+        return json.loads(LOG_FILE.read_text())
+    except Exception:
+        return {"chat": "search x", "pinned": True, "days": []}
+
+def append_day(day_entry):
+    data = load_log()
+    days = data.get("days", [])
+    # Replace same-date entry if exists (allows re-runs on same day)
+    days = [d for d in days if d.get("date") != day_entry["date"]]
+    days.append(day_entry)
+    # Newest first
+    days.sort(key=lambda d: d.get("date", ""), reverse=True)
+    data["days"] = days
+    LOG_FILE.write_text(json.dumps(data, indent=2))
 
 def diff_app(old, new):
     if not old:
@@ -408,6 +399,9 @@ def diff_app(old, new):
 # ============================================================
 
 def main():
+    global WORK_LOG
+    WORK_LOG = []
+
     started = datetime.now(timezone.utc)
     run_meta = {"started_at": started.isoformat(), "searches_used": 0}
     print(f"[worker] Starting at {run_meta['started_at']}")
@@ -419,12 +413,10 @@ def main():
         return search_count < MAX_SEARCHES_PER_RUN
 
     new_apps = []
-
     for app in KNOWN_APPS:
         if not budget_left():
-            print("[worker] Search budget exhausted")
+            log("info", message="search budget exhausted")
             break
-
         name = app["name"]
         results = []
         for q in [
@@ -434,7 +426,6 @@ def main():
         ]:
             if not budget_left():
                 break
-            print(f"[search] {q}")
             results.extend(search_web(q, num=5))
             search_count += 1
 
@@ -447,33 +438,51 @@ def main():
     for q in DISCOVERY_QUERIES:
         if not budget_left():
             break
-        print(f"[discovery] {q}")
         search_web(q, num=5)
         search_count += 1
 
-    changes = []
+    # Build findings
+    findings = []
     for app in new_apps:
-        app_changes = diff_app(previous.get(app["app_name"]), app)
-        if app_changes:
-            changes.append({"app": app["app_name"], "changes": app_changes})
+        changes = diff_app(previous.get(app["app_name"]), app)
+        if changes:
+            if not previous.get(app["app_name"]):
+                findings.append({
+                    "type": "new",
+                    "app": app["app_name"],
+                    "summary": "new app tracked",
+                    "url": app.get("source_url"),
+                    "extracted_by": app.get("_extracted_by"),
+                })
+            else:
+                findings.append({
+                    "type": "change",
+                    "app": app["app_name"],
+                    "summary": ", ".join(changes),
+                    "url": app.get("source_url"),
+                    "extracted_by": app.get("_extracted_by"),
+                })
 
     run_meta["searches_used"] = search_count
     run_meta["finished_at"] = datetime.now(timezone.utc).isoformat()
     run_meta["apps_tracked"] = len(new_apps)
-    run_meta["changes_detected"] = len(changes)
+    run_meta["findings"] = len(findings)
 
     save_results(new_apps, run_meta)
-    append_history(changes, run_meta)
 
-    if changes:
-        body = "\n".join(
-            f"{c['app']}: {', '.join(c['changes'])}" for c in changes
-        )
-        notify_ntfy(f"DocGen Agent: {len(changes)} changes", body)
-        print(f"[worker] Notified: {len(changes)} changes")
-    else:
-        print("[worker] No changes detected")
+    # ALWAYS append a day entry (even quiet days)
+    day_entry = {
+        "date": started.strftime("%Y-%m-%d"),
+        "started_at": run_meta["started_at"],
+        "finished_at": run_meta["finished_at"],
+        "searches": search_count,
+        "llm_calls": sum(1 for l in WORK_LOG if l.get("kind") == "llm"),
+        "work_log": WORK_LOG,
+        "findings": findings,
+    }
+    append_day(day_entry)
 
+    print(f"[worker] Day appended: {day_entry['date']}, findings: {len(findings)}")
     print(f"[worker] Done. Searches: {search_count}/{MAX_SEARCHES_PER_RUN}")
 
 if __name__ == "__main__":
