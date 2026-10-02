@@ -1,0 +1,2077 @@
+{
+  "chat": "search x",
+  "pinned": true,
+  "days": [
+    {
+      "date": "2026-10-02",
+      "started_at": "2026-10-02T19:14:55.505900+00:00",
+      "finished_at": "2026-10-02T19:19:26.191823+00:00",
+      "searches": 90,
+      "llm_calls": 120,
+      "work_log": [
+        {
+          "kind": "search",
+          "query": "ChatGPT Work pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "ChatGPT Work pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "ChatGPT Work new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "ChatGPT Work new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "ChatGPT Work free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "ChatGPT Work free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "ChatGPT Work",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "ChatGPT Work",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "ChatGPT Work",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "ChatGPT Work",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "ChatGPT Work",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "ChatGPT Work",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Claude Cowork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Claude Cowork",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Claude Cowork",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Claude Cowork",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Claude Cowork",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Claude Cowork",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Gamma pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Gamma pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Gamma new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Gamma free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Gamma",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Gamma",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Gamma",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Gamma",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Gamma",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Gamma",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Notion AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Notion AI",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Notion AI",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Notion AI",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Notion AI",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Notion AI",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Canva Magic Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Canva Magic Write",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Canva Magic Write",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Canva Magic Write",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Canva Magic Write",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Canva Magic Write",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Adobe Acrobat AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Adobe Acrobat AI",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Adobe Acrobat AI",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Adobe Acrobat AI",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Adobe Acrobat AI",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Adobe Acrobat AI",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Microsoft 365 Copilot",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Microsoft 365 Copilot",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Microsoft 365 Copilot",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Microsoft 365 Copilot",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Microsoft 365 Copilot",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Microsoft 365 Copilot",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Jotform Document Generator",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Jotform Document Generator",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Jotform Document Generator",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Jotform Document Generator",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Jotform Document Generator",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Jotform Document Generator",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Slaide pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Slaide pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Slaide new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Slaide new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Slaide free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Slaide free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Slaide",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Slaide",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Slaide",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Slaide",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Slaide",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Slaide",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Liner Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Liner Write",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Liner Write",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Liner Write",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Liner Write",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Liner Write",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Skywork pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Skywork pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Skywork new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Skywork new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Skywork free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Skywork free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Skywork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Skywork",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Skywork",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Skywork",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Skywork",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Skywork",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Type pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Type pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Type new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Type new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Type free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Type free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Type",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Type",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Type",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Type",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Type",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Type",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Sembly pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Sembly pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Sembly new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Sembly new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Sembly free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Sembly free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Sembly",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Sembly",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Sembly",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Sembly",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Sembly",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Sembly",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "QwenWork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "QwenWork",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "QwenWork",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "QwenWork",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "QwenWork",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "QwenWork",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Watto AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Watto AI",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Watto AI",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Watto AI",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Watto AI",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Watto AI",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Capitol AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Capitol AI",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Capitol AI",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Capitol AI",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Capitol AI",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Capitol AI",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Cobl.ai",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Cobl.ai",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Cobl.ai",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Cobl.ai",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Cobl.ai",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Cobl.ai",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "Google Gemini Docs",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Google Gemini Docs",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Google Gemini Docs",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Google Gemini Docs",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Google Gemini Docs",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "Google Gemini Docs",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "AI Doc Maker",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "AI Doc Maker",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "AI Doc Maker",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "AI Doc Maker",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "AI Doc Maker",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "AI Doc Maker",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc pricing 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc pricing 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc free plan changelog",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc free plan changelog",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "app": "PandaDoc",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "PandaDoc",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "PandaDoc",
+          "model": "deepseek-v4-flash-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "PandaDoc",
+          "model": "kimi-k3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "PandaDoc",
+          "model": "minimax-m3-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "llm",
+          "app": "PandaDoc",
+          "model": "glm-5.2-free",
+          "status": "failed",
+          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        {
+          "kind": "search",
+          "query": "new AI document generator 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "new AI document generator 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "launch AI document creation tool 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "launch AI document creation tool 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Show HN AI document generator",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Show HN AI document generator",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Product Hunt AI document generator 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Product Hunt AI document generator 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI document startup funding 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI document startup funding 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "YC AI document generator",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "YC AI document generator",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI document generation seed round",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI document generation seed round",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "best new document AI tool 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "best new document AI tool 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI report generator launch",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI report generator launch",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI proposal generator new app",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI proposal generator new app",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI contract generator startup",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI contract generator startup",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI slides generator new tool 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI slides generator new tool 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI resume generator launch 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI resume generator launch 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI business document generator new",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI business document generator new",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI doc automation tool 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI doc automation tool 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "OpenAI document generator update",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "OpenAI document generator update",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Anthropic Claude document features",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Anthropic Claude document features",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini document generation update",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini document generation update",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI new features 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI new features 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma AI changelog 2026",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Gamma AI changelog 2026",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write update",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write update",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI new features",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI new features",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft Copilot document update",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft Copilot document update",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI PDF generator new",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI PDF generator new",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI Word document generator new",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI Word document generator new",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI document summarizer launch",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI document summarizer launch",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI document translation tool new",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI document translation tool new",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI legal document generator startup",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI legal document generator startup",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI technical writing tool launch",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI technical writing tool launch",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI invoice generator new app",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "AI invoice generator new app",
+          "provider": "exa",
+          "hits": 5
+        }
+      ],
+      "findings": [
+        {
+          "type": "new",
+          "app": "ChatGPT Work",
+          "summary": "new app tracked",
+          "url": "https://openai.com/chatgpt/pricing/",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Claude Cowork",
+          "summary": "new app tracked",
+          "url": "https://www.anthropic.com/pricing",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Gamma",
+          "summary": "new app tracked",
+          "url": "https://gamma.app/pricing",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Notion AI",
+          "summary": "new app tracked",
+          "url": "https://www.notion.com/pricing",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Canva Magic Write",
+          "summary": "new app tracked",
+          "url": "https://www.canva.com/pricing/",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Adobe Acrobat AI",
+          "summary": "new app tracked",
+          "url": "https://www.adobe.com/acrobat/pricing.html",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Microsoft 365 Copilot",
+          "summary": "new app tracked",
+          "url": "https://www.microsoft.com/microsoft-365/copilot",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Jotform Document Generator",
+          "summary": "new app tracked",
+          "url": "https://www.jotform.com/pricing/",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Slaide",
+          "summary": "new app tracked",
+          "url": "https://slaide.com/pricing",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Liner Write",
+          "summary": "new app tracked",
+          "url": "https://getliner.com/pricing",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Skywork",
+          "summary": "new app tracked",
+          "url": "https://skywork.ai/pricing",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Type",
+          "summary": "new app tracked",
+          "url": "https://type.ai/pricing",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Sembly",
+          "summary": "new app tracked",
+          "url": "https://www.sembly.ai/pricing/",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "QwenWork",
+          "summary": "new app tracked",
+          "url": "https://qwenwork.aliyun.com/",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Watto AI",
+          "summary": "new app tracked",
+          "url": "https://watto.ai",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Capitol AI",
+          "summary": "new app tracked",
+          "url": "https://capitol.ai",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Cobl.ai",
+          "summary": "new app tracked",
+          "url": "https://cobl.ai",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "Google Gemini Docs",
+          "summary": "new app tracked",
+          "url": "https://one.google.com/about/plans",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "AI Doc Maker",
+          "summary": "new app tracked",
+          "url": "https://aidocmaker.com",
+          "extracted_by": null
+        },
+        {
+          "type": "new",
+          "app": "PandaDoc",
+          "summary": "new app tracked",
+          "url": "https://www.pandadoc.com/pricing/",
+          "extracted_by": null
+        }
+      ]
+    }
+  ]
+}
