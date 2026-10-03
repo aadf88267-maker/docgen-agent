@@ -4,46 +4,75 @@
   "days": [
     {
       "date": "2026-10-03",
-      "started_at": "2026-10-03T09:20:55.516679+00:00",
-      "finished_at": "2026-10-03T09:28:38.645958+00:00",
-      "searches": 90,
+      "started_at": "2026-10-03T10:11:36.902670+00:00",
+      "finished_at": "2026-10-03T10:26:52.419532+00:00",
+      "searches": 130,
       "llm_calls": 120,
       "work_log": [
         {
           "kind": "search",
-          "query": "ChatGPT Work pricing 2026",
+          "query": "what is the free tier of ChatGPT Work",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "ChatGPT Work pricing 2026",
+          "query": "what is the free tier of ChatGPT Work",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "ChatGPT Work new features 2026",
+          "query": "how much does ChatGPT Work cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "ChatGPT Work new features 2026",
+          "query": "how much does ChatGPT Work cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "ChatGPT Work free plan changelog",
+          "query": "what can you do with ChatGPT Work features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "ChatGPT Work free plan changelog",
+          "query": "what can you do with ChatGPT Work features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does ChatGPT Work export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does ChatGPT Work export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is ChatGPT Work worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is ChatGPT Work worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://openai.com/chatgpt/pricing/",
+          "chars": 26345
         },
         {
           "kind": "llm",
@@ -89,39 +118,68 @@
         },
         {
           "kind": "search",
-          "query": "Claude Cowork pricing 2026",
+          "query": "what is the free tier of Claude Cowork",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Claude Cowork pricing 2026",
+          "query": "what is the free tier of Claude Cowork",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Claude Cowork new features 2026",
+          "query": "how much does Claude Cowork cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Claude Cowork new features 2026",
+          "query": "how much does Claude Cowork cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Claude Cowork free plan changelog",
+          "query": "what can you do with Claude Cowork features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Claude Cowork free plan changelog",
+          "query": "what can you do with Claude Cowork features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Claude Cowork export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Claude Cowork export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Claude Cowork worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Claude Cowork worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.anthropic.com/pricing",
+          "chars": 24266
         },
         {
           "kind": "llm",
@@ -167,39 +225,68 @@
         },
         {
           "kind": "search",
-          "query": "Gamma pricing 2026",
+          "query": "what is the free tier of Gamma",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Gamma pricing 2026",
+          "query": "what is the free tier of Gamma",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Gamma new features 2026",
+          "query": "how much does Gamma cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Gamma new features 2026",
+          "query": "how much does Gamma cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Gamma free plan changelog",
+          "query": "what can you do with Gamma features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Gamma free plan changelog",
+          "query": "what can you do with Gamma features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Gamma export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Gamma export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Gamma worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Gamma worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://gamma.app/pricing",
+          "chars": 7974
         },
         {
           "kind": "llm",
@@ -245,39 +332,68 @@
         },
         {
           "kind": "search",
-          "query": "Notion AI pricing 2026",
+          "query": "what is the free tier of Notion AI",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Notion AI pricing 2026",
+          "query": "what is the free tier of Notion AI",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Notion AI new features 2026",
+          "query": "how much does Notion AI cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Notion AI new features 2026",
+          "query": "how much does Notion AI cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Notion AI free plan changelog",
+          "query": "what can you do with Notion AI features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Notion AI free plan changelog",
+          "query": "what can you do with Notion AI features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Notion AI export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Notion AI export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Notion AI worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Notion AI worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.notion.com/pricing",
+          "chars": 23347
         },
         {
           "kind": "llm",
@@ -323,39 +439,68 @@
         },
         {
           "kind": "search",
-          "query": "Canva Magic Write pricing 2026",
+          "query": "what is the free tier of Canva Magic Write",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Canva Magic Write pricing 2026",
+          "query": "what is the free tier of Canva Magic Write",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Canva Magic Write new features 2026",
+          "query": "how much does Canva Magic Write cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Canva Magic Write new features 2026",
+          "query": "how much does Canva Magic Write cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Canva Magic Write free plan changelog",
+          "query": "what can you do with Canva Magic Write features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Canva Magic Write free plan changelog",
+          "query": "what can you do with Canva Magic Write features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Canva Magic Write export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Canva Magic Write export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Canva Magic Write worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Canva Magic Write worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.canva.com/pricing/",
+          "chars": 26309
         },
         {
           "kind": "llm",
@@ -401,39 +546,68 @@
         },
         {
           "kind": "search",
-          "query": "Adobe Acrobat AI pricing 2026",
+          "query": "what is the free tier of Adobe Acrobat AI",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Adobe Acrobat AI pricing 2026",
+          "query": "what is the free tier of Adobe Acrobat AI",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Adobe Acrobat AI new features 2026",
+          "query": "how much does Adobe Acrobat AI cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Adobe Acrobat AI new features 2026",
+          "query": "how much does Adobe Acrobat AI cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Adobe Acrobat AI free plan changelog",
+          "query": "what can you do with Adobe Acrobat AI features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Adobe Acrobat AI free plan changelog",
+          "query": "what can you do with Adobe Acrobat AI features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Adobe Acrobat AI export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Adobe Acrobat AI export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Adobe Acrobat AI worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Adobe Acrobat AI worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.adobe.com/acrobat/pricing.html",
+          "chars": 68550
         },
         {
           "kind": "llm",
@@ -479,39 +653,68 @@
         },
         {
           "kind": "search",
-          "query": "Microsoft 365 Copilot pricing 2026",
+          "query": "what is the free tier of Microsoft 365 Copilot",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Microsoft 365 Copilot pricing 2026",
+          "query": "what is the free tier of Microsoft 365 Copilot",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Microsoft 365 Copilot new features 2026",
+          "query": "how much does Microsoft 365 Copilot cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Microsoft 365 Copilot new features 2026",
+          "query": "how much does Microsoft 365 Copilot cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Microsoft 365 Copilot free plan changelog",
+          "query": "what can you do with Microsoft 365 Copilot features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Microsoft 365 Copilot free plan changelog",
+          "query": "what can you do with Microsoft 365 Copilot features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Microsoft 365 Copilot export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Microsoft 365 Copilot export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Microsoft 365 Copilot worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Microsoft 365 Copilot worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.microsoft.com/microsoft-365/copilot",
+          "chars": 11606
         },
         {
           "kind": "llm",
@@ -557,39 +760,68 @@
         },
         {
           "kind": "search",
-          "query": "Jotform Document Generator pricing 2026",
+          "query": "what is the free tier of Jotform Document Generator",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Jotform Document Generator pricing 2026",
+          "query": "what is the free tier of Jotform Document Generator",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Jotform Document Generator new features 2026",
+          "query": "how much does Jotform Document Generator cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Jotform Document Generator new features 2026",
+          "query": "how much does Jotform Document Generator cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Jotform Document Generator free plan changelog",
+          "query": "what can you do with Jotform Document Generator features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Jotform Document Generator free plan changelog",
+          "query": "what can you do with Jotform Document Generator features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Jotform Document Generator export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Jotform Document Generator export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Jotform Document Generator worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Jotform Document Generator worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.jotform.com/pricing/",
+          "chars": 23827
         },
         {
           "kind": "llm",
@@ -635,39 +867,68 @@
         },
         {
           "kind": "search",
-          "query": "Slaide pricing 2026",
+          "query": "what is the free tier of Slaide",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Slaide pricing 2026",
+          "query": "what is the free tier of Slaide",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Slaide new features 2026",
+          "query": "how much does Slaide cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Slaide new features 2026",
+          "query": "how much does Slaide cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Slaide free plan changelog",
+          "query": "what can you do with Slaide features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Slaide free plan changelog",
+          "query": "what can you do with Slaide features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Slaide export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Slaide export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Slaide worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Slaide worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://slaide.com/pricing",
+          "chars": 60
         },
         {
           "kind": "llm",
@@ -713,39 +974,68 @@
         },
         {
           "kind": "search",
-          "query": "Liner Write pricing 2026",
+          "query": "what is the free tier of Liner Write",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Liner Write pricing 2026",
+          "query": "what is the free tier of Liner Write",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Liner Write new features 2026",
+          "query": "how much does Liner Write cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Liner Write new features 2026",
+          "query": "how much does Liner Write cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Liner Write free plan changelog",
+          "query": "what can you do with Liner Write features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Liner Write free plan changelog",
+          "query": "what can you do with Liner Write features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Liner Write export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Liner Write export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Liner Write worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Liner Write worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://getliner.com/pricing",
+          "chars": 148
         },
         {
           "kind": "llm",
@@ -791,39 +1081,68 @@
         },
         {
           "kind": "search",
-          "query": "Skywork pricing 2026",
+          "query": "what is the free tier of Skywork",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Skywork pricing 2026",
+          "query": "what is the free tier of Skywork",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Skywork new features 2026",
+          "query": "how much does Skywork cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Skywork new features 2026",
+          "query": "how much does Skywork cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Skywork free plan changelog",
+          "query": "what can you do with Skywork features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Skywork free plan changelog",
+          "query": "what can you do with Skywork features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Skywork export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Skywork export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Skywork worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Skywork worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://skywork.ai/pricing",
+          "chars": 13622
         },
         {
           "kind": "llm",
@@ -869,39 +1188,68 @@
         },
         {
           "kind": "search",
-          "query": "Type pricing 2026",
+          "query": "what is the free tier of Type",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Type pricing 2026",
+          "query": "what is the free tier of Type",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Type new features 2026",
+          "query": "how much does Type cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Type new features 2026",
+          "query": "how much does Type cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Type free plan changelog",
+          "query": "what can you do with Type features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Type free plan changelog",
+          "query": "what can you do with Type features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Type export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Type export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Type worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Type worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://type.ai/pricing",
+          "chars": 16790
         },
         {
           "kind": "llm",
@@ -947,39 +1295,68 @@
         },
         {
           "kind": "search",
-          "query": "Sembly pricing 2026",
+          "query": "what is the free tier of Sembly",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Sembly pricing 2026",
+          "query": "what is the free tier of Sembly",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Sembly new features 2026",
+          "query": "how much does Sembly cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Sembly new features 2026",
+          "query": "how much does Sembly cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Sembly free plan changelog",
+          "query": "what can you do with Sembly features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Sembly free plan changelog",
+          "query": "what can you do with Sembly features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Sembly export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Sembly export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Sembly worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Sembly worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.sembly.ai/pricing/",
+          "chars": 15206
         },
         {
           "kind": "llm",
@@ -1025,39 +1402,68 @@
         },
         {
           "kind": "search",
-          "query": "QwenWork pricing 2026",
+          "query": "what is the free tier of QwenWork",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "QwenWork pricing 2026",
+          "query": "what is the free tier of QwenWork",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "QwenWork new features 2026",
+          "query": "how much does QwenWork cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "QwenWork new features 2026",
+          "query": "how much does QwenWork cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "QwenWork free plan changelog",
+          "query": "what can you do with QwenWork features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "QwenWork free plan changelog",
+          "query": "what can you do with QwenWork features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does QwenWork export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does QwenWork export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is QwenWork worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is QwenWork worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://qwenwork.aliyun.com/",
+          "chars": 0
         },
         {
           "kind": "llm",
@@ -1103,39 +1509,68 @@
         },
         {
           "kind": "search",
-          "query": "Watto AI pricing 2026",
+          "query": "what is the free tier of Watto AI",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Watto AI pricing 2026",
+          "query": "what is the free tier of Watto AI",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Watto AI new features 2026",
+          "query": "how much does Watto AI cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Watto AI new features 2026",
+          "query": "how much does Watto AI cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Watto AI free plan changelog",
+          "query": "what can you do with Watto AI features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Watto AI free plan changelog",
+          "query": "what can you do with Watto AI features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Watto AI export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Watto AI export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Watto AI worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Watto AI worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://watto.ai",
+          "chars": 0
         },
         {
           "kind": "llm",
@@ -1181,39 +1616,68 @@
         },
         {
           "kind": "search",
-          "query": "Capitol AI pricing 2026",
+          "query": "what is the free tier of Capitol AI",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Capitol AI pricing 2026",
+          "query": "what is the free tier of Capitol AI",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Capitol AI new features 2026",
+          "query": "how much does Capitol AI cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Capitol AI new features 2026",
+          "query": "how much does Capitol AI cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Capitol AI free plan changelog",
+          "query": "what can you do with Capitol AI features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Capitol AI free plan changelog",
+          "query": "what can you do with Capitol AI features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Capitol AI export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Capitol AI export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Capitol AI worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Capitol AI worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://capitol.ai",
+          "chars": 13661
         },
         {
           "kind": "llm",
@@ -1259,39 +1723,68 @@
         },
         {
           "kind": "search",
-          "query": "Cobl.ai pricing 2026",
+          "query": "what is the free tier of Cobl.ai",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Cobl.ai pricing 2026",
+          "query": "what is the free tier of Cobl.ai",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Cobl.ai new features 2026",
+          "query": "how much does Cobl.ai cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Cobl.ai new features 2026",
+          "query": "how much does Cobl.ai cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Cobl.ai free plan changelog",
+          "query": "what can you do with Cobl.ai features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Cobl.ai free plan changelog",
+          "query": "what can you do with Cobl.ai features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Cobl.ai export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Cobl.ai export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Cobl.ai worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Cobl.ai worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://cobl.ai",
+          "chars": 9103
         },
         {
           "kind": "llm",
@@ -1337,39 +1830,68 @@
         },
         {
           "kind": "search",
-          "query": "Google Gemini Docs pricing 2026",
+          "query": "what is the free tier of Google Gemini Docs",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Google Gemini Docs pricing 2026",
+          "query": "what is the free tier of Google Gemini Docs",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Google Gemini Docs new features 2026",
+          "query": "how much does Google Gemini Docs cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Google Gemini Docs new features 2026",
+          "query": "how much does Google Gemini Docs cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "Google Gemini Docs free plan changelog",
+          "query": "what can you do with Google Gemini Docs features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "Google Gemini Docs free plan changelog",
+          "query": "what can you do with Google Gemini Docs features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Google Gemini Docs export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does Google Gemini Docs export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is Google Gemini Docs worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is Google Gemini Docs worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://one.google.com/about/plans",
+          "chars": 3321
         },
         {
           "kind": "llm",
@@ -1415,39 +1937,68 @@
         },
         {
           "kind": "search",
-          "query": "AI Doc Maker pricing 2026",
+          "query": "what is the free tier of AI Doc Maker",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "AI Doc Maker pricing 2026",
+          "query": "what is the free tier of AI Doc Maker",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "AI Doc Maker new features 2026",
+          "query": "how much does AI Doc Maker cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "AI Doc Maker new features 2026",
+          "query": "how much does AI Doc Maker cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "AI Doc Maker free plan changelog",
+          "query": "what can you do with AI Doc Maker features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "AI Doc Maker free plan changelog",
+          "query": "what can you do with AI Doc Maker features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does AI Doc Maker export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does AI Doc Maker export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is AI Doc Maker worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is AI Doc Maker worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://aidocmaker.com",
+          "chars": 21665
         },
         {
           "kind": "llm",
@@ -1493,39 +2044,68 @@
         },
         {
           "kind": "search",
-          "query": "PandaDoc pricing 2026",
+          "query": "what is the free tier of PandaDoc",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "PandaDoc pricing 2026",
+          "query": "what is the free tier of PandaDoc",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "PandaDoc new features 2026",
+          "query": "how much does PandaDoc cost per month",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "PandaDoc new features 2026",
+          "query": "how much does PandaDoc cost per month",
           "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
-          "query": "PandaDoc free plan changelog",
+          "query": "what can you do with PandaDoc features",
           "provider": "you.com",
           "error": "unhashable type: 'slice'"
         },
         {
           "kind": "search",
-          "query": "PandaDoc free plan changelog",
+          "query": "what can you do with PandaDoc features",
           "provider": "exa",
           "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does PandaDoc export",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "what file formats does PandaDoc export",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "is PandaDoc worth it review pros cons",
+          "provider": "you.com",
+          "error": "unhashable type: 'slice'"
+        },
+        {
+          "kind": "search",
+          "query": "is PandaDoc worth it review pros cons",
+          "provider": "exa",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.pandadoc.com/pricing/",
+          "chars": 19132
         },
         {
           "kind": "llm",
@@ -1573,7 +2153,7 @@
           "kind": "search",
           "query": "new AI document generator 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1585,7 +2165,7 @@
           "kind": "search",
           "query": "launch AI document creation tool 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1597,7 +2177,7 @@
           "kind": "search",
           "query": "Show HN AI document generator",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1609,7 +2189,7 @@
           "kind": "search",
           "query": "Product Hunt AI document generator 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1621,7 +2201,7 @@
           "kind": "search",
           "query": "AI document startup funding 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1633,7 +2213,7 @@
           "kind": "search",
           "query": "YC AI document generator",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1645,7 +2225,7 @@
           "kind": "search",
           "query": "AI document generation seed round",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1657,7 +2237,7 @@
           "kind": "search",
           "query": "best new document AI tool 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1669,7 +2249,7 @@
           "kind": "search",
           "query": "AI report generator launch",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1681,7 +2261,7 @@
           "kind": "search",
           "query": "AI proposal generator new app",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1693,7 +2273,7 @@
           "kind": "search",
           "query": "AI contract generator startup",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1705,7 +2285,7 @@
           "kind": "search",
           "query": "AI slides generator new tool 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1717,7 +2297,7 @@
           "kind": "search",
           "query": "AI resume generator launch 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1729,7 +2309,7 @@
           "kind": "search",
           "query": "AI business document generator new",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1741,7 +2321,7 @@
           "kind": "search",
           "query": "AI doc automation tool 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1753,7 +2333,7 @@
           "kind": "search",
           "query": "OpenAI document generator update",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1765,7 +2345,7 @@
           "kind": "search",
           "query": "Anthropic Claude document features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1777,7 +2357,7 @@
           "kind": "search",
           "query": "Google Gemini document generation update",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1789,7 +2369,7 @@
           "kind": "search",
           "query": "Notion AI new features 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1801,7 +2381,7 @@
           "kind": "search",
           "query": "Gamma AI changelog 2026",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1813,7 +2393,7 @@
           "kind": "search",
           "query": "Canva Magic Write update",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1825,7 +2405,7 @@
           "kind": "search",
           "query": "Adobe Acrobat AI new features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1837,7 +2417,7 @@
           "kind": "search",
           "query": "Microsoft Copilot document update",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1849,7 +2429,7 @@
           "kind": "search",
           "query": "AI PDF generator new",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1861,7 +2441,7 @@
           "kind": "search",
           "query": "AI Word document generator new",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1873,7 +2453,7 @@
           "kind": "search",
           "query": "AI document summarizer launch",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1885,7 +2465,7 @@
           "kind": "search",
           "query": "AI document translation tool new",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1897,7 +2477,7 @@
           "kind": "search",
           "query": "AI legal document generator startup",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1909,7 +2489,7 @@
           "kind": "search",
           "query": "AI technical writing tool launch",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1921,7 +2501,7 @@
           "kind": "search",
           "query": "AI invoice generator new app",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
+          "error": "You.com daily limit reached"
         },
         {
           "kind": "search",
@@ -1936,121 +2516,141 @@
           "error": "all_llms_failed",
           "app_name": "ChatGPT Work",
           "source_url": "https://openai.com/chatgpt/pricing/",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://openai.com/chatgpt/pricing/"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Claude Cowork",
           "source_url": "https://www.anthropic.com/pricing",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://www.anthropic.com/pricing"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Gamma",
           "source_url": "https://gamma.app/pricing",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://gamma.app/pricing"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Notion AI",
           "source_url": "https://www.notion.com/pricing",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://www.notion.com/pricing"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Canva Magic Write",
           "source_url": "https://www.canva.com/pricing/",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://www.canva.com/pricing/"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Adobe Acrobat AI",
           "source_url": "https://www.adobe.com/acrobat/pricing.html",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://www.adobe.com/acrobat/pricing.html"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Microsoft 365 Copilot",
           "source_url": "https://www.microsoft.com/microsoft-365/copilot",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://www.microsoft.com/microsoft-365/copilot"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Jotform Document Generator",
           "source_url": "https://www.jotform.com/pricing/",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://www.jotform.com/pricing/"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Slaide",
           "source_url": "https://slaide.com/pricing",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://slaide.com/pricing"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Liner Write",
           "source_url": "https://getliner.com/pricing",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://getliner.com/pricing"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Skywork",
           "source_url": "https://skywork.ai/pricing",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://skywork.ai/pricing"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Type",
           "source_url": "https://type.ai/pricing",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://type.ai/pricing"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Sembly",
           "source_url": "https://www.sembly.ai/pricing/",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://www.sembly.ai/pricing/"
         },
         {
           "error": "all_llms_failed",
           "app_name": "QwenWork",
           "source_url": "https://qwenwork.aliyun.com/",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://qwenwork.aliyun.com/"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Watto AI",
           "source_url": "https://watto.ai",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://watto.ai"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Capitol AI",
           "source_url": "https://capitol.ai",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://capitol.ai"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Cobl.ai",
           "source_url": "https://cobl.ai",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://cobl.ai"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Google Gemini Docs",
           "source_url": "https://one.google.com/about/plans",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://one.google.com/about/plans"
         },
         {
           "error": "all_llms_failed",
           "app_name": "AI Doc Maker",
           "source_url": "https://aidocmaker.com",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://aidocmaker.com"
         },
         {
           "error": "all_llms_failed",
           "app_name": "PandaDoc",
           "source_url": "https://www.pandadoc.com/pricing/",
-          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
+          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
+          "website": "https://www.pandadoc.com/pricing/"
         }
       ]
     }

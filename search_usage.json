@@ -1,6 +1,7 @@
 {
   "month": "2026-10",
   "counts": {
-    "exa": 450
+    "exa": 580,
+    "firecrawl": 20
   }
 }
