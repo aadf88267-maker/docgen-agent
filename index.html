@@ -47,6 +47,29 @@
     flex-shrink: 0;
   }
   .logo { color: var(--accent); font-weight: 600; font-size: 13px; letter-spacing: -0.2px; }
+  .live-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--text-dimmer);
+    margin-left: 10px;
+    transition: background 0.2s;
+  }
+  .live-dot.on {
+    background: var(--green);
+    box-shadow: 0 0 8px rgba(127, 176, 105, 0.6);
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .live-label {
+    color: var(--text-dimmer);
+    font-size: 10.5px;
+    margin-left: 6px;
+  }
+  .live-label.on { color: var(--green); }
+
   .topbar-spacer { flex: 1; }
   .topbar-btn {
     background: var(--bg-3);
@@ -101,6 +124,10 @@
     border-left-color: var(--accent);
   }
   .chat-item.pinned:hover { background: rgba(217, 119, 87, 0.12); }
+  .chat-item.live {
+    background: rgba(127, 176, 105, 0.06);
+    border-left-color: var(--green);
+  }
   .chat-item .icon { flex-shrink: 0; font-size: 12px; }
   .chat-item .label { overflow: hidden; text-overflow: ellipsis; }
   .chat-item .count {
@@ -112,6 +139,7 @@
     border-radius: 8px;
   }
   .chat-item.pinned .count { background: rgba(217, 119, 87, 0.15); color: var(--accent); }
+  .chat-item.live .count { background: rgba(127, 176, 105, 0.15); color: var(--green); }
 
   .sidebar-divider { height: 1px; background: var(--border); margin: 8px 12px; }
   .sidebar-list { flex: 1; overflow-y: auto; padding-bottom: 12px; }
@@ -140,6 +168,11 @@
     color: var(--accent);
     border: 1px solid rgba(217, 119, 87, 0.3);
   }
+  .badge.live-badge {
+    background: rgba(127, 176, 105, 0.15);
+    color: var(--green);
+    border: 1px solid rgba(127, 176, 105, 0.3);
+  }
 
   .main-content { flex: 1; overflow-y: auto; padding: 24px 28px 60px; }
 
@@ -164,6 +197,7 @@
   .table .date { color: var(--text); font-weight: 500; white-space: nowrap; }
   .table .summary { color: var(--text-dim); }
   .table .summary.quiet { color: var(--text-dimmer); font-style: italic; }
+  .table .summary.live { color: var(--green); }
   .table .num { text-align: right; color: var(--text-dimmer); white-space: nowrap; }
 
   .worklog-toggle {
@@ -177,6 +211,7 @@
     gap: 8px;
   }
   .worklog-toggle:hover { color: var(--accent); }
+  .worklog-toggle.live { color: var(--green); }
   .worklog-toggle .arrow {
     display: inline-block;
     transition: transform 0.15s ease;
@@ -373,6 +408,8 @@
 
 <div class="topbar">
   <span class="logo">docgen-agent</span>
+  <span class="live-dot" id="liveDot"></span>
+  <span class="live-label" id="liveLabel">offline</span>
   <div class="topbar-spacer"></div>
   <button class="topbar-btn" id="settingsBtn">settings</button>
   <button class="topbar-btn" id="refreshBtn">↻ refresh</button>
@@ -419,8 +456,12 @@ const config = {
   token: localStorage.getItem("token") || "",
 };
 
+const NTFY_TOPIC = "docgen-live-aadf88267";
+
 let LOG = { chat: "search x", pinned: true, days: [] };
 let view = { type: "pinned" };
+let liveDay = null; // active streaming day
+let liveES = null;
 
 $("repoInput").value = config.repo;
 $("tokenInput").value = config.token;
@@ -429,6 +470,12 @@ function setStatus(msg, cls) {
   const el = $("statusMsg");
   el.textContent = msg;
   el.className = "status-msg" + (cls ? " " + cls : "");
+}
+
+function setLive(on) {
+  $("liveDot").classList.toggle("on", on);
+  $("liveLabel").classList.toggle("on", on);
+  $("liveLabel").textContent = on ? "live" : "offline";
 }
 
 $("settingsBtn").onclick = () => $("settingsBar").classList.toggle("open");
@@ -463,8 +510,115 @@ async function load() {
 }
 $("refreshBtn").onclick = load;
 
+// ============================================================
+// LIVE STREAM via ntfy SSE
+// ============================================================
+
+function startLiveStream() {
+  if (liveES) return;
+  try {
+    liveES = new EventSource(`https://ntfy.sh/${NTFY_TOPIC}/sse`);
+    liveES.onopen = () => setLive(false);
+    liveES.onerror = () => setLive(false);
+    liveES.onmessage = (e) => {
+      try {
+        const wrap = JSON.parse(e.data);
+        if (wrap.event !== "message") return;
+        const evt = JSON.parse(wrap.message);
+        handleLiveEvent(evt, wrap.time ? wrap.time * 1000 : Date.now());
+      } catch {}
+    };
+  } catch (err) {
+    console.error("live stream failed", err);
+  }
+}
+
+function handleLiveEvent(evt, ts) {
+  const kind = evt.kind;
+
+  if (kind === "start") {
+    const date = evt.date || new Date(ts).toISOString().slice(0, 10);
+    liveDay = {
+      date: date,
+      live: true,
+      started_at: new Date(ts).toISOString(),
+      finished_at: null,
+      searches: 0,
+      llm_calls: 0,
+      work_log: [],
+      findings: [],
+    };
+    setLive(true);
+    view = { type: "day", date: date };
+    render();
+    return;
+  }
+
+  if (kind === "end") {
+    if (liveDay) {
+      liveDay.live = false;
+      liveDay.finished_at = new Date(ts).toISOString();
+    }
+    setLive(false);
+    render();
+    // Wait for GitHub to commit, then replace with the real saved version
+    setTimeout(load, 25000);
+    return;
+  }
+
+  if (!liveDay) return;
+
+  // Append to liveDay's work_log
+  liveDay.work_log.push({ kind: kind, ...evt, _ts: ts });
+  if (kind === "search") liveDay.searches++;
+  if (kind === "llm") liveDay.llm_calls++;
+
+  // Update view if we're watching this day
+  if (view.type === "day" && view.date === liveDay.date) {
+    appendLiveLine(kind, evt);
+  }
+}
+
+function appendLiveLine(kind, evt) {
+  const body = $("wlBody");
+  if (!body) { render(); return; }
+  // Auto-open worklog while streaming
+  body.classList.add("open");
+  const toggle = $("wlToggle");
+  if (toggle) toggle.classList.add("open");
+
+  const div = document.createElement("div");
+  div.className = "worklog-line";
+  div.innerHTML = renderLogLine({ kind: kind, ...evt });
+  body.appendChild(div);
+  body.scrollTop = body.scrollHeight;
+
+  if (toggle && liveDay) {
+    const arrow = toggle.querySelector(".arrow");
+    toggle.innerHTML = `<span class="arrow">▶</span> live · ${liveDay.searches} searches · ${liveDay.llm_calls} llm calls`;
+    if (toggle.classList.contains("open")) {
+      toggle.querySelector(".arrow").style.transform = "rotate(90deg)";
+    }
+  }
+}
+
+startLiveStream();
+
+// ============================================================
+// RENDER
+// ============================================================
+
+function allDays() {
+  const days = [];
+  if (liveDay) days.push(liveDay);
+  (LOG.days || []).forEach(d => {
+    if (!liveDay || d.date !== liveDay.date) days.push(d);
+  });
+  return days;
+}
+
 function render() {
-  const days = LOG.days || [];
+  const days = allDays();
 
   $("pinnedArea").innerHTML = `
     <div class="chat-item pinned ${view.type === "pinned" ? "active" : ""}" id="pinnedChat">
@@ -485,13 +639,19 @@ function render() {
     list.innerHTML = "";
     days.forEach(d => {
       const findings = d.findings || [];
-      const cls = view.type === "day" && view.date === d.date ? "active" : "";
+      const cls = [];
+      if (view.type === "day" && view.date === d.date) cls.push("active");
+      if (d.live) cls.push("live");
       const item = document.createElement("div");
-      item.className = "chat-item " + cls;
+      item.className = "chat-item " + cls.join(" ");
+      const icon = d.live ? "🟢" : "💬";
+      const countTxt = d.live
+        ? `${d.work_log.length}`
+        : `${findings.length}`;
       item.innerHTML = `
-        <span class="icon">💬</span>
+        <span class="icon">${icon}</span>
         <span class="label">${esc(formatDate(d.date))}</span>
-        <span class="count">${findings.length}</span>
+        <span class="count">${countTxt}</span>
       `;
       item.onclick = () => { view = { type: "day", date: d.date }; render(); };
       list.appendChild(item);
@@ -508,8 +668,10 @@ function render() {
   } else {
     const day = days.find(d => d.date === view.date);
     if (!day) { view = { type: "pinned" }; render(); return; }
+    const liveBadge = day.live ? '<span class="badge live-badge">live</span>' : "";
     $("mainHeader").innerHTML = `
       <span class="main-title">${esc(formatDate(day.date))}</span>
+      ${liveBadge}
       <span class="badge">${(day.findings || []).length} findings</span>
     `;
     renderDay(day);
@@ -529,11 +691,17 @@ function renderSearchX(days) {
 
   const rows = days.map(d => {
     const findings = d.findings || [];
-    const hasFindings = findings.length > 0;
-    const summary = hasFindings
-      ? summarizeFindings(findings)
-      : `<span class="quiet">— no main findings —</span>`;
-    const cls = hasFindings ? "" : "quiet";
+    let summary;
+    let cls = "";
+    if (d.live) {
+      summary = `streaming · ${d.work_log.length} events so far`;
+      cls = "live";
+    } else if (findings.length) {
+      summary = summarizeFindings(findings);
+    } else {
+      summary = `<span class="quiet">— no main findings —</span>`;
+      cls = "quiet";
+    }
     return `
       <tr data-date="${esc(d.date)}">
         <td class="date">${esc(formatDate(d.date))}</td>
@@ -578,15 +746,20 @@ function renderDay(day) {
 
   const findingsHtml = findings.length
     ? findings.map((f, i) => renderFinding(f, i)).join("")
-    : '<div class="no-findings">no main findings</div>';
+    : (day.live
+        ? '<div class="no-findings">working… results will appear when the run finishes</div>'
+        : '<div class="no-findings">no main findings</div>');
+
+  const wlLabel = day.live ? "live" : "work log";
+  const toggleCls = day.live ? "worklog-toggle live open" : "worklog-toggle";
 
   $("mainContent").innerHTML = `
-    <div class="worklog-toggle" id="wlToggle">
-      <span class="arrow">▶</span>
-      work log · ${searches} searches · ${llms} llm calls
+    <div class="${toggleCls}" id="wlToggle">
+      <span class="arrow">${day.live ? "▼" : "▶"}</span>
+      ${wlLabel} · ${searches} searches · ${llms} llm calls
     </div>
-    <div class="worklog-body" id="wlBody">
-      ${wl.map(renderLogLine).join("") || '<div style="color: var(--text-dimmer);">no log entries</div>'}
+    <div class="worklog-body ${day.live ? "open" : ""}" id="wlBody">
+      ${wl.map(renderLogLine).join("") || '<div style="color: var(--text-dimmer);">waiting for events…</div>'}
     </div>
 
     <div class="section-label">main findings</div>
@@ -595,10 +768,14 @@ function renderDay(day) {
 
   const toggle = $("wlToggle");
   const body = $("wlBody");
-  toggle.onclick = () => {
-    toggle.classList.toggle("open");
-    body.classList.toggle("open");
-  };
+  if (toggle && body && !day.live) {
+    toggle.onclick = () => {
+      toggle.classList.toggle("open");
+      body.classList.toggle("open");
+    };
+  }
+  // scroll work log to bottom if live
+  if (day.live) body.scrollTop = body.scrollHeight;
 
   document.querySelectorAll(".finding[data-details]").forEach(card => {
     card.onclick = (e) => {
@@ -620,12 +797,13 @@ function renderLogLine(l) {
     const status = l.error
       ? `<span class="status-bad">✗ ${esc(l.error)}</span>`
       : `<span class="status-ok">${l.hits} hits</span>`;
-    return `<div class="worklog-line"><span class="kind search">search</span><span class="body">${esc(l.provider || "?")} · ${esc(l.query || "")} · ${status}</span></div>`;
+    const q = l.query ? l.query.replace(/ 2026$/, "") : "";
+    return `<div class="worklog-line"><span class="kind search">search</span><span class="body">${esc(l.provider || "?")} · ${esc(q)} · ${status}</span></div>`;
   }
   if (l.kind === "llm") {
     const status = l.status === "ok"
       ? `<span class="status-ok">ok</span>`
-      : `<span class="status-bad">${esc(l.status || "fail")}${l.error ? " · " + esc(l.error) : ""}</span>`;
+      : `<span class="status-bad">${esc(l.status || "fail")}</span>`;
     return `<div class="worklog-line"><span class="kind llm">llm</span><span class="body">${esc(l.app || "?")} · ${esc(l.model || "?")} · ${status}</span></div>`;
   }
   if (l.kind === "info") {
@@ -658,18 +836,14 @@ function renderFinding(f, idx) {
         <div class="expand-hint">click to expand →</div>
 
         <div class="finding-details" id="${detailsId}" style="display:none;">
-
           <div class="section">basic</div>
           <div class="grid">
             <div class="key">category</div>
             <div class="val">${esc(f.category || "—")}</div>
-
             <div class="key">vendor</div>
             <div class="val">${esc(f.vendor || "—")}</div>
-
             <div class="key">website</div>
             <div class="val">${f.website ? `<a href="${esc(f.website)}" target="_blank">${esc(f.website)}</a>` : "—"}</div>
-
             <div class="key">source</div>
             <div class="val">${f.url ? `<a href="${esc(f.url)}" target="_blank">${esc(f.url)}</a>` : "—"}</div>
           </div>
@@ -678,10 +852,8 @@ function renderFinding(f, idx) {
           <div class="grid">
             <div class="key">available</div>
             <div class="val">${ft.available ? '<span class="badge-green">yes</span>' : '<span class="badge-red">no</span>'}</div>
-
             <div class="key">credits</div>
             <div class="val">${esc(ft.credits || "—")}</div>
-
             <div class="key">limits</div>
             <div class="val">${esc(ft.limits || "—")}</div>
           </div>
@@ -690,7 +862,6 @@ function renderFinding(f, idx) {
           <div class="grid">
             <div class="key">cheapest</div>
             <div class="val">${esc(pp.cheapest_plan || "—")}</div>
-
             <div class="key">notes</div>
             <div class="val">${esc(pp.notes || "—")}</div>
           </div>
@@ -711,7 +882,6 @@ function renderFinding(f, idx) {
 
           <div class="section">confidence</div>
           <div class="val">${conf}</div>
-
         </div>
       </div>
     </div>
@@ -748,8 +918,7 @@ $("runBtn").onclick = async () => {
       }
     );
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    setStatus("triggered · refresh in ~90s", "ok");
-    setTimeout(load, 90000);
+    setStatus("triggered · watch live above", "ok");
   } catch (e) {
     setStatus(`run failed: ${e.message}`, "err");
   }
