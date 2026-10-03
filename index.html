@@ -278,6 +278,7 @@
   .finding:hover { background: var(--bg-3); }
   .finding.change { border-left-color: var(--yellow); }
   .finding.new { border-left-color: var(--green); }
+  .finding.app { border-left-color: var(--blue); }
   .finding.expanded { background: var(--bg-3); }
   .finding .icon { flex-shrink: 0; font-size: 13px; line-height: 1.5; }
   .finding .content { flex: 1; min-width: 0; }
@@ -343,7 +344,7 @@
     margin-bottom: 8px;
   }
 
-  .no-findings { color: var(--text-dimmer); font-size: 12.5px; font-style: italic; padding: 20px 0; }
+  .no-findings { color: var(--text-dimmer); font-size: 12.5px; font-style: italic; padding: 6px 0 14px; }
 
   .empty {
     text-align: center;
@@ -460,7 +461,7 @@ const NTFY_TOPIC = "docgen-live-aadf88267";
 
 let LOG = { chat: "search x", pinned: true, days: [] };
 let view = { type: "pinned" };
-let liveDay = null; // active streaming day
+let liveDay = null;
 let liveES = null;
 
 $("repoInput").value = config.repo;
@@ -511,14 +512,13 @@ async function load() {
 $("refreshBtn").onclick = load;
 
 // ============================================================
-// LIVE STREAM via ntfy SSE
+// LIVE STREAM
 // ============================================================
 
 function startLiveStream() {
   if (liveES) return;
   try {
     liveES = new EventSource(`https://ntfy.sh/${NTFY_TOPIC}/sse`);
-    liveES.onopen = () => setLive(false);
     liveES.onerror = () => setLive(false);
     liveES.onmessage = (e) => {
       try {
@@ -531,6 +531,23 @@ function startLiveStream() {
   } catch (err) {
     console.error("live stream failed", err);
   }
+}
+
+function ensureLiveDay(ts) {
+  if (liveDay) return;
+  const date = new Date(ts).toISOString().slice(0, 10);
+  liveDay = {
+    date: date,
+    live: true,
+    started_at: new Date(ts).toISOString(),
+    finished_at: null,
+    searches: 0,
+    llm_calls: 0,
+    work_log: [],
+    findings: [],
+    apps: [],
+  };
+  setLive(true);
 }
 
 function handleLiveEvent(evt, ts) {
@@ -547,12 +564,15 @@ function handleLiveEvent(evt, ts) {
       llm_calls: 0,
       work_log: [],
       findings: [],
+      apps: [],
     };
     setLive(true);
     view = { type: "day", date: date };
     render();
     return;
   }
+
+  ensureLiveDay(ts);
 
   if (kind === "end") {
     if (liveDay) {
@@ -561,20 +581,18 @@ function handleLiveEvent(evt, ts) {
     }
     setLive(false);
     render();
-    // Wait for GitHub to commit, then replace with the real saved version
     setTimeout(load, 25000);
     return;
   }
 
-  if (!liveDay) return;
-
-  // Append to liveDay's work_log
   liveDay.work_log.push({ kind: kind, ...evt, _ts: ts });
   if (kind === "search") liveDay.searches++;
   if (kind === "llm") liveDay.llm_calls++;
 
-  // Update view if we're watching this day
-  if (view.type === "day" && view.date === liveDay.date) {
+  if (view.type !== "day" || view.date !== liveDay.date) {
+    view = { type: "day", date: liveDay.date };
+    render();
+  } else {
     appendLiveLine(kind, evt);
   }
 }
@@ -582,7 +600,6 @@ function handleLiveEvent(evt, ts) {
 function appendLiveLine(kind, evt) {
   const body = $("wlBody");
   if (!body) { render(); return; }
-  // Auto-open worklog while streaming
   body.classList.add("open");
   const toggle = $("wlToggle");
   if (toggle) toggle.classList.add("open");
@@ -594,11 +611,8 @@ function appendLiveLine(kind, evt) {
   body.scrollTop = body.scrollHeight;
 
   if (toggle && liveDay) {
-    const arrow = toggle.querySelector(".arrow");
-    toggle.innerHTML = `<span class="arrow">▶</span> live · ${liveDay.searches} searches · ${liveDay.llm_calls} llm calls`;
-    if (toggle.classList.contains("open")) {
-      toggle.querySelector(".arrow").style.transform = "rotate(90deg)";
-    }
+    toggle.innerHTML = `<span class="arrow">▼</span> live · ${liveDay.searches} searches · ${liveDay.llm_calls} llm calls`;
+    toggle.classList.add("open");
   }
 }
 
@@ -647,7 +661,7 @@ function render() {
       const icon = d.live ? "🟢" : "💬";
       const countTxt = d.live
         ? `${d.work_log.length}`
-        : `${findings.length}`;
+        : (findings.length ? `${findings.length}` : "·");
       item.innerHTML = `
         <span class="icon">${icon}</span>
         <span class="label">${esc(formatDate(d.date))}</span>
@@ -669,10 +683,14 @@ function render() {
     const day = days.find(d => d.date === view.date);
     if (!day) { view = { type: "pinned" }; render(); return; }
     const liveBadge = day.live ? '<span class="badge live-badge">live</span>' : "";
+    const findings = day.findings || [];
+    const findingsBadge = findings.length
+      ? `<span class="badge">${findings.length} findings</span>`
+      : `<span class="badge">no changes</span>`;
     $("mainHeader").innerHTML = `
       <span class="main-title">${esc(formatDate(day.date))}</span>
       ${liveBadge}
-      <span class="badge">${(day.findings || []).length} findings</span>
+      ${findingsBadge}
     `;
     renderDay(day);
   }
@@ -743,15 +761,41 @@ function renderDay(day) {
   const searches = wl.filter(x => x.kind === "search").length;
   const llms = wl.filter(x => x.kind === "llm").length;
   const findings = day.findings || [];
-
-  const findingsHtml = findings.length
-    ? findings.map((f, i) => renderFinding(f, i)).join("")
-    : (day.live
-        ? '<div class="no-findings">working… results will appear when the run finishes</div>'
-        : '<div class="no-findings">no main findings</div>');
+  const apps = day.apps || [];
 
   const wlLabel = day.live ? "live" : "work log";
   const toggleCls = day.live ? "worklog-toggle live open" : "worklog-toggle";
+
+  let bodyHtml = "";
+
+  if (findings.length) {
+    bodyHtml += `
+      <div class="section-label">main findings</div>
+      <div class="findings">
+        ${findings.map((f, i) => renderFinding(f, i, "finding")).join("")}
+      </div>
+    `;
+  } else if (day.live) {
+    bodyHtml += `
+      <div class="section-label">main findings</div>
+      <div class="no-findings">working… results will appear when the run finishes</div>
+    `;
+  } else {
+    bodyHtml += `
+      <div class="section-label">main findings</div>
+      <div class="no-findings">no changes detected · no new apps this run</div>
+    `;
+  }
+
+  // On quiet days, show all apps that were checked
+  if (!findings.length && apps.length) {
+    bodyHtml += `
+      <div class="section-label">all apps checked (${apps.length})</div>
+      <div class="findings">
+        ${apps.map((a, i) => renderFinding(a, i + 500, "app")).join("")}
+      </div>
+    `;
+  }
 
   $("mainContent").innerHTML = `
     <div class="${toggleCls}" id="wlToggle">
@@ -761,9 +805,7 @@ function renderDay(day) {
     <div class="worklog-body ${day.live ? "open" : ""}" id="wlBody">
       ${wl.map(renderLogLine).join("") || '<div style="color: var(--text-dimmer);">waiting for events…</div>'}
     </div>
-
-    <div class="section-label">main findings</div>
-    <div class="findings">${findingsHtml}</div>
+    ${bodyHtml}
   `;
 
   const toggle = $("wlToggle");
@@ -774,8 +816,7 @@ function renderDay(day) {
       body.classList.toggle("open");
     };
   }
-  // scroll work log to bottom if live
-  if (day.live) body.scrollTop = body.scrollHeight;
+  if (day.live && body) body.scrollTop = body.scrollHeight;
 
   document.querySelectorAll(".finding[data-details]").forEach(card => {
     card.onclick = (e) => {
@@ -812,9 +853,26 @@ function renderLogLine(l) {
   return "";
 }
 
-function renderFinding(f, idx) {
-  const icon = f.type === "new" ? "🆕" : "🔄";
-  const cls = f.type === "new" ? "new" : "change";
+function renderFinding(f, idx, mode) {
+  mode = mode || "finding";
+  const isNew = f.type === "new";
+  const isChange = f.type === "change";
+
+  let icon, cls, heading, summaryLine;
+  if (mode === "app") {
+    icon = "📄";
+    cls = "app";
+    heading = f.app_name || f.app || "?";
+    const ft = f.free_tier || {};
+    const ftText = ft.available ? `free tier: ${ft.credits || "yes"}` : "no free tier";
+    summaryLine = `${f.category || "app"} · ${ftText}`;
+  } else {
+    icon = isNew ? "🆕" : isChange ? "🔄" : "📄";
+    cls = isNew ? "new" : isChange ? "change" : "app";
+    heading = f.app || f.app_name || "?";
+    summaryLine = f.summary || "";
+  }
+
   const meta = f.extracted_by ? `via ${f.extracted_by}` : "";
 
   const ft = f.free_tier || {};
@@ -823,6 +881,8 @@ function renderFinding(f, idx) {
   const formats = f.output_formats || [];
   const channels = (f.support || {}).channels || [];
   const conf = f.confidence != null ? Math.round(f.confidence * 100) + "%" : "—";
+  const website = f.website || null;
+  const sourceUrl = f.url || f.source_url || null;
 
   const detailsId = "fd-" + idx;
 
@@ -830,8 +890,8 @@ function renderFinding(f, idx) {
     <div class="finding ${cls}" data-details="${detailsId}">
       <div class="icon">${icon}</div>
       <div class="content">
-        <div class="app">${esc(f.app || "?")}</div>
-        <div class="summary">${esc(f.summary || "")}</div>
+        <div class="app">${esc(heading)}</div>
+        <div class="summary">${esc(summaryLine)}</div>
         ${meta ? `<div class="meta">${esc(meta)}</div>` : ""}
         <div class="expand-hint">click to expand →</div>
 
@@ -843,9 +903,9 @@ function renderFinding(f, idx) {
             <div class="key">vendor</div>
             <div class="val">${esc(f.vendor || "—")}</div>
             <div class="key">website</div>
-            <div class="val">${f.website ? `<a href="${esc(f.website)}" target="_blank">${esc(f.website)}</a>` : "—"}</div>
+            <div class="val">${website ? `<a href="${esc(website)}" target="_blank">${esc(website)}</a>` : "—"}</div>
             <div class="key">source</div>
-            <div class="val">${f.url ? `<a href="${esc(f.url)}" target="_blank">${esc(f.url)}</a>` : "—"}</div>
+            <div class="val">${sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank">${esc(sourceUrl)}</a>` : "—"}</div>
           </div>
 
           <div class="section">free tier</div>
