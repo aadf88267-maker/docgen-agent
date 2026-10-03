@@ -1,6 +1,6 @@
 """
 DocGenAppWatch Agent - single-file backend.
-Streams live events to ntfy.sh; writes daily chat to log.json.
+Natural-language field queries + page fetch + LLM extraction.
 """
 
 import os
@@ -18,7 +18,7 @@ LOG_FILE = Path("log.json")
 RESULTS_FILE = Path("results.json")
 USAGE_FILE = Path("search_usage.json")
 
-MAX_SEARCHES_PER_RUN = 140
+MAX_SEARCHES_PER_RUN = 160
 MONTHLY_CAPS = {"exa": 1200, "firecrawl": 1000}
 
 NTFY_LIVE_TOPIC = "docgen-live-aadf88267"
@@ -63,6 +63,15 @@ KNOWN_APPS = [
     {"name": "PandaDoc", "url": "https://www.pandadoc.com/pricing/"},
 ]
 
+# Natural-language queries — these trigger Google AI Overviews
+FIELD_QUERIES = [
+    "what is the free tier of {name}",
+    "how much does {name} cost per month",
+    "what can you do with {name} features",
+    "what file formats does {name} export",
+    "is {name} worth it review pros cons",
+]
+
 DISCOVERY_QUERIES = [
     "new AI document generator 2026",
     "launch AI document creation tool 2026",
@@ -97,14 +106,12 @@ DISCOVERY_QUERIES = [
 ]
 
 # ============================================================
-# SNIPPET HELPER (prevents crashes on unexpected shapes)
+# HELPERS
 # ============================================================
 
 def _safe_snippet(h):
-    """Safely extract a string from a search hit — never crashes on dicts/lists."""
     if not isinstance(h, dict):
         return str(h)[:800] if h else ""
-
     for key in ("snippet", "description", "text", "content", "markdown"):
         v = h.get(key)
         if isinstance(v, str) and v:
@@ -118,13 +125,11 @@ def _safe_snippet(h):
             joined = " ".join(str(x) for x in v if isinstance(x, (str, int, float)))
             if joined:
                 return joined[:800]
-
     snips = h.get("snippets") or h.get("highlights")
     if isinstance(snips, list):
         joined = " ".join(str(x) for x in snips if isinstance(x, (str, int, float)))
         if joined:
             return joined[:800]
-
     return ""
 
 # ============================================================
@@ -260,13 +265,62 @@ def search_web(query, num=5):
     return []
 
 # ============================================================
+# PAGE FETCH
+# ============================================================
+
+def fetch_page(url, max_chars=8000):
+    if not url:
+        return ""
+    api_key = os.getenv("FIRECRAWL_API_KEY")
+    if not api_key:
+        return ""
+    if not _check_and_increment("firecrawl", MONTHLY_CAPS["firecrawl"]):
+        return ""
+    try:
+        r = requests.post(
+            "https://api.firecrawl.dev/v1/scrape",
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            json={"url": url, "formats": ["markdown"], "onlyMainContent": True},
+            timeout=45,
+        )
+        r.raise_for_status()
+        data = r.json()
+        md = (data.get("data") or {}).get("markdown") or ""
+        log("fetch", url=url, chars=len(md))
+        live("fetch", url=url, chars=len(md))
+        return md[:max_chars]
+    except Exception as e:
+        log("fetch", url=url, error=str(e)[:120])
+        live("fetch", url=url, error=str(e)[:80])
+        return ""
+
+# ============================================================
 # LLM ROUTER
 # ============================================================
 
-EXTRACTION_PROMPT = """You are a research analyst. Below are web search results about a document generation app.
+EXTRACTION_PROMPT = """You are a research analyst. Below are (a) targeted search snippets (some from Google AI Overviews) and (b) the full text of the app's pricing page (if available) about a document generation app.
 
-Extract structured data. Return ONLY valid JSON matching this exact schema. Use null for unknown.
+Extract structured data. Prefer the page text over snippets when they conflict. Return ONLY valid JSON matching this exact schema. Use null for unknown — DO NOT guess.
 
+FILL EVERY FIELD YOU CAN. Pay attention to:
+- category: general type (document generation, presentations, e-sign, etc.)
+- vendor: company that makes the product
+- website: product homepage
+- free_tier.available: is there a free plan? true/false
+- free_tier.credits: exact number of free credits or uses (e.g. "400 one-time credits")
+- free_tier.limits: any restrictions (e.g. "10 slides max per prompt", "50K input tokens")
+- paid_pricing.cheapest_plan: cheapest paid tier with price (e.g. "Plus · $9/seat/mo")
+- paid_pricing.notes: higher tiers, enterprise, per-user pricing notes
+- key_features: list of notable features (array of short strings)
+- output_formats: what it can export (pdf, docx, pptx, google_slides, markdown, etc.)
+- support.channels: how users get help (email, chat, phone, help_center, community)
+- quality_notes: pros/cons sentiment from reviews
+- confidence: 0.0-1.0 how confident you are in the extracted data
+
+Schema:
 {{
   "app_name": "string",
   "vendor": "string or null",
@@ -283,8 +337,11 @@ Extract structured data. Return ONLY valid JSON matching this exact schema. Use 
 
 App name: {app_name}
 
-Search results:
-{content}
+=== SEARCH SNIPPETS ===
+{snippets}
+
+=== PRICING PAGE TEXT ===
+{page_text}
 
 Return only the JSON object. No markdown. No explanation.
 """
@@ -297,7 +354,7 @@ def _llm_nemotron(prompt):
     r = c.chat.completions.create(
         model="nvidia/nemotron-3-super-120b-a12b",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2000,
+        temperature=0.1, max_tokens=2500,
     )
     return r.choices[0].message.content
 
@@ -309,7 +366,7 @@ def _llm_gemini(prompt):
     r = c.chat.completions.create(
         model="gemini-3.5-flash-lite",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2000,
+        temperature=0.1, max_tokens=2500,
     )
     return r.choices[0].message.content
 
@@ -318,7 +375,7 @@ def _llm_deepseek_orca(prompt):
     r = c.chat.completions.create(
         model="deepseek/deepseek-v4-flash-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2000,
+        temperature=0.1, max_tokens=2500,
     )
     return r.choices[0].message.content
 
@@ -327,7 +384,7 @@ def _llm_kimi_k3(prompt):
     r = c.chat.completions.create(
         model="coding-kimi-k3-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2000,
+        temperature=0.1, max_tokens=2500,
     )
     return r.choices[0].message.content
 
@@ -336,7 +393,7 @@ def _llm_minimax_m3(prompt):
     r = c.chat.completions.create(
         model="coding-minimax-m3-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2000,
+        temperature=0.1, max_tokens=2500,
     )
     return r.choices[0].message.content
 
@@ -345,7 +402,7 @@ def _llm_glm_52(prompt):
     r = c.chat.completions.create(
         model="coding-glm-5.2-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2000,
+        temperature=0.1, max_tokens=2500,
     )
     return r.choices[0].message.content
 
@@ -366,12 +423,16 @@ def _clean_json(raw):
     except Exception:
         return None
 
-def extract_app(app_name, search_results):
-    content = "\n\n".join(
+def extract_app(app_name, search_results, page_text=""):
+    snippets = "\n\n".join(
         f"- {r['title']} ({r['url']})\n  {r['snippet']}"
-        for r in search_results[:10]
+        for r in search_results[:25]
     )
-    prompt = EXTRACTION_PROMPT.format(app_name=app_name, content=content)
+    prompt = EXTRACTION_PROMPT.format(
+        app_name=app_name,
+        snippets=snippets or "(no snippets)",
+        page_text=page_text or "(no page text)",
+    )
 
     providers = [
         ("nemotron", _llm_nemotron),
@@ -468,21 +529,26 @@ def main():
             log("info", message="search budget exhausted")
             break
         name = app["name"]
+
+        # Natural-language field queries
         results = []
-        for q in [
-            f"{name} pricing 2026",
-            f"{name} new features 2026",
-            f"{name} free plan changelog",
-        ]:
+        for tpl in FIELD_QUERIES:
             if not budget_left():
                 break
+            q = tpl.format(name=name)
             results.extend(search_web(q, num=5))
             search_count += 1
 
-        extracted = extract_app(name, results)
+        # Fetch pricing page
+        page_text = fetch_page(app.get("url"), max_chars=8000)
+
+        # Extract
+        extracted = extract_app(name, results, page_text=page_text)
         extracted["app_name"] = name
         extracted["source_url"] = app.get("url")
         extracted["_searched_at"] = run_meta["started_at"]
+        if not extracted.get("website"):
+            extracted["website"] = app.get("url")
         new_apps.append(extracted)
 
     for q in DISCOVERY_QUERIES:
