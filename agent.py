@@ -1,6 +1,6 @@
 """
 DocGenAppWatch Agent - single-file backend.
-Creates one daily chat entry per run. Every day appears in search x.
+Creates one daily chat entry per run. Findings include full structured data.
 """
 
 import os
@@ -377,10 +377,8 @@ def load_log():
 def append_day(day_entry):
     data = load_log()
     days = data.get("days", [])
-    # Replace same-date entry if exists (allows re-runs on same day)
     days = [d for d in days if d.get("date") != day_entry["date"]]
     days.append(day_entry)
-    # Newest first
     days.sort(key=lambda d: d.get("date", ""), reverse=True)
     data["days"] = days
     LOG_FILE.write_text(json.dumps(data, indent=2))
@@ -441,27 +439,30 @@ def main():
         search_web(q, num=5)
         search_count += 1
 
-    # Build findings
+    # Build findings — with full structured data
     findings = []
     for app in new_apps:
         changes = diff_app(previous.get(app["app_name"]), app)
         if changes:
-            if not previous.get(app["app_name"]):
-                findings.append({
-                    "type": "new",
-                    "app": app["app_name"],
-                    "summary": "new app tracked",
-                    "url": app.get("source_url"),
-                    "extracted_by": app.get("_extracted_by"),
-                })
-            else:
-                findings.append({
-                    "type": "change",
-                    "app": app["app_name"],
-                    "summary": ", ".join(changes),
-                    "url": app.get("source_url"),
-                    "extracted_by": app.get("_extracted_by"),
-                })
+            is_new = not previous.get(app["app_name"])
+            findings.append({
+                "type": "new" if is_new else "change",
+                "app": app["app_name"],
+                "summary": "new app tracked" if is_new else ", ".join(changes),
+                "url": app.get("source_url"),
+                "extracted_by": app.get("_extracted_by"),
+                # Full structured data:
+                "category": app.get("category"),
+                "vendor": app.get("vendor"),
+                "website": app.get("website"),
+                "free_tier": app.get("free_tier"),
+                "paid_pricing": app.get("paid_pricing"),
+                "key_features": app.get("key_features"),
+                "output_formats": app.get("output_formats"),
+                "support": app.get("support"),
+                "quality_notes": app.get("quality_notes"),
+                "confidence": app.get("confidence"),
+            })
 
     run_meta["searches_used"] = search_count
     run_meta["finished_at"] = datetime.now(timezone.utc).isoformat()
@@ -470,7 +471,6 @@ def main():
 
     save_results(new_apps, run_meta)
 
-    # ALWAYS append a day entry (even quiet days)
     day_entry = {
         "date": started.strftime("%Y-%m-%d"),
         "started_at": run_meta["started_at"],
