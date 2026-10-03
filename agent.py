@@ -29,7 +29,6 @@ def log(kind, **kwargs):
     WORK_LOG.append({"kind": kind, **kwargs})
 
 def live(kind, **kwargs):
-    """Stream one event to the UI via ntfy. Fire-and-forget."""
     try:
         payload = {"kind": kind, **kwargs}
         requests.post(
@@ -98,6 +97,37 @@ DISCOVERY_QUERIES = [
 ]
 
 # ============================================================
+# SNIPPET HELPER (prevents crashes on unexpected shapes)
+# ============================================================
+
+def _safe_snippet(h):
+    """Safely extract a string from a search hit — never crashes on dicts/lists."""
+    if not isinstance(h, dict):
+        return str(h)[:800] if h else ""
+
+    for key in ("snippet", "description", "text", "content", "markdown"):
+        v = h.get(key)
+        if isinstance(v, str) and v:
+            return v[:800]
+        if isinstance(v, dict):
+            for sub in ("text", "value", "content"):
+                sv = v.get(sub)
+                if isinstance(sv, str) and sv:
+                    return sv[:800]
+        if isinstance(v, list):
+            joined = " ".join(str(x) for x in v if isinstance(x, (str, int, float)))
+            if joined:
+                return joined[:800]
+
+    snips = h.get("snippets") or h.get("highlights")
+    if isinstance(snips, list):
+        joined = " ".join(str(x) for x in snips if isinstance(x, (str, int, float)))
+        if joined:
+            return joined[:800]
+
+    return ""
+
+# ============================================================
 # SEARCH ROUTER
 # ============================================================
 
@@ -145,13 +175,9 @@ def _you_search(query, num=5):
     out = []
     for h in hits[:num]:
         out.append({
-            "title": h.get("title", ""),
-            "url": h.get("url", ""),
-            "snippet": (
-                h.get("snippet")
-                or h.get("description")
-                or " ".join(h.get("snippets", []) or [])
-            )[:800],
+            "title": h.get("title", "") if isinstance(h, dict) else "",
+            "url": h.get("url", "") if isinstance(h, dict) else "",
+            "snippet": _safe_snippet(h),
         })
     return out
 
@@ -171,7 +197,7 @@ def _exa_search(query, num=5):
         {
             "title": h.get("title", ""),
             "url": h.get("url", ""),
-            "snippet": " ".join(h.get("highlights", []) or [])[:800],
+            "snippet": _safe_snippet({"snippets": h.get("highlights", []) or []}),
         }
         for h in data.get("results", [])
     ]
@@ -196,7 +222,7 @@ def _firecrawl_search(query, num=5):
         {
             "title": h.get("title", ""),
             "url": h.get("url", ""),
-            "snippet": (h.get("description") or h.get("markdown") or "")[:800],
+            "snippet": _safe_snippet(h),
         }
         for h in items
     ]
@@ -465,7 +491,6 @@ def main():
         search_web(q, num=5)
         search_count += 1
 
-    # Build findings — with full structured data
     findings = []
     for app in new_apps:
         changes = diff_app(previous.get(app["app_name"]), app)
@@ -496,7 +521,6 @@ def main():
 
     save_results(new_apps, run_meta)
 
-    # ← NEW: include full app data in day_entry
     day_entry = {
         "date": started.strftime("%Y-%m-%d"),
         "started_at": run_meta["started_at"],
