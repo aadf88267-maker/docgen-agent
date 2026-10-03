@@ -249,6 +249,7 @@
   .worklog-line .kind.search { color: var(--blue); }
   .worklog-line .kind.llm { color: var(--accent); }
   .worklog-line .kind.info { color: var(--yellow); }
+  .worklog-line .kind.fetch { color: var(--green); }
   .worklog-line .body { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; }
   .worklog-line .status-ok { color: var(--green); }
   .worklog-line .status-bad { color: var(--red); }
@@ -458,11 +459,14 @@ const config = {
 };
 
 const NTFY_TOPIC = "docgen-live-aadf88267";
+const LIVE_WINDOW_MS = 2 * 60 * 1000;
+const IDLE_TIMEOUT_MS = 3 * 60 * 1000;
 
 let LOG = { chat: "search x", pinned: true, days: [] };
 let view = { type: "pinned" };
 let liveDay = null;
 let liveES = null;
+let liveTimeout = null;
 
 $("repoInput").value = config.repo;
 $("tokenInput").value = config.token;
@@ -491,11 +495,11 @@ $("saveSettings").onclick = () => {
 };
 
 async function load() {
-  if (!config.repo) { render(); setStatus("set repo in settings", "err"); return; }
+  if (!config.repo) { render(); setStatus("set repo in settings", "err"); return false; }
   setStatus("loading…", "busy");
   try {
     const url = `https://raw.githubusercontent.com/${config.repo}/main/log.json?t=${Date.now()}`;
-    const r = await fetch(url);
+    const r = await fetch(url, { cache: "no-store" });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     LOG = await r.json();
     render();
@@ -504,12 +508,33 @@ async function load() {
     $("lastRun").textContent = latest?.finished_at
       ? "last run " + new Date(latest.finished_at).toLocaleString()
       : "no runs yet";
+    return true;
   } catch (e) {
     setStatus(`load failed: ${e.message}`, "err");
     render();
+    return false;
   }
 }
-$("refreshBtn").onclick = load;
+
+async function refreshFromGitHub() {
+  setStatus("refreshing…", "busy");
+  const delays = [0, 3000, 8000];
+  for (const d of delays) {
+    if (d) await new Promise(r => setTimeout(r, d));
+    const ok = await load();
+    if (ok && LOG.days?.length) {
+      if (liveDay) {
+        liveDay = null;
+        render();
+      }
+      setStatus("refreshed", "ok");
+      return;
+    }
+  }
+  setStatus("refresh failed — try again in a min", "err");
+}
+
+$("refreshBtn").onclick = refreshFromGitHub;
 
 // ============================================================
 // LIVE STREAM
@@ -518,19 +543,35 @@ $("refreshBtn").onclick = load;
 function startLiveStream() {
   if (liveES) return;
   try {
-    liveES = new EventSource(`https://ntfy.sh/${NTFY_TOPIC}/sse`);
+    liveES = new EventSource(`https://ntfy.sh/${NTFY_TOPIC}/sse?since=all`);
     liveES.onerror = () => setLive(false);
     liveES.onmessage = (e) => {
       try {
         const wrap = JSON.parse(e.data);
         if (wrap.event !== "message") return;
+        const ts = wrap.time ? wrap.time * 1000 : Date.now();
+        const age = Date.now() - ts;
+        if (age > LIVE_WINDOW_MS) return;
         const evt = JSON.parse(wrap.message);
-        handleLiveEvent(evt, wrap.time ? wrap.time * 1000 : Date.now());
+        handleLiveEvent(evt, ts);
       } catch {}
     };
   } catch (err) {
     console.error("live stream failed", err);
   }
+}
+
+function resetLiveTimeout() {
+  if (liveTimeout) clearTimeout(liveTimeout);
+  liveTimeout = setTimeout(() => {
+    if (liveDay && liveDay.live) {
+      liveDay.live = false;
+      liveDay.finished_at = new Date().toISOString();
+      setLive(false);
+      render();
+      load();
+    }
+  }, IDLE_TIMEOUT_MS);
 }
 
 function ensureLiveDay(ts) {
@@ -569,25 +610,45 @@ function handleLiveEvent(evt, ts) {
     setLive(true);
     view = { type: "day", date: date };
     render();
+    resetLiveTimeout();
     return;
   }
 
   ensureLiveDay(ts);
 
   if (kind === "end") {
+    if (liveTimeout) clearTimeout(liveTimeout);
     if (liveDay) {
       liveDay.live = false;
       liveDay.finished_at = new Date(ts).toISOString();
     }
     setLive(false);
     render();
-    setTimeout(load, 25000);
+    setStatus("run finished · waiting for commit…", "busy");
+
+    const delays = [5000, 15000, 30000, 60000, 90000];
+    (async () => {
+      for (const d of delays) {
+        await new Promise(r => setTimeout(r, d));
+        const ok = await load();
+        if (ok && LOG.days?.length && LOG.days[0]?.finished_at) {
+          if (liveDay) {
+            liveDay = null;
+            render();
+          }
+          setStatus("fresh data loaded", "ok");
+          return;
+        }
+      }
+      setStatus("commit delayed — click refresh", "err");
+    })();
     return;
   }
 
   liveDay.work_log.push({ kind: kind, ...evt, _ts: ts });
   if (kind === "search") liveDay.searches++;
   if (kind === "llm") liveDay.llm_calls++;
+  resetLiveTimeout();
 
   if (view.type !== "day" || view.date !== liveDay.date) {
     view = { type: "day", date: liveDay.date };
@@ -787,7 +848,6 @@ function renderDay(day) {
     `;
   }
 
-  // On quiet days, show all apps that were checked
   if (!findings.length && apps.length) {
     bodyHtml += `
       <div class="section-label">all apps checked (${apps.length})</div>
@@ -846,6 +906,13 @@ function renderLogLine(l) {
       ? `<span class="status-ok">ok</span>`
       : `<span class="status-bad">${esc(l.status || "fail")}</span>`;
     return `<div class="worklog-line"><span class="kind llm">llm</span><span class="body">${esc(l.app || "?")} · ${esc(l.model || "?")} · ${status}</span></div>`;
+  }
+  if (l.kind === "fetch") {
+    const status = l.error
+      ? `<span class="status-bad">✗ ${esc(l.error)}</span>`
+      : `<span class="status-ok">${l.chars} chars</span>`;
+    const url = (l.url || "").replace(/^https?:\/\//, "").slice(0, 60);
+    return `<div class="worklog-line"><span class="kind fetch">fetch</span><span class="body">${esc(url)} · ${status}</span></div>`;
   }
   if (l.kind === "info") {
     return `<div class="worklog-line"><span class="kind info">info</span><span class="body">${esc(l.message || "")}</span></div>`;
