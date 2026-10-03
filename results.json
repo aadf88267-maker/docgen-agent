@@ -1,131 +1,131 @@
 {
   "last_run": {
-    "started_at": "2026-10-02T19:14:55.505900+00:00",
+    "started_at": "2026-10-03T07:24:27.569263+00:00",
     "searches_used": 90,
-    "finished_at": "2026-10-02T19:19:26.191823+00:00",
+    "finished_at": "2026-10-03T07:29:55.610582+00:00",
     "apps_tracked": 20,
-    "findings": 20
+    "findings": 0
   },
   "apps": [
     {
       "error": "all_llms_failed",
       "app_name": "ChatGPT Work",
       "source_url": "https://openai.com/chatgpt/pricing/",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Claude Cowork",
       "source_url": "https://www.anthropic.com/pricing",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Gamma",
       "source_url": "https://gamma.app/pricing",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Notion AI",
       "source_url": "https://www.notion.com/pricing",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Canva Magic Write",
       "source_url": "https://www.canva.com/pricing/",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Adobe Acrobat AI",
       "source_url": "https://www.adobe.com/acrobat/pricing.html",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Microsoft 365 Copilot",
       "source_url": "https://www.microsoft.com/microsoft-365/copilot",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Jotform Document Generator",
       "source_url": "https://www.jotform.com/pricing/",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Slaide",
       "source_url": "https://slaide.com/pricing",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Liner Write",
       "source_url": "https://getliner.com/pricing",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Skywork",
       "source_url": "https://skywork.ai/pricing",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Type",
       "source_url": "https://type.ai/pricing",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Sembly",
       "source_url": "https://www.sembly.ai/pricing/",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "QwenWork",
       "source_url": "https://qwenwork.aliyun.com/",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Watto AI",
       "source_url": "https://watto.ai",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Capitol AI",
       "source_url": "https://capitol.ai",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Cobl.ai",
       "source_url": "https://cobl.ai",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "Google Gemini Docs",
       "source_url": "https://one.google.com/about/plans",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "AI Doc Maker",
       "source_url": "https://aidocmaker.com",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     },
     {
       "error": "all_llms_failed",
       "app_name": "PandaDoc",
       "source_url": "https://www.pandadoc.com/pricing/",
-      "_searched_at": "2026-10-02T19:14:55.505900+00:00"
+      "_searched_at": "2026-10-03T07:24:27.569263+00:00"
     }
   ]
 }
