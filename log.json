@@ -4,8 +4,8 @@
   "days": [
     {
       "date": "2026-10-03",
-      "started_at": "2026-10-03T08:33:13.197600+00:00",
-      "finished_at": "2026-10-03T08:37:56.301192+00:00",
+      "started_at": "2026-10-03T09:20:55.516679+00:00",
+      "finished_at": "2026-10-03T09:28:38.645958+00:00",
       "searches": 90,
       "llm_calls": 120,
       "work_log": [
@@ -1930,468 +1930,127 @@
           "hits": 5
         }
       ],
-      "findings": [
-        {
-          "type": "new",
-          "app": "ChatGPT Work",
-          "summary": "new app tracked",
-          "url": "https://openai.com/chatgpt/pricing/",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Claude Cowork",
-          "summary": "new app tracked",
-          "url": "https://www.anthropic.com/pricing",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Gamma",
-          "summary": "new app tracked",
-          "url": "https://gamma.app/pricing",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Notion AI",
-          "summary": "new app tracked",
-          "url": "https://www.notion.com/pricing",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Canva Magic Write",
-          "summary": "new app tracked",
-          "url": "https://www.canva.com/pricing/",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Adobe Acrobat AI",
-          "summary": "new app tracked",
-          "url": "https://www.adobe.com/acrobat/pricing.html",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Microsoft 365 Copilot",
-          "summary": "new app tracked",
-          "url": "https://www.microsoft.com/microsoft-365/copilot",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Jotform Document Generator",
-          "summary": "new app tracked",
-          "url": "https://www.jotform.com/pricing/",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Slaide",
-          "summary": "new app tracked",
-          "url": "https://slaide.com/pricing",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Liner Write",
-          "summary": "new app tracked",
-          "url": "https://getliner.com/pricing",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Skywork",
-          "summary": "new app tracked",
-          "url": "https://skywork.ai/pricing",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Type",
-          "summary": "new app tracked",
-          "url": "https://type.ai/pricing",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Sembly",
-          "summary": "new app tracked",
-          "url": "https://www.sembly.ai/pricing/",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "QwenWork",
-          "summary": "new app tracked",
-          "url": "https://qwenwork.aliyun.com/",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Watto AI",
-          "summary": "new app tracked",
-          "url": "https://watto.ai",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Capitol AI",
-          "summary": "new app tracked",
-          "url": "https://capitol.ai",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Cobl.ai",
-          "summary": "new app tracked",
-          "url": "https://cobl.ai",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "Google Gemini Docs",
-          "summary": "new app tracked",
-          "url": "https://one.google.com/about/plans",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "AI Doc Maker",
-          "summary": "new app tracked",
-          "url": "https://aidocmaker.com",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        },
-        {
-          "type": "new",
-          "app": "PandaDoc",
-          "summary": "new app tracked",
-          "url": "https://www.pandadoc.com/pricing/",
-          "extracted_by": null,
-          "category": null,
-          "vendor": null,
-          "website": null,
-          "free_tier": null,
-          "paid_pricing": null,
-          "key_features": null,
-          "output_formats": null,
-          "support": null,
-          "quality_notes": null,
-          "confidence": null
-        }
-      ],
+      "findings": [],
       "apps": [
         {
           "error": "all_llms_failed",
           "app_name": "ChatGPT Work",
           "source_url": "https://openai.com/chatgpt/pricing/",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Claude Cowork",
           "source_url": "https://www.anthropic.com/pricing",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Gamma",
           "source_url": "https://gamma.app/pricing",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Notion AI",
           "source_url": "https://www.notion.com/pricing",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Canva Magic Write",
           "source_url": "https://www.canva.com/pricing/",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Adobe Acrobat AI",
           "source_url": "https://www.adobe.com/acrobat/pricing.html",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Microsoft 365 Copilot",
           "source_url": "https://www.microsoft.com/microsoft-365/copilot",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Jotform Document Generator",
           "source_url": "https://www.jotform.com/pricing/",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Slaide",
           "source_url": "https://slaide.com/pricing",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Liner Write",
           "source_url": "https://getliner.com/pricing",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Skywork",
           "source_url": "https://skywork.ai/pricing",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Type",
           "source_url": "https://type.ai/pricing",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Sembly",
           "source_url": "https://www.sembly.ai/pricing/",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "QwenWork",
           "source_url": "https://qwenwork.aliyun.com/",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Watto AI",
           "source_url": "https://watto.ai",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Capitol AI",
           "source_url": "https://capitol.ai",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Cobl.ai",
           "source_url": "https://cobl.ai",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "Google Gemini Docs",
           "source_url": "https://one.google.com/about/plans",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "AI Doc Maker",
           "source_url": "https://aidocmaker.com",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         },
         {
           "error": "all_llms_failed",
           "app_name": "PandaDoc",
           "source_url": "https://www.pandadoc.com/pricing/",
-          "_searched_at": "2026-10-03T08:33:13.197600+00:00"
+          "_searched_at": "2026-10-03T09:20:55.516679+00:00"
         }
       ]
     }
