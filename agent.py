@@ -1,7 +1,6 @@
 """
 DocGenAppWatch Agent - single-file backend.
 Natural-language field queries + page fetch + LLM extraction.
-Robust against any search response shape.
 """
 
 import os
@@ -106,16 +105,14 @@ DISCOVERY_QUERIES = [
 ]
 
 # ============================================================
-# HELPERS — bulletproof against any response shape
+# HELPERS
 # ============================================================
 
 def _extract_hits(data):
-    """Find the list of search hits in any common response shape."""
     if isinstance(data, list):
         return data
     if not isinstance(data, dict):
         return []
-
     for key in ("results", "hits", "items", "data", "organic", "web", "pages"):
         v = data.get(key)
         if isinstance(v, list):
@@ -125,7 +122,6 @@ def _extract_hits(data):
                 sv = v.get(sub)
                 if isinstance(sv, list):
                     return sv
-
     return []
 
 def _safe_snippet(h):
@@ -342,24 +338,9 @@ def fetch_page(url, max_chars=8000):
 # LLM ROUTER
 # ============================================================
 
-EXTRACTION_PROMPT = """You are a research analyst. Below are (a) targeted search snippets (some from Google AI Overviews) and (b) the full text of the app's pricing page (if available) about a document generation app.
+EXTRACTION_PROMPT = """You are a research analyst. Below are (a) targeted search snippets and (b) the full text of the app's pricing page (if available) about a document generation app.
 
-Extract structured data. Prefer the page text over snippets when they conflict. Return ONLY valid JSON matching this exact schema. Use null for unknown — DO NOT guess.
-
-FILL EVERY FIELD YOU CAN. Pay attention to:
-- category: general type (document generation, presentations, e-sign, etc.)
-- vendor: company that makes the product
-- website: product homepage
-- free_tier.available: is there a free plan? true/false
-- free_tier.credits: exact number of free credits or uses
-- free_tier.limits: any restrictions
-- paid_pricing.cheapest_plan: cheapest paid tier with price
-- paid_pricing.notes: higher tiers, enterprise, per-user pricing notes
-- key_features: list of notable features
-- output_formats: what it can export
-- support.channels: how users get help (email, chat, phone, help_center, community)
-- quality_notes: pros/cons sentiment from reviews
-- confidence: 0.0-1.0
+Extract structured data. Prefer page text over snippets when they conflict. Return ONLY valid JSON matching this exact schema. Use null for unknown — DO NOT guess.
 
 Schema:
 {{
@@ -538,7 +519,11 @@ def append_day(day_entry):
     LOG_FILE.write_text(json.dumps(data, indent=2))
 
 def diff_app(old, new):
+    # First time seeing this app
     if not old:
+        return ["new app tracked"]
+    # Previous extraction failed — treat as new, not changed
+    if old.get("error") == "all_llms_failed" or not old.get("category"):
         return ["new app tracked"]
     changes = []
     for key in ["free_tier", "paid_pricing", "key_features", "support", "output_formats"]:
