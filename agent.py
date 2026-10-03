@@ -1,6 +1,7 @@
 """
 DocGenAppWatch Agent - single-file backend.
 Natural-language field queries + page fetch + LLM extraction.
+Robust against any search response shape.
 """
 
 import os
@@ -63,7 +64,6 @@ KNOWN_APPS = [
     {"name": "PandaDoc", "url": "https://www.pandadoc.com/pricing/"},
 ]
 
-# Natural-language queries — these trigger Google AI Overviews
 FIELD_QUERIES = [
     "what is the free tier of {name}",
     "how much does {name} cost per month",
@@ -106,18 +106,37 @@ DISCOVERY_QUERIES = [
 ]
 
 # ============================================================
-# HELPERS
+# HELPERS — bulletproof against any response shape
 # ============================================================
+
+def _extract_hits(data):
+    """Find the list of search hits in any common response shape."""
+    if isinstance(data, list):
+        return data
+    if not isinstance(data, dict):
+        return []
+
+    for key in ("results", "hits", "items", "data", "organic", "web", "pages"):
+        v = data.get(key)
+        if isinstance(v, list):
+            return v
+        if isinstance(v, dict):
+            for sub in ("results", "hits", "items", "data", "organic", "web"):
+                sv = v.get(sub)
+                if isinstance(sv, list):
+                    return sv
+
+    return []
 
 def _safe_snippet(h):
     if not isinstance(h, dict):
         return str(h)[:800] if h else ""
-    for key in ("snippet", "description", "text", "content", "markdown"):
+    for key in ("snippet", "description", "text", "content", "markdown", "summary"):
         v = h.get(key)
         if isinstance(v, str) and v:
             return v[:800]
         if isinstance(v, dict):
-            for sub in ("text", "value", "content"):
+            for sub in ("text", "value", "content", "snippet"):
                 sv = v.get(sub)
                 if isinstance(sv, str) and sv:
                     return sv[:800]
@@ -130,6 +149,24 @@ def _safe_snippet(h):
         joined = " ".join(str(x) for x in snips if isinstance(x, (str, int, float)))
         if joined:
             return joined[:800]
+    return ""
+
+def _safe_url(h):
+    if not isinstance(h, dict):
+        return ""
+    for key in ("url", "link", "href", "source"):
+        v = h.get(key)
+        if isinstance(v, str):
+            return v
+    return ""
+
+def _safe_title(h):
+    if not isinstance(h, dict):
+        return ""
+    for key in ("title", "name", "heading"):
+        v = h.get(key)
+        if isinstance(v, str):
+            return v
     return ""
 
 # ============================================================
@@ -176,12 +213,12 @@ def _you_search(query, num=5):
         raise RuntimeError("You.com rate limited")
     r.raise_for_status()
     data = r.json()
-    hits = data.get("results") or data.get("hits") or []
+    hits = _extract_hits(data)
     out = []
     for h in hits[:num]:
         out.append({
-            "title": h.get("title", "") if isinstance(h, dict) else "",
-            "url": h.get("url", "") if isinstance(h, dict) else "",
+            "title": _safe_title(h),
+            "url": _safe_url(h),
             "snippet": _safe_snippet(h),
         })
     return out
@@ -198,14 +235,15 @@ def _exa_search(query, num=5):
     )
     r.raise_for_status()
     data = r.json()
-    return [
-        {
-            "title": h.get("title", ""),
-            "url": h.get("url", ""),
+    hits = _extract_hits(data)
+    out = []
+    for h in hits[:num]:
+        out.append({
+            "title": _safe_title(h),
+            "url": _safe_url(h),
             "snippet": _safe_snippet({"snippets": h.get("highlights", []) or []}),
-        }
-        for h in data.get("results", [])
-    ]
+        })
+    return out
 
 def _firecrawl_search(query, num=5):
     api_key = os.getenv("FIRECRAWL_API_KEY")
@@ -222,15 +260,15 @@ def _firecrawl_search(query, num=5):
     )
     r.raise_for_status()
     data = r.json()
-    items = data.get("data", [])
-    return [
-        {
-            "title": h.get("title", ""),
-            "url": h.get("url", ""),
+    hits = _extract_hits(data)
+    out = []
+    for h in hits[:num]:
+        out.append({
+            "title": _safe_title(h),
+            "url": _safe_url(h),
             "snippet": _safe_snippet(h),
-        }
-        for h in items
-    ]
+        })
+    return out
 
 def search_web(query, num=5):
     try:
@@ -288,7 +326,10 @@ def fetch_page(url, max_chars=8000):
         )
         r.raise_for_status()
         data = r.json()
-        md = (data.get("data") or {}).get("markdown") or ""
+        inner = data.get("data") if isinstance(data, dict) else None
+        md = ""
+        if isinstance(inner, dict):
+            md = inner.get("markdown") or ""
         log("fetch", url=url, chars=len(md))
         live("fetch", url=url, chars=len(md))
         return md[:max_chars]
@@ -310,15 +351,15 @@ FILL EVERY FIELD YOU CAN. Pay attention to:
 - vendor: company that makes the product
 - website: product homepage
 - free_tier.available: is there a free plan? true/false
-- free_tier.credits: exact number of free credits or uses (e.g. "400 one-time credits")
-- free_tier.limits: any restrictions (e.g. "10 slides max per prompt", "50K input tokens")
-- paid_pricing.cheapest_plan: cheapest paid tier with price (e.g. "Plus · $9/seat/mo")
+- free_tier.credits: exact number of free credits or uses
+- free_tier.limits: any restrictions
+- paid_pricing.cheapest_plan: cheapest paid tier with price
 - paid_pricing.notes: higher tiers, enterprise, per-user pricing notes
-- key_features: list of notable features (array of short strings)
-- output_formats: what it can export (pdf, docx, pptx, google_slides, markdown, etc.)
+- key_features: list of notable features
+- output_formats: what it can export
 - support.channels: how users get help (email, chat, phone, help_center, community)
 - quality_notes: pros/cons sentiment from reviews
-- confidence: 0.0-1.0 how confident you are in the extracted data
+- confidence: 0.0-1.0
 
 Schema:
 {{
@@ -445,16 +486,18 @@ def extract_app(app_name, search_results, page_text=""):
 
     for name, fn in providers:
         try:
-            parsed = _clean_json(fn(prompt))
+            raw = fn(prompt)
+            parsed = _clean_json(raw)
             if parsed:
                 log("llm", app=app_name, model=name, status="ok")
                 live("llm", app=app_name, model=name, status="ok")
                 parsed["_extracted_by"] = name
                 return parsed
-            log("llm", app=app_name, model=name, status="invalid_json")
+            err = (raw or "")[:80]
+            log("llm", app=app_name, model=name, status="invalid_json", error=err)
             live("llm", app=app_name, model=name, status="invalid")
         except Exception as e:
-            log("llm", app=app_name, model=name, status="failed", error=str(e)[:120])
+            log("llm", app=app_name, model=name, status="failed", error=str(e)[:200])
             live("llm", app=app_name, model=name, status="failed")
 
     return {"error": "all_llms_failed", "app_name": app_name}
@@ -530,7 +573,6 @@ def main():
             break
         name = app["name"]
 
-        # Natural-language field queries
         results = []
         for tpl in FIELD_QUERIES:
             if not budget_left():
@@ -539,10 +581,8 @@ def main():
             results.extend(search_web(q, num=5))
             search_count += 1
 
-        # Fetch pricing page
         page_text = fetch_page(app.get("url"), max_chars=8000)
 
-        # Extract
         extracted = extract_app(name, results, page_text=page_text)
         extracted["app_name"] = name
         extracted["source_url"] = app.get("url")
