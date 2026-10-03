@@ -496,6 +496,7 @@ def main():
 
     save_results(new_apps, run_meta)
 
+    # ← NEW: include full app data in day_entry
     day_entry = {
         "date": started.strftime("%Y-%m-%d"),
         "started_at": run_meta["started_at"],
@@ -504,6 +505,7 @@ def main():
         "llm_calls": sum(1 for l in WORK_LOG if l.get("kind") == "llm"),
         "work_log": WORK_LOG,
         "findings": findings,
+        "apps": new_apps,
     }
     append_day(day_entry)
 
