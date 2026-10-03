@@ -1,6 +1,6 @@
 """
 DocGenAppWatch Agent - single-file backend.
-Creates one daily chat entry per run. Findings include full structured data.
+Streams live events to ntfy.sh; writes daily chat to log.json.
 """
 
 import os
@@ -21,10 +21,25 @@ USAGE_FILE = Path("search_usage.json")
 MAX_SEARCHES_PER_RUN = 140
 MONTHLY_CAPS = {"exa": 1200, "firecrawl": 1000}
 
+NTFY_LIVE_TOPIC = "docgen-live-aadf88267"
+
 WORK_LOG = []
 
 def log(kind, **kwargs):
     WORK_LOG.append({"kind": kind, **kwargs})
+
+def live(kind, **kwargs):
+    """Stream one event to the UI via ntfy. Fire-and-forget."""
+    try:
+        payload = {"kind": kind, **kwargs}
+        requests.post(
+            f"https://ntfy.sh/{NTFY_LIVE_TOPIC}",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Title": "evt", "Priority": "min"},
+            timeout=3,
+        )
+    except Exception:
+        pass
 
 KNOWN_APPS = [
     {"name": "ChatGPT Work", "url": "https://openai.com/chatgpt/pricing/"},
@@ -190,25 +205,31 @@ def search_web(query, num=5):
     try:
         out = _you_search(query, num)
         log("search", query=query, provider="you.com", hits=len(out))
+        live("search", query=query, provider="you.com", hits=len(out))
         return out
     except Exception as e:
         log("search", query=query, provider="you.com", error=str(e)[:120])
+        live("search", query=query, provider="you.com", error=str(e)[:80])
 
     if _check_and_increment("exa", MONTHLY_CAPS["exa"]):
         try:
             out = _exa_search(query, num)
             log("search", query=query, provider="exa", hits=len(out))
+            live("search", query=query, provider="exa", hits=len(out))
             return out
         except Exception as e:
             log("search", query=query, provider="exa", error=str(e)[:120])
+            live("search", query=query, provider="exa", error=str(e)[:80])
 
     if _check_and_increment("firecrawl", MONTHLY_CAPS["firecrawl"]):
         try:
             out = _firecrawl_search(query, num)
             log("search", query=query, provider="firecrawl", hits=len(out))
+            live("search", query=query, provider="firecrawl", hits=len(out))
             return out
         except Exception as e:
             log("search", query=query, provider="firecrawl", error=str(e)[:120])
+            live("search", query=query, provider="firecrawl", error=str(e)[:80])
 
     return []
 
@@ -340,11 +361,14 @@ def extract_app(app_name, search_results):
             parsed = _clean_json(fn(prompt))
             if parsed:
                 log("llm", app=app_name, model=name, status="ok")
+                live("llm", app=app_name, model=name, status="ok")
                 parsed["_extracted_by"] = name
                 return parsed
             log("llm", app=app_name, model=name, status="invalid_json")
+            live("llm", app=app_name, model=name, status="invalid")
         except Exception as e:
             log("llm", app=app_name, model=name, status="failed", error=str(e)[:120])
+            live("llm", app=app_name, model=name, status="failed")
 
     return {"error": "all_llms_failed", "app_name": app_name}
 
@@ -404,6 +428,8 @@ def main():
     run_meta = {"started_at": started.isoformat(), "searches_used": 0}
     print(f"[worker] Starting at {run_meta['started_at']}")
 
+    live("start", date=started.strftime("%Y-%m-%d"))
+
     previous = load_previous_results()
     search_count = 0
 
@@ -451,7 +477,6 @@ def main():
                 "summary": "new app tracked" if is_new else ", ".join(changes),
                 "url": app.get("source_url"),
                 "extracted_by": app.get("_extracted_by"),
-                # Full structured data:
                 "category": app.get("category"),
                 "vendor": app.get("vendor"),
                 "website": app.get("website"),
@@ -481,6 +506,8 @@ def main():
         "findings": findings,
     }
     append_day(day_entry)
+
+    live("end", findings=len(findings), searches=search_count, date=day_entry["date"])
 
     print(f"[worker] Day appended: {day_entry['date']}, findings: {len(findings)}")
     print(f"[worker] Done. Searches: {search_count}/{MAX_SEARCHES_PER_RUN}")
