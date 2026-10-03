@@ -4,283 +4,135 @@
   "days": [
     {
       "date": "2026-10-03",
-      "started_at": "2026-10-03T10:11:36.902670+00:00",
-      "finished_at": "2026-10-03T10:26:52.419532+00:00",
+      "started_at": "2026-10-03T12:16:25.471943+00:00",
+      "finished_at": "2026-10-03T12:20:49.568199+00:00",
       "searches": 130,
-      "llm_calls": 120,
+      "llm_calls": 40,
       "work_log": [
         {
           "kind": "search",
           "query": "what is the free tier of ChatGPT Work",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of ChatGPT Work",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does ChatGPT Work cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does ChatGPT Work cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with ChatGPT Work features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with ChatGPT Work features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does ChatGPT Work export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does ChatGPT Work export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is ChatGPT Work worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is ChatGPT Work worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "fetch",
           "url": "https://openai.com/chatgpt/pricing/",
-          "chars": 26345
+          "chars": 26326
         },
         {
           "kind": "llm",
           "app": "ChatGPT Work",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "ChatGPT Work",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "ChatGPT Work",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "ChatGPT Work",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "ChatGPT Work",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "ChatGPT Work",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Claude Cowork",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Claude Cowork",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Claude Cowork cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Claude Cowork cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Claude Cowork features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Claude Cowork features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Claude Cowork export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Claude Cowork export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Claude Cowork worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Claude Cowork worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "fetch",
           "url": "https://www.anthropic.com/pricing",
-          "chars": 24266
+          "chars": 24235
         },
         {
           "kind": "llm",
           "app": "Claude Cowork",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Claude Cowork",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Claude Cowork",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Claude Cowork",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Claude Cowork",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Claude Cowork",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Gamma",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Gamma",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Gamma cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Gamma cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Gamma features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Gamma features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Gamma export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Gamma export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Gamma worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Gamma worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -293,208 +145,90 @@
           "app": "Gamma",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Gamma",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Gamma",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Gamma",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Gamma",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Gamma",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Notion AI",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Notion AI",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Notion AI cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Notion AI cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Notion AI features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Notion AI features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Notion AI export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Notion AI export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Notion AI worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Notion AI worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "fetch",
           "url": "https://www.notion.com/pricing",
-          "chars": 23347
+          "chars": 23439
         },
         {
           "kind": "llm",
           "app": "Notion AI",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Notion AI",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Notion AI",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Notion AI",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Notion AI",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Notion AI",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Canva Magic Write",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Canva Magic Write",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Canva Magic Write cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Canva Magic Write cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Canva Magic Write features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Canva Magic Write features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Canva Magic Write export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Canva Magic Write export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Canva Magic Write worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Canva Magic Write worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -507,101 +241,42 @@
           "app": "Canva Magic Write",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Canva Magic Write",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Canva Magic Write",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Canva Magic Write",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Canva Magic Write",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Canva Magic Write",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Adobe Acrobat AI",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Adobe Acrobat AI",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Adobe Acrobat AI cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Adobe Acrobat AI cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Adobe Acrobat AI features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Adobe Acrobat AI features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Adobe Acrobat AI export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Adobe Acrobat AI export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Adobe Acrobat AI worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Adobe Acrobat AI worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -614,101 +289,42 @@
           "app": "Adobe Acrobat AI",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Adobe Acrobat AI",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Adobe Acrobat AI",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Adobe Acrobat AI",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Adobe Acrobat AI",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Adobe Acrobat AI",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Microsoft 365 Copilot",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Microsoft 365 Copilot",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Microsoft 365 Copilot cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Microsoft 365 Copilot cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Microsoft 365 Copilot features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Microsoft 365 Copilot features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Microsoft 365 Copilot export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Microsoft 365 Copilot export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Microsoft 365 Copilot worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Microsoft 365 Copilot worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -721,101 +337,42 @@
           "app": "Microsoft 365 Copilot",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Microsoft 365 Copilot",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Microsoft 365 Copilot",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Microsoft 365 Copilot",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Microsoft 365 Copilot",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Microsoft 365 Copilot",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Jotform Document Generator",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Jotform Document Generator",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Jotform Document Generator cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Jotform Document Generator cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Jotform Document Generator features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Jotform Document Generator features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Jotform Document Generator export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Jotform Document Generator export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Jotform Document Generator worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Jotform Document Generator worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -828,101 +385,42 @@
           "app": "Jotform Document Generator",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Jotform Document Generator",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Jotform Document Generator",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Jotform Document Generator",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Jotform Document Generator",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Jotform Document Generator",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Slaide",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Slaide",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Slaide cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Slaide cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Slaide features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Slaide features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Slaide export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Slaide export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Slaide worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Slaide worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -935,101 +433,42 @@
           "app": "Slaide",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Slaide",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Slaide",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Slaide",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Slaide",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Slaide",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Liner Write",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Liner Write",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Liner Write cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Liner Write cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Liner Write features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Liner Write features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Liner Write export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Liner Write export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Liner Write worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Liner Write worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1042,101 +481,42 @@
           "app": "Liner Write",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Liner Write",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Liner Write",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Liner Write",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Liner Write",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Liner Write",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Skywork",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Skywork",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Skywork cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Skywork cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Skywork features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Skywork features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Skywork export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Skywork export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Skywork worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Skywork worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1149,101 +529,42 @@
           "app": "Skywork",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Skywork",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Skywork",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Skywork",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Skywork",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Skywork",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Type",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Type",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Type cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Type cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Type features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Type features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Type export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Type export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Type worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Type worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1256,101 +577,42 @@
           "app": "Type",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Type",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Type",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Type",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Type",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Type",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Sembly",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Sembly",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Sembly cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Sembly cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Sembly features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Sembly features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Sembly export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Sembly export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Sembly worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Sembly worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1363,101 +625,42 @@
           "app": "Sembly",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Sembly",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Sembly",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Sembly",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Sembly",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Sembly",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of QwenWork",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of QwenWork",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does QwenWork cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does QwenWork cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with QwenWork features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with QwenWork features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does QwenWork export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does QwenWork export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is QwenWork worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is QwenWork worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1470,101 +673,42 @@
           "app": "QwenWork",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "QwenWork",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "QwenWork",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "QwenWork",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "QwenWork",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "QwenWork",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Watto AI",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Watto AI",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Watto AI cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Watto AI cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Watto AI features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Watto AI features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Watto AI export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Watto AI export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Watto AI worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Watto AI worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1577,101 +721,42 @@
           "app": "Watto AI",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Watto AI",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Watto AI",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Watto AI",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Watto AI",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Watto AI",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Capitol AI",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Capitol AI",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Capitol AI cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Capitol AI cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Capitol AI features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Capitol AI features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Capitol AI export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Capitol AI export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Capitol AI worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Capitol AI worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1684,101 +769,42 @@
           "app": "Capitol AI",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Capitol AI",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Capitol AI",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Capitol AI",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Capitol AI",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Capitol AI",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Cobl.ai",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Cobl.ai",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Cobl.ai cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Cobl.ai cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Cobl.ai features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Cobl.ai features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Cobl.ai export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Cobl.ai export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Cobl.ai worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Cobl.ai worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1791,101 +817,42 @@
           "app": "Cobl.ai",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Cobl.ai",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Cobl.ai",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Cobl.ai",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Cobl.ai",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Cobl.ai",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of Google Gemini Docs",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of Google Gemini Docs",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does Google Gemini Docs cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does Google Gemini Docs cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with Google Gemini Docs features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with Google Gemini Docs features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does Google Gemini Docs export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does Google Gemini Docs export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is Google Gemini Docs worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is Google Gemini Docs worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
@@ -1898,256 +865,109 @@
           "app": "Google Gemini Docs",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "Google Gemini Docs",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Google Gemini Docs",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Google Gemini Docs",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Google Gemini Docs",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "Google Gemini Docs",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of AI Doc Maker",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of AI Doc Maker",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does AI Doc Maker cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does AI Doc Maker cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with AI Doc Maker features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with AI Doc Maker features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does AI Doc Maker export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does AI Doc Maker export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is AI Doc Maker worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is AI Doc Maker worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "fetch",
           "url": "https://aidocmaker.com",
-          "chars": 21665
+          "error": "429 Client Error: Too Many Requests for url: https://api.firecrawl.dev/v1/scrape"
         },
         {
           "kind": "llm",
           "app": "AI Doc Maker",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "AI Doc Maker",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "AI Doc Maker",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "AI Doc Maker",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "AI Doc Maker",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "AI Doc Maker",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
           "query": "what is the free tier of PandaDoc",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what is the free tier of PandaDoc",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "how much does PandaDoc cost per month",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "how much does PandaDoc cost per month",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what can you do with PandaDoc features",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what can you do with PandaDoc features",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "what file formats does PandaDoc export",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "what file formats does PandaDoc export",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "search",
           "query": "is PandaDoc worth it review pros cons",
           "provider": "you.com",
-          "error": "unhashable type: 'slice'"
-        },
-        {
-          "kind": "search",
-          "query": "is PandaDoc worth it review pros cons",
-          "provider": "exa",
           "hits": 5
         },
         {
           "kind": "fetch",
           "url": "https://www.pandadoc.com/pricing/",
-          "chars": 19132
+          "error": "429 Client Error: Too Many Requests for url: https://api.firecrawl.dev/v1/scrape"
         },
         {
           "kind": "llm",
           "app": "PandaDoc",
           "model": "nemotron",
           "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
         },
         {
           "kind": "llm",
           "app": "PandaDoc",
           "model": "gemini",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "PandaDoc",
-          "model": "deepseek-v4-flash-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "PandaDoc",
-          "model": "kimi-k3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "PandaDoc",
-          "model": "minimax-m3-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
-        },
-        {
-          "kind": "llm",
-          "app": "PandaDoc",
-          "model": "glm-5.2-free",
-          "status": "failed",
-          "error": "Client.__init__() got an unexpected keyword argument 'proxies'"
+          "status": "ok"
         },
         {
           "kind": "search",
@@ -2273,7 +1093,7 @@
           "kind": "search",
           "query": "AI contract generator startup",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2285,7 +1105,7 @@
           "kind": "search",
           "query": "AI slides generator new tool 2026",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2297,7 +1117,7 @@
           "kind": "search",
           "query": "AI resume generator launch 2026",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2309,7 +1129,7 @@
           "kind": "search",
           "query": "AI business document generator new",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2321,7 +1141,7 @@
           "kind": "search",
           "query": "AI doc automation tool 2026",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2333,7 +1153,7 @@
           "kind": "search",
           "query": "OpenAI document generator update",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2345,7 +1165,7 @@
           "kind": "search",
           "query": "Anthropic Claude document features",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2357,7 +1177,7 @@
           "kind": "search",
           "query": "Google Gemini document generation update",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2369,7 +1189,7 @@
           "kind": "search",
           "query": "Notion AI new features 2026",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2381,7 +1201,7 @@
           "kind": "search",
           "query": "Gamma AI changelog 2026",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2393,7 +1213,7 @@
           "kind": "search",
           "query": "Canva Magic Write update",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2405,7 +1225,7 @@
           "kind": "search",
           "query": "Adobe Acrobat AI new features",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2417,7 +1237,7 @@
           "kind": "search",
           "query": "Microsoft Copilot document update",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2429,7 +1249,7 @@
           "kind": "search",
           "query": "AI PDF generator new",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2441,7 +1261,7 @@
           "kind": "search",
           "query": "AI Word document generator new",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2489,7 +1309,7 @@
           "kind": "search",
           "query": "AI technical writing tool launch",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2501,7 +1321,7 @@
           "kind": "search",
           "query": "AI invoice generator new app",
           "provider": "you.com",
-          "error": "You.com daily limit reached"
+          "error": "You.com rate limited"
         },
         {
           "kind": "search",
@@ -2510,147 +1330,1610 @@
           "hits": 5
         }
       ],
-      "findings": [],
+      "findings": [
+        {
+          "type": "change",
+          "app": "ChatGPT Work",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://openai.com/chatgpt/pricing/",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "OpenAI",
+          "website": "https://chatgpt.com/work/",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited ChatGPT Work access on desktop, limited messages with uploads, limited image creation, limited voice chats, limited deep research, limited memory and context, and limited Codex access."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "Go",
+            "notes": "Paid individual, business, and enterprise plans available including Go, Plus, and Pro tiers, priced per user per month."
+          },
+          "key_features": [
+            "Create and edit docs, slide decks, spreadsheets, charts, PDFs, and images",
+            "Bring together files, apps, and knowledge for complex projects",
+            "Desktop, web, and mobile access (on higher tiers)",
+            "Deep research capabilities",
+            "Memory and context management",
+            "Custom GPTs and projects"
+          ],
+          "output_formats": [
+            "PDF",
+            "Markdown",
+            "Text",
+            "CSV",
+            "JSON",
+            "Image"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Useful for drafting, exploring, and creating structured deliverables, but specialized software and qualified human oversight remain necessary for guaranteed factual accuracy.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Claude Cowork",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://www.anthropic.com/pricing",
+          "extracted_by": "gemini",
+          "category": "document generation, AI workspace, and assistant",
+          "vendor": "Anthropic",
+          "website": "https://claude.com",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Free tier does not include Claude Cowork or advanced tools; limited to basic chat, web search, code execution, and artifacts with standard limits."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$17/month (annual billing) or $20/month (monthly billing) for Pro",
+            "notes": "Pro plan starts at $17-$20/month. Max plans start from $100/month. Team plans start at $20/seat/month billed annually. Enterprise plans available."
+          },
+          "key_features": [
+            "Claude Design, Slides, Docs",
+            "Claude Code",
+            "Task scheduling and handoff",
+            "Claude in Chrome and Microsoft 365",
+            "Built-in browser for web tasks",
+            "Artifacts and file creation"
+          ],
+          "output_formats": [
+            "PDF",
+            "Markdown",
+            "Excel",
+            "PowerPoint",
+            "Word",
+            "Structured Data"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Powerful agentic workspace that automates multi-step tasks and file creation, but consumes usage limits much faster than basic chat.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Gamma",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://gamma.app/pricing",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Gamma Tech, Inc.",
+          "website": "https://gamma.app",
+          "free_tier": {
+            "available": true,
+            "credits": "400 credits at signup",
+            "limits": "Starter credits do not refill; create up to 10 slides per prompt; includes Gamma branding"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$9 / seat / month (Plus plan, billed annually at $108)",
+            "notes": "Plus: $9/seat/mo ($108/yr), 1,000 monthly credits. Pro: $18/seat/mo ($216/yr), 4,000 monthly credits. Ultra: $90/seat/mo ($1,080/yr), 20,000 monthly credits. Business/Team plans also available."
+          },
+          "key_features": [
+            "AI-powered presentation, document, and website generation",
+            "Import from PDF & PPTX",
+            "Theme builder for custom branding",
+            "API access on paid plans",
+            "Advanced AI models (Claude, ChatGPT, Gemini, Flux, etc.)"
+          ],
+          "output_formats": [
+            "PDF",
+            "PPTX",
+            "PNG",
+            "Google Slides"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center",
+              "community"
+            ],
+            "notes": "Help center available at help.gamma.app, community hub, and support email via support@gamma.app"
+          },
+          "quality_notes": "Well-regarded AI presentation and document builder with flexible modular card structures, though some users note limitations with dynamic layout flattening on exports.",
+          "confidence": 1.0
+        },
+        {
+          "type": "change",
+          "app": "Notion AI",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://www.notion.com/pricing",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Notion",
+          "website": "https://www.notion.com",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Trial AI capabilities; limited trial usage"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$20 per member / month (Business plan includes full Notion AI access)",
+            "notes": "Plus plan is $10/member/month (with trial AI); Business plan is $20/member/month (includes full Notion AI, Notion Agent, AI Meeting Notes, Enterprise Search); Enterprise is custom pricing. Custom Agents are free to try, then $10 per 1,000 monthly Notion credits."
+          },
+          "key_features": [
+            "Trial of Notion AI",
+            "Notion Agent",
+            "AI Meeting Notes",
+            "Enterprise Search",
+            "Custom Agents",
+            "Workers (Beta)"
+          ],
+          "output_formats": [
+            "PDF",
+            "HTML",
+            "Markdown",
+            "CSV"
+          ],
+          "support": {
+            "channels": [
+              "help_center",
+              "chat"
+            ],
+            "notes": "Includes Customer Success Manager for Enterprise plans."
+          },
+          "quality_notes": "Praised as a powerful all-in-one workspace with embedded AI capabilities, though some users note frustration with pricing tiers and the requirement of upgrading to higher plans for full AI agent access.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Canva Magic Write",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://www.canva.com/pricing/",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Canva",
+          "website": "https://www.canva.com/magic-write/",
+          "free_tier": {
+            "available": true,
+            "credits": "Up to 20 Standard or Premium AI uses",
+            "limits": "Shared monthly AI allowance across Standard and Premium AI tools"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$144/year for one person (Pro plan)",
+            "notes": "Business plan is US$250/year per person. Enterprise plan pricing is custom (Contact Sales)."
+          },
+          "key_features": [
+            "AI text generation and copywriting assistant",
+            "Blog and long-form content creation",
+            "Social media captions and short-form text",
+            "Brainstorming and idea generation",
+            "Integration with Canva design suite and docs"
+          ],
+          "output_formats": [
+            "TXT",
+            "PDF",
+            "PNG",
+            "JPG",
+            "MP4"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Priority support and dedicated success manager available for Enterprise customers with 150+ contracted seats."
+          },
+          "quality_notes": "Rated 4.64 out of 5 from user reviews. Users praise its speed in overcoming writer's block and generating quick drafts, though some note limits on free tiers and occasional reliance on pre-2021 knowledge data.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Adobe Acrobat AI",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://www.adobe.com/acrobat/pricing.html",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Adobe",
+          "website": "https://www.adobe.com/acrobat.html",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Free tier is limited to Acrobat Reader for opening and viewing PDFs; advanced tools and AI features require a trial or paid plan."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$14.99/mo (Acrobat Standard)",
+            "notes": "Acrobat Standard is US$14.99/mo, Acrobat Pro is US$19.99/mo, and Acrobat Studio (which includes AI Assistant) is US$24.99/mo on an annual commitment billed monthly. AI Assistant add-on is also available starting at US$4.99/mo for existing plans or US$1.99/mo for education."
+          },
+          "key_features": [
+            "Generative AI assistant for document Q&A and summarization",
+            "Create, edit, convert, and organize PDFs",
+            "Collect e-signatures and track responses",
+            "OCR and turn scans into editable PDFs",
+            "Redact sensitive content",
+            "PDF Spaces for collaboration",
+            "Generate flyers, social content, and presentations from documents"
+          ],
+          "output_formats": [
+            "PDF",
+            "Microsoft Word",
+            "Microsoft Excel",
+            "Microsoft PowerPoint"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Support is accessible via Adobe's help center and community forums."
+          },
+          "quality_notes": "Industry-standard PDF solution praised for its comprehensive editing, OCR, and newly integrated AI summarization/Q&A features, though some users find subscription pricing and cancellation terms restrictive.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Microsoft 365 Copilot",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://www.microsoft.com/microsoft-365/copilot",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Microsoft",
+          "website": "https://www.microsoft.com/en-us/microsoft-365-copilot",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Basic chat and web access limits apply; does not include full integration inside desktop Microsoft 365 apps."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$21-22 per user per month (bundled with select business plans) or $30 per user per month as an add-on",
+            "notes": "Standard add-on is $30/user/month. Bundled business plans for up to 300 users are available around $21-22/user/month."
+          },
+          "key_features": [
+            "Integrated into Word, Excel, PowerPoint, Outlook, and Teams",
+            "Work IQ grounding in company and team context",
+            "Leading AI models selection with Auto advantage",
+            "Agent Builder for custom work-focused AI agents",
+            "Copilot Code and Copilot Autopilot background agents"
+          ],
+          "output_formats": [
+            "docx",
+            "pptx",
+            "csv",
+            "pdf",
+            "text"
+          ],
+          "support": {
+            "channels": [
+              "help_center",
+              "community"
+            ],
+            "notes": "Support is provided through Microsoft Support documentation, community forums, and standard enterprise support channels."
+          },
+          "quality_notes": "Powerful productivity tool deeply integrated into Office apps, but its value depends heavily on configuration, context quality, and user onboarding.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Jotform Document Generator",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://www.jotform.com/pricing/",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Jotform",
+          "website": "https://www.jotform.com",
+          "free_tier": {
+            "available": true,
+            "credits": "5 forms, 100 monthly submissions, 10 monthly signed documents",
+            "limits": "100 MB available space, 10,000 monthly form views, 500 total submission storage, 100 fields per form, 1 user"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$34 per month (Bronze plan, billed annually)",
+            "notes": "Bronze ($34/mo), Silver ($39/mo), Gold ($99/mo) billed annually. Enterprise has custom quote-only pricing. Nonprofit and educational discounts available (up to 50% off)."
+          },
+          "key_features": [
+            "Form builder",
+            "Dynamic PDF generator",
+            "AI document generator",
+            "E-signatures",
+            "Payment integrations",
+            "Templates",
+            "HIPAA-enabled features (Gold and Enterprise)"
+          ],
+          "output_formats": [
+            "PDF",
+            "Excel",
+            "CSV",
+            "HTML",
+            "DOC",
+            "DOCX",
+            "XLS",
+            "XLSX",
+            "TXT",
+            "RTF"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": "24/7 customer support available."
+          },
+          "quality_notes": "Users note that Jotform is user-friendly and great for forms and PDF generation, but customization options can sometimes be limited.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Slaide",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://slaide.com/pricing",
+          "extracted_by": "gemini",
+          "category": "presentation and document generation",
+          "vendor": null,
+          "website": "https://www.slaide.de/",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Paid tier exists, but exact pricing details are not available in the snippets."
+          },
+          "key_features": [
+            "AI presentation maker and document generator",
+            "In-place visual editing",
+            "High-fidelity PowerPoint import and export",
+            "Markdown presentation language (.slaide format)",
+            "Export to PowerPoint, Word, Excel, PDF, and PNG",
+            "Web deck rendering",
+            "Git diff support for decks"
+          ],
+          "output_formats": [
+            "PowerPoint (.pptx)",
+            "Word (.docx)",
+            "Excel (.xlsx)",
+            "PDF",
+            "PNG",
+            "Web deck"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Allows real editable files (text, headings, lists, tables, shapes) instead of flat visual mockups, and enables presentations to be written directly in Markdown by AI agents.",
+          "confidence": 0.8
+        },
+        {
+          "type": "change",
+          "app": "Liner Write",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://getliner.com/pricing",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Liner",
+          "website": "https://liner.com/write",
+          "free_tier": {
+            "available": null,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI writing agent for business plans and proposals",
+            "Built-in source verification and research",
+            "Co-writing experience with AI",
+            "Line-by-line citations and add citation feature"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Reduces post-generation fact-checking burden by tethering suggestions to verifiable sources.",
+          "confidence": 0.8
+        },
+        {
+          "type": "change",
+          "app": "Skywork",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://skywork.ai/pricing",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": null,
+          "website": "https://skywork.ai/",
+          "free_tier": {
+            "available": true,
+            "credits": "800 daily free credits",
+            "limits": "Credits reset with no rollover"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19.99 per month",
+            "notes": "Monthly Pro is $19.99/mo (includes 7,000 monthly credits); Annual Pro is $149.99; a 7-day trial is offered for $1."
+          },
+          "key_features": [
+            "DeepResearch engine scanning hundreds of sources per query",
+            "Multimodal content generation (docs, slides, sheets, podcasts, webpages, and videos)",
+            "Scheduled recurring tasks (daily/weekly)",
+            "Specialized AI agents and skills workspace",
+            "Long-term memory and cloud sandbox"
+          ],
+          "output_formats": [
+            "PPTX",
+            "Google Slides",
+            "PDF",
+            "Documents",
+            "Sheets",
+            "Webpages",
+            "Videos"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Strong multi-format generation and deep research capabilities, but credit metering can be opaque and heavy tasks consume credits quickly.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Type",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://type.ai/pricing",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": null,
+          "website": "https://type.ai",
+          "free_tier": {
+            "available": true,
+            "credits": "Limited credits",
+            "limits": "Limited credits that never expire and do not reset once used"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$8/mo",
+            "notes": "Basic tier is $8/mo (500,000 credits, $96 billed annually). Pro tier is $16/mo (1,500,000 credits, $192 billed annually). Max tier is $64/mo (6,000,000 credits, $768 billed annually)."
+          },
+          "key_features": [
+            "Intelligent editor for long-form writing",
+            "Premium AI models for writing, editing, and publishing",
+            "AI-powered features like chat, creating images, audio, or video",
+            "Document import and export preserving images, headings, and tables",
+            "Support for up to 150,000 words per document"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "email"
+            ],
+            "notes": "Priority support includes hands-on, priority email support."
+          },
+          "quality_notes": "Praised by users as a top AI tool for overcoming writer's block, offering a clean minimal interface, and working exceptionally well for long-form creative writing like books, novels, and screenplays.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "Sembly",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://www.sembly.ai/pricing/",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Sembly AI",
+          "website": "https://www.sembly.ai",
+          "free_tier": {
+            "available": true,
+            "credits": "750 monthly credits per user",
+            "limits": "1 user, 5 clients, 5 brands, 2 months chat/artifact history, 1 hour meeting hours per month"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$10 per month (Basic plan, billed annually)",
+            "notes": "Pro is $20/user/mo, MAX is $30/user/mo, and Enterprise is custom pricing."
+          },
+          "key_features": [
+            "Meeting transcription in 45+ languages",
+            "AI meeting notes, summaries, and tasks",
+            "Build on-brand client documents and presentations from scratch",
+            "Multi-meeting AI chat and advanced search",
+            "Workspace automations, webhooks, and MCP access",
+            "Sentiment analysis and risk/issue tracking",
+            "Calendar sync and media uploads"
+          ],
+          "output_formats": [
+            "PDF",
+            "DOCX",
+            "HTML",
+            "Markdown"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Priority support is available on the MAX and Enterprise plans."
+          },
+          "quality_notes": null,
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "QwenWork",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://qwenwork.aliyun.com/",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Alibaba Cloud",
+          "website": "https://qwenwork.ai",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Offers Free, Plus, Pro, and enterprise plans covering AI credits, storage, page publishing, parallel tasks, and organization controls."
+          },
+          "key_features": [
+            "Turns briefs into finished documents, presentations, web pages, images, audio, and video",
+            "Document creation",
+            "Data analysis",
+            "Information retrieval",
+            "In-depth research",
+            "Multimodal content generation",
+            "Scheduled tasks",
+            "Website creation"
+          ],
+          "output_formats": [
+            "documents",
+            "presentations",
+            "web pages",
+            "images",
+            "audio",
+            "video"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.8
+        },
+        {
+          "type": "change",
+          "app": "Watto AI",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://watto.ai",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": null,
+          "website": "https://www.watto.ai",
+          "free_tier": {
+            "available": true,
+            "credits": "7",
+            "limits": "7 Document Generations"
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI-powered report generation",
+            "Integrate information from different platforms like Google Docs or Slack",
+            "Intelligently generate documents in desired formats"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.8
+        },
+        {
+          "type": "change",
+          "app": "Capitol AI",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://capitol.ai",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": null,
+          "website": "https://www.capitol.ai",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Enterprise pricing requires booking a demo for a custom quote based on usage, scale, and integration."
+          },
+          "key_features": [
+            "Governed data integration",
+            "Institutional workflows",
+            "Model independence / multi-model orchestration",
+            "Defensible artifacts with lineage tracking",
+            "No-code workflow design",
+            "Human-in-the-loop approvals",
+            "Real-time collaboration"
+          ],
+          "output_formats": [
+            "PowerPoint",
+            "Web Page",
+            "Spreadsheet",
+            "Reports",
+            "Filings"
+          ],
+          "support": {
+            "channels": [],
+            "notes": "Contact via demo request page"
+          },
+          "quality_notes": "Focused on regulated and high-stakes enterprise industries requiring secure, auditable, and model-agnostic AI workflows.",
+          "confidence": 0.85
+        },
+        {
+          "type": "change",
+          "app": "Cobl.ai",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://cobl.ai",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": null,
+          "website": "https://www.cobl.ai/",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "upgrade for unlimited documents"
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Starts at \u20ac0/month, upgrade for unlimited documents, and scale with your team."
+          },
+          "key_features": [
+            "AI deal assistant for sales teams",
+            "CRM, email, and meeting integration",
+            "Proposal and RFP response generation",
+            "Pitch decks and executive summaries",
+            "Multi-source file attachments and connectors (Gmail, Outlook, Hubspot, Slack, Notion, Gong, Salesforce, Docusign, Dropbox)"
+          ],
+          "output_formats": [
+            "XLS",
+            "DOC",
+            "PDF"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Users report significant time savings on RFP analysis and proposal creation, reducing turnaround times from days to hours while improving relevance and consistency.",
+          "confidence": 0.85
+        },
+        {
+          "type": "change",
+          "app": "Google Gemini Docs",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://one.google.com/about/plans",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": "Google",
+          "website": "https://gemini.google.com",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Standard rate limits and usage caps apply"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$9.99/mo",
+            "notes": "Google AI Plus is $9.99/mo (2 TB storage, Gemini app access). Google AI Pro is $19.99/mo (5 TB storage, Gemini Pro model, Gemini in Docs, Vids & More)."
+          },
+          "key_features": [
+            "Direct file generation in chat (PDF, Word, Excel, etc.)",
+            "Help me write in Google Docs",
+            "Summarization and executive summaries",
+            "Infographic and diagram generation",
+            "Contextual document creation from linked Google Workspace files"
+          ],
+          "output_formats": [
+            ".pdf",
+            ".docx",
+            ".xlsx",
+            ".csv",
+            "LaTeX",
+            "TXT",
+            "RTF",
+            "Markdown",
+            "Google Docs"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Standard Google support and community help centers"
+          },
+          "quality_notes": "Users praise deep Google Workspace integration and broad export capabilities, but note that AI-generated content can occasionally require manual correction or context refinement.",
+          "confidence": 0.95
+        },
+        {
+          "type": "change",
+          "app": "AI Doc Maker",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://aidocmaker.com",
+          "extracted_by": "gemini",
+          "category": "document generation",
+          "vendor": null,
+          "website": "https://www.aidocmaker.com/",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI Document Generator",
+            "AI PDF Maker",
+            "Template-based document generation (reports, proposals, contracts)",
+            "AI spreadsheet generator with formulas, charts, and data tables"
+          ],
+          "output_formats": [
+            "PDF",
+            "Excel",
+            "Google Sheets"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.7
+        },
+        {
+          "type": "change",
+          "app": "PandaDoc",
+          "summary": "free_tier changed, paid_pricing changed, key_features changed, support changed, output_formats changed",
+          "url": "https://www.pandadoc.com/pricing/",
+          "extracted_by": "gemini",
+          "category": "document generation and e-sign",
+          "vendor": "PandaDoc",
+          "website": "https://www.pandadoc.com",
+          "free_tier": {
+            "available": true,
+            "credits": "60 documents per year",
+            "limits": "2 recipients per document"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19 per user per month (billed annually)",
+            "notes": "Business plan starts at $49/user/month. Higher tiers and Enterprise options available with per-user scaling."
+          },
+          "key_features": [
+            "eSignatures",
+            "Drag-and-drop editor",
+            "Document templates",
+            "Content library",
+            "CRM integrations",
+            "Payment collection",
+            "AI Contract Assistant",
+            "Real-time tracking and analytics"
+          ],
+          "output_formats": [
+            "PDF",
+            "DOCX"
+          ],
+          "support": {
+            "channels": [
+              "help_center",
+              "email"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Ranks highly on G2 for proposals, eSignatures, and contract management. Users appreciate the ease of use, integrations, and collaborative real-time editing, though some note pricing transparency concerns and per-user scaling costs.",
+          "confidence": 0.95
+        }
+      ],
       "apps": [
         {
-          "error": "all_llms_failed",
           "app_name": "ChatGPT Work",
+          "vendor": "OpenAI",
+          "website": "https://chatgpt.com/work/",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited ChatGPT Work access on desktop, limited messages with uploads, limited image creation, limited voice chats, limited deep research, limited memory and context, and limited Codex access."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "Go",
+            "notes": "Paid individual, business, and enterprise plans available including Go, Plus, and Pro tiers, priced per user per month."
+          },
+          "key_features": [
+            "Create and edit docs, slide decks, spreadsheets, charts, PDFs, and images",
+            "Bring together files, apps, and knowledge for complex projects",
+            "Desktop, web, and mobile access (on higher tiers)",
+            "Deep research capabilities",
+            "Memory and context management",
+            "Custom GPTs and projects"
+          ],
+          "output_formats": [
+            "PDF",
+            "Markdown",
+            "Text",
+            "CSV",
+            "JSON",
+            "Image"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Useful for drafting, exploring, and creating structured deliverables, but specialized software and qualified human oversight remain necessary for guaranteed factual accuracy.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://openai.com/chatgpt/pricing/",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://openai.com/chatgpt/pricing/"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Claude Cowork",
+          "vendor": "Anthropic",
+          "website": "https://claude.com",
+          "category": "document generation, AI workspace, and assistant",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Free tier does not include Claude Cowork or advanced tools; limited to basic chat, web search, code execution, and artifacts with standard limits."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$17/month (annual billing) or $20/month (monthly billing) for Pro",
+            "notes": "Pro plan starts at $17-$20/month. Max plans start from $100/month. Team plans start at $20/seat/month billed annually. Enterprise plans available."
+          },
+          "key_features": [
+            "Claude Design, Slides, Docs",
+            "Claude Code",
+            "Task scheduling and handoff",
+            "Claude in Chrome and Microsoft 365",
+            "Built-in browser for web tasks",
+            "Artifacts and file creation"
+          ],
+          "output_formats": [
+            "PDF",
+            "Markdown",
+            "Excel",
+            "PowerPoint",
+            "Word",
+            "Structured Data"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Powerful agentic workspace that automates multi-step tasks and file creation, but consumes usage limits much faster than basic chat.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://www.anthropic.com/pricing",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://www.anthropic.com/pricing"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Gamma",
+          "vendor": "Gamma Tech, Inc.",
+          "website": "https://gamma.app",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": "400 credits at signup",
+            "limits": "Starter credits do not refill; create up to 10 slides per prompt; includes Gamma branding"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$9 / seat / month (Plus plan, billed annually at $108)",
+            "notes": "Plus: $9/seat/mo ($108/yr), 1,000 monthly credits. Pro: $18/seat/mo ($216/yr), 4,000 monthly credits. Ultra: $90/seat/mo ($1,080/yr), 20,000 monthly credits. Business/Team plans also available."
+          },
+          "key_features": [
+            "AI-powered presentation, document, and website generation",
+            "Import from PDF & PPTX",
+            "Theme builder for custom branding",
+            "API access on paid plans",
+            "Advanced AI models (Claude, ChatGPT, Gemini, Flux, etc.)"
+          ],
+          "output_formats": [
+            "PDF",
+            "PPTX",
+            "PNG",
+            "Google Slides"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center",
+              "community"
+            ],
+            "notes": "Help center available at help.gamma.app, community hub, and support email via support@gamma.app"
+          },
+          "quality_notes": "Well-regarded AI presentation and document builder with flexible modular card structures, though some users note limitations with dynamic layout flattening on exports.",
+          "confidence": 1.0,
+          "_extracted_by": "gemini",
           "source_url": "https://gamma.app/pricing",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://gamma.app/pricing"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Notion AI",
+          "vendor": "Notion",
+          "website": "https://www.notion.com",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Trial AI capabilities; limited trial usage"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$20 per member / month (Business plan includes full Notion AI access)",
+            "notes": "Plus plan is $10/member/month (with trial AI); Business plan is $20/member/month (includes full Notion AI, Notion Agent, AI Meeting Notes, Enterprise Search); Enterprise is custom pricing. Custom Agents are free to try, then $10 per 1,000 monthly Notion credits."
+          },
+          "key_features": [
+            "Trial of Notion AI",
+            "Notion Agent",
+            "AI Meeting Notes",
+            "Enterprise Search",
+            "Custom Agents",
+            "Workers (Beta)"
+          ],
+          "output_formats": [
+            "PDF",
+            "HTML",
+            "Markdown",
+            "CSV"
+          ],
+          "support": {
+            "channels": [
+              "help_center",
+              "chat"
+            ],
+            "notes": "Includes Customer Success Manager for Enterprise plans."
+          },
+          "quality_notes": "Praised as a powerful all-in-one workspace with embedded AI capabilities, though some users note frustration with pricing tiers and the requirement of upgrading to higher plans for full AI agent access.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://www.notion.com/pricing",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://www.notion.com/pricing"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Canva Magic Write",
+          "vendor": "Canva",
+          "website": "https://www.canva.com/magic-write/",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": "Up to 20 Standard or Premium AI uses",
+            "limits": "Shared monthly AI allowance across Standard and Premium AI tools"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$144/year for one person (Pro plan)",
+            "notes": "Business plan is US$250/year per person. Enterprise plan pricing is custom (Contact Sales)."
+          },
+          "key_features": [
+            "AI text generation and copywriting assistant",
+            "Blog and long-form content creation",
+            "Social media captions and short-form text",
+            "Brainstorming and idea generation",
+            "Integration with Canva design suite and docs"
+          ],
+          "output_formats": [
+            "TXT",
+            "PDF",
+            "PNG",
+            "JPG",
+            "MP4"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Priority support and dedicated success manager available for Enterprise customers with 150+ contracted seats."
+          },
+          "quality_notes": "Rated 4.64 out of 5 from user reviews. Users praise its speed in overcoming writer's block and generating quick drafts, though some note limits on free tiers and occasional reliance on pre-2021 knowledge data.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://www.canva.com/pricing/",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://www.canva.com/pricing/"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Adobe Acrobat AI",
+          "vendor": "Adobe",
+          "website": "https://www.adobe.com/acrobat.html",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Free tier is limited to Acrobat Reader for opening and viewing PDFs; advanced tools and AI features require a trial or paid plan."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$14.99/mo (Acrobat Standard)",
+            "notes": "Acrobat Standard is US$14.99/mo, Acrobat Pro is US$19.99/mo, and Acrobat Studio (which includes AI Assistant) is US$24.99/mo on an annual commitment billed monthly. AI Assistant add-on is also available starting at US$4.99/mo for existing plans or US$1.99/mo for education."
+          },
+          "key_features": [
+            "Generative AI assistant for document Q&A and summarization",
+            "Create, edit, convert, and organize PDFs",
+            "Collect e-signatures and track responses",
+            "OCR and turn scans into editable PDFs",
+            "Redact sensitive content",
+            "PDF Spaces for collaboration",
+            "Generate flyers, social content, and presentations from documents"
+          ],
+          "output_formats": [
+            "PDF",
+            "Microsoft Word",
+            "Microsoft Excel",
+            "Microsoft PowerPoint"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Support is accessible via Adobe's help center and community forums."
+          },
+          "quality_notes": "Industry-standard PDF solution praised for its comprehensive editing, OCR, and newly integrated AI summarization/Q&A features, though some users find subscription pricing and cancellation terms restrictive.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://www.adobe.com/acrobat/pricing.html",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://www.adobe.com/acrobat/pricing.html"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Microsoft 365 Copilot",
+          "vendor": "Microsoft",
+          "website": "https://www.microsoft.com/en-us/microsoft-365-copilot",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Basic chat and web access limits apply; does not include full integration inside desktop Microsoft 365 apps."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$21-22 per user per month (bundled with select business plans) or $30 per user per month as an add-on",
+            "notes": "Standard add-on is $30/user/month. Bundled business plans for up to 300 users are available around $21-22/user/month."
+          },
+          "key_features": [
+            "Integrated into Word, Excel, PowerPoint, Outlook, and Teams",
+            "Work IQ grounding in company and team context",
+            "Leading AI models selection with Auto advantage",
+            "Agent Builder for custom work-focused AI agents",
+            "Copilot Code and Copilot Autopilot background agents"
+          ],
+          "output_formats": [
+            "docx",
+            "pptx",
+            "csv",
+            "pdf",
+            "text"
+          ],
+          "support": {
+            "channels": [
+              "help_center",
+              "community"
+            ],
+            "notes": "Support is provided through Microsoft Support documentation, community forums, and standard enterprise support channels."
+          },
+          "quality_notes": "Powerful productivity tool deeply integrated into Office apps, but its value depends heavily on configuration, context quality, and user onboarding.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://www.microsoft.com/microsoft-365/copilot",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://www.microsoft.com/microsoft-365/copilot"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Jotform Document Generator",
+          "vendor": "Jotform",
+          "website": "https://www.jotform.com",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": "5 forms, 100 monthly submissions, 10 monthly signed documents",
+            "limits": "100 MB available space, 10,000 monthly form views, 500 total submission storage, 100 fields per form, 1 user"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$34 per month (Bronze plan, billed annually)",
+            "notes": "Bronze ($34/mo), Silver ($39/mo), Gold ($99/mo) billed annually. Enterprise has custom quote-only pricing. Nonprofit and educational discounts available (up to 50% off)."
+          },
+          "key_features": [
+            "Form builder",
+            "Dynamic PDF generator",
+            "AI document generator",
+            "E-signatures",
+            "Payment integrations",
+            "Templates",
+            "HIPAA-enabled features (Gold and Enterprise)"
+          ],
+          "output_formats": [
+            "PDF",
+            "Excel",
+            "CSV",
+            "HTML",
+            "DOC",
+            "DOCX",
+            "XLS",
+            "XLSX",
+            "TXT",
+            "RTF"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": "24/7 customer support available."
+          },
+          "quality_notes": "Users note that Jotform is user-friendly and great for forms and PDF generation, but customization options can sometimes be limited.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://www.jotform.com/pricing/",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://www.jotform.com/pricing/"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Slaide",
+          "vendor": null,
+          "website": "https://www.slaide.de/",
+          "category": "presentation and document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Paid tier exists, but exact pricing details are not available in the snippets."
+          },
+          "key_features": [
+            "AI presentation maker and document generator",
+            "In-place visual editing",
+            "High-fidelity PowerPoint import and export",
+            "Markdown presentation language (.slaide format)",
+            "Export to PowerPoint, Word, Excel, PDF, and PNG",
+            "Web deck rendering",
+            "Git diff support for decks"
+          ],
+          "output_formats": [
+            "PowerPoint (.pptx)",
+            "Word (.docx)",
+            "Excel (.xlsx)",
+            "PDF",
+            "PNG",
+            "Web deck"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Allows real editable files (text, headings, lists, tables, shapes) instead of flat visual mockups, and enables presentations to be written directly in Markdown by AI agents.",
+          "confidence": 0.8,
+          "_extracted_by": "gemini",
           "source_url": "https://slaide.com/pricing",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://slaide.com/pricing"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Liner Write",
+          "vendor": "Liner",
+          "website": "https://liner.com/write",
+          "category": "document generation",
+          "free_tier": {
+            "available": null,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI writing agent for business plans and proposals",
+            "Built-in source verification and research",
+            "Co-writing experience with AI",
+            "Line-by-line citations and add citation feature"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Reduces post-generation fact-checking burden by tethering suggestions to verifiable sources.",
+          "confidence": 0.8,
+          "_extracted_by": "gemini",
           "source_url": "https://getliner.com/pricing",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://getliner.com/pricing"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Skywork",
+          "vendor": null,
+          "website": "https://skywork.ai/",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": "800 daily free credits",
+            "limits": "Credits reset with no rollover"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19.99 per month",
+            "notes": "Monthly Pro is $19.99/mo (includes 7,000 monthly credits); Annual Pro is $149.99; a 7-day trial is offered for $1."
+          },
+          "key_features": [
+            "DeepResearch engine scanning hundreds of sources per query",
+            "Multimodal content generation (docs, slides, sheets, podcasts, webpages, and videos)",
+            "Scheduled recurring tasks (daily/weekly)",
+            "Specialized AI agents and skills workspace",
+            "Long-term memory and cloud sandbox"
+          ],
+          "output_formats": [
+            "PPTX",
+            "Google Slides",
+            "PDF",
+            "Documents",
+            "Sheets",
+            "Webpages",
+            "Videos"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Strong multi-format generation and deep research capabilities, but credit metering can be opaque and heavy tasks consume credits quickly.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://skywork.ai/pricing",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://skywork.ai/pricing"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Type",
+          "vendor": null,
+          "website": "https://type.ai",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": "Limited credits",
+            "limits": "Limited credits that never expire and do not reset once used"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$8/mo",
+            "notes": "Basic tier is $8/mo (500,000 credits, $96 billed annually). Pro tier is $16/mo (1,500,000 credits, $192 billed annually). Max tier is $64/mo (6,000,000 credits, $768 billed annually)."
+          },
+          "key_features": [
+            "Intelligent editor for long-form writing",
+            "Premium AI models for writing, editing, and publishing",
+            "AI-powered features like chat, creating images, audio, or video",
+            "Document import and export preserving images, headings, and tables",
+            "Support for up to 150,000 words per document"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "email"
+            ],
+            "notes": "Priority support includes hands-on, priority email support."
+          },
+          "quality_notes": "Praised by users as a top AI tool for overcoming writer's block, offering a clean minimal interface, and working exceptionally well for long-form creative writing like books, novels, and screenplays.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://type.ai/pricing",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://type.ai/pricing"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Sembly",
+          "vendor": "Sembly AI",
+          "website": "https://www.sembly.ai",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": "750 monthly credits per user",
+            "limits": "1 user, 5 clients, 5 brands, 2 months chat/artifact history, 1 hour meeting hours per month"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$10 per month (Basic plan, billed annually)",
+            "notes": "Pro is $20/user/mo, MAX is $30/user/mo, and Enterprise is custom pricing."
+          },
+          "key_features": [
+            "Meeting transcription in 45+ languages",
+            "AI meeting notes, summaries, and tasks",
+            "Build on-brand client documents and presentations from scratch",
+            "Multi-meeting AI chat and advanced search",
+            "Workspace automations, webhooks, and MCP access",
+            "Sentiment analysis and risk/issue tracking",
+            "Calendar sync and media uploads"
+          ],
+          "output_formats": [
+            "PDF",
+            "DOCX",
+            "HTML",
+            "Markdown"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Priority support is available on the MAX and Enterprise plans."
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://www.sembly.ai/pricing/",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://www.sembly.ai/pricing/"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "QwenWork",
+          "vendor": "Alibaba Cloud",
+          "website": "https://qwenwork.ai",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Offers Free, Plus, Pro, and enterprise plans covering AI credits, storage, page publishing, parallel tasks, and organization controls."
+          },
+          "key_features": [
+            "Turns briefs into finished documents, presentations, web pages, images, audio, and video",
+            "Document creation",
+            "Data analysis",
+            "Information retrieval",
+            "In-depth research",
+            "Multimodal content generation",
+            "Scheduled tasks",
+            "Website creation"
+          ],
+          "output_formats": [
+            "documents",
+            "presentations",
+            "web pages",
+            "images",
+            "audio",
+            "video"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.8,
+          "_extracted_by": "gemini",
           "source_url": "https://qwenwork.aliyun.com/",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://qwenwork.aliyun.com/"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Watto AI",
+          "vendor": null,
+          "website": "https://www.watto.ai",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": "7",
+            "limits": "7 Document Generations"
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI-powered report generation",
+            "Integrate information from different platforms like Google Docs or Slack",
+            "Intelligently generate documents in desired formats"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.8,
+          "_extracted_by": "gemini",
           "source_url": "https://watto.ai",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://watto.ai"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Capitol AI",
+          "vendor": null,
+          "website": "https://www.capitol.ai",
+          "category": "document generation",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Enterprise pricing requires booking a demo for a custom quote based on usage, scale, and integration."
+          },
+          "key_features": [
+            "Governed data integration",
+            "Institutional workflows",
+            "Model independence / multi-model orchestration",
+            "Defensible artifacts with lineage tracking",
+            "No-code workflow design",
+            "Human-in-the-loop approvals",
+            "Real-time collaboration"
+          ],
+          "output_formats": [
+            "PowerPoint",
+            "Web Page",
+            "Spreadsheet",
+            "Reports",
+            "Filings"
+          ],
+          "support": {
+            "channels": [],
+            "notes": "Contact via demo request page"
+          },
+          "quality_notes": "Focused on regulated and high-stakes enterprise industries requiring secure, auditable, and model-agnostic AI workflows.",
+          "confidence": 0.85,
+          "_extracted_by": "gemini",
           "source_url": "https://capitol.ai",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://capitol.ai"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Cobl.ai",
+          "vendor": null,
+          "website": "https://www.cobl.ai/",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "upgrade for unlimited documents"
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Starts at \u20ac0/month, upgrade for unlimited documents, and scale with your team."
+          },
+          "key_features": [
+            "AI deal assistant for sales teams",
+            "CRM, email, and meeting integration",
+            "Proposal and RFP response generation",
+            "Pitch decks and executive summaries",
+            "Multi-source file attachments and connectors (Gmail, Outlook, Hubspot, Slack, Notion, Gong, Salesforce, Docusign, Dropbox)"
+          ],
+          "output_formats": [
+            "XLS",
+            "DOC",
+            "PDF"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Users report significant time savings on RFP analysis and proposal creation, reducing turnaround times from days to hours while improving relevance and consistency.",
+          "confidence": 0.85,
+          "_extracted_by": "gemini",
           "source_url": "https://cobl.ai",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://cobl.ai"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "Google Gemini Docs",
+          "vendor": "Google",
+          "website": "https://gemini.google.com",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Standard rate limits and usage caps apply"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$9.99/mo",
+            "notes": "Google AI Plus is $9.99/mo (2 TB storage, Gemini app access). Google AI Pro is $19.99/mo (5 TB storage, Gemini Pro model, Gemini in Docs, Vids & More)."
+          },
+          "key_features": [
+            "Direct file generation in chat (PDF, Word, Excel, etc.)",
+            "Help me write in Google Docs",
+            "Summarization and executive summaries",
+            "Infographic and diagram generation",
+            "Contextual document creation from linked Google Workspace files"
+          ],
+          "output_formats": [
+            ".pdf",
+            ".docx",
+            ".xlsx",
+            ".csv",
+            "LaTeX",
+            "TXT",
+            "RTF",
+            "Markdown",
+            "Google Docs"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Standard Google support and community help centers"
+          },
+          "quality_notes": "Users praise deep Google Workspace integration and broad export capabilities, but note that AI-generated content can occasionally require manual correction or context refinement.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://one.google.com/about/plans",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://one.google.com/about/plans"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "AI Doc Maker",
+          "vendor": null,
+          "website": "https://www.aidocmaker.com/",
+          "category": "document generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI Document Generator",
+            "AI PDF Maker",
+            "Template-based document generation (reports, proposals, contracts)",
+            "AI spreadsheet generator with formulas, charts, and data tables"
+          ],
+          "output_formats": [
+            "PDF",
+            "Excel",
+            "Google Sheets"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.7,
+          "_extracted_by": "gemini",
           "source_url": "https://aidocmaker.com",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://aidocmaker.com"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         },
         {
-          "error": "all_llms_failed",
           "app_name": "PandaDoc",
+          "vendor": "PandaDoc",
+          "website": "https://www.pandadoc.com",
+          "category": "document generation and e-sign",
+          "free_tier": {
+            "available": true,
+            "credits": "60 documents per year",
+            "limits": "2 recipients per document"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19 per user per month (billed annually)",
+            "notes": "Business plan starts at $49/user/month. Higher tiers and Enterprise options available with per-user scaling."
+          },
+          "key_features": [
+            "eSignatures",
+            "Drag-and-drop editor",
+            "Document templates",
+            "Content library",
+            "CRM integrations",
+            "Payment collection",
+            "AI Contract Assistant",
+            "Real-time tracking and analytics"
+          ],
+          "output_formats": [
+            "PDF",
+            "DOCX"
+          ],
+          "support": {
+            "channels": [
+              "help_center",
+              "email"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Ranks highly on G2 for proposals, eSignatures, and contract management. Users appreciate the ease of use, integrations, and collaborative real-time editing, though some note pricing transparency concerns and per-user scaling costs.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
           "source_url": "https://www.pandadoc.com/pricing/",
-          "_searched_at": "2026-10-03T10:11:36.902670+00:00",
-          "website": "https://www.pandadoc.com/pricing/"
+          "_searched_at": "2026-10-03T12:16:25.471943+00:00"
         }
       ]
     }
