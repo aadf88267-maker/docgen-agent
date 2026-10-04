@@ -1,6 +1,8 @@
 """
-DocGenAppWatch Agent - single-file backend.
-Natural-language field queries + page fetch + LLM extraction.
+DocGenAppWatch Agent — dual-mode backend.
+
+AGENT_MODE=watch    → monitor known apps + find new competitors
+AGENT_MODE=research → scan ANY sector with user-defined fields
 """
 
 import os
@@ -16,9 +18,23 @@ from openai import OpenAI
 
 LOG_FILE = Path("log.json")
 RESULTS_FILE = Path("results.json")
+BASELINE_FILE = Path("baseline.json")
 USAGE_FILE = Path("search_usage.json")
 
-MAX_SEARCHES_PER_RUN = 160
+MODE = os.getenv("AGENT_MODE", "watch").lower()
+RESEARCH_SECTOR = os.getenv("RESEARCH_SECTOR", "").strip()[:200] or "AI document generation tools"
+RESEARCH_FIELDS_RAW = os.getenv("RESEARCH_FIELDS", "").strip()[:500]
+
+def _parse_fields(raw):
+    if not raw:
+        return ["description", "url", "category"]
+    parts = [p.strip() for p in raw.split(",") if p.strip()]
+    return parts[:12]  # cap at 12 fields
+
+RESEARCH_FIELDS = _parse_fields(RESEARCH_FIELDS_RAW)
+
+MAX_SEARCHES_PER_RUN = 120
+DAILY_EXA_CAP = 40
 MONTHLY_CAPS = {"exa": 1200, "firecrawl": 1000}
 
 NTFY_LIVE_TOPIC = "docgen-live-aadf88267"
@@ -39,6 +55,10 @@ def live(kind, **kwargs):
         )
     except Exception:
         pass
+
+# ============================================================
+# KNOWN APPS (WATCH only)
+# ============================================================
 
 KNOWN_APPS = [
     {"name": "ChatGPT Work", "url": "https://openai.com/chatgpt/pricing/"},
@@ -63,45 +83,32 @@ KNOWN_APPS = [
     {"name": "PandaDoc", "url": "https://www.pandadoc.com/pricing/"},
 ]
 
-FIELD_QUERIES = [
-    "what is the free tier of {name}",
-    "how much does {name} cost per month",
-    "what can you do with {name} features",
-    "what file formats does {name} export",
-    "is {name} worth it review pros cons",
+WATCH_QUERIES = [
+    "{name} new update announcement 2026",
+    "{name} pricing or feature change 2026",
 ]
 
-DISCOVERY_QUERIES = [
-    "new AI document generator 2026",
-    "launch AI document creation tool 2026",
-    "Show HN AI document generator",
-    "Product Hunt AI document generator 2026",
-    "AI document startup funding 2026",
-    "YC AI document generator",
-    "AI document generation seed round",
-    "best new document AI tool 2026",
-    "AI report generator launch",
-    "AI proposal generator new app",
-    "AI contract generator startup",
-    "AI slides generator new tool 2026",
-    "AI resume generator launch 2026",
-    "AI business document generator new",
-    "AI doc automation tool 2026",
-    "OpenAI document generator update",
-    "Anthropic Claude document features",
-    "Google Gemini document generation update",
-    "Notion AI new features 2026",
-    "Gamma AI changelog 2026",
-    "Canva Magic Write update",
-    "Adobe Acrobat AI new features",
-    "Microsoft Copilot document update",
-    "AI PDF generator new",
-    "AI Word document generator new",
-    "AI document summarizer launch",
-    "AI document translation tool new",
-    "AI legal document generator startup",
-    "AI technical writing tool launch",
-    "AI invoice generator new app",
+COMPETITOR_QUERIES = [
+    "new AI document generator launched this week",
+    "new AI writing assistant launch 2026",
+    "Product Hunt document tool this month",
+    "AI presentation tool new release",
+    "AI contract generator new launch",
+    "YC batch AI document startup",
+    "AI proposal software new tool 2026",
+    "just launched AI doc app",
+    "new entrant document automation",
+    "AI document startup funding this week",
+    "new AI spreadsheet tool 2026",
+    "AI report generator launch this month",
+    "Notion alternative new 2026",
+    "Gamma alternative new tool",
+    "AI doc app Show HN 2026",
+    "AI powerpoint generator new",
+    "AI resume tool new launch",
+    "AI invoice generator new 2026",
+    "AI legal document startup 2026",
+    "AI technical doc generator new",
 ]
 
 # ============================================================
@@ -165,6 +172,31 @@ def _safe_title(h):
             return v
     return ""
 
+def _sector_queries(sector):
+    s = sector.strip()
+    return [
+        f"{s} list 2026",
+        f"best {s} 2026",
+        f"top {s} 2026",
+        f"{s} comparison 2026",
+        f"{s} roundup 2026",
+        f"new {s} 2026",
+        f"{s} guide 2026",
+        f"{s} database 2026",
+        f"{s} directory",
+        f"popular {s}",
+        f"{s} examples",
+        f"{s} list with details",
+        f"{s} review site",
+        f"{s} ranked 2026",
+        f"most used {s}",
+        f"{s} overview 2026",
+        f"{s} wiki",
+        f"{s} facts",
+        f"{s} data 2026",
+        f"{s} stats 2026",
+    ]
+
 # ============================================================
 # SEARCH ROUTER
 # ============================================================
@@ -183,18 +215,35 @@ def _save_usage(data):
 def _current_month():
     return datetime.now(timezone.utc).strftime("%Y-%m")
 
+def _today():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
 def _check_and_increment(provider, cap=None):
     data = _load_usage()
     month = _current_month()
+    day = _today()
     if data.get("month") != month:
-        data = {"month": month, "counts": {}}
+        data = {"month": month, "counts": {}, "daily": {}}
+    if data.get("daily_date") != day:
+        data["daily_date"] = day
+        data["daily"] = {}
     counts = data.setdefault("counts", {})
-    used = counts.get(provider, 0)
-    if cap is not None and used >= cap:
+    daily = data.setdefault("daily", {})
+    used_total = counts.get(provider, 0)
+    used_today = daily.get(provider, 0)
+    if cap is not None and used_total >= cap:
         return False
-    counts[provider] = used + 1
+    counts[provider] = used_total + 1
+    daily[provider] = used_today + 1
     _save_usage(data)
     return True
+
+def _exa_daily_ok():
+    data = _load_usage()
+    day = _today()
+    if data.get("daily_date") != day:
+        return True
+    return data.get("daily", {}).get("exa", 0) < DAILY_EXA_CAP
 
 def _you_search(query, num=5):
     r = requests.post(
@@ -210,14 +259,7 @@ def _you_search(query, num=5):
     r.raise_for_status()
     data = r.json()
     hits = _extract_hits(data)
-    out = []
-    for h in hits[:num]:
-        out.append({
-            "title": _safe_title(h),
-            "url": _safe_url(h),
-            "snippet": _safe_snippet(h),
-        })
-    return out
+    return [{"title": _safe_title(h), "url": _safe_url(h), "snippet": _safe_snippet(h)} for h in hits[:num]]
 
 def _exa_search(query, num=5):
     api_key = os.getenv("EXA_API_KEY")
@@ -232,14 +274,14 @@ def _exa_search(query, num=5):
     r.raise_for_status()
     data = r.json()
     hits = _extract_hits(data)
-    out = []
-    for h in hits[:num]:
-        out.append({
+    return [
+        {
             "title": _safe_title(h),
             "url": _safe_url(h),
             "snippet": _safe_snippet({"snippets": h.get("highlights", []) or []}),
-        })
-    return out
+        }
+        for h in hits[:num]
+    ]
 
 def _firecrawl_search(query, num=5):
     api_key = os.getenv("FIRECRAWL_API_KEY")
@@ -247,24 +289,14 @@ def _firecrawl_search(query, num=5):
         raise RuntimeError("FIRECRAWL_API_KEY not set")
     r = requests.post(
         "https://api.firecrawl.dev/v1/search",
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-        },
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
         json={"query": query, "limit": num},
         timeout=30,
     )
     r.raise_for_status()
     data = r.json()
     hits = _extract_hits(data)
-    out = []
-    for h in hits[:num]:
-        out.append({
-            "title": _safe_title(h),
-            "url": _safe_url(h),
-            "snippet": _safe_snippet(h),
-        })
-    return out
+    return [{"title": _safe_title(h), "url": _safe_url(h), "snippet": _safe_snippet(h)} for h in hits[:num]]
 
 def search_web(query, num=5):
     try:
@@ -276,7 +308,7 @@ def search_web(query, num=5):
         log("search", query=query, provider="you.com", error=str(e)[:120])
         live("search", query=query, provider="you.com", error=str(e)[:80])
 
-    if _check_and_increment("exa", MONTHLY_CAPS["exa"]):
+    if _exa_daily_ok() and _check_and_increment("exa", MONTHLY_CAPS["exa"]):
         try:
             out = _exa_search(query, num)
             log("search", query=query, provider="exa", hits=len(out))
@@ -313,10 +345,7 @@ def fetch_page(url, max_chars=8000):
     try:
         r = requests.post(
             "https://api.firecrawl.dev/v1/scrape",
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
-            },
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
             json={"url": url, "formats": ["markdown"], "onlyMainContent": True},
             timeout=45,
         )
@@ -338,36 +367,6 @@ def fetch_page(url, max_chars=8000):
 # LLM ROUTER
 # ============================================================
 
-EXTRACTION_PROMPT = """You are a research analyst. Below are (a) targeted search snippets and (b) the full text of the app's pricing page (if available) about a document generation app.
-
-Extract structured data. Prefer page text over snippets when they conflict. Return ONLY valid JSON matching this exact schema. Use null for unknown — DO NOT guess.
-
-Schema:
-{{
-  "app_name": "string",
-  "vendor": "string or null",
-  "website": "string or null",
-  "category": "string",
-  "free_tier": {{"available": true/false, "credits": "string or null", "limits": "string or null"}},
-  "paid_pricing": {{"cheapest_plan": "string or null", "notes": "string or null"}},
-  "key_features": ["string"],
-  "output_formats": ["string"],
-  "support": {{"channels": ["email","chat","phone","help_center"], "notes": "string or null"}},
-  "quality_notes": "string or null",
-  "confidence": 0.0
-}}
-
-App name: {app_name}
-
-=== SEARCH SNIPPETS ===
-{snippets}
-
-=== PRICING PAGE TEXT ===
-{page_text}
-
-Return only the JSON object. No markdown. No explanation.
-"""
-
 def _client(base_url, api_key):
     return OpenAI(base_url=base_url, api_key=api_key)
 
@@ -376,57 +375,63 @@ def _llm_nemotron(prompt):
     r = c.chat.completions.create(
         model="nvidia/nemotron-3-super-120b-a12b",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2500,
+        temperature=0.1, max_tokens=3000,
     )
     return r.choices[0].message.content
 
 def _llm_gemini(prompt):
-    c = _client(
-        "https://generativelanguage.googleapis.com/v1beta/openai/",
-        os.getenv("GEMINI_API_KEY"),
-    )
+    c = _client("https://generativelanguage.googleapis.com/v1beta/openai/", os.getenv("GEMINI_API_KEY"))
     r = c.chat.completions.create(
         model="gemini-3.5-flash-lite",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2500,
+        temperature=0.1, max_tokens=3000,
     )
     return r.choices[0].message.content
 
-def _llm_deepseek_orca(prompt):
+def _llm_deepseek(prompt):
     c = _client("https://api.orcarouter.ai/v1", os.getenv("ORCA_API_KEY"))
     r = c.chat.completions.create(
         model="deepseek/deepseek-v4-flash-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2500,
+        temperature=0.1, max_tokens=3000,
     )
     return r.choices[0].message.content
 
-def _llm_kimi_k3(prompt):
+def _llm_kimi(prompt):
     c = _client("https://aihubmix.com/v1", os.getenv("AIHUBMIX_API_KEY"))
     r = c.chat.completions.create(
         model="coding-kimi-k3-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2500,
+        temperature=0.1, max_tokens=3000,
     )
     return r.choices[0].message.content
 
-def _llm_minimax_m3(prompt):
+def _llm_minimax(prompt):
     c = _client("https://aihubmix.com/v1", os.getenv("AIHUBMIX_API_KEY"))
     r = c.chat.completions.create(
         model="coding-minimax-m3-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2500,
+        temperature=0.1, max_tokens=3000,
     )
     return r.choices[0].message.content
 
-def _llm_glm_52(prompt):
+def _llm_glm(prompt):
     c = _client("https://aihubmix.com/v1", os.getenv("AIHUBMIX_API_KEY"))
     r = c.chat.completions.create(
         model="coding-glm-5.2-free",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.1, max_tokens=2500,
+        temperature=0.1, max_tokens=3000,
     )
     return r.choices[0].message.content
+
+PROVIDERS = [
+    ("nemotron", _llm_nemotron),
+    ("gemini", _llm_gemini),
+    ("deepseek", _llm_deepseek),
+    ("kimi", _llm_kimi),
+    ("minimax", _llm_minimax),
+    ("glm", _llm_glm),
+]
 
 def _clean_json(raw):
     if raw is None:
@@ -445,91 +450,361 @@ def _clean_json(raw):
     except Exception:
         return None
 
-def extract_app(app_name, search_results, page_text=""):
-    snippets = "\n\n".join(
-        f"- {r['title']} ({r['url']})\n  {r['snippet']}"
-        for r in search_results[:25]
-    )
-    prompt = EXTRACTION_PROMPT.format(
-        app_name=app_name,
-        snippets=snippets or "(no snippets)",
-        page_text=page_text or "(no page text)",
-    )
-
-    providers = [
-        ("nemotron", _llm_nemotron),
-        ("gemini", _llm_gemini),
-        ("deepseek-v4-flash-free", _llm_deepseek_orca),
-        ("kimi-k3-free", _llm_kimi_k3),
-        ("minimax-m3-free", _llm_minimax_m3),
-        ("glm-5.2-free", _llm_glm_52),
-    ]
-
-    for name, fn in providers:
+def _call_llm(prompt, tag):
+    for name, fn in PROVIDERS:
         try:
             raw = fn(prompt)
             parsed = _clean_json(raw)
             if parsed:
-                log("llm", app=app_name, model=name, status="ok")
-                live("llm", app=app_name, model=name, status="ok")
+                log("llm", task=tag, model=name, status="ok")
+                live("llm", task=tag, model=name, status="ok")
                 parsed["_extracted_by"] = name
                 return parsed
             err = (raw or "")[:80]
-            log("llm", app=app_name, model=name, status="invalid_json", error=err)
-            live("llm", app=app_name, model=name, status="invalid")
+            log("llm", task=tag, model=name, status="invalid_json", error=err)
         except Exception as e:
-            log("llm", app=app_name, model=name, status="failed", error=str(e)[:200])
-            live("llm", app=app_name, model=name, status="failed")
+            log("llm", task=tag, model=name, status="failed", error=str(e)[:200])
+            live("llm", task=tag, model=name, status="failed")
+    return None
 
-    return {"error": "all_llms_failed", "app_name": app_name}
+def _call_llm_text(prompt, tag):
+    for name, fn in PROVIDERS:
+        try:
+            raw = fn(prompt)
+            if raw and raw.strip():
+                log("llm", task=tag, model=name, status="ok")
+                live("llm", task=tag, model=name, status="ok")
+                return raw.strip(), name
+            log("llm", task=tag, model=name, status="empty")
+        except Exception as e:
+            log("llm", task=tag, model=name, status="failed", error=str(e)[:200])
+            live("llm", task=tag, model=name, status="failed")
+    return None, None
+
+# ============================================================
+# PROMPTS
+# ============================================================
+
+EXTRACT_PROMPT = """You are a research analyst. Below are (a) search snippets and (b) the app's pricing page text.
+
+Extract structured data. Prefer page text over snippets when they conflict. Return ONLY valid JSON matching this schema. Use null for unknown.
+
+Schema:
+{{
+  "app_name": "string",
+  "vendor": "string or null",
+  "website": "string or null",
+  "category": "string",
+  "free_tier": {{"available": true/false, "credits": "string or null", "limits": "string or null"}},
+  "paid_pricing": {{"cheapest_plan": "string or null", "notes": "string or null"}},
+  "key_features": ["string"],
+  "output_formats": ["string"],
+  "support": {{"channels": ["email","chat","phone","help_center"], "notes": "string or null"}},
+  "quality_notes": "string or null",
+  "confidence": 0.0
+}}
+
+App name: {app_name}
+
+=== SNIPPETS ===
+{snippets}
+
+=== PAGE TEXT ===
+{page_text}
+
+Return only the JSON object.
+"""
+
+DIFF_PROMPT = """You compare two snapshots of a software product to find meaningful changes.
+
+BASELINE (previous state):
+{baseline}
+
+CURRENT (today's state):
+{current}
+
+Output 0-3 short change lines, one per line. Examples:
+Pro plan: $20 -> $25
+New feature: AI Agents
+Removed: Zapier integration
+Free tier: 400 -> 500 credits
+
+Rules:
+- Only report PRICING, FEATURES, SUPPORT, or FREE TIER changes
+- If nothing meaningful changed, output exactly: NO_CHANGES
+- No bullets, no numbering, no markdown. Plain lines separated by newlines.
+- Maximum 3 lines.
+"""
+
+COMPETITOR_PROMPT = """Below are web search results about NEW AI document generation tools.
+
+Extract a list of AI document tools that appear NEW (launched or funded in 2025-2026). Skip established players (Notion, Canva, Adobe, Microsoft, OpenAI, Anthropic, Google, Gamma).
+
+Return ONLY valid JSON:
+{{
+  "apps": [
+    {{
+      "name": "string",
+      "url": "string or null",
+      "category": "string",
+      "one_liner": "short description",
+      "evidence": "why new"
+    }}
+  ]
+}}
+
+Search snippets:
+{content}
+
+Return only JSON. No markdown.
+"""
+
+def build_research_prompt(sector, fields):
+    """Build dynamic prompt with user-defined fields."""
+    field_lines = "\n".join(f'- "{f}"' for f in fields)
+    field_keys = ", ".join(f'"{f}"' for f in fields)
+    example = ",\n      ".join(f'"{f}": "value or null"' for f in fields)
+    return f"""You are scanning the market for this sector: {sector}
+
+Below are web search results. Extract EVERY distinct item/product/entry you can find that fits the sector "{sector}".
+
+For each item, extract these specific fields:
+{field_lines}
+
+For each field:
+- Use a concise string value (number + unit if applicable)
+- Use null if the info isn't in the snippets
+- DO NOT guess or hallucinate values
+
+Return ONLY valid JSON:
+{{
+  "items": [
+    {{
+      "name": "string — name of the item",
+      {example}
+    }}
+  ]
+}}
+
+Search snippets:
+{{content}}
+
+Return only JSON. No markdown. Maximum 40 items.
+"""
 
 # ============================================================
 # STORAGE
 # ============================================================
 
-def load_previous_results():
-    if not RESULTS_FILE.exists():
-        return {}
-    try:
-        data = json.loads(RESULTS_FILE.read_text())
-        return {item["app_name"]: item for item in data.get("apps", [])}
-    except Exception:
-        return {}
-
-def save_results(apps, run_meta):
-    RESULTS_FILE.write_text(
-        json.dumps({"last_run": run_meta, "apps": apps}, indent=2)
-    )
-
 def load_log():
     if not LOG_FILE.exists():
-        return {"chat": "search x", "pinned": True, "days": []}
+        return {"chat": "search x", "pinned": True, "days": [], "research": []}
     try:
-        return json.loads(LOG_FILE.read_text())
+        d = json.loads(LOG_FILE.read_text())
+        d.setdefault("days", [])
+        d.setdefault("research", [])
+        return d
     except Exception:
-        return {"chat": "search x", "pinned": True, "days": []}
+        return {"chat": "search x", "pinned": True, "days": [], "research": []}
 
-def append_day(day_entry):
-    data = load_log()
-    days = data.get("days", [])
-    days = [d for d in days if d.get("date") != day_entry["date"]]
-    days.append(day_entry)
-    days.sort(key=lambda d: d.get("date", ""), reverse=True)
-    data["days"] = days
+def save_log(data):
     LOG_FILE.write_text(json.dumps(data, indent=2))
 
-def diff_app(old, new):
-    # First time seeing this app
-    if not old:
-        return ["new app tracked"]
-    # Previous extraction failed — treat as new, not changed
-    if old.get("error") == "all_llms_failed" or not old.get("category"):
-        return ["new app tracked"]
-    changes = []
-    for key in ["free_tier", "paid_pricing", "key_features", "support", "output_formats"]:
-        if old.get(key) != new.get(key):
-            changes.append(f"{key} changed")
-    return changes
+def append_day(entry):
+    data = load_log()
+    days = [d for d in data.get("days", []) if d.get("date") != entry["date"]]
+    days.append(entry)
+    days.sort(key=lambda d: d.get("date", ""), reverse=True)
+    data["days"] = days
+    save_log(data)
+
+def append_research(entry):
+    data = load_log()
+    research = data.get("research", [])
+    research.append(entry)
+    research = research[-60:]
+    data["research"] = research
+    save_log(data)
+
+def load_baseline():
+    if not BASELINE_FILE.exists():
+        return {"apps": {}}
+    try:
+        return json.loads(BASELINE_FILE.read_text())
+    except Exception:
+        return {"apps": {}}
+
+def save_baseline(data):
+    BASELINE_FILE.write_text(json.dumps(data, indent=2))
+
+# ============================================================
+# WATCH MODE
+# ============================================================
+
+def run_watch():
+    started = datetime.now(timezone.utc)
+    live("start", date=started.strftime("%Y-%m-%d"), mode="watch")
+    print(f"[watch] Starting at {started.isoformat()}")
+
+    baseline = load_baseline()
+    baseline_apps = baseline.get("apps", {})
+    search_count = 0
+    updates = []
+    checked_apps = []
+
+    def budget_left():
+        return search_count < MAX_SEARCHES_PER_RUN
+
+    for app in KNOWN_APPS:
+        if not budget_left():
+            break
+        name = app["name"]
+        results = []
+        for tpl in WATCH_QUERIES:
+            if not budget_left():
+                break
+            results.extend(search_web(tpl.format(name=name), num=5))
+            search_count += 1
+        page_text = fetch_page(app.get("url"), max_chars=6000)
+        extracted = _call_llm(
+            EXTRACT_PROMPT.format(
+                app_name=name,
+                snippets="\n\n".join(f"- {r['title']} ({r['url']})\n  {r['snippet']}" for r in results[:20]) or "(none)",
+                page_text=page_text or "(none)",
+            ),
+            tag=f"extract:{name}",
+        )
+        if not extracted:
+            extracted = {"error": "all_llms_failed", "app_name": name}
+        extracted["app_name"] = name
+        extracted["source_url"] = app.get("url")
+        if not extracted.get("website"):
+            extracted["website"] = app.get("url")
+        checked_apps.append(extracted)
+
+        prev = baseline_apps.get(name)
+        if prev and not prev.get("error"):
+            diff_raw, _ = _call_llm_text(
+                DIFF_PROMPT.format(
+                    baseline=json.dumps(prev, indent=2)[:3500],
+                    current=json.dumps(extracted, indent=2)[:3500],
+                ),
+                tag=f"diff:{name}",
+            )
+            if diff_raw and diff_raw.strip() != "NO_CHANGES":
+                lines = [l.strip(" -•*") for l in diff_raw.splitlines() if l.strip()]
+                for ln in lines[:3]:
+                    if ln.upper() == "NO_CHANGES":
+                        continue
+                    updates.append({"app": name, "change": ln})
+        else:
+            updates.append({"app": name, "change": "tracking started"})
+
+    new_competitors = []
+    all_snippets = []
+    for q in COMPETITOR_QUERIES:
+        if not budget_left():
+            break
+        results = search_web(q, num=5)
+        search_count += 1
+        all_snippets.extend(results[:3])
+
+    if all_snippets:
+        comp_raw = _call_llm(
+            COMPETITOR_PROMPT.format(
+                content="\n\n".join(f"- {r['title']} ({r['url']})\n  {r['snippet']}" for r in all_snippets[:60])
+            ),
+            tag="competitor_scan",
+        )
+        if comp_raw and comp_raw.get("apps"):
+            for a in comp_raw["apps"][:30]:
+                new_competitors.append({
+                    "name": a.get("name", ""),
+                    "url": a.get("url"),
+                    "category": a.get("category"),
+                    "one_liner": a.get("one_liner"),
+                    "evidence": a.get("evidence"),
+                })
+
+    for app in checked_apps:
+        if not app.get("error"):
+            baseline_apps[app["app_name"]] = app
+    baseline["apps"] = baseline_apps
+    baseline["updated_at"] = started.isoformat()
+    save_baseline(baseline)
+
+    day_entry = {
+        "date": started.strftime("%Y-%m-%d"),
+        "mode": "watch",
+        "started_at": started.isoformat(),
+        "finished_at": datetime.now(timezone.utc).isoformat(),
+        "searches": search_count,
+        "updates": updates,
+        "new_competitors": new_competitors,
+        "apps_checked": checked_apps,
+        "work_log": WORK_LOG,
+    }
+    append_day(day_entry)
+    live("end", date=day_entry["date"], mode="watch",
+         updates=len(updates), competitors=len(new_competitors))
+    print(f"[watch] Done. Updates: {len(updates)} · Competitors: {len(new_competitors)} · Searches: {search_count}")
+
+# ============================================================
+# RESEARCH MODE (dynamic sector + fields)
+# ============================================================
+
+def run_research():
+    started = datetime.now(timezone.utc)
+    sector = RESEARCH_SECTOR
+    fields = RESEARCH_FIELDS
+
+    live("start", date=started.strftime("%Y-%m-%d"), mode="research", sector=sector)
+    print(f"[research] Sector: {sector}")
+    print(f"[research] Fields: {fields}")
+    print(f"[research] Starting at {started.isoformat()}")
+
+    search_count = 0
+    all_results = []
+    queries = _sector_queries(sector)
+
+    for q in queries:
+        if search_count >= MAX_SEARCHES_PER_RUN:
+            break
+        results = search_web(q, num=5)
+        search_count += 1
+        all_results.extend(results)
+
+    content = "\n\n".join(
+        f"- {r['title']} ({r['url']})\n  {r['snippet']}"
+        for r in all_results[:100]
+    )
+
+    prompt = build_research_prompt(sector, fields).format(content=content[:16000] or "(none)")
+    extracted = _call_llm(prompt, tag=f"market_scan:{sector}")
+
+    found = []
+    if extracted and extracted.get("items"):
+        for a in extracted["items"][:60]:
+            # Keep only fields the user asked for + name
+            item = {"name": a.get("name", "")}
+            for f in fields:
+                item[f] = a.get(f)
+            found.append(item)
+
+    entry = {
+        "date": started.strftime("%Y-%m-%d"),
+        "mode": "research",
+        "sector": sector,
+        "fields": fields,
+        "started_at": started.isoformat(),
+        "finished_at": datetime.now(timezone.utc).isoformat(),
+        "searches": search_count,
+        "found": found,
+        "work_log": WORK_LOG,
+    }
+    append_research(entry)
+    live("end", date=entry["date"], mode="research", sector=sector, found=len(found))
+    print(f"[research] Done. Found: {len(found)} items · Searches: {search_count}")
 
 # ============================================================
 # MAIN
@@ -538,96 +813,11 @@ def diff_app(old, new):
 def main():
     global WORK_LOG
     WORK_LOG = []
-
-    started = datetime.now(timezone.utc)
-    run_meta = {"started_at": started.isoformat(), "searches_used": 0}
-    print(f"[worker] Starting at {run_meta['started_at']}")
-
-    live("start", date=started.strftime("%Y-%m-%d"))
-
-    previous = load_previous_results()
-    search_count = 0
-
-    def budget_left():
-        return search_count < MAX_SEARCHES_PER_RUN
-
-    new_apps = []
-    for app in KNOWN_APPS:
-        if not budget_left():
-            log("info", message="search budget exhausted")
-            break
-        name = app["name"]
-
-        results = []
-        for tpl in FIELD_QUERIES:
-            if not budget_left():
-                break
-            q = tpl.format(name=name)
-            results.extend(search_web(q, num=5))
-            search_count += 1
-
-        page_text = fetch_page(app.get("url"), max_chars=8000)
-
-        extracted = extract_app(name, results, page_text=page_text)
-        extracted["app_name"] = name
-        extracted["source_url"] = app.get("url")
-        extracted["_searched_at"] = run_meta["started_at"]
-        if not extracted.get("website"):
-            extracted["website"] = app.get("url")
-        new_apps.append(extracted)
-
-    for q in DISCOVERY_QUERIES:
-        if not budget_left():
-            break
-        search_web(q, num=5)
-        search_count += 1
-
-    findings = []
-    for app in new_apps:
-        changes = diff_app(previous.get(app["app_name"]), app)
-        if changes:
-            is_new = not previous.get(app["app_name"])
-            findings.append({
-                "type": "new" if is_new else "change",
-                "app": app["app_name"],
-                "summary": "new app tracked" if is_new else ", ".join(changes),
-                "url": app.get("source_url"),
-                "extracted_by": app.get("_extracted_by"),
-                "category": app.get("category"),
-                "vendor": app.get("vendor"),
-                "website": app.get("website"),
-                "free_tier": app.get("free_tier"),
-                "paid_pricing": app.get("paid_pricing"),
-                "key_features": app.get("key_features"),
-                "output_formats": app.get("output_formats"),
-                "support": app.get("support"),
-                "quality_notes": app.get("quality_notes"),
-                "confidence": app.get("confidence"),
-            })
-
-    run_meta["searches_used"] = search_count
-    run_meta["finished_at"] = datetime.now(timezone.utc).isoformat()
-    run_meta["apps_tracked"] = len(new_apps)
-    run_meta["findings"] = len(findings)
-
-    save_results(new_apps, run_meta)
-
-    day_entry = {
-        "date": started.strftime("%Y-%m-%d"),
-        "started_at": run_meta["started_at"],
-        "finished_at": run_meta["finished_at"],
-        "searches": search_count,
-        "llm_calls": sum(1 for l in WORK_LOG if l.get("kind") == "llm"),
-        "work_log": WORK_LOG,
-        "findings": findings,
-        "apps": new_apps,
-    }
-    append_day(day_entry)
-
-    live("end", findings=len(findings), searches=search_count, date=day_entry["date"])
-
-    print(f"[worker] Day appended: {day_entry['date']}, findings: {len(findings)}")
-    print(f"[worker] Done. Searches: {search_count}/{MAX_SEARCHES_PER_RUN}")
+    print(f"[worker] Mode: {MODE}")
+    if MODE == "research":
+        run_research()
+    else:
+        run_watch()
 
 if __name__ == "__main__":
     main()
