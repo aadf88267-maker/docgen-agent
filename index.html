@@ -68,6 +68,12 @@
   .worklog-line .status-ok{color:var(--green)}
   .worklog-line .status-bad{color:var(--red)}
   .section-label{font-size:10.5px;color:var(--text-dimmer);text-transform:uppercase;letter-spacing:.6px;margin:22px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+  .report-box{background:var(--bg-2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:5px;padding:18px 22px;margin-bottom:8px;font-size:12.5px;line-height:1.7}
+  .report-box h3{color:var(--accent);font-size:13px;margin:14px 0 6px;letter-spacing:-0.2px;font-weight:600}
+  .report-box h3:first-child{margin-top:0}
+  .report-box p{margin-bottom:8px;color:var(--text)}
+  .report-box ul{margin:4px 0 12px 22px}
+  .report-box li{margin-bottom:4px;color:var(--text)}
   .update{padding:10px 14px;background:var(--bg-2);border-left:3px solid var(--yellow);border-radius:3px;margin-bottom:6px;font-size:12.5px;display:flex;gap:12px;align-items:flex-start}
   .update .upd-app{color:var(--text);font-weight:600;min-width:180px}
   .update .upd-change{color:var(--text-dim)}
@@ -80,7 +86,7 @@
   .competitor a{color:var(--blue);text-decoration:none}
   .competitor a:hover{text-decoration:underline}
   .kv-grid{display:grid;grid-template-columns:140px 1fr;gap:4px 14px;font-size:12px;margin-top:6px}
-  .kv-grid .k{color:var(--text-dimmer);text-transform:lowercase;font-size:11px;padding-top:2px}
+  .kv-grid .k{color:var(--text-dimmer);font-size:11px;padding-top:2px}
   .kv-grid .v{color:var(--text);word-break:break-word}
   .kv-grid .v a{color:var(--blue);text-decoration:none}
   .kv-grid .v a:hover{text-decoration:underline}
@@ -212,7 +218,6 @@ async function refreshFromGitHub() {
 }
 $("refreshBtn").onclick = refreshFromGitHub;
 
-// ---------------- MODE ----------------
 $("tabWatch").onclick = () => switchMode("watch");
 $("tabResearch").onclick = () => switchMode("research");
 
@@ -228,7 +233,6 @@ function switchMode(mode) {
   render();
 }
 
-// ---------------- RUN ----------------
 $("runBtn").onclick = async () => {
   if (!config.repo || !config.token) { setStatus("need repo + token","err"); return; }
   const sector = $("sectorInput").value.trim();
@@ -260,7 +264,6 @@ $("runBtn").onclick = async () => {
   } catch(e){ setStatus(`run failed: ${e.message}`,"err"); }
 };
 
-// ---------------- LIVE ----------------
 function startLiveStream() {
   if (liveES) return;
   try {
@@ -280,28 +283,34 @@ function startLiveStream() {
 
 function handleLiveEvent(evt, ts) {
   const kind = evt.kind;
-  const mode = evt.mode || "watch";
+  const mode = evt.mode || (liveDay && liveDay.mode) || "watch";
+
   if (kind === "start") {
     liveDay = {
       date: evt.date || new Date(ts).toISOString().slice(0,10),
-      mode: mode,
+      mode: evt.mode || "watch",
       sector: evt.sector,
-      fields: [],
+      fields: evt.fields || [],
       live: true,
       started_at: new Date(ts).toISOString(),
       finished_at: null,
       searches: 0,
-      updates: [], new_competitors: [], found: [], apps_checked: [],
+      updates: [], new_competitors: [], found: [], apps_checked: [], report: "",
       work_log: [],
     };
     setLive(true);
-    if (mode !== currentMode) switchMode(mode);
-    view = { type: "day", date: liveDay.date, mode };
+    if (liveDay.mode !== currentMode) switchMode(liveDay.mode);
+    view = { type: "day", date: liveDay.date, mode: liveDay.mode };
     render();
     return;
   }
+
   if (kind === "end") {
-    if (liveDay) { liveDay.live = false; liveDay.finished_at = new Date(ts).toISOString(); }
+    if (liveDay) {
+      liveDay.live = false;
+      liveDay.finished_at = new Date(ts).toISOString();
+      if (evt.sector) liveDay.sector = evt.sector;
+    }
     setLive(false);
     render();
     (async () => {
@@ -313,18 +322,26 @@ function handleLiveEvent(evt, ts) {
     })();
     return;
   }
+
   if (!liveDay) {
     liveDay = {
       date: new Date(ts).toISOString().slice(0,10),
-      mode: mode, sector: evt.sector, fields: [],
-      live: true, started_at: new Date(ts).toISOString(), finished_at: null,
-      searches: 0, updates: [], new_competitors: [], found: [], apps_checked: [],
+      mode: mode,
+      sector: evt.sector,
+      fields: evt.fields || [],
+      live: true,
+      started_at: new Date(ts).toISOString(), finished_at: null,
+      searches: 0,
+      updates: [], new_competitors: [], found: [], apps_checked: [], report: "",
       work_log: [],
     };
     setLive(true);
+    if (liveDay.mode !== currentMode) switchMode(liveDay.mode);
   }
+
   liveDay.work_log.push({ kind, ...evt });
   if (kind === "search") liveDay.searches++;
+
   if (view.type === "day" && view.date === liveDay.date && view.mode === liveDay.mode) {
     appendLiveLine(kind, evt);
   }
@@ -347,11 +364,10 @@ function appendLiveLine(kind, evt) {
 }
 startLiveStream();
 
-// ---------------- RENDER ----------------
 function render() {
   const isResearch = currentMode === "research";
   const items = isResearch ? (LOG.research || []) : (LOG.days || []);
-  const liveItem = liveDay && liveDay.mode === currentMode ? liveDay : null;
+  const liveItem = (liveDay && liveDay.mode === currentMode) ? liveDay : null;
 
   $("pinnedArea").innerHTML = `
     <div class="chat-item pinned ${view.type === "pinned" ? "active" : ""}" id="pinnedChat">
@@ -368,7 +384,9 @@ function render() {
   const list = $("chatList");
   const all = [];
   if (liveItem) all.push(liveItem);
-  items.forEach(d => { if (!liveItem || d.date !== liveItem.date || d.mode !== liveItem.mode) all.push(d); });
+  items.forEach(d => {
+    if (!liveItem || d.date !== liveItem.date || d.mode !== liveItem.mode) all.push(d);
+  });
 
   if (!all.length) {
     list.innerHTML = `<div class="sidebar-empty">${isResearch ? "no scans yet" : "no days yet"}</div>`;
@@ -508,8 +526,16 @@ function renderResearchDay(day) {
   const searches = wl.filter(x => x.kind === "search").length;
   const found = day.found || [];
   const fields = day.fields || [];
+  const report = day.report || "";
 
   let body = "";
+  if (report) {
+    body += `<div class="section-label">report</div>`;
+    body += `<div class="report-box">${renderMarkdown(report)}</div>`;
+  } else if (day.live) {
+    body += `<div class="section-label">report</div><div class="no-updates">generating report…</div>`;
+  }
+
   body += `<div class="section-label">items found (${found.length})</div>`;
   if (found.length) {
     body += found.map(item => renderResearchItem(item, fields)).join("");
@@ -542,6 +568,28 @@ function renderResearchItem(item, fields) {
       <div class="comp-head"><span class="comp-name">${esc(name)}</span></div>
       <div class="kv-grid">${rows}</div>
     </div>`;
+}
+
+function renderMarkdown(md) {
+  if (!md) return "";
+  let html = esc(md);
+  // Headers
+  html = html.replace(/^## (.+)$/gm, "<h3>$1</h3>");
+  html = html.replace(/^# (.+)$/gm, "<h3>$1</h3>");
+  // Bold
+  html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  // Bullets
+  html = html.replace(/(?:^|\n)[-*] (.+?)(?=\n|$)/g, (m, item) => `\n<li>${item}</li>`);
+  // Wrap consecutive <li> in <ul>
+  html = html.replace(/(<li>.*?<\/li>)(?:\s*<li>.*?<\/li>)*/gs, m => `<ul>${m}</ul>`);
+  // Paragraphs — wrap non-empty non-tag lines
+  html = html.split("\n").map(line => {
+    const t = line.trim();
+    if (!t) return "";
+    if (/^<(h3|ul|li|\/ul|\/li)/.test(t)) return t;
+    return `<p>${t}</p>`;
+  }).join("\n");
+  return html;
 }
 
 function renderLogLine(l) {
