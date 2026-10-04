@@ -29,7 +29,7 @@ def _parse_fields(raw):
     if not raw:
         return ["description", "url", "category"]
     parts = [p.strip() for p in raw.split(",") if p.strip()]
-    return parts[:12]  # cap at 12 fields
+    return parts[:12]
 
 RESEARCH_FIELDS = _parse_fields(RESEARCH_FIELDS_RAW)
 
@@ -560,7 +560,6 @@ Return only JSON. No markdown.
 """
 
 def build_research_prompt(sector, fields):
-    """Build dynamic prompt with user-defined fields."""
     field_lines = "\n".join(f'- "{f}"' for f in fields)
     field_keys = ", ".join(f'"{f}"' for f in fields)
     example = ",\n      ".join(f'"{f}": "value or null"' for f in fields)
@@ -592,6 +591,36 @@ Search snippets:
 Return only JSON. No markdown. Maximum 40 items.
 """
 
+REPORT_PROMPT = """You are a market analyst. You just scanned the "{sector}" sector.
+
+Here are the items you found:
+
+{items}
+
+Write a SHORT structured report (200-400 words). Use this exact format:
+
+## Overview
+1-2 sentences on what this sector looks like right now.
+
+## Key Players
+Bullet list of the top 5-8 most notable items.
+
+## Trends
+2-3 bullets on what's happening: pricing patterns, new launches, features, funding, consolidation.
+
+## Gaps & Opportunities
+1-3 bullets on what appears missing or underserved.
+
+## Bottom Line
+One sentence: what should someone entering this space know?
+
+Rules:
+- Return PLAIN TEXT with markdown-style headers (##)
+- No JSON
+- Be specific — reference actual item names
+- If data is sparse, say so honestly
+"""
+
 # ============================================================
 # STORAGE
 # ============================================================
@@ -621,6 +650,11 @@ def append_day(entry):
 def append_research(entry):
     data = load_log()
     research = data.get("research", [])
+    # If same date+sector exists, replace it
+    research = [
+        r for r in research
+        if not (r.get("date") == entry["date"] and r.get("sector") == entry.get("sector"))
+    ]
     research.append(entry)
     research = research[-60:]
     data["research"] = research
@@ -750,7 +784,7 @@ def run_watch():
     print(f"[watch] Done. Updates: {len(updates)} · Competitors: {len(new_competitors)} · Searches: {search_count}")
 
 # ============================================================
-# RESEARCH MODE (dynamic sector + fields)
+# RESEARCH MODE (dynamic sector + fields + report)
 # ============================================================
 
 def run_research():
@@ -758,7 +792,7 @@ def run_research():
     sector = RESEARCH_SECTOR
     fields = RESEARCH_FIELDS
 
-    live("start", date=started.strftime("%Y-%m-%d"), mode="research", sector=sector)
+    live("start", date=started.strftime("%Y-%m-%d"), mode="research", sector=sector, fields=fields)
     print(f"[research] Sector: {sector}")
     print(f"[research] Fields: {fields}")
     print(f"[research] Starting at {started.isoformat()}")
@@ -785,11 +819,20 @@ def run_research():
     found = []
     if extracted and extracted.get("items"):
         for a in extracted["items"][:60]:
-            # Keep only fields the user asked for + name
             item = {"name": a.get("name", "")}
             for f in fields:
                 item[f] = a.get(f)
             found.append(item)
+
+    # ---- Generate structured report ----
+    report = ""
+    if found:
+        items_txt = json.dumps(found[:40], indent=2)[:8000]
+        report, _ = _call_llm_text(
+            REPORT_PROMPT.format(sector=sector, items=items_txt),
+            tag=f"report:{sector}",
+        )
+        report = report or ""
 
     entry = {
         "date": started.strftime("%Y-%m-%d"),
@@ -800,11 +843,12 @@ def run_research():
         "finished_at": datetime.now(timezone.utc).isoformat(),
         "searches": search_count,
         "found": found,
+        "report": report,
         "work_log": WORK_LOG,
     }
     append_research(entry)
     live("end", date=entry["date"], mode="research", sector=sector, found=len(found))
-    print(f"[research] Done. Found: {len(found)} items · Searches: {search_count}")
+    print(f"[research] Done. Found: {len(found)} items · Report: {len(report)} chars · Searches: {search_count}")
 
 # ============================================================
 # MAIN
