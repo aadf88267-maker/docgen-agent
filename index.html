@@ -3,407 +3,101 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>search x</title>
+<title>docgen-agent</title>
 <style>
-  :root {
-    --bg: #1a1a1a;
-    --bg-2: #1f1f1f;
-    --bg-3: #252525;
-    --bg-4: #2b2b2b;
-    --border: #2e2e2e;
-    --border-light: #383838;
-    --text: #e8e6e3;
-    --text-dim: #8a8a8a;
-    --text-dimmer: #5c5c5c;
-    --accent: #d97757;
-    --accent-dim: #a05a42;
-    --green: #7fb069;
-    --yellow: #d4a259;
-    --red: #c75450;
-    --blue: #6a9fbf;
-    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--mono);
-    font-size: 13px;
-    line-height: 1.55;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  .topbar {
-    height: 44px;
-    background: var(--bg-2);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    gap: 10px;
-    flex-shrink: 0;
-  }
-  .logo { color: var(--accent); font-weight: 600; font-size: 13px; letter-spacing: -0.2px; }
-  .live-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--text-dimmer);
-    margin-left: 10px;
-    transition: background 0.2s;
-  }
-  .live-dot.on {
-    background: var(--green);
-    box-shadow: 0 0 8px rgba(127, 176, 105, 0.6);
-    animation: pulse 1.5s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-  .live-label {
-    color: var(--text-dimmer);
-    font-size: 10.5px;
-    margin-left: 6px;
-  }
-  .live-label.on { color: var(--green); }
-
-  .topbar-spacer { flex: 1; }
-  .topbar-btn {
-    background: var(--bg-3);
-    border: 1px solid var(--border-light);
-    color: var(--text-dim);
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-family: var(--mono);
-    font-size: 11.5px;
-    cursor: pointer;
-  }
-  .topbar-btn:hover { background: var(--border); color: var(--text); }
-  .topbar-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .topbar-btn.primary:hover { background: var(--accent-dim); }
-
-  .layout { display: flex; flex: 1; overflow: hidden; }
-
-  .sidebar {
-    width: 260px;
-    background: var(--bg-2);
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-  }
-  .sidebar-section {
-    padding: 10px 12px 6px;
-    font-size: 10.5px;
-    color: var(--text-dimmer);
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-  }
-  .chat-item {
-    padding: 8px 12px;
-    cursor: pointer;
-    color: var(--text-dim);
-    font-size: 12.5px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-left: 2px solid transparent;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .chat-item:hover { background: var(--bg-3); color: var(--text); }
-  .chat-item.active { background: var(--bg-3); color: var(--text); border-left-color: var(--accent); }
-  .chat-item.pinned {
-    background: rgba(217, 119, 87, 0.06);
-    color: var(--text);
-    font-weight: 600;
-    border-left-color: var(--accent);
-  }
-  .chat-item.pinned:hover { background: rgba(217, 119, 87, 0.12); }
-  .chat-item.live {
-    background: rgba(127, 176, 105, 0.06);
-    border-left-color: var(--green);
-  }
-  .chat-item .icon { flex-shrink: 0; font-size: 12px; }
-  .chat-item .label { overflow: hidden; text-overflow: ellipsis; }
-  .chat-item .count {
-    margin-left: auto;
-    font-size: 10.5px;
-    color: var(--text-dimmer);
-    background: var(--bg-3);
-    padding: 1px 6px;
-    border-radius: 8px;
-  }
-  .chat-item.pinned .count { background: rgba(217, 119, 87, 0.15); color: var(--accent); }
-  .chat-item.live .count { background: rgba(127, 176, 105, 0.15); color: var(--green); }
-
-  .sidebar-divider { height: 1px; background: var(--border); margin: 8px 12px; }
-  .sidebar-list { flex: 1; overflow-y: auto; padding-bottom: 12px; }
-  .sidebar-empty { padding: 20px 14px; color: var(--text-dimmer); font-size: 11.5px; text-align: center; }
-
-  .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
-  .main-header {
-    height: 44px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    gap: 12px;
-    flex-shrink: 0;
-  }
-  .main-title { font-weight: 600; color: var(--text); font-size: 13.5px; letter-spacing: -0.2px; }
-  .badge {
-    background: var(--bg-3);
-    color: var(--text-dim);
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 10.5px;
-  }
-  .badge.pin-badge {
-    background: rgba(217, 119, 87, 0.15);
-    color: var(--accent);
-    border: 1px solid rgba(217, 119, 87, 0.3);
-  }
-  .badge.live-badge {
-    background: rgba(127, 176, 105, 0.15);
-    color: var(--green);
-    border: 1px solid rgba(127, 176, 105, 0.3);
-  }
-
-  .main-content { flex: 1; overflow-y: auto; padding: 24px 28px 60px; }
-
-  .table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
-  .table th {
-    text-align: left;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border-light);
-    color: var(--text-dimmer);
-    font-weight: 500;
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    position: sticky;
-    top: 0;
-    background: var(--bg);
-    z-index: 1;
-  }
-  .table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-dim); }
-  .table tr:hover td { background: var(--bg-2); cursor: pointer; }
-  .table tr:hover td:first-child { color: var(--accent); }
-  .table .date { color: var(--text); font-weight: 500; white-space: nowrap; }
-  .table .summary { color: var(--text-dim); }
-  .table .summary.quiet { color: var(--text-dimmer); font-style: italic; }
-  .table .summary.live { color: var(--green); }
-  .table .num { text-align: right; color: var(--text-dimmer); white-space: nowrap; }
-
-  .worklog-toggle {
-    color: var(--text-dim);
-    font-size: 12px;
-    cursor: pointer;
-    user-select: none;
-    padding: 8px 0;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .worklog-toggle:hover { color: var(--accent); }
-  .worklog-toggle.live { color: var(--green); }
-  .worklog-toggle .arrow {
-    display: inline-block;
-    transition: transform 0.15s ease;
-    font-size: 10px;
-    color: var(--text-dimmer);
-  }
-  .worklog-toggle.open .arrow { transform: rotate(90deg); }
-  .worklog-body {
-    display: none;
-    background: var(--bg-2);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    padding: 12px 14px;
-    margin: 6px 0 20px;
-    font-size: 11.5px;
-    color: var(--text-dim);
-    max-height: 420px;
-    overflow-y: auto;
-  }
-  .worklog-body.open { display: block; }
-  .worklog-line {
-    padding: 2px 0;
-    display: flex;
-    gap: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .worklog-line .kind {
-    flex-shrink: 0;
-    width: 55px;
-    font-size: 10.5px;
-    letter-spacing: 0.3px;
-  }
-  .worklog-line .kind.search { color: var(--blue); }
-  .worklog-line .kind.llm { color: var(--accent); }
-  .worklog-line .kind.info { color: var(--yellow); }
-  .worklog-line .kind.fetch { color: var(--green); }
-  .worklog-line .body { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; }
-  .worklog-line .status-ok { color: var(--green); }
-  .worklog-line .status-bad { color: var(--red); }
-
-  .section-label {
-    font-size: 10.5px;
-    color: var(--text-dimmer);
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    margin: 22px 0 10px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .finding {
-    padding: 12px 14px;
-    background: var(--bg-2);
-    border-left: 3px solid var(--accent);
-    border-radius: 3px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    cursor: pointer;
-    transition: background 0.1s ease;
-  }
-  .finding:hover { background: var(--bg-3); }
-  .finding.change { border-left-color: var(--yellow); }
-  .finding.new { border-left-color: var(--green); }
-  .finding.app { border-left-color: var(--blue); }
-  .finding.expanded { background: var(--bg-3); }
-  .finding .icon { flex-shrink: 0; font-size: 13px; line-height: 1.5; }
-  .finding .content { flex: 1; min-width: 0; }
-  .finding .app { color: var(--text); font-weight: 600; font-size: 12.5px; margin-bottom: 2px; }
-  .finding .summary { color: var(--text-dim); font-size: 12px; }
-  .finding .meta { color: var(--text-dimmer); font-size: 10.5px; margin-top: 4px; }
-  .finding .expand-hint { color: var(--text-dimmer); font-size: 10.5px; margin-top: 6px; }
-  .finding.expanded .expand-hint { color: var(--accent); }
-
-  .finding-details {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border-light);
-    font-size: 12px;
-    cursor: default;
-  }
-  .finding-details .grid {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 6px 14px;
-  }
-  .finding-details .key {
-    color: var(--text-dimmer);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    padding-top: 3px;
-  }
-  .finding-details .val { color: var(--text); word-break: break-word; }
-  .finding-details .val a { color: var(--blue); text-decoration: none; }
-  .finding-details .val a:hover { text-decoration: underline; }
-  .finding-details .tags { display: flex; flex-wrap: wrap; gap: 5px; }
-  .finding-details .tag {
-    background: var(--bg);
-    border: 1px solid var(--border-light);
-    color: var(--text-dim);
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 11px;
-  }
-  .finding-details .badge-green {
-    background: rgba(127, 176, 105, 0.15);
-    color: var(--green);
-    border: 1px solid rgba(127, 176, 105, 0.3);
-    padding: 1px 7px;
-    border-radius: 3px;
-    font-size: 11px;
-  }
-  .finding-details .badge-red {
-    background: rgba(199, 84, 80, 0.15);
-    color: var(--red);
-    border: 1px solid rgba(199, 84, 80, 0.3);
-    padding: 1px 7px;
-    border-radius: 3px;
-    font-size: 11px;
-  }
-  .finding-details .section {
-    margin-top: 14px;
-    font-size: 10.5px;
-    color: var(--text-dimmer);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-  }
-
-  .no-findings { color: var(--text-dimmer); font-size: 12.5px; font-style: italic; padding: 6px 0 14px; }
-
-  .empty {
-    text-align: center;
-    padding: 100px 20px;
-    color: var(--text-dimmer);
-    font-size: 12.5px;
-    line-height: 1.8;
-  }
-  .empty code {
-    background: var(--bg-3);
-    padding: 2px 6px;
-    border-radius: 3px;
-    color: var(--accent);
-  }
-
-  .settings-bar {
-    display: none;
-    background: var(--bg-2);
-    border-bottom: 1px solid var(--border);
-    padding: 8px 16px;
-    gap: 8px;
-    align-items: center;
-    flex-shrink: 0;
-  }
-  .settings-bar.open { display: flex; }
-  .settings-bar input {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-family: var(--mono);
-    font-size: 11.5px;
-    outline: none;
-  }
-  .settings-bar input:focus { border-color: var(--accent-dim); }
-
-  .statusbar {
-    height: 26px;
-    background: var(--bg-2);
-    border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    gap: 14px;
-    font-size: 11px;
-    color: var(--text-dimmer);
-    flex-shrink: 0;
-  }
-  .statusbar .ok { color: var(--green); }
-  .statusbar .err { color: var(--red); }
-  .statusbar .busy { color: var(--yellow); }
-  .statusbar-spacer { flex: 1; }
-
-  ::-webkit-scrollbar { width: 10px; height: 10px; }
-  ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; border: 2px solid var(--bg-2); }
-  ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+  :root{--bg:#1a1a1a;--bg-2:#1f1f1f;--bg-3:#252525;--border:#2e2e2e;--border-light:#383838;--text:#e8e6e3;--text-dim:#8a8a8a;--text-dimmer:#5c5c5c;--accent:#d97757;--accent-dim:#a05a42;--green:#7fb069;--yellow:#d4a259;--red:#c75450;--blue:#6a9fbf;--mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
+  *{box-sizing:border-box;margin:0;padding:0}html,body{height:100%}
+  body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;line-height:1.55;display:flex;flex-direction:column;overflow:hidden}
+  .topbar{min-height:44px;background:var(--bg-2);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 16px;gap:10px;flex-shrink:0;flex-wrap:wrap}
+  .logo{color:var(--accent);font-weight:600;font-size:13px}
+  .live-dot{width:8px;height:8px;border-radius:50%;background:var(--text-dimmer);margin-left:10px}
+  .live-dot.on{background:var(--green);box-shadow:0 0 8px rgba(127,176,105,.6);animation:pulse 1.5s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .live-label{color:var(--text-dimmer);font-size:10.5px;margin-left:6px}
+  .live-label.on{color:var(--green)}
+  .mode-tabs{display:flex;margin-left:20px}
+  .mode-tab{padding:5px 12px;font-size:12px;cursor:pointer;color:var(--text-dim);border:1px solid var(--border-light);background:var(--bg-3);font-family:var(--mono)}
+  .mode-tab:first-child{border-radius:4px 0 0 4px;border-right:0}
+  .mode-tab:last-child{border-radius:0 4px 4px 0}
+  .mode-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .topbar-spacer{flex:1}
+  .sector-input{background:var(--bg);border:1px solid var(--border-light);color:var(--text);padding:5px 10px;border-radius:4px;font-family:var(--mono);font-size:11.5px;outline:none;width:200px}
+  .fields-input{background:var(--bg);border:1px solid var(--border-light);color:var(--text);padding:5px 10px;border-radius:4px;font-family:var(--mono);font-size:11.5px;outline:none;flex:1;min-width:200px;max-width:400px}
+  .sector-input:focus,.fields-input:focus{border-color:var(--accent-dim)}
+  .topbar-btn{background:var(--bg-3);border:1px solid var(--border-light);color:var(--text-dim);padding:5px 10px;border-radius:4px;font-family:var(--mono);font-size:11.5px;cursor:pointer}
+  .topbar-btn:hover{background:var(--border);color:var(--text)}
+  .topbar-btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .topbar-btn.primary:hover{background:var(--accent-dim)}
+  .hidden{display:none !important}
+  .layout{display:flex;flex:1;overflow:hidden}
+  .sidebar{width:260px;background:var(--bg-2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0}
+  .sidebar-section{padding:10px 12px 6px;font-size:10.5px;color:var(--text-dimmer);text-transform:uppercase;letter-spacing:.6px}
+  .chat-item{padding:8px 12px;cursor:pointer;color:var(--text-dim);font-size:12.5px;display:flex;align-items:center;gap:8px;border-left:2px solid transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .chat-item:hover{background:var(--bg-3);color:var(--text)}
+  .chat-item.active{background:var(--bg-3);color:var(--text);border-left-color:var(--accent)}
+  .chat-item.pinned{background:rgba(217,119,87,.06);color:var(--text);font-weight:600;border-left-color:var(--accent)}
+  .chat-item.live{background:rgba(127,176,105,.06);border-left-color:var(--green)}
+  .chat-item .icon{flex-shrink:0;font-size:12px}
+  .chat-item .label{overflow:hidden;text-overflow:ellipsis}
+  .chat-item .count{margin-left:auto;font-size:10.5px;color:var(--text-dimmer);background:var(--bg-3);padding:1px 6px;border-radius:8px}
+  .chat-item.pinned .count{background:rgba(217,119,87,.15);color:var(--accent)}
+  .sidebar-divider{height:1px;background:var(--border);margin:8px 12px}
+  .sidebar-list{flex:1;overflow-y:auto;padding-bottom:12px}
+  .sidebar-empty{padding:20px 14px;color:var(--text-dimmer);font-size:11.5px;text-align:center}
+  .main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+  .main-header{height:44px;border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 20px;gap:12px;flex-shrink:0}
+  .main-title{font-weight:600;color:var(--text);font-size:13.5px}
+  .badge{background:var(--bg-3);color:var(--text-dim);padding:2px 8px;border-radius:10px;font-size:10.5px}
+  .badge.pin-badge{background:rgba(217,119,87,.15);color:var(--accent);border:1px solid rgba(217,119,87,.3)}
+  .badge.live-badge{background:rgba(127,176,105,.15);color:var(--green);border:1px solid rgba(127,176,105,.3)}
+  .badge.research{background:rgba(106,159,191,.15);color:var(--blue);border:1px solid rgba(106,159,191,.3)}
+  .main-content{flex:1;overflow-y:auto;padding:24px 28px 60px}
+  .worklog-toggle{color:var(--text-dim);font-size:12px;cursor:pointer;user-select:none;padding:8px 0;display:inline-flex;align-items:center;gap:8px}
+  .worklog-toggle:hover{color:var(--accent)}
+  .worklog-toggle .arrow{display:inline-block;transition:transform .15s;font-size:10px;color:var(--text-dimmer)}
+  .worklog-toggle.open .arrow{transform:rotate(90deg)}
+  .worklog-body{display:none;background:var(--bg-2);border:1px solid var(--border);border-radius:5px;padding:12px 14px;margin:6px 0 20px;font-size:11.5px;color:var(--text-dim);max-height:400px;overflow-y:auto}
+  .worklog-body.open{display:block}
+  .worklog-line{padding:2px 0;display:flex;gap:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .worklog-line .kind{flex-shrink:0;width:60px;font-size:10.5px}
+  .worklog-line .kind.search{color:var(--blue)}
+  .worklog-line .kind.llm{color:var(--accent)}
+  .worklog-line .kind.fetch{color:var(--green)}
+  .worklog-line .kind.info{color:var(--yellow)}
+  .worklog-line .body{color:var(--text-dim);overflow:hidden;text-overflow:ellipsis}
+  .worklog-line .status-ok{color:var(--green)}
+  .worklog-line .status-bad{color:var(--red)}
+  .section-label{font-size:10.5px;color:var(--text-dimmer);text-transform:uppercase;letter-spacing:.6px;margin:22px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+  .update{padding:10px 14px;background:var(--bg-2);border-left:3px solid var(--yellow);border-radius:3px;margin-bottom:6px;font-size:12.5px;display:flex;gap:12px;align-items:flex-start}
+  .update .upd-app{color:var(--text);font-weight:600;min-width:180px}
+  .update .upd-change{color:var(--text-dim)}
+  .competitor{padding:10px 14px;background:var(--bg-2);border-left:3px solid var(--green);border-radius:3px;margin-bottom:6px;font-size:12.5px}
+  .competitor .comp-head{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  .competitor .comp-name{color:var(--text);font-weight:600}
+  .competitor .comp-cat{color:var(--blue);font-size:11px}
+  .competitor .comp-line{color:var(--text-dim);font-size:12px}
+  .competitor .comp-evi{color:var(--text-dimmer);font-size:11px;margin-top:4px}
+  .competitor a{color:var(--blue);text-decoration:none}
+  .competitor a:hover{text-decoration:underline}
+  .kv-grid{display:grid;grid-template-columns:140px 1fr;gap:4px 14px;font-size:12px;margin-top:6px}
+  .kv-grid .k{color:var(--text-dimmer);text-transform:lowercase;font-size:11px;padding-top:2px}
+  .kv-grid .v{color:var(--text);word-break:break-word}
+  .kv-grid .v a{color:var(--blue);text-decoration:none}
+  .kv-grid .v a:hover{text-decoration:underline}
+  .kv-grid .v.null{color:var(--text-dimmer)}
+  .app-card{padding:10px 14px;background:var(--bg-2);border-left:3px solid var(--blue);border-radius:3px;margin-bottom:6px;font-size:12px}
+  .app-card .app-name{color:var(--text);font-weight:600;font-size:12.5px}
+  .app-card .app-sub{color:var(--text-dim);font-size:11.5px;margin-top:2px}
+  .no-updates{padding:20px;text-align:center;color:var(--text-dimmer);font-size:12.5px;font-style:italic}
+  .empty{text-align:center;padding:80px 20px;color:var(--text-dimmer);font-size:12.5px;line-height:1.8}
+  .settings-bar{display:none;background:var(--bg-2);border-bottom:1px solid var(--border);padding:8px 16px;gap:8px;align-items:center;flex-shrink:0}
+  .settings-bar.open{display:flex}
+  .settings-bar input{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:5px 10px;border-radius:4px;font-family:var(--mono);font-size:11.5px;outline:none}
+  .statusbar{height:26px;background:var(--bg-2);border-top:1px solid var(--border);display:flex;align-items:center;padding:0 16px;gap:14px;font-size:11px;color:var(--text-dimmer);flex-shrink:0}
+  .statusbar .ok{color:var(--green)}.statusbar .err{color:var(--red)}.statusbar .busy{color:var(--yellow)}
+  .statusbar-spacer{flex:1}
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:5px;border:2px solid var(--bg-2)}
 </style>
 </head>
 <body>
@@ -412,15 +106,21 @@
   <span class="logo">docgen-agent</span>
   <span class="live-dot" id="liveDot"></span>
   <span class="live-label" id="liveLabel">offline</span>
+  <div class="mode-tabs">
+    <button class="mode-tab active" id="tabWatch">👁 Watch</button>
+    <button class="mode-tab" id="tabResearch">🔬 Research</button>
+  </div>
   <div class="topbar-spacer"></div>
+  <input id="sectorInput" class="sector-input hidden" placeholder="sector to research…" />
+  <input id="fieldsInput" class="fields-input hidden" placeholder="fields per item, comma-separated…" />
   <button class="topbar-btn" id="settingsBtn">settings</button>
   <button class="topbar-btn" id="refreshBtn">↻ refresh</button>
-  <button class="topbar-btn primary" id="runBtn">▶ run now</button>
+  <button class="topbar-btn primary" id="runBtn">▶ run watch</button>
 </div>
 
 <div class="settings-bar" id="settingsBar">
-  <input id="repoInput" placeholder="owner/repo" style="width: 240px;" />
-  <input id="tokenInput" type="password" placeholder="gh token (run now)" style="width: 220px;" />
+  <input id="repoInput" placeholder="owner/repo" style="width:240px"/>
+  <input id="tokenInput" type="password" placeholder="gh token (for run buttons)" style="width:220px"/>
   <button class="topbar-btn" id="saveSettings">save</button>
 </div>
 
@@ -428,7 +128,7 @@
   <div class="sidebar">
     <div id="pinnedArea"></div>
     <div class="sidebar-divider"></div>
-    <div class="sidebar-section">chats</div>
+    <div class="sidebar-section" id="sidebarLabel">chats</div>
     <div class="sidebar-list" id="chatList">
       <div class="sidebar-empty">loading…</div>
     </div>
@@ -436,8 +136,7 @@
 
   <div class="main">
     <div class="main-header" id="mainHeader">
-      <span class="main-title">search x</span>
-      <span class="badge pin-badge">pinned</span>
+      <span class="main-title">watch agent</span>
     </div>
     <div class="main-content" id="mainContent">
       <div class="empty">loading…</div>
@@ -457,31 +156,22 @@ const config = {
   repo: localStorage.getItem("repo") || "",
   token: localStorage.getItem("token") || "",
 };
-
 const NTFY_TOPIC = "docgen-live-aadf88267";
 const LIVE_WINDOW_MS = 2 * 60 * 1000;
-const IDLE_TIMEOUT_MS = 3 * 60 * 1000;
 
-let LOG = { chat: "search x", pinned: true, days: [] };
-let view = { type: "pinned" };
+let LOG = { chat: "search x", pinned: true, days: [], research: [] };
+let view = { type: "pinned", mode: "watch" };
+let currentMode = "watch";
 let liveDay = null;
 let liveES = null;
-let liveTimeout = null;
 
 $("repoInput").value = config.repo;
 $("tokenInput").value = config.token;
+$("sectorInput").value = localStorage.getItem("sector") || "";
+$("fieldsInput").value = localStorage.getItem("fields") || "";
 
-function setStatus(msg, cls) {
-  const el = $("statusMsg");
-  el.textContent = msg;
-  el.className = "status-msg" + (cls ? " " + cls : "");
-}
-
-function setLive(on) {
-  $("liveDot").classList.toggle("on", on);
-  $("liveLabel").classList.toggle("on", on);
-  $("liveLabel").textContent = on ? "live" : "offline";
-}
+function setStatus(msg, cls){const e=$("statusMsg");e.textContent=msg;e.className="status-msg"+(cls?" "+cls:"")}
+function setLive(on){$("liveDot").classList.toggle("on",on);$("liveLabel").classList.toggle("on",on);$("liveLabel").textContent=on?"live":"offline"}
 
 $("settingsBtn").onclick = () => $("settingsBar").classList.toggle("open");
 $("saveSettings").onclick = () => {
@@ -490,56 +180,87 @@ $("saveSettings").onclick = () => {
   localStorage.setItem("repo", config.repo);
   localStorage.setItem("token", config.token);
   $("settingsBar").classList.remove("open");
-  setStatus("saved", "ok");
+  setStatus("saved","ok");
   load();
 };
+$("sectorInput").oninput = () => localStorage.setItem("sector", $("sectorInput").value);
+$("fieldsInput").oninput = () => localStorage.setItem("fields", $("fieldsInput").value);
 
 async function load() {
-  if (!config.repo) { render(); setStatus("set repo in settings", "err"); return false; }
-  setStatus("loading…", "busy");
+  if (!config.repo) { render(); setStatus("set repo in settings","err"); return false; }
+  setStatus("loading…","busy");
   try {
     const url = `https://raw.githubusercontent.com/${config.repo}/main/log.json?t=${Date.now()}`;
-    const r = await fetch(url, { cache: "no-store" });
+    const r = await fetch(url, {cache:"no-store"});
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     LOG = await r.json();
+    LOG.days = LOG.days || [];
+    LOG.research = LOG.research || [];
     render();
-    setStatus("loaded", "ok");
-    const latest = LOG.days?.[0];
-    $("lastRun").textContent = latest?.finished_at
-      ? "last run " + new Date(latest.finished_at).toLocaleString()
-      : "no runs yet";
+    setStatus("loaded","ok");
     return true;
-  } catch (e) {
-    setStatus(`load failed: ${e.message}`, "err");
-    render();
-    return false;
-  }
+  } catch(e){ setStatus(`load failed: ${e.message}`,"err"); render(); return false; }
 }
 
 async function refreshFromGitHub() {
-  setStatus("refreshing…", "busy");
-  const delays = [0, 3000, 8000];
-  for (const d of delays) {
+  setStatus("refreshing…","busy");
+  for (const d of [0,3000,8000]) {
     if (d) await new Promise(r => setTimeout(r, d));
-    const ok = await load();
-    if (ok && LOG.days?.length) {
-      if (liveDay) {
-        liveDay = null;
-        render();
-      }
-      setStatus("refreshed", "ok");
-      return;
-    }
+    if (await load()) { setStatus("refreshed","ok"); return; }
   }
-  setStatus("refresh failed — try again in a min", "err");
+  setStatus("refresh failed","err");
 }
-
 $("refreshBtn").onclick = refreshFromGitHub;
 
-// ============================================================
-// LIVE STREAM
-// ============================================================
+// ---------------- MODE ----------------
+$("tabWatch").onclick = () => switchMode("watch");
+$("tabResearch").onclick = () => switchMode("research");
 
+function switchMode(mode) {
+  currentMode = mode;
+  $("tabWatch").classList.toggle("active", mode === "watch");
+  $("tabResearch").classList.toggle("active", mode === "research");
+  $("sectorInput").classList.toggle("hidden", mode !== "research");
+  $("fieldsInput").classList.toggle("hidden", mode !== "research");
+  $("runBtn").textContent = mode === "watch" ? "▶ run watch" : "▶ run research";
+  $("sidebarLabel").textContent = mode === "watch" ? "days" : "market scans";
+  view = { type: "pinned", mode };
+  render();
+}
+
+// ---------------- RUN ----------------
+$("runBtn").onclick = async () => {
+  if (!config.repo || !config.token) { setStatus("need repo + token","err"); return; }
+  const sector = $("sectorInput").value.trim();
+  const fields = $("fieldsInput").value.trim();
+
+  if (currentMode === "research" && !sector) { setStatus("enter a sector first","err"); return; }
+  if (currentMode === "research" && !fields) { setStatus("enter fields to extract","err"); return; }
+
+  setStatus(`triggering ${currentMode}…`,"busy");
+  try {
+    const [owner, repo] = config.repo.split("/");
+    const inputs = { mode: currentMode };
+    if (currentMode === "research") { inputs.sector = sector; inputs.fields = fields; }
+
+    const res = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/actions/workflows/agent.yml/dispatches`,
+      {
+        method:"POST",
+        headers:{
+          "Authorization":`Bearer ${config.token}`,
+          "Accept":"application/vnd.github+json",
+          "Content-Type":"application/json",
+        },
+        body: JSON.stringify({ ref: "main", inputs }),
+      }
+    );
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    setStatus(`${currentMode} triggered · watch live`,"ok");
+  } catch(e){ setStatus(`run failed: ${e.message}`,"err"); }
+};
+
+// ---------------- LIVE ----------------
 function startLiveStream() {
   if (liveES) return;
   try {
@@ -550,110 +271,61 @@ function startLiveStream() {
         const wrap = JSON.parse(e.data);
         if (wrap.event !== "message") return;
         const ts = wrap.time ? wrap.time * 1000 : Date.now();
-        const age = Date.now() - ts;
-        if (age > LIVE_WINDOW_MS) return;
-        const evt = JSON.parse(wrap.message);
-        handleLiveEvent(evt, ts);
+        if (Date.now() - ts > LIVE_WINDOW_MS) return;
+        handleLiveEvent(JSON.parse(wrap.message), ts);
       } catch {}
     };
-  } catch (err) {
-    console.error("live stream failed", err);
-  }
-}
-
-function resetLiveTimeout() {
-  if (liveTimeout) clearTimeout(liveTimeout);
-  liveTimeout = setTimeout(() => {
-    if (liveDay && liveDay.live) {
-      liveDay.live = false;
-      liveDay.finished_at = new Date().toISOString();
-      setLive(false);
-      render();
-      load();
-    }
-  }, IDLE_TIMEOUT_MS);
-}
-
-function ensureLiveDay(ts) {
-  if (liveDay) return;
-  const date = new Date(ts).toISOString().slice(0, 10);
-  liveDay = {
-    date: date,
-    live: true,
-    started_at: new Date(ts).toISOString(),
-    finished_at: null,
-    searches: 0,
-    llm_calls: 0,
-    work_log: [],
-    findings: [],
-    apps: [],
-  };
-  setLive(true);
+  } catch {}
 }
 
 function handleLiveEvent(evt, ts) {
   const kind = evt.kind;
-
+  const mode = evt.mode || "watch";
   if (kind === "start") {
-    const date = evt.date || new Date(ts).toISOString().slice(0, 10);
     liveDay = {
-      date: date,
+      date: evt.date || new Date(ts).toISOString().slice(0,10),
+      mode: mode,
+      sector: evt.sector,
+      fields: [],
       live: true,
       started_at: new Date(ts).toISOString(),
       finished_at: null,
       searches: 0,
-      llm_calls: 0,
+      updates: [], new_competitors: [], found: [], apps_checked: [],
       work_log: [],
-      findings: [],
-      apps: [],
     };
     setLive(true);
-    view = { type: "day", date: date };
+    if (mode !== currentMode) switchMode(mode);
+    view = { type: "day", date: liveDay.date, mode };
     render();
-    resetLiveTimeout();
     return;
   }
-
-  ensureLiveDay(ts);
-
   if (kind === "end") {
-    if (liveTimeout) clearTimeout(liveTimeout);
-    if (liveDay) {
-      liveDay.live = false;
-      liveDay.finished_at = new Date(ts).toISOString();
-    }
+    if (liveDay) { liveDay.live = false; liveDay.finished_at = new Date(ts).toISOString(); }
     setLive(false);
     render();
-    setStatus("run finished · waiting for commit…", "busy");
-
-    const delays = [5000, 15000, 30000, 60000, 90000];
     (async () => {
-      for (const d of delays) {
+      for (const d of [5000,15000,30000,60000]) {
         await new Promise(r => setTimeout(r, d));
-        const ok = await load();
-        if (ok && LOG.days?.length && LOG.days[0]?.finished_at) {
-          if (liveDay) {
-            liveDay = null;
-            render();
-          }
-          setStatus("fresh data loaded", "ok");
-          return;
-        }
+        if (await load()) { liveDay = null; render(); setStatus("fresh data loaded","ok"); return; }
       }
-      setStatus("commit delayed — click refresh", "err");
+      setStatus("commit delayed","err");
     })();
     return;
   }
-
-  liveDay.work_log.push({ kind: kind, ...evt, _ts: ts });
+  if (!liveDay) {
+    liveDay = {
+      date: new Date(ts).toISOString().slice(0,10),
+      mode: mode, sector: evt.sector, fields: [],
+      live: true, started_at: new Date(ts).toISOString(), finished_at: null,
+      searches: 0, updates: [], new_competitors: [], found: [], apps_checked: [],
+      work_log: [],
+    };
+    setLive(true);
+  }
+  liveDay.work_log.push({ kind, ...evt });
   if (kind === "search") liveDay.searches++;
-  if (kind === "llm") liveDay.llm_calls++;
-  resetLiveTimeout();
-
-  if (view.type !== "day" || view.date !== liveDay.date) {
-    view = { type: "day", date: liveDay.date };
-    render();
-  } else {
+  if (view.type === "day" && view.date === liveDay.date && view.mode === liveDay.mode) {
     appendLiveLine(kind, evt);
   }
 }
@@ -662,394 +334,241 @@ function appendLiveLine(kind, evt) {
   const body = $("wlBody");
   if (!body) { render(); return; }
   body.classList.add("open");
-  const toggle = $("wlToggle");
-  if (toggle) toggle.classList.add("open");
-
+  const t = $("wlToggle");
+  if (t) t.classList.add("open");
   const div = document.createElement("div");
   div.className = "worklog-line";
-  div.innerHTML = renderLogLine({ kind: kind, ...evt });
+  div.innerHTML = renderLogLine({ kind, ...evt });
   body.appendChild(div);
   body.scrollTop = body.scrollHeight;
-
-  if (toggle && liveDay) {
-    toggle.innerHTML = `<span class="arrow">▼</span> live · ${liveDay.searches} searches · ${liveDay.llm_calls} llm calls`;
-    toggle.classList.add("open");
+  if (t && liveDay) {
+    t.innerHTML = `<span class="arrow">▼</span> live · ${liveDay.searches} searches · ${liveDay.work_log.length} events`;
   }
 }
-
 startLiveStream();
 
-// ============================================================
-// RENDER
-// ============================================================
-
-function allDays() {
-  const days = [];
-  if (liveDay) days.push(liveDay);
-  (LOG.days || []).forEach(d => {
-    if (!liveDay || d.date !== liveDay.date) days.push(d);
-  });
-  return days;
-}
-
+// ---------------- RENDER ----------------
 function render() {
-  const days = allDays();
+  const isResearch = currentMode === "research";
+  const items = isResearch ? (LOG.research || []) : (LOG.days || []);
+  const liveItem = liveDay && liveDay.mode === currentMode ? liveDay : null;
 
   $("pinnedArea").innerHTML = `
     <div class="chat-item pinned ${view.type === "pinned" ? "active" : ""}" id="pinnedChat">
-      <span class="icon">📌</span>
-      <span class="label">search x</span>
-      <span class="count">${days.length}</span>
+      <span class="icon">${isResearch ? "🔬" : "📌"}</span>
+      <span class="label">${isResearch ? "market scan" : "search x"}</span>
+      <span class="count">${items.length}</span>
     </div>
   `;
   setTimeout(() => {
     const el = $("pinnedChat");
-    if (el) el.onclick = () => { view = { type: "pinned" }; render(); };
+    if (el) el.onclick = () => { view = { type: "pinned", mode: currentMode }; render(); };
   }, 0);
 
   const list = $("chatList");
-  if (!days.length) {
-    list.innerHTML = '<div class="sidebar-empty">no chats yet</div>';
+  const all = [];
+  if (liveItem) all.push(liveItem);
+  items.forEach(d => { if (!liveItem || d.date !== liveItem.date || d.mode !== liveItem.mode) all.push(d); });
+
+  if (!all.length) {
+    list.innerHTML = `<div class="sidebar-empty">${isResearch ? "no scans yet" : "no days yet"}</div>`;
   } else {
     list.innerHTML = "";
-    days.forEach(d => {
-      const findings = d.findings || [];
+    all.forEach(d => {
       const cls = [];
-      if (view.type === "day" && view.date === d.date) cls.push("active");
+      if (view.type === "day" && view.date === d.date && view.mode === d.mode) cls.push("active");
       if (d.live) cls.push("live");
       const item = document.createElement("div");
       item.className = "chat-item " + cls.join(" ");
-      const icon = d.live ? "🟢" : "💬";
-      const countTxt = d.live
-        ? `${d.work_log.length}`
-        : (findings.length ? `${findings.length}` : "·");
+      const icon = d.live ? "🟢" : (d.mode === "research" ? "🔬" : "💬");
+      const label = formatDate(d.date);
+      let countTxt;
+      if (d.live) countTxt = d.work_log.length;
+      else if (d.mode === "research") countTxt = (d.found || []).length;
+      else countTxt = (d.updates || []).length + (d.new_competitors || []).length;
       item.innerHTML = `
         <span class="icon">${icon}</span>
-        <span class="label">${esc(formatDate(d.date))}</span>
+        <span class="label">${esc(label)}</span>
         <span class="count">${countTxt}</span>
       `;
-      item.onclick = () => { view = { type: "day", date: d.date }; render(); };
+      item.onclick = () => { view = { type: "day", date: d.date, mode: d.mode }; render(); };
       list.appendChild(item);
     });
   }
 
   if (view.type === "pinned") {
-    $("mainHeader").innerHTML = `
-      <span class="main-title">search x</span>
-      <span class="badge pin-badge">pinned</span>
-      <span class="badge">${days.length} days</span>
-    `;
-    renderSearchX(days);
+    $("mainHeader").innerHTML = isResearch
+      ? `<span class="main-title">market scan</span><span class="badge research">research</span>`
+      : `<span class="main-title">watch agent</span><span class="badge pin-badge">pinned</span>`;
+    renderPinned(isResearch, all);
   } else {
-    const day = days.find(d => d.date === view.date);
-    if (!day) { view = { type: "pinned" }; render(); return; }
-    const liveBadge = day.live ? '<span class="badge live-badge">live</span>' : "";
-    const findings = day.findings || [];
-    const findingsBadge = findings.length
-      ? `<span class="badge">${findings.length} findings</span>`
-      : `<span class="badge">no changes</span>`;
+    const day = all.find(d => d.date === view.date && d.mode === view.mode);
+    if (!day) { view = { type: "pinned", mode: currentMode }; render(); return; }
     $("mainHeader").innerHTML = `
       <span class="main-title">${esc(formatDate(day.date))}</span>
-      ${liveBadge}
-      ${findingsBadge}
+      ${day.live ? '<span class="badge live-badge">live</span>' : ""}
+      <span class="badge">${day.mode === "research" ? "research" : "watch"}</span>
+      ${day.mode === "research" && day.sector ? `<span class="badge research">${esc(day.sector)}</span>` : ""}
     `;
-    renderDay(day);
+    day.mode === "research" ? renderResearchDay(day) : renderWatchDay(day);
   }
 }
 
-function renderSearchX(days) {
-  if (!days.length) {
-    $("mainContent").innerHTML = `
-      <div class="empty">
-        no chats yet<br><br>
-        the agent will create one chat per day,<br>
-        even on quiet days
-      </div>`;
+function renderPinned(isResearch, items) {
+  if (!items.length) {
+    $("mainContent").innerHTML = `<div class="empty">${isResearch ? "no market scans yet.<br><br>type a sector + fields above and click run research." : "no days yet.<br><br>the agent runs daily at 9:00 IST."}</div>`;
     return;
   }
-
-  const rows = days.map(d => {
-    const findings = d.findings || [];
-    let summary;
-    let cls = "";
-    if (d.live) {
-      summary = `streaming · ${d.work_log.length} events so far`;
-      cls = "live";
-    } else if (findings.length) {
-      summary = summarizeFindings(findings);
-    } else {
-      summary = `<span class="quiet">— no main findings —</span>`;
-      cls = "quiet";
-    }
-    return `
-      <tr data-date="${esc(d.date)}">
-        <td class="date">${esc(formatDate(d.date))}</td>
-        <td class="summary ${cls}">${summary}</td>
-        <td class="num">${d.searches || 0}</td>
-      </tr>
-    `;
-  }).join("");
-
-  $("mainContent").innerHTML = `
-    <table class="table">
-      <thead>
-        <tr>
-          <th>date</th>
-          <th>main findings</th>
-          <th class="num">searches</th>
-        </tr>
-      </thead>
-      <tbody>${rows}</tbody>
-    </table>
-  `;
-
+  if (isResearch) {
+    const rows = items.map(d => `
+      <tr data-date="${esc(d.date)}" data-mode="research" style="cursor:pointer">
+        <td style="padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text);font-weight:500">${esc(formatDate(d.date))}</td>
+        <td style="padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text-dim)">${esc(d.sector || "—")}</td>
+        <td style="padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text-dim)">${(d.found||[]).length} items</td>
+        <td style="padding:10px 12px;border-bottom:1px solid var(--border);text-align:right;color:var(--text-dimmer)">${d.searches||0}</td>
+      </tr>`).join("");
+    $("mainContent").innerHTML = `
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+        <thead><tr>
+          <th style="text-align:left;padding:10px 12px;border-bottom:1px solid var(--border-light);color:var(--text-dimmer);font-weight:500;font-size:10.5px;text-transform:uppercase">date</th>
+          <th style="text-align:left;padding:10px 12px;border-bottom:1px solid var(--border-light);color:var(--text-dimmer);font-weight:500;font-size:10.5px;text-transform:uppercase">sector</th>
+          <th style="text-align:left;padding:10px 12px;border-bottom:1px solid var(--border-light);color:var(--text-dimmer);font-weight:500;font-size:10.5px;text-transform:uppercase">results</th>
+          <th style="text-align:right;padding:10px 12px;border-bottom:1px solid var(--border-light);color:var(--text-dimmer);font-weight:500;font-size:10.5px;text-transform:uppercase">searches</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  } else {
+    const rows = items.map(d => {
+      const upd = (d.updates||[]).length;
+      const comp = (d.new_competitors||[]).length;
+      const summary = d.live ? `streaming · ${d.work_log.length} events`
+        : (upd || comp ? `${upd} update${upd!==1?"s":""} · ${comp} new competitor${comp!==1?"s":""}` : `<span style="color:var(--text-dimmer);font-style:italic">no updates on tracked apps</span>`);
+      return `<tr data-date="${esc(d.date)}" data-mode="watch" style="cursor:pointer">
+        <td style="padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text);font-weight:500">${esc(formatDate(d.date))}</td>
+        <td style="padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text-dim)">${summary}</td>
+        <td style="padding:10px 12px;border-bottom:1px solid var(--border);text-align:right;color:var(--text-dimmer)">${d.searches||0}</td>
+      </tr>`;
+    }).join("");
+    $("mainContent").innerHTML = `
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+        <thead><tr>
+          <th style="text-align:left;padding:10px 12px;border-bottom:1px solid var(--border-light);color:var(--text-dimmer);font-weight:500;font-size:10.5px;text-transform:uppercase">date</th>
+          <th style="text-align:left;padding:10px 12px;border-bottom:1px solid var(--border-light);color:var(--text-dimmer);font-weight:500;font-size:10.5px;text-transform:uppercase">main findings</th>
+          <th style="text-align:right;padding:10px 12px;border-bottom:1px solid var(--border-light);color:var(--text-dimmer);font-weight:500;font-size:10.5px;text-transform:uppercase">searches</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }
   document.querySelectorAll("tr[data-date]").forEach(tr => {
-    tr.onclick = () => { view = { type: "day", date: tr.getAttribute("data-date") }; render(); };
+    tr.onclick = () => { view = { type: "day", date: tr.getAttribute("data-date"), mode: tr.getAttribute("data-mode") }; render(); };
   });
 }
 
-function summarizeFindings(findings) {
-  const changes = findings.filter(f => f.type === "change").length;
-  const news = findings.filter(f => f.type === "new").length;
-  const parts = [];
-  if (changes) parts.push(`${changes} change${changes > 1 ? "s" : ""}`);
-  if (news) parts.push(`${news} new app${news > 1 ? "s" : ""}`);
-  return esc(parts.join(", "));
-}
-
-function renderDay(day) {
+function renderWatchDay(day) {
   const wl = day.work_log || [];
   const searches = wl.filter(x => x.kind === "search").length;
   const llms = wl.filter(x => x.kind === "llm").length;
-  const findings = day.findings || [];
-  const apps = day.apps || [];
-
-  const wlLabel = day.live ? "live" : "work log";
-  const toggleCls = day.live ? "worklog-toggle live open" : "worklog-toggle";
-
-  let bodyHtml = "";
-
-  if (findings.length) {
-    bodyHtml += `
-      <div class="section-label">main findings</div>
-      <div class="findings">
-        ${findings.map((f, i) => renderFinding(f, i, "finding")).join("")}
-      </div>
-    `;
-  } else if (day.live) {
-    bodyHtml += `
-      <div class="section-label">main findings</div>
-      <div class="no-findings">working… results will appear when the run finishes</div>
-    `;
-  } else {
-    bodyHtml += `
-      <div class="section-label">main findings</div>
-      <div class="no-findings">no changes detected · no new apps this run</div>
-    `;
+  const updates = day.updates || [];
+  const competitors = day.new_competitors || [];
+  const appsChecked = day.apps_checked || [];
+  let body = "";
+  body += `<div class="section-label">updates (${updates.length})</div>`;
+  body += updates.length
+    ? updates.map(u => `<div class="update"><div class="upd-app">${esc(u.app)}</div><div class="upd-change">${esc(u.change)}</div></div>`).join("")
+    : `<div class="no-updates">no updates on tracked apps</div>`;
+  body += `<div class="section-label">new competitors (${competitors.length})</div>`;
+  body += competitors.length
+    ? competitors.map(c => `
+        <div class="competitor">
+          <div class="comp-head"><span class="comp-name">${esc(c.name || "?")}</span><span class="comp-cat">${esc(c.category || "")}</span></div>
+          ${c.one_liner ? `<div class="comp-line">${esc(c.one_liner)}</div>` : ""}
+          ${c.evidence ? `<div class="comp-evi">${esc(c.evidence)}</div>` : ""}
+          ${c.url ? `<div class="comp-evi"><a href="${esc(c.url)}" target="_blank">${esc(c.url)}</a></div>` : ""}
+        </div>`).join("")
+    : `<div class="no-updates">no new competitors found</div>`;
+  if (appsChecked.length) {
+    body += `<div class="section-label">all apps checked (${appsChecked.length})</div>`;
+    body += appsChecked.map(a => {
+      const ft = a.free_tier || {};
+      const sub = `${a.category || "app"} · ${ft.available ? "free tier" : "no free"}`;
+      return `<div class="app-card"><div class="app-name">${esc(a.app_name || "?")}</div><div class="app-sub">${esc(sub)}</div></div>`;
+    }).join("");
   }
+  $("mainContent").innerHTML = `
+    <div class="worklog-toggle open" id="wlToggle"><span class="arrow">▼</span>work log · ${searches} searches · ${llms} llm calls</div>
+    <div class="worklog-body open" id="wlBody">${wl.map(renderLogLine).join("") || '<div style="color:var(--text-dimmer)">waiting…</div>'}</div>
+    ${body}`;
+  const t = $("wlToggle"), b = $("wlBody");
+  if (t && b) t.onclick = () => { t.classList.toggle("open"); b.classList.toggle("open"); };
+  if (b) b.scrollTop = b.scrollHeight;
+}
 
-  if (!findings.length && apps.length) {
-    bodyHtml += `
-      <div class="section-label">all apps checked (${apps.length})</div>
-      <div class="findings">
-        ${apps.map((a, i) => renderFinding(a, i + 500, "app")).join("")}
-      </div>
-    `;
+function renderResearchDay(day) {
+  const wl = day.work_log || [];
+  const searches = wl.filter(x => x.kind === "search").length;
+  const found = day.found || [];
+  const fields = day.fields || [];
+
+  let body = "";
+  body += `<div class="section-label">items found (${found.length})</div>`;
+  if (found.length) {
+    body += found.map(item => renderResearchItem(item, fields)).join("");
+  } else {
+    body += `<div class="no-updates">no items found</div>`;
   }
 
   $("mainContent").innerHTML = `
-    <div class="${toggleCls}" id="wlToggle">
-      <span class="arrow">${day.live ? "▼" : "▶"}</span>
-      ${wlLabel} · ${searches} searches · ${llms} llm calls
-    </div>
-    <div class="worklog-body ${day.live ? "open" : ""}" id="wlBody">
-      ${wl.map(renderLogLine).join("") || '<div style="color: var(--text-dimmer);">waiting for events…</div>'}
-    </div>
-    ${bodyHtml}
-  `;
+    <div class="worklog-toggle open" id="wlToggle"><span class="arrow">▼</span>work log · ${searches} searches</div>
+    <div class="worklog-body open" id="wlBody">${wl.map(renderLogLine).join("") || '<div style="color:var(--text-dimmer)">waiting…</div>'}</div>
+    ${body}`;
+  const t = $("wlToggle"), b = $("wlBody");
+  if (t && b) t.onclick = () => { t.classList.toggle("open"); b.classList.toggle("open"); };
+  if (b) b.scrollTop = b.scrollHeight;
+}
 
-  const toggle = $("wlToggle");
-  const body = $("wlBody");
-  if (toggle && body && !day.live) {
-    toggle.onclick = () => {
-      toggle.classList.toggle("open");
-      body.classList.toggle("open");
-    };
-  }
-  if (day.live && body) body.scrollTop = body.scrollHeight;
-
-  document.querySelectorAll(".finding[data-details]").forEach(card => {
-    card.onclick = (e) => {
-      if (e.target.tagName === "A") return;
-      const id = card.getAttribute("data-details");
-      const details = document.getElementById(id);
-      const hint = card.querySelector(".expand-hint");
-      if (!details) return;
-      const open = details.style.display === "block";
-      details.style.display = open ? "none" : "block";
-      card.classList.toggle("expanded", !open);
-      if (hint) hint.textContent = open ? "click to expand →" : "click to collapse ↑";
-    };
-  });
+function renderResearchItem(item, fields) {
+  const name = item.name || "?";
+  const rows = fields.map(f => {
+    const v = item[f];
+    const isUrl = typeof v === "string" && /^https?:\/\//.test(v);
+    const val = (v === null || v === undefined || v === "")
+      ? `<span style="color:var(--text-dimmer)">—</span>`
+      : (isUrl ? `<a href="${esc(v)}" target="_blank">${esc(v)}</a>` : esc(v));
+    const cls = (v === null || v === undefined || v === "") ? "v null" : "v";
+    return `<div class="k">${esc(f)}</div><div class="${cls}">${val}</div>`;
+  }).join("");
+  return `
+    <div class="competitor" style="border-left-color: var(--blue);">
+      <div class="comp-head"><span class="comp-name">${esc(name)}</span></div>
+      <div class="kv-grid">${rows}</div>
+    </div>`;
 }
 
 function renderLogLine(l) {
   if (l.kind === "search") {
-    const status = l.error
-      ? `<span class="status-bad">✗ ${esc(l.error)}</span>`
-      : `<span class="status-ok">${l.hits} hits</span>`;
+    const status = l.error ? `<span class="status-bad">✗ ${esc(l.error)}</span>` : `<span class="status-ok">${l.hits} hits</span>`;
     const q = l.query ? l.query.replace(/ 2026$/, "") : "";
     return `<div class="worklog-line"><span class="kind search">search</span><span class="body">${esc(l.provider || "?")} · ${esc(q)} · ${status}</span></div>`;
   }
   if (l.kind === "llm") {
-    const status = l.status === "ok"
-      ? `<span class="status-ok">ok</span>`
-      : `<span class="status-bad">${esc(l.status || "fail")}</span>`;
-    return `<div class="worklog-line"><span class="kind llm">llm</span><span class="body">${esc(l.app || "?")} · ${esc(l.model || "?")} · ${status}</span></div>`;
+    const status = l.status === "ok" ? `<span class="status-ok">ok</span>` : `<span class="status-bad">${esc(l.status || "fail")}</span>`;
+    return `<div class="worklog-line"><span class="kind llm">llm</span><span class="body">${esc(l.task || l.app || "?")} · ${esc(l.model || "?")} · ${status}</span></div>`;
   }
   if (l.kind === "fetch") {
-    const status = l.error
-      ? `<span class="status-bad">✗ ${esc(l.error)}</span>`
-      : `<span class="status-ok">${l.chars} chars</span>`;
+    const status = l.error ? `<span class="status-bad">✗ ${esc(l.error)}</span>` : `<span class="status-ok">${l.chars} chars</span>`;
     const url = (l.url || "").replace(/^https?:\/\//, "").slice(0, 60);
     return `<div class="worklog-line"><span class="kind fetch">fetch</span><span class="body">${esc(url)} · ${status}</span></div>`;
   }
-  if (l.kind === "info") {
-    return `<div class="worklog-line"><span class="kind info">info</span><span class="body">${esc(l.message || "")}</span></div>`;
-  }
+  if (l.kind === "info") return `<div class="worklog-line"><span class="kind info">info</span><span class="body">${esc(l.message || "")}</span></div>`;
   return "";
-}
-
-function renderFinding(f, idx, mode) {
-  mode = mode || "finding";
-  const isNew = f.type === "new";
-  const isChange = f.type === "change";
-
-  let icon, cls, heading, summaryLine;
-  if (mode === "app") {
-    icon = "📄";
-    cls = "app";
-    heading = f.app_name || f.app || "?";
-    const ft = f.free_tier || {};
-    const ftText = ft.available ? `free tier: ${ft.credits || "yes"}` : "no free tier";
-    summaryLine = `${f.category || "app"} · ${ftText}`;
-  } else {
-    icon = isNew ? "🆕" : isChange ? "🔄" : "📄";
-    cls = isNew ? "new" : isChange ? "change" : "app";
-    heading = f.app || f.app_name || "?";
-    summaryLine = f.summary || "";
-  }
-
-  const meta = f.extracted_by ? `via ${f.extracted_by}` : "";
-
-  const ft = f.free_tier || {};
-  const pp = f.paid_pricing || {};
-  const features = f.key_features || [];
-  const formats = f.output_formats || [];
-  const channels = (f.support || {}).channels || [];
-  const conf = f.confidence != null ? Math.round(f.confidence * 100) + "%" : "—";
-  const website = f.website || null;
-  const sourceUrl = f.url || f.source_url || null;
-
-  const detailsId = "fd-" + idx;
-
-  return `
-    <div class="finding ${cls}" data-details="${detailsId}">
-      <div class="icon">${icon}</div>
-      <div class="content">
-        <div class="app">${esc(heading)}</div>
-        <div class="summary">${esc(summaryLine)}</div>
-        ${meta ? `<div class="meta">${esc(meta)}</div>` : ""}
-        <div class="expand-hint">click to expand →</div>
-
-        <div class="finding-details" id="${detailsId}" style="display:none;">
-          <div class="section">basic</div>
-          <div class="grid">
-            <div class="key">category</div>
-            <div class="val">${esc(f.category || "—")}</div>
-            <div class="key">vendor</div>
-            <div class="val">${esc(f.vendor || "—")}</div>
-            <div class="key">website</div>
-            <div class="val">${website ? `<a href="${esc(website)}" target="_blank">${esc(website)}</a>` : "—"}</div>
-            <div class="key">source</div>
-            <div class="val">${sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank">${esc(sourceUrl)}</a>` : "—"}</div>
-          </div>
-
-          <div class="section">free tier</div>
-          <div class="grid">
-            <div class="key">available</div>
-            <div class="val">${ft.available ? '<span class="badge-green">yes</span>' : '<span class="badge-red">no</span>'}</div>
-            <div class="key">credits</div>
-            <div class="val">${esc(ft.credits || "—")}</div>
-            <div class="key">limits</div>
-            <div class="val">${esc(ft.limits || "—")}</div>
-          </div>
-
-          <div class="section">paid pricing</div>
-          <div class="grid">
-            <div class="key">cheapest</div>
-            <div class="val">${esc(pp.cheapest_plan || "—")}</div>
-            <div class="key">notes</div>
-            <div class="val">${esc(pp.notes || "—")}</div>
-          </div>
-
-          <div class="section">capabilities &amp; features</div>
-          <div class="val">${features.length ? `<div class="tags">${features.map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div>` : "—"}</div>
-
-          <div class="section">output formats</div>
-          <div class="val">${formats.length ? `<div class="tags">${formats.map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div>` : "—"}</div>
-
-          <div class="section">support channels</div>
-          <div class="val">${channels.length ? `<div class="tags">${channels.map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div>` : "—"}</div>
-
-          ${f.quality_notes ? `
-            <div class="section">quality notes</div>
-            <div class="val">${esc(f.quality_notes)}</div>
-          ` : ""}
-
-          <div class="section">confidence</div>
-          <div class="val">${conf}</div>
-        </div>
-      </div>
-    </div>
-  `;
 }
 
 function formatDate(iso) {
   if (!iso) return "unknown";
-  try {
-    const d = new Date(iso + "T00:00:00Z");
-    return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-  } catch { return iso; }
+  try { return new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); }
+  catch { return iso; }
 }
-
-function esc(s) {
-  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-}
-
-$("runBtn").onclick = async () => {
-  if (!config.repo || !config.token) { setStatus("need repo + token", "err"); return; }
-  setStatus("triggering…", "busy");
-  try {
-    const [owner, repo] = config.repo.split("/");
-    const res = await fetch(
-      `https://api.github.com/repos/${owner}/${repo}/actions/workflows/agent.yml/dispatches`,
-      {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${config.token}`,
-          "Accept": "application/vnd.github+json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ref: "main" }),
-      }
-    );
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    setStatus("triggered · watch live above", "ok");
-  } catch (e) {
-    setStatus(`run failed: ${e.message}`, "err");
-  }
-};
+function esc(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 
 load();
 </script>
