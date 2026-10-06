@@ -3,6 +3,1812 @@
   "pinned": true,
   "days": [
     {
+      "date": "2026-10-06",
+      "mode": "watch",
+      "started_at": "2026-10-06T10:37:46.705355+00:00",
+      "finished_at": "2026-10-06T10:50:02.923865+00:00",
+      "searches": 60,
+      "updates": [
+        {
+          "app": "ChatGPT Work",
+          "change": "Paid plan notes: Updated to include more messages, tools, uploads, image creation, voice chats, longer memory"
+        },
+        {
+          "app": "ChatGPT Work",
+          "change": "New features: Added Dot agent, Unlimited image creation, Maximum deep research, Maximum memory/context, Projects, scheduled tasks, custom GPTs, Early access, Advanced reasoning GPT-6, Pro reasoning GPT-6 Astra"
+        },
+        {
+          "app": "ChatGPT Work",
+          "change": "Output formats: Added voice, document"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "Paid pricing: $20 per month (or $17/month with annual billing) -> $20/month"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "Removed: Web search and file creation"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "Added: Draft and send emails, Manage calendar events"
+        },
+        {
+          "app": "Gamma",
+          "change": "Free tier: removed \"(do not refill)\" note"
+        },
+        {
+          "app": "Gamma",
+          "change": "Paid pricing: Business plan price removed (was $10,000/seat/month)"
+        },
+        {
+          "app": "Gamma",
+          "change": "Support: added note \"Help center available at help.gamma.app\""
+        },
+        {
+          "app": "Notion AI",
+          "change": "Free tier: Trial AI capabilities only (generating docs, autofilling databases) -> Trial AI capabilities only"
+        },
+        {
+          "app": "Notion AI",
+          "change": "Support: removed chat channel"
+        },
+        {
+          "app": "Notion AI",
+          "change": "New feature: Trial AI capabilities: generating docs, autofilling databases"
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Cheapest plan: $144/year -> US$144/year (Pro)"
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Features replaced: AI writer & text generator, Fast first draft, Quality copy generation, Co-author assistance"
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Support: chat removed; notes added about live chat for paid plans"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Free tier limits: View only PDFs -> removed"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Cheapest plan: $14.99/mo -> $24.99/mo (Acrobat Studio)"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Support channels: email, chat, phone, help_center -> removed"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "Pricing notes: added Microsoft 365 subscription requirement, bundles from $23.50, no free trial mentioned"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "New feature: Copilot Chat for work-grounded answers"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "New feature: Copilot Cowork for multi-step workflow automation"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "Free tier: added remove Jotform branding, HIPAA-disabled"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "Pricing: notes updated (annual billing saves up to 20%; features increase per tier)"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "Support: added phone channel"
+        },
+        {
+          "app": "Slaide",
+          "change": "Free tier: unavailable -> available"
+        },
+        {
+          "app": "Liner Write",
+          "change": "Free tier: true -> false"
+        },
+        {
+          "app": "Liner Write",
+          "change": "Removed: No-code machine learning platform"
+        },
+        {
+          "app": "Liner Write",
+          "change": "New feature: AI-generated business plans"
+        },
+        {
+          "app": "Skywork",
+          "change": "Paid pricing notes: Credit-based pricing with hidden caps -> Credit-based plans with hidden caps behind login wall"
+        },
+        {
+          "app": "Skywork",
+          "change": "New feature: Projects"
+        },
+        {
+          "app": "Type",
+          "change": "Paid pricing: cheapest plan now \"$8/mo (Basic)\""
+        },
+        {
+          "app": "Type",
+          "change": "Features: removed money-back guarantee & easy cancellation; added testimonial embedding"
+        },
+        {
+          "app": "Type",
+          "change": "Support: notes updated to include help center via FAQ"
+        },
+        {
+          "app": "Sembly",
+          "change": "Free tier: added 1 user limit"
+        },
+        {
+          "app": "Sembly",
+          "change": "Paid pricing: notes updated to include Basic $10/mo, Pro $20/user/mo, MAX $30/user/mo, Enterprise custom"
+        },
+        {
+          "app": "QwenWork",
+          "change": "Pricing notes: API pricing varies by model; free tier includes Qwen Chat app -> API rates range from $0.05 to $6.00 per million tokens depending on the model."
+        },
+        {
+          "app": "QwenWork",
+          "change": "Features: All-in-one workplace AI agent, Integrated AI office tools, Global public beta, Web and desktop support -> Build interactive HTML pages, Hosting and domain services, Database connectivity, Multimodal AI capabilities (Qwen3.8-Max)"
+        },
+        {
+          "app": "QwenWork",
+          "change": "Support: none -> email, help_center"
+        },
+        {
+          "app": "Watto AI",
+          "change": "Free tier: limits removed; credits now 7 Document Generations"
+        },
+        {
+          "app": "Watto AI",
+          "change": "Paid pricing: notes added: See pricing page for simple plans"
+        },
+        {
+          "app": "Watto AI",
+          "change": "Feature changes: removed AI Voice Agents; added Generate documents in desired format, Simplify content creation process"
+        },
+        {
+          "app": "Capitol AI",
+          "change": "Key features: revised descriptions"
+        },
+        {
+          "app": "Capitol AI",
+          "change": "Support: added email, help_center"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "Free tier: limits: none -> limited documents"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "Support: added help_center channel"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "Feature: added Team collaboration; removed Proactive deal tracking"
+        },
+        {
+          "app": "Google Gemini Docs",
+          "change": "Free tier: Limited Gemini usage -> Limited Gemini app access"
+        },
+        {
+          "app": "Google Gemini Docs",
+          "change": "Removed: More benefits across Google"
+        },
+        {
+          "app": "AI Doc Maker",
+          "change": "New feature: AI Generator for AI Document Generation (attach files in prompt)"
+        },
+        {
+          "app": "AI Doc Maker",
+          "change": "New feature: Draft and Edit Documents with AI Generation"
+        },
+        {
+          "app": "AI Doc Maker",
+          "change": "New feature: Free AI Tools (including AI PowerPoint Generator, AI Spreadsheet Maker)"
+        },
+        {
+          "app": "PandaDoc",
+          "change": "Cheapest plan: $19 per seat per month (Starter) -> $19 USD per seat per month"
+        },
+        {
+          "app": "PandaDoc",
+          "change": "Feature list updated with plan-specific qualifiers (Free, Starter, Business, Enterprise)"
+        },
+        {
+          "app": "PandaDoc",
+          "change": "Support notes: added 'online' to help center accessibility"
+        }
+      ],
+      "new_competitors": [
+        {
+          "name": "Jenova",
+          "url": "https://www.jenova.ai",
+          "category": "AI Document Generation",
+          "one_liner": "Specialized agents for Word, PDF, resumes, proposals, and invoices.",
+          "evidence": "Mentioned as a top AI document generator option in 2026."
+        },
+        {
+          "name": "Doco",
+          "url": null,
+          "category": "AI Document Editing / Workspace",
+          "one_liner": "Bring AI natively into Microsoft Word.",
+          "evidence": "Official launch announced in 2025/2026 for streamlining workflows inside Word."
+        },
+        {
+          "name": "Proposia",
+          "url": "https://proposia.ai",
+          "category": "AI Proposal Software",
+          "one_liner": "AI drafting platform focused on research grants and proposals.",
+          "evidence": "Highlighted in 2026 reviews as a specialized proposal writing software tool."
+        },
+        {
+          "name": "DocuWriter",
+          "url": "https://www.docuwriter.ai",
+          "category": "AI Code Documentation",
+          "one_liner": "AI-powered platform for creating and managing complete documentation for entire codebases.",
+          "evidence": "Featured as a technical AI generation tool for code architecture and APIs."
+        }
+      ],
+      "apps_checked": [
+        {
+          "app_name": "ChatGPT Work",
+          "vendor": "OpenAI",
+          "website": "https://chatgpt.com/",
+          "category": "AI-powered work assistant",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited ChatGPT Work access on desktop"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "Go at $8 per month",
+            "notes": "Includes more messages with tools, uploads, image creation, voice chats, and longer memory compared to Free."
+          },
+          "key_features": [
+            "Limited ChatGPT Work access on desktop (Free)",
+            "Expanded access to ChatGPT Work on desktop, web, and mobile (Plus)",
+            "Longer Codex and ChatGPT Work sessions (Pro)",
+            "Dot, your always-on agent (Pro)",
+            "Unlimited and faster image creation (Pro)",
+            "Maximum deep research (Pro)",
+            "Maximum memory and context (Pro)",
+            "Projects, scheduled tasks, and custom GPTs (Plus/Pro)",
+            "Early access to new features (Plus)",
+            "Advanced reasoning models with GPT-6 (Plus)",
+            "Pro reasoning powered by GPT-6 Astra (Pro)"
+          ],
+          "output_formats": [
+            "text",
+            "image",
+            "voice",
+            "code",
+            "document"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://openai.com/chatgpt/pricing/"
+        },
+        {
+          "app_name": "Claude Cowork",
+          "vendor": "Anthropic",
+          "website": "https://claude.com",
+          "category": "AI productivity assistant",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$20/month",
+            "notes": "Included in all paid Claude plans at no extra separate fee."
+          },
+          "key_features": [
+            "Shared memory across chat and Cowork",
+            "Draft and send emails",
+            "Manage calendar events",
+            "Create and update files in OneDrive",
+            "Hand off and schedule tasks",
+            "Claude Design, Slides, and Docs",
+            "Claude Code",
+            "Claude Science",
+            "Projects",
+            "Connect apps and tools",
+            "Create Artifacts"
+          ],
+          "output_formats": [
+            "text",
+            "email",
+            "calendar events",
+            "documents",
+            "slides",
+            "code",
+            "files",
+            "artifacts"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Claude Cowork shares memory across chat and Cowork, reducing need for repeated briefing.",
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://www.anthropic.com/pricing"
+        },
+        {
+          "app_name": "Gamma",
+          "vendor": "Gamma",
+          "website": "https://gamma.app",
+          "category": "AI-powered presentation and document generation",
+          "free_tier": {
+            "available": true,
+            "credits": "400 credits at signup",
+            "limits": "Create up to 10 slides per prompt; simple presentations, docs, websites, social, and images; import from PDF & PPTX; export to PDF, PPTX, PNG & Google Slides"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$9 per seat per month (Plus)",
+            "notes": "Save up to 28% with annual billing; Plus: $9/month, Pro: $18/month, Ultra: $90/month; Business plan also available"
+          },
+          "key_features": [
+            "AI-powered generation of presentations, documents, websites, social media, and graphics",
+            "Export to PDF, PPTX, PNG, Google Slides",
+            "Import from PDF & PPTX",
+            "Remove Gamma branding (Plus plan)",
+            "Custom branding (Pro plan)",
+            "API access (Pro plan)",
+            "Advanced AI image models",
+            "Unused credits roll over up to 2\u00d7 monthly amount",
+            "SOC 2 Type II compliant"
+          ],
+          "output_formats": [
+            "PDF",
+            "PPTX",
+            "PNG",
+            "Google Slides"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Help center available at help.gamma.app"
+          },
+          "quality_notes": "SOC 2 Type II compliant; uses multiple AI models (Claude, ChatGPT+DALL-E, Gemini, Flux, Recraft, Playground, Ideogram, Luma, Leonardo); unused credits roll over up to 2\u00d7 monthly amount.",
+          "confidence": 0.95,
+          "_extracted_by": "nemotron",
+          "source_url": "https://gamma.app/pricing"
+        },
+        {
+          "app_name": "Notion AI",
+          "vendor": "Notion",
+          "website": "https://www.notion.com",
+          "category": "Productivity",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Trial AI capabilities only"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$20 per member/month (Business plan)",
+            "notes": "AI features are included in the Business plan; Plus plan includes only trial AI capabilities."
+          },
+          "key_features": [
+            "Notion Agent",
+            "AI Meeting Notes",
+            "Enterprise Search Beta",
+            "Granular database permissions",
+            "Private teamspaces",
+            "Domain verification",
+            "Premium connections",
+            "Zero data retention with LLM providers (Enterprise)",
+            "Custom Agents (free to try, then $10 per 1,000 monthly Notion credits)",
+            "Workers Beta",
+            "Trial AI capabilities: generating docs, autofilling databases"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "nemotron",
+          "source_url": "https://www.notion.com/pricing"
+        },
+        {
+          "app_name": "Canva Magic Write",
+          "vendor": "Canva",
+          "website": "https://www.canva.com/",
+          "category": "AI Writing Assistant",
+          "free_tier": {
+            "available": true,
+            "credits": "20 Standard or Premium AI uses per month",
+            "limits": "20 Standard or Premium AI uses per month"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$144/year (Pro)",
+            "notes": "AI Pass add-on available for extra cost; Business and Enterprise plans provide higher AI usage."
+          },
+          "key_features": [
+            "AI writer & text generator",
+            "Fast first draft",
+            "Quality copy generation",
+            "Co-author assistance"
+          ],
+          "output_formats": [
+            "Text"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": "Support via Canva Help Center and email; live chat may be available for paid plans."
+          },
+          "quality_notes": "AI usage estimates assume simple tasks; actual usage may be lower for advanced tools.",
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://www.canva.com/pricing/"
+        },
+        {
+          "app_name": "Adobe Acrobat AI",
+          "vendor": "Adobe",
+          "website": "https://www.adobe.com/acrobat/pricing.html",
+          "category": "Document Management",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$24.99/mo (Acrobat Studio)",
+            "notes": "AI Assistant is included in the Acrobat Studio plan; Standard and Pro plans do not include AI features."
+          },
+          "key_features": [
+            "Create, edit, convert, export, and organize PDFs",
+            "Collect e-signatures and track responses",
+            "Fill, sign, and password-protect PDFs",
+            "Redact sensitive content",
+            "Create web forms",
+            "Turn scans into editable PDFs",
+            "AI Assistant: ask AI to edit, convert, compress PDFs",
+            "Get summaries, insights, and answers",
+            "Organize, share, and collaborate with PDF Spaces",
+            "Generate flyers, social content, and presentations from documents"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://www.adobe.com/acrobat/pricing.html"
+        },
+        {
+          "app_name": "Microsoft 365 Copilot",
+          "vendor": "Microsoft",
+          "website": "https://www.microsoft.com/en-us/copilot",
+          "category": "AI-powered productivity assistant",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$21 per user per month (Business plan)",
+            "notes": "Pricing is on top of a required Microsoft 365 subscription; Enterprise plan $30 per user per month; bundles from $23.50; no free trial mentioned."
+          },
+          "key_features": [
+            "AI integrated into Word, Excel, PowerPoint, Outlook, and Teams",
+            "Work IQ grounding for contextual understanding",
+            "Access to leading AI models with auto model selection",
+            "Agent Builder to create custom work-focused AI agents",
+            "Copilot Chat for work-grounded answers",
+            "Copilot Cowork for multi-step workflow automation",
+            "Copilot Code for no-code app/dashboard creation",
+            "Copilot Autopilot for always-on personal agent"
+          ],
+          "output_formats": [
+            "text",
+            "code",
+            "documents",
+            "presentations",
+            "spreadsheets"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "phone",
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://www.microsoft.com/microsoft-365/copilot"
+        },
+        {
+          "app_name": "Jotform Document Generator",
+          "vendor": "Jotform",
+          "website": "https://www.jotform.com",
+          "category": "Document Generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "5 forms, 100 monthly submissions, 1 user, 100 MB storage, 10,000 monthly form views, 500 total submission storage, 100 fields per form, 10 monthly payment submissions, 10 monthly signed documents, remove Jotform branding, HIPAA-disabled"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$34/month (Bronze, billed annually)",
+            "notes": "Paid plans include Bronze, Silver, Gold, and Enterprise; annual billing saves up to 20%; features and limits increase with each plan tier."
+          },
+          "key_features": [
+            "Unlimited forms (Enterprise)",
+            "Conditional logic",
+            "Payment integration",
+            "E-signature",
+            "HIPAA compliance (Gold/Enterprise)",
+            "AI agent limits",
+            "Custom branding",
+            "SSO",
+            "Dedicated support",
+            "File upload storage",
+            "Monthly submission limits",
+            "Form views",
+            "Fields per form",
+            "Remove Jotform branding"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "phone",
+              "help_center"
+            ],
+            "notes": "24/7 customer support available via email, chat, phone, and help center."
+          },
+          "quality_notes": "Trusted by over 40 million users; offers nonprofit and education discounts; 30-day money-back guarantee.",
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://www.jotform.com/pricing/"
+        },
+        {
+          "app_name": "Slaide",
+          "vendor": null,
+          "website": "https://www.slaide.de/",
+          "category": "AI Presentation Maker",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI-powered presentation generation",
+            "Document generation",
+            "Design preservation",
+            "PowerPoint export",
+            "Word export",
+            "Excel export"
+          ],
+          "output_formats": [
+            "PowerPoint",
+            "Word",
+            "Excel"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.7,
+          "_extracted_by": "nemotron",
+          "source_url": "https://slaide.com/pricing"
+        },
+        {
+          "app_name": "Liner Write",
+          "vendor": "Liner",
+          "website": "https://liner.com",
+          "category": "AI-powered business document generation",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI-generated business plans",
+            "AI-generated proposals",
+            "93.7% accuracy"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.6,
+          "_extracted_by": "nemotron",
+          "source_url": "https://getliner.com/pricing"
+        },
+        {
+          "app_name": "Skywork",
+          "vendor": "Skywork",
+          "website": "https://skywork.ai",
+          "category": "AI Assistant",
+          "free_tier": {
+            "available": true,
+            "credits": "7,000 credits",
+            "limits": "7,000-credit allowance"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19.99/month",
+            "notes": "Credit-based plans with hidden caps behind login wall; $1 trial available"
+          },
+          "key_features": [
+            "New Projects",
+            "Knowledge Base",
+            "Scheduled Tasks",
+            "Projects",
+            "Skywork Design",
+            "Skywork Video",
+            "Connect IM channel",
+            "Configure SkyClaw",
+            "Research Paper Expert",
+            "Product Manager Expert",
+            "Teacher Lesson Planning Expert",
+            "Design Execution Expert",
+            "Sales Acquisition Expert",
+            "Social Media Beginner Expert",
+            "Marketing Growth Expert",
+            "Creative Writing Expert",
+            "Data Collection & Web Crawling Expert"
+          ],
+          "output_formats": [
+            "Websites",
+            "Slides",
+            "Documents",
+            "Posters",
+            "Images",
+            "Sheets",
+            "Videos"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Users report hidden caps and billing traps; verify before checkout.",
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://skywork.ai/pricing"
+        },
+        {
+          "app_name": "Type",
+          "vendor": null,
+          "website": "https://type.ai/",
+          "category": "AI-powered writing editor",
+          "free_tier": {
+            "available": true,
+            "credits": "Limited credits that never expire",
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$8/mo (Basic)",
+            "notes": "All paid plans include premium AI models and priority email support; annual billing saves 33%."
+          },
+          "key_features": [
+            "AI-powered writing and editing",
+            "Priority email support",
+            "Credits for AI features",
+            "Up to 150,000 words per document",
+            "Document import preserving formatting (images, headings, tables)",
+            "No training on user data",
+            "Testimonial embedding"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": "Priority email support for paid plans; help center via FAQ."
+          },
+          "quality_notes": "Free tier offers limited credits that never expire; paid plans provide significantly larger monthly credit allocations.",
+          "confidence": 0.95,
+          "_extracted_by": "nemotron",
+          "source_url": "https://type.ai/pricing"
+        },
+        {
+          "app_name": "Sembly",
+          "vendor": "Sembly AI",
+          "website": "https://www.sembly.ai/",
+          "category": "AI-powered meeting and document platform",
+          "free_tier": {
+            "available": true,
+            "credits": "750 monthly credits per user",
+            "limits": "1 user, 5 clients, 5 brand packages, 2 months chat history"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$10 per month (billed annually)",
+            "notes": "Plans billed annually; Basic $10/mo, Pro $20/user/mo, MAX $30/user/mo, Enterprise custom."
+          },
+          "key_features": [
+            "Unlimited capture and transcription in 45+ languages",
+            "Notes, summaries, tasks, and basic AI chat",
+            "Multi-meeting AI chat and advanced search",
+            "Workspace automations, webhooks, and MCP access",
+            "HD video capture and unlimited history",
+            "Custom SSO, audit log, and HIPAA compliance"
+          ],
+          "output_formats": [
+            "Notes",
+            "Summaries",
+            "Tasks",
+            "AI chat",
+            "Brand packages"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "help_center"
+            ],
+            "notes": "Priority support available on MAX plan"
+          },
+          "quality_notes": "Free tier provides limited credits and features; paid plans scale with users, clients, and brand packages.",
+          "confidence": 0.8,
+          "_extracted_by": "nemotron",
+          "source_url": "https://www.sembly.ai/pricing/"
+        },
+        {
+          "app_name": "QwenWork",
+          "vendor": "Alibaba",
+          "website": "https://qwenwork.aliyun.com/",
+          "category": "AI office tools",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$0.05 per 1M tokens",
+            "notes": "API rates range from $0.05 to $6.00 per million tokens depending on the model."
+          },
+          "key_features": [
+            "Build interactive HTML pages",
+            "Hosting and domain services",
+            "Database connectivity",
+            "Multimodal AI capabilities (Qwen3.8-Max)"
+          ],
+          "output_formats": [
+            "HTML"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Generated applications should be tested for security, accessibility, data handling, and correctness before production use.",
+          "confidence": 0.7,
+          "_extracted_by": "nemotron",
+          "source_url": "https://qwenwork.aliyun.com/"
+        },
+        {
+          "app_name": "Watto AI",
+          "vendor": "Watto AI",
+          "website": "https://www.watto.ai",
+          "category": "Document Generation",
+          "free_tier": {
+            "available": true,
+            "credits": "7 Document Generations",
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "See pricing page for simple plans"
+          },
+          "key_features": [
+            "AI-powered McKinsey-quality reports",
+            "Natural language lead collection and customer support automation",
+            "Intelligent document creation from Google Docs/Slack integration",
+            "Generate documents in desired format",
+            "Simplify content creation process"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.7,
+          "_extracted_by": "nemotron",
+          "source_url": "https://watto.ai"
+        },
+        {
+          "app_name": "Capitol AI",
+          "vendor": "Capitol AI",
+          "website": "https://www.capitol.ai",
+          "category": "Enterprise AI workflow platform",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "Governed data",
+            "Institutional workflows",
+            "Model independence",
+            "Defensible artifacts",
+            "Connect every source",
+            "Work with structured & unstructured data",
+            "Prepare data for reliable AI work",
+            "Access control by source and workflow",
+            "Lineage tracking",
+            "Usage, access, and cost governance",
+            "Data control",
+            "Workflow control",
+            "Model control",
+            "Infrastructure for institutional intelligence",
+            "Generate finished reports, filings, models, decks, apps, published artifacts"
+          ],
+          "output_formats": [
+            "Reports",
+            "Presentations",
+            "Models",
+            "Decks",
+            "Apps",
+            "Published artifacts"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Produces high-quality, decision-ready outputs with built-in attribution and governance.",
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://capitol.ai"
+        },
+        {
+          "app_name": "Cobl.ai",
+          "vendor": "Cobl",
+          "website": "https://www.cobl.ai/",
+          "category": "AI Sales Proposal Generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "limited documents"
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Paid plan provides unlimited documents; exact pricing not disclosed in page text"
+          },
+          "key_features": [
+            "AI-powered sales proposal generation",
+            "RFP response automation",
+            "CRM and email integration",
+            "Multi-agent AI deal assistant",
+            "Document generation from CRM data",
+            "Team collaboration"
+          ],
+          "output_formats": [
+            "Sales Proposal",
+            "RFP Response",
+            "Sales Deck",
+            "Executive Summary",
+            "Pitch Deck",
+            "UX/UI Audit",
+            "Competitive Analysis",
+            "RFI",
+            "XLS",
+            "DOC",
+            "PDF"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://cobl.ai"
+        },
+        {
+          "app_name": "Google Gemini Docs",
+          "vendor": "Google",
+          "website": "https://gemini.google.com",
+          "category": "AI-powered document editing",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited Gemini app access (basic usage)"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$9.99/mo (Google AI Plus)",
+            "notes": "Includes Gemini app access with double usage limits, Flash Thinking model, Google Flow expanded access, Gemini in Gmail, and Gemini Notebook with more access."
+          },
+          "key_features": [
+            "Gemini app access with double usage limits",
+            "Flash Thinking model",
+            "Google Flow with expanded access to creative models",
+            "Gemini in Gmail",
+            "Gemini Notebook",
+            "Gemini in Docs, Vids & More",
+            "Deep Research",
+            "YouTube Premium Lite",
+            "Google Home Premium"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://one.google.com/about/plans"
+        },
+        {
+          "app_name": "AI Doc Maker",
+          "vendor": null,
+          "website": "https://www.aidocmaker.com",
+          "category": "AI Document Generator",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "Free AI Document Generator",
+            "AI PDF Maker & AI PDF Generator",
+            "A Flexible PDF Maker AI",
+            "Convert Text to PDF with AI",
+            "AI Word Document Generator",
+            "Online Document Maker",
+            "PDF Generator AI for Reports",
+            "Smart AI Document Creator",
+            "Powerful AI Excel Sheet Generator",
+            "Fast AI Spreadsheet Generator",
+            "AI Generator for AI Document Generation (attach files in prompt)",
+            "Draft and Edit Documents with AI Generation",
+            "Free AI Tools (including AI PowerPoint Generator, AI Spreadsheet Maker)"
+          ],
+          "output_formats": [
+            "PDF",
+            "DOCX",
+            "XLSX",
+            "HTML",
+            "PPTX"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Featured in Wired, PC Guide, GVS, Geeky Gadgets, Beebom, and OpenAI GPT Store; trusted by users at Yale, Harvard, Cornell, NYU, Michigan, Fujitsu, and University of Alberta.",
+          "confidence": 0.9,
+          "_extracted_by": "nemotron",
+          "source_url": "https://aidocmaker.com"
+        },
+        {
+          "app_name": "PandaDoc",
+          "vendor": "PandaDoc",
+          "website": "https://www.pandadoc.com",
+          "category": "Document Automation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "5 documents per month"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19 USD per seat per month",
+            "notes": "Starter plan includes unlimited document uploads and e\u2011signatures, rich media drag\u2011and\u2011drop editor, real\u2011time tracking, 24/7 email and chat support, API access (requires usage credits), and AI assistants via MCP (ChatGPT, Claude)."
+          },
+          "key_features": [
+            "Create 5 documents per month (Free)",
+            "Unlimited document uploads and e\u2011Signatures (Starter)",
+            "Rich media drag and drop document editor",
+            "Real\u2011time tracking and notifications",
+            "24/7 email and chat support",
+            "Limited API access (Free)",
+            "API access (Starter, requires usage credits)",
+            "AI assistants via MCP (ChatGPT, Claude)",
+            "Custom quotes and sales agreements (Business)",
+            "CRM integrations (Business)",
+            "Custom branding and content library (Business)",
+            "Deal rooms (Business)",
+            "Approval workflows (Business)",
+            "Web forms (Business)",
+            "Bulk send (Business)",
+            "CPQ (Enterprise)",
+            "Workflow automation (Enterprise)",
+            "Smart content (Enterprise)",
+            "Single sign\u2011on (SSO) (Enterprise)",
+            "Team workspaces (Enterprise)",
+            "Notary (Enterprise)"
+          ],
+          "output_formats": [
+            "PDF"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "help_center"
+            ],
+            "notes": "24/7 email and chat support available on all plans; help center accessible online."
+          },
+          "quality_notes": "High user ratings: G2 4.7/5 (3,324 reviews), Capterra 4.5/5 (1,197 reviews), Trustpilot 4/5 (560 reviews).",
+          "confidence": 0.95,
+          "_extracted_by": "nemotron",
+          "source_url": "https://www.pandadoc.com/pricing/"
+        }
+      ],
+      "work_log": [
+        {
+          "kind": "search",
+          "query": "ChatGPT Work new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "ChatGPT Work pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://openai.com/chatgpt/pricing/",
+          "chars": 26343
+        },
+        {
+          "kind": "llm",
+          "task": "extract:ChatGPT Work",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:ChatGPT Work",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.anthropic.com/pricing",
+          "chars": 24245
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Claude Cowork",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Claude Cowork",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Gamma new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://gamma.app/pricing",
+          "chars": 7978
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Gamma",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Gamma",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.notion.com/pricing",
+          "chars": 23347
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Notion AI",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Notion AI",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.canva.com/pricing/",
+          "chars": 26309
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Canva Magic Write",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Canva Magic Write",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.adobe.com/acrobat/pricing.html",
+          "chars": 67837
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Adobe Acrobat AI",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Adobe Acrobat AI",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.microsoft.com/microsoft-365/copilot",
+          "chars": 11579
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Microsoft 365 Copilot",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Microsoft 365 Copilot",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.jotform.com/pricing/",
+          "chars": 23827
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Jotform Document Generator",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Jotform Document Generator",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Slaide new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Slaide pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://slaide.com/pricing",
+          "chars": 60
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Slaide",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Slaide",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://getliner.com/pricing",
+          "chars": 148
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Liner Write",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Liner Write",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Skywork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Skywork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://skywork.ai/pricing",
+          "chars": 13634
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Skywork",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Skywork",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Type new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Type pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://type.ai/pricing",
+          "chars": 16790
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Type",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Type",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Sembly new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Sembly pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.sembly.ai/pricing/",
+          "chars": 15322
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Sembly",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Sembly",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://qwenwork.aliyun.com/",
+          "chars": 0
+        },
+        {
+          "kind": "llm",
+          "task": "extract:QwenWork",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:QwenWork",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://watto.ai",
+          "chars": 0
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Watto AI",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Watto AI",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://capitol.ai",
+          "chars": 13249
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Capitol AI",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Capitol AI",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://cobl.ai",
+          "chars": 9103
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Cobl.ai",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Cobl.ai",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://one.google.com/about/plans",
+          "chars": 3321
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Google Gemini Docs",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Google Gemini Docs",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://aidocmaker.com",
+          "chars": 21678
+        },
+        {
+          "kind": "llm",
+          "task": "extract:AI Doc Maker",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:AI Doc Maker",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.pandadoc.com/pricing/",
+          "chars": 19132
+        },
+        {
+          "kind": "llm",
+          "task": "extract:PandaDoc",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:PandaDoc",
+          "model": "nemotron",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "new AI document generator launched this week",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new AI writing assistant launch 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Product Hunt document tool this month",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI presentation tool new release",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI contract generator new launch",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "YC batch AI document startup",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI proposal software new tool 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "just launched AI doc app",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new entrant document automation",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI document startup funding this week",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new AI spreadsheet tool 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI report generator launch this month",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion alternative new 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma alternative new tool",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI doc app Show HN 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI powerpoint generator new",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI resume tool new launch",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI invoice generator new 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI legal document startup 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI technical doc generator new",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "task": "competitor_scan",
+          "model": "nemotron",
+          "status": "invalid_json",
+          "error": ""
+        },
+        {
+          "kind": "llm",
+          "task": "competitor_scan",
+          "model": "gemini",
+          "status": "ok"
+        }
+      ]
+    },
+    {
       "date": "2026-10-05",
       "mode": "watch",
       "started_at": "2026-10-05T10:44:47.692638+00:00",
