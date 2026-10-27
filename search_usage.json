@@ -2,9 +2,9 @@
   "month": "2026-10",
   "counts": {
     "exa": 640,
-    "firecrawl": 500
+    "firecrawl": 520
   },
-  "daily_date": "2026-10-26",
+  "daily_date": "2026-10-27",
   "daily": {
     "firecrawl": 20
   }
