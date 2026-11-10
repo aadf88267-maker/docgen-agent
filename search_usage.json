@@ -1,10 +1,10 @@
 {
   "month": "2026-11",
   "counts": {
-    "firecrawl": 180
+    "firecrawl": 200
   },
   "daily": {
     "firecrawl": 20
   },
-  "daily_date": "2026-11-09"
+  "daily_date": "2026-11-10"
 }
