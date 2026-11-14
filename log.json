@@ -3,6 +3,2047 @@
   "pinned": true,
   "days": [
     {
+      "date": "2026-11-14",
+      "mode": "watch",
+      "started_at": "2026-11-14T10:46:07.035951+00:00",
+      "finished_at": "2026-11-14T10:48:50.538326+00:00",
+      "searches": 60,
+      "updates": [
+        {
+          "app": "ChatGPT Work",
+          "change": "Paid pricing: Cheapest plan notes and Pro plan pricing structure updated"
+        },
+        {
+          "app": "ChatGPT Work",
+          "change": "New feature: Custom GPTs and projects"
+        },
+        {
+          "app": "ChatGPT Work",
+          "change": "Support notes: Added billing help resources note"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "Free tier: Limits updated to remove restriction on Cowork and scheduled tasks"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "New features: Chat on web, desktop, and mobile, Connect your apps and tools, Create Artifacts"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "Output formats: Added Sheets"
+        },
+        {
+          "app": "Gamma",
+          "change": "New feature: Custom domains and detailed analytics"
+        },
+        {
+          "app": "Gamma",
+          "change": "New feature: MCP Server integration"
+        },
+        {
+          "app": "Gamma",
+          "change": "Category: Updated to specify presentations, websites, documents, and social media"
+        },
+        {
+          "app": "Notion AI",
+          "change": "Paid pricing: Standalone AI add-on notes updated with specific credit allocations (1,500 Standard / 500 Select)"
+        },
+        {
+          "app": "Notion AI",
+          "change": "Removed feature: Notion MCP"
+        },
+        {
+          "app": "Notion AI",
+          "change": "Support channels: Removed chat support channel"
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Free tier limits: Limited access to Standard and Premium AI -> Limited access to Standard and Premium AI monthly allowance"
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Paid pricing notes: AI Pass add-on and AI top-ups available at extra cost -> Paid plans offer 10x to 20x more AI allowance than Canva Free, with AI Pass add-ons and top-ups available at extra cost"
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Support channels: Added email"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Free tier: available -> unavailable"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Paid pricing: notes updated regarding cancellation fees and plan naming"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Output formats: removed Visual assets (flyers, social content) and Presentations"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "Website: https://www.microsoft.com/en-us/copilot -> https://www.microsoft.com"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "Paid pricing notes: Updated enterprise and business plan wording"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "Key features: Updated feature list emphasizing Home view, Cowork, and Autopilot"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "New feature: PDF customization"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "New feature: Table data import"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "New feature: Stripe ACH payment acceptance"
+        },
+        {
+          "app": "Slaide",
+          "change": "Free tier: available (unknown) -> not available"
+        },
+        {
+          "app": "Liner Write",
+          "change": "New feature: AI agent for business documents"
+        },
+        {
+          "app": "Liner Write",
+          "change": "New output format: Business docs"
+        },
+        {
+          "app": "Skywork",
+          "change": "Support: added email and help_center channels"
+        },
+        {
+          "app": "Skywork",
+          "change": "Category: AI Workspace / Productivity -> AI Agent & Workflow Assistant"
+        },
+        {
+          "app": "Type",
+          "change": "New feature: Math and code blocks"
+        },
+        {
+          "app": "Type",
+          "change": "Output formats: Added Text documents, Images, Audio, and Video"
+        },
+        {
+          "app": "Type",
+          "change": "Category: Long-form writing AI editor -> AI Writing & Editing"
+        },
+        {
+          "app": "Sembly",
+          "change": "New feature: Single-meeting and multi-meeting AI chat"
+        },
+        {
+          "app": "Sembly",
+          "change": "New feature: Workspace integrations and MCP"
+        },
+        {
+          "app": "Sembly",
+          "change": "Paid pricing notes: Added mention of a 7-day free trial"
+        },
+        {
+          "app": "QwenWork",
+          "change": "New feature: Content creation"
+        },
+        {
+          "app": "QwenWork",
+          "change": "New feature: Application development"
+        },
+        {
+          "app": "QwenWork",
+          "change": "New feature: Data analysis"
+        },
+        {
+          "app": "Watto AI",
+          "change": "Category: Document Creation -> Document Generation & AI Reports"
+        },
+        {
+          "app": "Watto AI",
+          "change": "New feature: AI Voice Agents development"
+        },
+        {
+          "app": "Watto AI",
+          "change": "New feature: Automated document creation and review for Product Managers"
+        },
+        {
+          "app": "Capitol AI",
+          "change": "Category: Enterprise AI Workflows & Intelligence -> Enterprise AI Workflows & Research"
+        },
+        {
+          "app": "Capitol AI",
+          "change": "New feature: Multi-source integration (internal systems, Google Drive, Azure, S3, etc.)"
+        },
+        {
+          "app": "Capitol AI",
+          "change": "Support channels: Added help_center"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "Paid pricing: Added cheapest plan details (\"Pro credits plan\") and updated notes"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "New feature: RFP response drafting and automation"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "New feature: Automated sales proposals"
+        },
+        {
+          "app": "Google Gemini Docs",
+          "change": "Cheapest plan: $9.99/mo -> $1.99/mo"
+        },
+        {
+          "app": "Google Gemini Docs",
+          "change": "New feature: Shared storage up to 5 others"
+        },
+        {
+          "app": "Google Gemini Docs",
+          "change": "Removed: Presentations output format"
+        },
+        {
+          "app": "AI Doc Maker",
+          "change": "Updated features: reorganized key features list emphasizing PDF and Word generators"
+        },
+        {
+          "app": "AI Doc Maker",
+          "change": "Paid pricing notes: removed mention of premium plans in notes"
+        },
+        {
+          "app": "PandaDoc",
+          "change": "Removed feature: Web forms"
+        },
+        {
+          "app": "PandaDoc",
+          "change": "Removed feature: Bulk send"
+        }
+      ],
+      "new_competitors": [
+        {
+          "name": "Medium TK",
+          "url": "https://emergent.sh/news/medium-launches-tk-app-ai-writing-assistant",
+          "category": "Writing Assistant / Document Generation",
+          "one_liner": "A new web app launched by Medium that embeds AI writing and editing assistance directly into the writing process via @TK prompts.",
+          "evidence": "Launched on November 9, 2026."
+        },
+        {
+          "name": "goHeather",
+          "url": "https://www.goheather.io/ai-contract-generator",
+          "category": "Legal AI / Contract Generation",
+          "one_liner": "AI-powered tool that researches, retrieves templates, drafts, and delivers foundational legal contracts for various jurisdictions.",
+          "evidence": "Featured in 2026 AI contract generator reviews."
+        },
+        {
+          "name": "Inventive AI",
+          "url": "https://www.inventive.ai/blog-posts/top-proposal-software-tools",
+          "category": "Proposal & RFP Writing",
+          "one_liner": "AI tool that writes sourced, deal-ready proposals from existing knowledge without requiring a manual Q&A library.",
+          "evidence": "Highlighted as a top proposal software tool in 2026 analyses."
+        },
+        {
+          "name": "Bidara",
+          "url": "https://www.bidara.ai/comparison/ai-proposal-software",
+          "category": "Proposal & RFP Writing",
+          "one_liner": "AI proposal writing platform for RFPs, RFQs, tenders, and sales documents.",
+          "evidence": "Reviewed in 2026 AI proposal software comparisons updated in July 2026."
+        },
+        {
+          "name": "NextDocs AI Report Creator",
+          "url": "https://www.nextdocs.io/ai-report-free-creator",
+          "category": "Document & Report Generation",
+          "one_liner": "Free online tool to create structured professional reports from notes and source files.",
+          "evidence": "Tracked in 2026 landscape reports for AI report generation."
+        }
+      ],
+      "apps_checked": [
+        {
+          "app_name": "ChatGPT Work",
+          "vendor": "OpenAI",
+          "website": "https://chatgpt.com/",
+          "category": "AI Productivity & Assistant",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited ChatGPT Work access on desktop"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$8 / month (Go plan)",
+            "notes": "ChatGPT Work is gated by your plan and metered against it. Higher tiers like Plus ($20/mo) and Pro (from $100/mo) provide expanded or longer ChatGPT Work sessions."
+          },
+          "key_features": [
+            "Unlimited text chats",
+            "Advanced reasoning models",
+            "Deep research",
+            "Codex access",
+            "ChatGPT Work access across desktop, web, and mobile",
+            "Custom GPTs and projects"
+          ],
+          "output_formats": [
+            "Text",
+            "Voice",
+            "Images"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Support accessible via OpenAI Help Center and billing help resources."
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://openai.com/chatgpt/pricing/"
+        },
+        {
+          "app_name": "Claude Cowork",
+          "vendor": "Anthropic",
+          "website": "https://claude.com",
+          "category": "AI Assistant & Productivity",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited usage every 5 hours and every week"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$17 per month (with annual subscription discount, $200 billed up front) or $20 if billed monthly",
+            "notes": "Paid plans include Pro ($20/mo), Max ($100/mo), and Ultra ($200/mo) with varying usage limits and API credits."
+          },
+          "key_features": [
+            "Chat on web, desktop, and mobile",
+            "Search the web, create files, and run code",
+            "Memory across conversations",
+            "Connect your apps and tools",
+            "Create Artifacts",
+            "Claude Design, Slides, Docs",
+            "Hand off and schedule tasks",
+            "Claude Data, Sheets, and Whiteboards",
+            "Claude Code",
+            "Claude Science",
+            "Projects",
+            "Claude in Chrome and Microsoft 365"
+          ],
+          "output_formats": [
+            "Documents",
+            "Slides",
+            "Sheets",
+            "Files",
+            "Code"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.anthropic.com/pricing"
+        },
+        {
+          "app_name": "Gamma",
+          "vendor": null,
+          "website": "https://gamma.app",
+          "category": "AI-powered platform for visual communication (Presentations, Websites, Documents, Social Media)",
+          "free_tier": {
+            "available": true,
+            "credits": "400 credits at signup (do not refill)",
+            "limits": "Create up to 10 slides per prompt"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$9 USD / month (Plus plan, billed annually at $108)",
+            "notes": "Plans include Plus ($9/mo), Pro ($18/mo), Ultra ($90/mo), and Business. Annual billing saves up to 28%."
+          },
+          "key_features": [
+            "Presentations, websites, social media, and documents creation",
+            "Import from PDF & PPTX",
+            "Export to PDF, PPTX, PNG & Google Slides",
+            "Advanced AI image models (Claude, ChatGPT + DALL-E, Gemini, Flux, Recraft, Playground, Ideogram, Luma, Leonardo)",
+            "Custom branding and custom domains",
+            "Detailed analytics and advanced sharing",
+            "Public API and MCP Server integrations"
+          ],
+          "output_formats": [
+            "PDF",
+            "PPTX",
+            "PNG",
+            "Google Slides"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "SOC 2 Type II compliant.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://gamma.app/pricing"
+        },
+        {
+          "app_name": "Notion AI",
+          "vendor": "Notion",
+          "website": "https://www.notion.com",
+          "category": "Productivity & AI Workspace",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Trial AI capabilities available on Free and Plus plans"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$20 per seat / month (Business plan, billed annually or monthly equivalent)",
+            "notes": "Plus plan offers trial AI capabilities for $10 per seat/month; Business plan unlocks full Notion AI, Notion Agents, and credits (1,500 Standard credits and 500 Select credits per month)."
+          },
+          "key_features": [
+            "Notion Agent",
+            "Custom Agents",
+            "AI Meeting Notes",
+            "Enterprise Search",
+            "Standard and Select AI credits system",
+            "Database Autofill",
+            "Bring your own AI (BYOK)"
+          ],
+          "output_formats": [
+            "Text",
+            "Documents",
+            "Meeting notes",
+            "Database summaries"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Enterprise plan includes a dedicated Customer Success Manager."
+          },
+          "quality_notes": "Offers advanced AI capabilities integrated into workspaces with zero data retention options on Enterprise plans.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.notion.com/pricing"
+        },
+        {
+          "app_name": "Canva Magic Write",
+          "vendor": "Canva",
+          "website": "https://www.canva.com",
+          "category": "AI Content Generation & Design",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited access to Standard and Premium AI monthly allowance"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$144/year for one person (Pro plan)",
+            "notes": "Paid plans offer 10x to 20x more AI allowance than Canva Free, with AI Pass add-ons and top-ups available at extra cost."
+          },
+          "key_features": [
+            "Magic Write",
+            "Magic Design",
+            "Magic Edit",
+            "Magic Switch",
+            "AI image generation / Dream Lab",
+            "Background Remover",
+            "AI text generation and translation"
+          ],
+          "output_formats": [
+            "PDF",
+            "JPG",
+            "PNG",
+            "Print-ready designs"
+          ],
+          "support": {
+            "channels": [
+              "help_center",
+              "email"
+            ],
+            "notes": "Priority support and dedicated success manager available for Enterprise customers with 150+ contracted seats."
+          },
+          "quality_notes": "Part of Canva's unified Magic Studio console, which automatically triggers the appropriate AI model based on the user's input or selected canvas objects.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.canva.com/pricing/"
+        },
+        {
+          "app_name": "Adobe Acrobat AI",
+          "vendor": "Adobe",
+          "website": "https://www.adobe.com",
+          "category": "PDF Editor & AI Document Assistant",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$14.99/mo (Acrobat Standard)",
+            "notes": "Acrobat Studio (including AI Assistant) is US$24.99/mo. Fee applies up to half your remaining annual commitment if you cancel after 14 days."
+          },
+          "key_features": [
+            "Create, edit, convert, export, and organize PDFs",
+            "Collect e-signatures and track responses",
+            "Fill, sign, and password-protect PDFs",
+            "Redact sensitive content",
+            "Create web forms",
+            "Turn scans into editable PDFs",
+            "AI Assistant for summaries, insights, and answers",
+            "Collaborative PDF Spaces",
+            "Generate flyers, social content, and presentations from documents"
+          ],
+          "output_formats": [
+            "PDF"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Industry-standard PDF editor integrated with generative AI features for document summarization, Q&A, and content creation.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.adobe.com/acrobat/pricing.html"
+        },
+        {
+          "app_name": "Microsoft 365 Copilot",
+          "vendor": "Microsoft",
+          "website": "https://www.microsoft.com",
+          "category": "AI Productivity & Office Assistant",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$21 a user a month",
+            "notes": "Business plan is $21 a user a month ($18 promo for the first year) and Enterprise is $30, both on top of a Microsoft 365 plan."
+          },
+          "key_features": [
+            "Integrated into Word, Excel, PowerPoint, Outlook, and Teams",
+            "Home view combining Chat and Cowork",
+            "Copilot Code for building dashboards, trackers, or apps",
+            "Copilot Autopilot for background cloud-hosted agent tasks",
+            "Grounded in work content and Microsoft 365 data"
+          ],
+          "output_formats": [
+            "Text",
+            "Documents",
+            "Spreadsheets",
+            "Presentations",
+            "Code/Apps"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Pricing details derived from search snippets as the provided page text cuts off before the pricing table section.",
+          "confidence": 0.85,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.microsoft.com/microsoft-365/copilot"
+        },
+        {
+          "app_name": "Jotform Document Generator",
+          "vendor": "Jotform",
+          "website": "https://www.jotform.com",
+          "category": "Form Builder & Document Automation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "5 Forms, 100 Monthly Submissions, 1 User, 100 MB Available Space, 10,000 Monthly Form Views, 500 Total Submission Storage, 100 Fields per form, 10 Monthly Payment Submissions, 10 Monthly Signed Documents"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$34/month (Billed annually, Bronze plan)",
+            "notes": "Bronze ($39/mo or $34/mo billed annually), Silver ($49/mo or $39/mo billed annually), Gold ($129/mo or $99/mo billed annually), Enterprise (Custom Price)."
+          },
+          "key_features": [
+            "Online form builder",
+            "PDF customization",
+            "Table data import",
+            "Stripe ACH payment acceptance",
+            "AI form generation and workflows",
+            "Document signing",
+            "HIPAA-enabled features (on higher tiers and Enterprise)"
+          ],
+          "output_formats": [
+            "PDF"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "help_center"
+            ],
+            "notes": "24/7 Customer Support available. Dedicated Support for Enterprise."
+          },
+          "quality_notes": "Trusted by over 40 million users. Offers 50% discount for nonprofits and educational institutions on certain plans.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.jotform.com/pricing/"
+        },
+        {
+          "app_name": "Slaide",
+          "vendor": null,
+          "website": "https://www.slaide.de",
+          "category": "AI Presentation Tools",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "Chrome extension",
+            "ChatGPT and Claude connection",
+            "PDF and Word conversion",
+            "Collaboration",
+            "New editor",
+            "130 fonts"
+          ],
+          "output_formats": [
+            "PDF",
+            "Word"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.6,
+          "_extracted_by": "gemini",
+          "source_url": "https://slaide.com/pricing"
+        },
+        {
+          "app_name": "Liner Write",
+          "vendor": "Liner",
+          "website": "https://liner.com",
+          "category": "AI Writing Assistant",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "AI agent for business documents",
+            "Generates business plans and proposals",
+            "93.7% accuracy"
+          ],
+          "output_formats": [
+            "Business plans",
+            "Proposals",
+            "Business docs"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Page text indicates the URL has moved or is not found.",
+          "confidence": 0.4,
+          "_extracted_by": "gemini",
+          "source_url": "https://getliner.com/pricing"
+        },
+        {
+          "app_name": "Skywork",
+          "vendor": "Skywork AI",
+          "website": "https://skywork.ai",
+          "category": "AI Agent & Workflow Assistant",
+          "free_tier": {
+            "available": true,
+            "credits": "free credits included",
+            "limits": "hidden caps behind login wall"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19.99 / month",
+            "notes": "$1 7-day trial offer available, $149.99 annual Pro plan option"
+          },
+          "key_features": [
+            "AI agent features",
+            "Workflow improvements",
+            "DeepResearch capabilities",
+            "Knowledge base",
+            "Scheduled tasks",
+            "Specialized expert tools (Research Paper, Product Manager, Teacher Lesson Planning, Design Execution, Sales Acquisition, Social Media, Marketing Growth, Creative Writing, Data Collection & Web Crawling)"
+          ],
+          "output_formats": [
+            "Websites",
+            "Slides",
+            "Documents",
+            "Posters",
+            "Images",
+            "Sheets",
+            "Videos"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://skywork.ai/pricing"
+        },
+        {
+          "app_name": "Type",
+          "vendor": null,
+          "website": "https://type.ai",
+          "category": "AI Writing & Editing",
+          "free_tier": {
+            "available": true,
+            "credits": "Limited credits that never expire",
+            "limits": "Try all of Type's features for free with fixed non-resetting credits"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$8/mo",
+            "notes": "Basic plan is $8/mo ($96 billed annually) with 500,000 credits. Pro is $16/mo, Max is $64/mo. All paid plans include a 30-day money-back guarantee on the first subscription."
+          },
+          "key_features": [
+            "Intelligent editor for long-form writing",
+            "AI-powered writing, editing, and publishing tools",
+            "Support for books, novels, screenplays, and stories",
+            "Document import and export up to 150,000 words",
+            "Chat, image, audio, and video generation using credits",
+            "Math and code blocks",
+            "Data privacy (does not train AI models on user data)"
+          ],
+          "output_formats": [
+            "Text documents",
+            "Images",
+            "Audio",
+            "Video"
+          ],
+          "support": {
+            "channels": [
+              "email"
+            ],
+            "notes": "Hands-on, priority email support included with all paid plans."
+          },
+          "quality_notes": "Designed specifically for long-form creative writing, novels, and screenplays to help overcome writer's block with built-in word processor functionality.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://type.ai/pricing"
+        },
+        {
+          "app_name": "Sembly",
+          "vendor": "Sembly AI",
+          "website": "https://www.sembly.ai/",
+          "category": "AI Meeting Assistant",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "1 maximum user"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$10 per month, billed annually (Basic plan)",
+            "notes": "Plans include Basic ($10/mo), Pro ($20/user/mo), MAX ($30/user/mo), and Enterprise (Custom), billed annually with a 7-day free trial."
+          },
+          "key_features": [
+            "Unlimited online meetings",
+            "Audio & video recordings",
+            "Multi-lingual transcription",
+            "Meeting notes and summaries",
+            "Single-meeting and multi-meeting AI chat",
+            "Custom meeting notes templates",
+            "Task detection",
+            "CRM sync",
+            "Workspace integrations and MCP"
+          ],
+          "output_formats": [
+            ".docx",
+            ".pptx"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Dedicated Success Manager available on Enterprise plans."
+          },
+          "quality_notes": "Sembly 3.0 is an agentic AI platform that records online meetings, generates notes, handles multi-meeting AI chat, and supports compliance features like HIPAA.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.sembly.ai/pricing/"
+        },
+        {
+          "app_name": "QwenWork",
+          "vendor": "Alibaba",
+          "website": "https://qwenwork.ai",
+          "category": "Workplace AI Agent",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Personal and Enterprise plans exist, but specific international pricing is not disclosed or remains incomplete during the public beta."
+          },
+          "key_features": [
+            "Workplace AI agent",
+            "Research",
+            "Content creation",
+            "Automation",
+            "Application development",
+            "Data analysis",
+            "Website building",
+            "Agent-driven workflows",
+            "Web and desktop integration"
+          ],
+          "output_formats": [
+            "Files",
+            "Sites"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "International edition launched in public beta on August 26, 2026. Consolidates three Alibaba agent services into one workplace product.",
+          "confidence": 0.8,
+          "_extracted_by": "gemini",
+          "source_url": "https://qwenwork.aliyun.com/"
+        },
+        {
+          "app_name": "Watto AI",
+          "vendor": null,
+          "website": "https://www.watto.ai",
+          "category": "Document Generation & AI Reports",
+          "free_tier": {
+            "available": true,
+            "credits": "7 Document Generations",
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Simple plans available, details not specified in snippets."
+          },
+          "key_features": [
+            "Integrate information from different platforms like Google Docs or Slack",
+            "Intelligently generate documents in desired formats",
+            "AI-powered McKinsey-quality reports",
+            "Automated document creation and review for Product Managers",
+            "AI Voice Agents development"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Aims to generate McKinsey-quality reports in seconds.",
+          "confidence": 0.7,
+          "_extracted_by": "gemini",
+          "source_url": "https://watto.ai"
+        },
+        {
+          "app_name": "Capitol AI",
+          "vendor": "Capitol AI",
+          "website": "https://www.capitol.ai",
+          "category": "Enterprise AI Workflows & Research",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Pricing details are not publicly listed on the page; enterprise demo requests are required."
+          },
+          "key_features": [
+            "Governed data access and lineage tracking",
+            "Institutional workflow codification",
+            "Model independence and routing",
+            "Defensible and auditable artifact generation",
+            "Multi-source integration (internal systems, Google Drive, Azure, S3, etc.)",
+            "Data preparation and normalization",
+            "Access control by source and workflow",
+            "Built-in evaluations and approvals"
+          ],
+          "output_formats": [
+            "Powerpoint",
+            "Reports",
+            "Models",
+            "Workflows"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Custom enterprise support and demo requests available via contact form."
+          },
+          "quality_notes": "The provided page text does not contain explicit pricing tier numbers or free trial mentions, emphasizing enterprise sales and demo requests instead.",
+          "confidence": 0.85,
+          "_extracted_by": "gemini",
+          "source_url": "https://capitol.ai"
+        },
+        {
+          "app_name": "Cobl.ai",
+          "vendor": null,
+          "website": "https://www.cobl.ai",
+          "category": "AI Sales Proposal & Document Automation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "15-day free trial or start free for a month"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "Pro credits plan",
+            "notes": "Scale with your deal volume, or talk about Enterprise"
+          },
+          "key_features": [
+            "CRM, meeting, and calendar monitoring",
+            "Deal workspaces",
+            "Shared and Personal Drives",
+            "RFP response drafting and automation",
+            "Excel editing",
+            "Search across every document",
+            "Design systems from any document",
+            "Document analytics",
+            "Automated sales proposals"
+          ],
+          "output_formats": [
+            "PDF",
+            "Link",
+            "Excel"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "The provided text emphasizes everyday AI sales agent capabilities, tracking CRM and account changes, generating proposals, managing RFPs, and document management.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://cobl.ai"
+        },
+        {
+          "app_name": "Google Gemini Docs",
+          "vendor": "Google",
+          "website": "https://one.google.com",
+          "category": "AI Assistant & Productivity",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Standard usage limits apply to free accounts (up to 15 GB of storage included)."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$1.99/mo",
+            "notes": "Basic (100 GB) is $1.99/mo; Google AI Plus (2 TB) is $9.99/mo; Google AI Pro (5 TB) is $19.99/mo which includes Gemini in Docs, Gmail, Vids & More."
+          },
+          "key_features": [
+            "Gemini in Google Docs, Gmail, Vids & More",
+            "Gemini app access with higher usage limits",
+            "Google Flow with expanded access to creative models",
+            "Gemini Notebook with expanded access",
+            "Shared storage up to 5 others"
+          ],
+          "output_formats": [
+            "Text",
+            "Documents"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Support accessible via Google One help center and Google account resources."
+          },
+          "quality_notes": "Integrated directly into Google Docs and Google Workspace via Google One AI subscription tiers.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://one.google.com/about/plans"
+        },
+        {
+          "app_name": "AI Doc Maker",
+          "vendor": null,
+          "website": "https://www.aidocmaker.com/",
+          "category": "AI Document Generator",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "1-Click Generate",
+            "Agentic AI Workspace that organizes and refines files",
+            "AI PDF Maker & PDF Generator",
+            "AI Word Document Generator",
+            "AI Excel Sheet Generator with formulas, charts, and data tables",
+            "File attachment support for importing content"
+          ],
+          "output_formats": [
+            "PDF",
+            "Word",
+            "DOCX",
+            "XLSX",
+            "HTML",
+            "Slides",
+            "Audio"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://aidocmaker.com"
+        },
+        {
+          "app_name": "PandaDoc",
+          "vendor": "PandaDoc",
+          "website": "https://www.pandadoc.com",
+          "category": "eSignatures & Document Automation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "5 documents per month"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19 USD Seat cost per month",
+            "notes": "Plans include Starter ($19/mo per seat), Business ($49/mo per seat), and Enterprise (Custom pricing)."
+          },
+          "key_features": [
+            "Rich media drag and drop document editor",
+            "Real-time tracking and notifications",
+            "Unlimited document uploads and e-Signatures (Starter and above)",
+            "Custom quotes and sales agreements",
+            "CRM integrations",
+            "Custom branding and content library",
+            "Deal rooms",
+            "Approval workflows",
+            "CPQ (configure, price, quote)",
+            "Workflow automation",
+            "AI assistants via MCP (ChatGPT, Claude)"
+          ],
+          "output_formats": [
+            "PDF",
+            "Document exports"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "help_center"
+            ],
+            "notes": "24/7 email and chat support"
+          },
+          "quality_notes": "Highly rated across G2 (4.7/5), Capterra (4.5/5), and Trustpilot (4/5).",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.pandadoc.com/pricing/"
+        }
+      ],
+      "work_log": [
+        {
+          "kind": "search",
+          "query": "ChatGPT Work new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "ChatGPT Work pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://openai.com/chatgpt/pricing/",
+          "chars": 20262
+        },
+        {
+          "kind": "llm",
+          "task": "extract:ChatGPT Work",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:ChatGPT Work",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:ChatGPT Work",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:ChatGPT Work",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.anthropic.com/pricing",
+          "chars": 27210
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Claude Cowork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Claude Cowork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Claude Cowork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Claude Cowork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Gamma new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://gamma.app/pricing",
+          "chars": 7672
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Gamma",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Gamma",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Gamma",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Gamma",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.notion.com/pricing",
+          "chars": 23423
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Notion AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Notion AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Notion AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Notion AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.canva.com/pricing/",
+          "chars": 24339
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Canva Magic Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Canva Magic Write",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Canva Magic Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Canva Magic Write",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.adobe.com/acrobat/pricing.html",
+          "chars": 68544
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Adobe Acrobat AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Adobe Acrobat AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Adobe Acrobat AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Adobe Acrobat AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.microsoft.com/microsoft-365/copilot",
+          "chars": 13514
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Microsoft 365 Copilot",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Microsoft 365 Copilot",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Microsoft 365 Copilot",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Microsoft 365 Copilot",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.jotform.com/pricing/",
+          "chars": 23951
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Jotform Document Generator",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Jotform Document Generator",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Jotform Document Generator",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Jotform Document Generator",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Slaide new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Slaide pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://slaide.com/pricing",
+          "error": "500 Server Error: Internal Server Error for url: https://api.firecrawl.dev/v1/scrape"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Slaide",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Slaide",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Slaide",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Slaide",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://getliner.com/pricing",
+          "chars": 148
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Liner Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Liner Write",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Liner Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Liner Write",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Skywork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Skywork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://skywork.ai/pricing",
+          "chars": 169966
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Skywork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Skywork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Skywork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Skywork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Type new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Type pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://type.ai/pricing",
+          "chars": 16790
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Type",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Type",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Type",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Type",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Sembly new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Sembly pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.sembly.ai/pricing/",
+          "chars": 15355
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Sembly",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Sembly",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Sembly",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Sembly",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://qwenwork.aliyun.com/",
+          "chars": 0
+        },
+        {
+          "kind": "llm",
+          "task": "extract:QwenWork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:QwenWork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:QwenWork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:QwenWork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://watto.ai",
+          "chars": 0
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Watto AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Watto AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Watto AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Watto AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://capitol.ai",
+          "chars": 13547
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Capitol AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Capitol AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Capitol AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Capitol AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://cobl.ai",
+          "chars": 28974
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Cobl.ai",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Cobl.ai",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Cobl.ai",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Cobl.ai",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://one.google.com/about/plans",
+          "chars": 3270
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Google Gemini Docs",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Google Gemini Docs",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Google Gemini Docs",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Google Gemini Docs",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://aidocmaker.com",
+          "chars": 21726
+        },
+        {
+          "kind": "llm",
+          "task": "extract:AI Doc Maker",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:AI Doc Maker",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:AI Doc Maker",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:AI Doc Maker",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.pandadoc.com/pricing/",
+          "chars": 17896
+        },
+        {
+          "kind": "llm",
+          "task": "extract:PandaDoc",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:PandaDoc",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:PandaDoc",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:PandaDoc",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "new AI document generator launched this week",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new AI writing assistant launch 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Product Hunt document tool this month",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI presentation tool new release",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI contract generator new launch",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "YC batch AI document startup",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI proposal software new tool 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "just launched AI doc app",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new entrant document automation",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI document startup funding this week",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new AI spreadsheet tool 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI report generator launch this month",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion alternative new 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma alternative new tool",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI doc app Show HN 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI powerpoint generator new",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI resume tool new launch",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI invoice generator new 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI legal document startup 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI technical doc generator new",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "task": "competitor_scan",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 404 - {'status': 404, 'title': 'Not Found', 'detail': \"Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account 'AOdD8SC0zuimbOxHxCKXT5rhHj1Irlbv5i-M_orYQ3A'\"}"
+        },
+        {
+          "kind": "llm",
+          "task": "competitor_scan",
+          "model": "gemini",
+          "status": "ok"
+        }
+      ]
+    },
+    {
       "date": "2026-11-13",
       "mode": "watch",
       "started_at": "2026-11-13T11:22:29.047402+00:00",
