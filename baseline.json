@@ -4,7 +4,7 @@
       "app_name": "ChatGPT Work",
       "vendor": "OpenAI",
       "website": "https://chatgpt.com/",
-      "category": "AI Assistant & Productivity",
+      "category": "AI Assistant / Productivity",
       "free_tier": {
         "available": true,
         "credits": null,
@@ -12,21 +12,19 @@
       },
       "paid_pricing": {
         "cheapest_plan": "$8 / month",
-        "notes": "ChatGPT Work is gated by your plan and metered against it. Higher tiers like Plus ($20/mo) and Pro (from $100/mo) expand access to desktop, web, and mobile."
+        "notes": "ChatGPT Work isn't sold separately; it's gated by your plan (Free, Go, Plus, Pro, Business, Enterprise) and metered against it."
       },
       "key_features": [
         "Unlimited text chats with GPT-6",
+        "ChatGPT Work access on desktop, web, and mobile",
         "Advanced reasoning models with GPT-6",
-        "Deep research",
-        "Codex access",
-        "ChatGPT Work access across desktop, web, and mobile",
-        "Projects, scheduled tasks, and custom GPTs",
-        "Dot, your always-on agent"
+        "Codex integration",
+        "Deep research"
       ],
       "output_formats": [
-        "Text",
-        "Image",
-        "Voice"
+        "text",
+        "image",
+        "voice"
       ],
       "support": {
         "channels": [
@@ -50,30 +48,31 @@
         "limits": "Limited usage every 5 hours and every week"
       },
       "paid_pricing": {
-        "cheapest_plan": "$17 per month (billed annually at $200 upfront, or $20 if billed monthly)",
-        "notes": "Paid plans include Pro ($20/mo), Max ($100/mo), and Ultra ($200/mo), offering increased usage limits, API credits on higher tiers, and additional features like task scheduling and Microsoft 365 integration."
+        "cheapest_plan": "$17 per month (with annual subscription discount, $200 billed up front) or $20 billed monthly",
+        "notes": "Paid plans include Pro ($17-$20/mo), Max ($100/mo), and Ultra ($200/mo) with varying usage limits and API credits."
       },
       "key_features": [
-        "Chat on web, desktop, and mobile",
+        "Chat on web, iOS, Android and Desktop",
         "Hand off and schedule tasks",
-        "Search the web, create files, and run code",
-        "Memory across conversations",
-        "Connect your apps and tools",
         "Create Artifacts",
-        "Claude Design, Slides, Docs, Sheets, Data, and Whiteboards",
+        "Claude Data, Design, Docs, Sheets, Slides, Whiteboards",
         "Claude Code",
+        "Claude for Microsoft 365 and Outlook",
+        "Claude in Chrome",
         "Claude Science",
-        "Projects",
-        "Claude in Chrome and Microsoft 365"
+        "Web search",
+        "Memory",
+        "Voice mode",
+        "Create and edit files with code execution"
       ],
       "output_formats": [
-        "Text",
         "Files",
-        "Artifacts",
         "Documents",
+        "Spreadsheets",
         "Slides",
-        "Sheets",
-        "Designs"
+        "Code",
+        "Designs",
+        "Whiteboards"
       ],
       "support": {
         "channels": [
@@ -81,33 +80,33 @@
         ],
         "notes": null
       },
-      "quality_notes": null,
-      "confidence": 0.95,
+      "quality_notes": "Pricing and feature tiers verified from Anthropic's live pricing page data.",
+      "confidence": 1.0,
       "_extracted_by": "gemini",
       "source_url": "https://www.anthropic.com/pricing"
     },
     "Gamma": {
       "app_name": "Gamma",
-      "vendor": null,
+      "vendor": "Gamma",
       "website": "https://gamma.app",
-      "category": "AI-powered platform for visual communication (Presentations, Websites, Documents, Social Media)",
+      "category": "AI-powered visual communication platform",
       "free_tier": {
         "available": true,
-        "credits": "400 credits at signup",
-        "limits": "Create up to 10 slides per prompt; starter credits do not refill"
+        "credits": "400 credits at signup (do not refill)",
+        "limits": "Create up to 10 slides per prompt"
       },
       "paid_pricing": {
-        "cheapest_plan": "$9 USD / month",
-        "notes": "Plus plan is $9/mo ($108 billed annually); Pro is $18/mo ($216 billed annually); Ultra is $90/mo ($1,080 billed annually); Business is also available. Save up to 28% with annual billing."
+        "cheapest_plan": "$9 USD / month (Plus plan, billed annually at $108)",
+        "notes": "Plans include Plus ($9/mo), Pro ($18/mo), Ultra ($90/mo), and Business plans."
       },
       "key_features": [
-        "Gamma 5 design and editing engine",
-        "Create presentations, docs, websites, social media, and graphics from prompts",
+        "AI-powered presentations, websites, social media, documents, and graphics",
         "Import from PDF & PPTX",
-        "Advanced AI models (Claude, ChatGPT + DALL-E, Gemini, Flux, Recraft, Playground, Ideogram, Luma, Leonardo)",
-        "Custom branding and custom domains",
-        "Detailed analytics and advanced sharing",
-        "Public API and integrations"
+        "Export to PDF, PPTX, PNG & Google Slides",
+        "Advanced AI image models",
+        "Custom branding and themes",
+        "Custom domains",
+        "API access"
       ],
       "output_formats": [
         "PDF",
@@ -121,47 +120,48 @@
         ],
         "notes": null
       },
-      "quality_notes": "SOC 2 Type II compliant.",
+      "quality_notes": "SOC 2 Type II compliant. Integrates multiple AI models including Claude, ChatGPT + DALL-E, Gemini, Flux, Recraft, Playground, Ideogram, Luma, and Leonardo.",
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://gamma.app/pricing"
     },
     "Notion AI": {
       "app_name": "Notion AI",
-      "vendor": "Notion",
+      "vendor": "Notion Labs, Inc.",
       "website": "https://www.notion.com",
       "category": "AI Workspace & Productivity",
       "free_tier": {
         "available": true,
         "credits": null,
-        "limits": "For individuals to organize personal projects and life with unlimited blocks."
+        "limits": "Trial AI capabilities available on Free and Plus plans"
       },
       "paid_pricing": {
-        "cheapest_plan": "$10 per seat / month (Plus plan, billed annually)",
-        "notes": "Plus plan includes trial AI capabilities. Business plan is $20 per seat / month and unlocks full AI, Notion Agent, 1,500 Standard credits/month, and 500 Select credits/month. Enterprise plan has custom pricing."
+        "cheapest_plan": "$20 per seat / month (Business plan, billed annually or monthly)",
+        "notes": "Standalone $10 AI add-on was retired; AI features and Notion Agents are built into the Business plan ($20/seat/month) and Enterprise plan."
       },
       "key_features": [
         "Notion Agent",
         "Custom Agents",
         "AI Meeting Notes",
         "Enterprise Search",
-        "Database Autofill",
-        "Standard and Select credits system",
-        "Bring your own AI (BYOK)"
+        "Standard and Select AI credits system",
+        "Bring your own AI (BYOK)",
+        "Notion MCP",
+        "AI Command Center"
       ],
       "output_formats": [
-        "text",
-        "documents",
-        "database autofill",
-        "meeting notes"
+        "Text",
+        "Documents",
+        "Summaries",
+        "Database autofill"
       ],
       "support": {
         "channels": [
           "help_center"
         ],
-        "notes": "Customer success managers available on Enterprise plan."
+        "notes": "Customer success manager available for Enterprise tier."
       },
-      "quality_notes": "Notion AI provides citations and utilizes frontier models with automated or user-selected model routing (Standard and Select credits).",
+      "quality_notes": "Offers standard credits (where Notion picks the model) and select credits (where user picks the model or runs custom agents). Enterprise features zero data retention with LLM providers.",
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://www.notion.com/pricing"
@@ -170,35 +170,36 @@
       "app_name": "Canva Magic Write",
       "vendor": "Canva",
       "website": "https://www.canva.com",
-      "category": "AI Writing Assistant",
+      "category": "AI Text Generator / Design Suite",
       "free_tier": {
         "available": true,
         "credits": null,
-        "limits": "Limited access to Standard and Premium AI (monthly AI allowance)"
+        "limits": "Limited monthly AI access for Standard and Premium AI tools"
       },
       "paid_pricing": {
-        "cheapest_plan": "US$144/year",
-        "notes": "Pro plan is US$144/year for one person, offering 10x more AI than Canva Free. Business plan is US$250/year per person, offering 20x more AI."
+        "cheapest_plan": "US$144/year for one person (Pro plan)",
+        "notes": "Pro, Business, and Enterprise tiers offer higher AI allowances (10x to 20x more AI than Free) with optional AI Pass add-ons."
       },
       "key_features": [
-        "AI-powered writing assistant",
-        "Creates drafts, blog posts, and social media content in seconds",
-        "Integrated into Canva Magic Studio",
-        "Text generation and editing"
+        "AI-powered text generator (Magic Write)",
+        "Magic Studio unified console",
+        "AI design and content creation",
+        "Templates and elements access",
+        "Brand kits and on-brand AI"
       ],
       "output_formats": [
-        "Text",
-        "Drafts",
-        "Blog posts",
-        "Social media content"
+        "PDF",
+        "JPG",
+        "PNG",
+        "Text"
       ],
       "support": {
         "channels": [
           "help_center"
         ],
-        "notes": "Priority support and dedicated success manager available for Enterprise customers with 150+ contracted seats."
+        "notes": "Premium support and professional services available for enterprise customers with 150+ contracted seats."
       },
-      "quality_notes": null,
+      "quality_notes": "Consolidated into Canva's Magic Studio console, providing seamless AI text generation and design capabilities with tiered monthly allowances.",
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://www.canva.com/pricing/"
@@ -206,16 +207,16 @@
     "Adobe Acrobat AI": {
       "app_name": "Adobe Acrobat AI",
       "vendor": "Adobe",
-      "website": "https://helpx.adobe.com/acrobat/desktop/whats-new/whats-new-acrobat-desktop.html",
-      "category": "PDF & Document Productivity / AI Assistant",
+      "website": "https://www.adobe.com",
+      "category": "PDF and Document Productivity",
       "free_tier": {
-        "available": true,
+        "available": false,
         "credits": null,
-        "limits": "Free trial available for Acrobat Pro and Acrobat Studio plans."
+        "limits": null
       },
       "paid_pricing": {
-        "cheapest_plan": "US$14.99/mo",
-        "notes": "Acrobat Standard is US$14.99/mo, Acrobat Pro is US$19.99/mo, and Acrobat Studio (includes AI Assistant) is US$24.99/mo (annual commitment, billed monthly)."
+        "cheapest_plan": "US$14.99/mo for Acrobat Standard, with Acrobat Studio (including AI Assistant) at US$24.99/mo",
+        "notes": "Plans include Acrobat Standard (US$14.99/mo), Acrobat Pro (US$19.99/mo), and Acrobat Studio with AI Assistant (US$24.99/mo). Free trials available for select plans."
       },
       "key_features": [
         "Create, edit, convert, export, and organize PDFs",
@@ -224,23 +225,25 @@
         "Redact sensitive content",
         "Create web forms",
         "Turn scans into editable PDFs",
-        "Ask AI to edit, convert, and compress PDFs",
-        "Get summaries, insights, and answers via AI Assistant",
-        "Organize, share, and collaborate with PDF Spaces",
+        "AI Assistant for summaries, insights, answers, and editing/converting/compressing PDFs",
+        "Collaborative PDF Spaces",
         "Generate flyers, social content, and presentations from documents"
       ],
       "output_formats": [
         "PDF",
-        "Visuals/Audio",
-        "Presentations",
+        "Editable PDFs",
+        "Visuals",
+        "Audio",
         "Flyers",
-        "Social content"
+        "Presentations"
       ],
       "support": {
-        "channels": [],
+        "channels": [
+          "help_center"
+        ],
         "notes": null
       },
-      "quality_notes": "Transforms dense documents into visuals, audio, and professional deliverables using generative AI.",
+      "quality_notes": "Integrates generative AI into traditional PDF workflows for document summarization, Q&A, and content creation.",
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://www.adobe.com/acrobat/pricing.html"
@@ -249,39 +252,37 @@
       "app_name": "Microsoft 365 Copilot",
       "vendor": "Microsoft",
       "website": "https://www.microsoft.com/en-us/copilot",
-      "category": "AI Productivity & Office Assistant",
+      "category": "AI Productivity & Workplace Assistant",
       "free_tier": {
         "available": false,
         "credits": null,
         "limits": null
       },
       "paid_pricing": {
-        "cheapest_plan": "Business plans starting around $21/user/month (or enterprise plans at $30)",
-        "notes": "Prices vary depending on business or enterprise tiers, on top of a Microsoft 365 plan."
+        "cheapest_plan": "$21 a user a month",
+        "notes": "Business plan is $21 a user a month ($18 promo for the first year) and enterprise plan is $30, both on top of a Microsoft 365 plan."
       },
       "key_features": [
-        "Integrated AI in Word, Excel, PowerPoint, Outlook, and Teams",
-        "Home view combining Chat and Cowork",
-        "Copilot Code for no-code application and dashboard building",
-        "Copilot Autopilot cloud-hosted personal agent with memory and tool access",
-        "Work content and application integration"
+        "Copilot Code",
+        "Copilot Home",
+        "Copilot Autopilot",
+        "Chat and Cowork",
+        "Integration with Microsoft 365 apps (Word, Excel, PowerPoint, Outlook, Teams)"
       ],
       "output_formats": [
         "Text",
         "Code",
-        "Documents",
-        "Presentations",
-        "Spreadsheets"
+        "Dashboards",
+        "Trackers",
+        "Applications"
       ],
       "support": {
         "channels": [
-          "help_center",
-          "chat",
-          "email"
+          "help_center"
         ],
         "notes": null
       },
-      "quality_notes": "Deeply integrated into Microsoft 365 ecosystem with advanced multi-step workflow capabilities and agent features.",
+      "quality_notes": null,
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://www.microsoft.com/microsoft-365/copilot"
@@ -294,31 +295,33 @@
       "free_tier": {
         "available": true,
         "credits": null,
-        "limits": "5 Forms, 100 Monthly Submissions, 1 User Individual Plan, 100 MB Available Space, 10,000 Monthly Form Views, 500 Total Submission Storage, 100 Fields per form, 10 Monthly Payment Submissions, 10 Monthly Signed Documents"
+        "limits": "5 Forms, 100 Monthly Submissions, 1 User, 100 MB Available Space, 10,000 Monthly Form Views, 500 Total Submission Storage, 100 Fields per form, 10 Monthly Payment Submissions, 10 Monthly Signed Documents"
       },
       "paid_pricing": {
-        "cheapest_plan": "$34 /month (Billed annually, Bronze plan)",
-        "notes": "Paid plans include Bronze ($34-$39/mo), Silver ($39-$49/mo), Gold ($99-$129/mo), and Enterprise (Custom Price). Discounts available for nonprofits and education."
+        "cheapest_plan": "$34/month (billed annually) or $39/month (monthly)",
+        "notes": "Paid plans include Bronze ($34-$39/mo), Silver ($39-$49/mo), Gold ($99-$129/mo), and Enterprise (Custom price)."
       },
       "key_features": [
-        "Online form builder",
-        "AI form generation and conversational form building",
-        "PDF customization",
-        "Table data import",
-        "Stripe ACH payment acceptance",
-        "Signed documents",
-        "Workflows and automations"
+        "Online Form Builder",
+        "PDF Customization",
+        "Workflows and Automations",
+        "Signed Documents",
+        "Payment Submissions",
+        "AI Form Creation",
+        "HIPAA-Enabled Features (on higher tiers)"
       ],
       "output_formats": [
         "PDF"
       ],
       "support": {
         "channels": [
+          "email",
+          "chat",
           "help_center"
         ],
-        "notes": "24/7 Customer Support available. Dedicated support included in Enterprise."
+        "notes": "24/7 Customer Support available. Dedicated support is provided for Enterprise plans."
       },
-      "quality_notes": "Trusted by over 40 million users. Offers 30-day money-back guarantee.",
+      "quality_notes": "Trusted by over 40 million users with a 30-day money-back guarantee. Nonprofits and educational institutions are eligible for discounts up to 50%.",
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://www.jotform.com/pricing/"
@@ -335,7 +338,7 @@
       },
       "paid_pricing": {
         "cheapest_plan": null,
-        "notes": "Pricing details not available in the provided text."
+        "notes": "Pricing is mentioned on OMR Reviews and Capterra, but specific amounts are not included in the provided data."
       },
       "key_features": [
         "Chrome extension",
@@ -343,7 +346,8 @@
         "PDF and Word conversion",
         "Collaboration",
         "New editor",
-        "130 fonts"
+        "130 fonts",
+        "Microsoft Publisher file recovery/alternative"
       ],
       "output_formats": [
         "PDF",
@@ -353,16 +357,16 @@
         "channels": [],
         "notes": null
       },
-      "quality_notes": null,
-      "confidence": 0.6,
-      "_extracted_by": "gemini",
+      "quality_notes": "Reviews are listed on G2, Capterra, and OMR, but no aggregate rating or qualitative summary is provided in the snippets.",
+      "confidence": 0.15,
+      "_extracted_by": "deepseek",
       "source_url": "https://slaide.com/pricing"
     },
     "Liner Write": {
       "app_name": "Liner Write",
       "vendor": "Liner",
       "website": "https://liner.com",
-      "category": "AI Writing Assistant",
+      "category": "AI Writing & Productivity",
       "free_tier": {
         "available": true,
         "credits": "100 credits a month",
@@ -370,30 +374,28 @@
       },
       "paid_pricing": {
         "cheapest_plan": "$17.99 a month",
-        "notes": "Pro is $17.99/mo and Max is $35.99/mo, offering 1,000 or 2,500 Agent credits and no ads."
+        "notes": "Pro is $17.99 a month and Max $35.99 a month, with 1,000 or 2,500 Agent credits and no ads."
       },
       "key_features": [
         "AI agent that generates business plans and proposals",
-        "Automates business document creation",
+        "Automates business documents",
         "93.7% accuracy"
       ],
       "output_formats": [],
       "support": {
-        "channels": [
-          "help_center"
-        ],
+        "channels": [],
         "notes": null
       },
-      "quality_notes": null,
-      "confidence": 0.8,
+      "quality_notes": "Page text indicates the content has moved, so details are primarily sourced from snippets.",
+      "confidence": 0.6,
       "_extracted_by": "gemini",
       "source_url": "https://getliner.com/pricing"
     },
     "Skywork": {
       "app_name": "Skywork",
-      "vendor": "Skywork AI",
+      "vendor": null,
       "website": "https://skywork.ai",
-      "category": "AI Productivity Assistant & Workflow Platform",
+      "category": "AI Productivity & Workflow Assistant",
       "free_tier": {
         "available": true,
         "credits": null,
@@ -401,14 +403,14 @@
       },
       "paid_pricing": {
         "cheapest_plan": "$19.99/month",
-        "notes": "Includes a $1 7-day trial option; monthly Pro plan is $19.99/month and annual Pro plan is $149.99/year with a 7,000-credit allowance."
+        "notes": "Includes a $1 trial offer, $19.99 Monthly Pro plan, and $149.99 Annual Pro plan."
       },
       "key_features": [
         "AI agent features and workflow improvements",
-        "DeepResearch capabilities",
-        "Specialized expert tools for research, product management, teaching, design, sales, social media, marketing, and creative writing",
+        "DeepResearch and project orchestration",
+        "Expert tools for research, product management, lesson planning, design, sales, social media, and marketing",
         "Document, slide, website, poster, image, sheet, and video generation",
-        "Knowledge Base and scheduled tasks"
+        "Scheduled tasks and knowledge base management"
       ],
       "output_formats": [
         "Documents",
@@ -423,7 +425,7 @@
         "channels": [],
         "notes": null
       },
-      "quality_notes": "Pricing details are gathered from external reviews and 2026 pricing guides due to login wall restrictions on the main platform.",
+      "quality_notes": null,
       "confidence": 0.85,
       "_extracted_by": "gemini",
       "source_url": "https://skywork.ai/pricing"
@@ -432,39 +434,37 @@
       "app_name": "Type",
       "vendor": null,
       "website": "https://type.ai",
-      "category": "Long-form writing AI editor",
+      "category": "Long-form Writing / AI Intelligent Editor",
       "free_tier": {
         "available": true,
         "credits": "Limited credits that never expire",
-        "limits": "Fixed amount of credits that never reset once used"
+        "limits": "Fixed amount of credits that don't reset once used"
       },
       "paid_pricing": {
         "cheapest_plan": "$8/mo (Basic plan, billed annually at $96)",
-        "notes": "Plans include Basic ($8/mo), Pro ($16/mo), and Max ($64/mo) when billed annually. Additional credits can be purchased on active paid subscriptions."
+        "notes": "Includes Basic ($8/mo), Pro ($16/mo), and Max ($64/mo) plans when billed annually. 30-day money-back guarantee on the first paid subscription."
       },
       "key_features": [
         "Intelligent editor for long-form writing",
-        "Writing, editing, and publishing features",
-        "Premium AI models access",
-        "Chat, image, audio, and video generation",
-        "Document import up to 150,000 words",
-        "Math and code blocks",
-        "Contextual recommendations"
+        "AI-powered writing, editing, and publishing features",
+        "Support for premium AI models",
+        "Chat, image, audio, and video creation using credits",
+        "Document length capacity up to 150,000 words",
+        "Import documents preserving images, headings, and tables",
+        "Private documents (no AI training on user data)"
       ],
       "output_formats": [
-        "Text documents",
-        "Images",
-        "Audio",
-        "Video"
+        "Documents",
+        "Files"
       ],
       "support": {
         "channels": [
           "email"
         ],
-        "notes": "Hands-on, priority email support included on all paid plans"
+        "notes": "Hands-on, priority email support included in all paid plans."
       },
-      "quality_notes": "Does not train AI models on user data. Includes a 30-day money-back guarantee for the first paid subscription.",
-      "confidence": 1.0,
+      "quality_notes": "Designed for books, novels, screenplays, stories, and other long-form creative writing. Does not use user data to train AI models.",
+      "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://type.ai/pricing"
     },
@@ -472,42 +472,37 @@
       "app_name": "Sembly",
       "vendor": "Sembly AI",
       "website": "https://www.sembly.ai/",
-      "category": "AI Meeting Assistant",
+      "category": "AI Meeting Assistant & Transcription",
       "free_tier": {
         "available": true,
         "credits": null,
-        "limits": null
+        "limits": "5 meeting hours"
       },
       "paid_pricing": {
-        "cheapest_plan": "$8 per month, billed annually (Basic plan)",
-        "notes": "Prices shown reflect a Black Friday 20% discount. Regular prices are $10/mo for Basic, $20/user/mo for Pro, and $30/user/mo for MAX when billed annually."
+        "cheapest_plan": "$8 per month (billed annually, normally $10)",
+        "notes": "Plans include Basic ($10/mo), Pro ($20/user/mo), MAX ($30/user/mo), and Enterprise (Custom)."
       },
       "key_features": [
-        "Unlimited online meetings",
+        "Meeting transcription",
         "Audio & video recordings",
-        "Multi-lingual transcription",
         "Meeting notes and summaries",
-        "Single-meeting and multi-meeting AI chat",
+        "Task detection",
+        "AI chat (single and multi-meeting)",
         "Custom meeting notes templates",
-        "Risks, issues, and notable events",
-        "Workspace integrations and MCP",
-        "Consent tracking",
-        "HIPAA compliance",
-        "Custom SSO",
-        "Audit log",
-        "HD video recording"
+        "Calendar sync",
+        "Multi-lingual transcription"
       ],
       "output_formats": [
-        ".pptx",
-        ".docx"
+        "Text",
+        "Summary"
       ],
       "support": {
         "channels": [
           "help_center"
         ],
-        "notes": "Dedicated Success Manager available on Enterprise plans."
+        "notes": "Enterprise includes a dedicated Success Manager."
       },
-      "quality_notes": "Sembly is an AI meeting agent that records online meetings, generates notes with tasks and key decisions, prepares client proposals, and transforms documents and meetings into actionable insights.",
+      "quality_notes": null,
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://www.sembly.ai/pricing/"
@@ -524,14 +519,15 @@
       },
       "paid_pricing": {
         "cheapest_plan": null,
-        "notes": "Plans include Personal and Enterprise, but international pricing details remain unset or undisclosed during public beta."
+        "notes": "Plans include Personal and Enterprise, but international pricing details have not been fully disclosed during the public beta."
       },
       "key_features": [
-        "Workplace AI agent",
+        "Workplace AI agent platform",
         "Acts across browsers and local computers",
-        "Builds files and websites",
-        "Consolidates three agent services into one platform",
-        "Research, creation, data, and agent-driven workflows"
+        "Builds files and sites",
+        "Research, creation, and data processing",
+        "Agent-driven workflows",
+        "Web and desktop app support"
       ],
       "output_formats": [
         "files",
@@ -541,7 +537,7 @@
         "channels": [],
         "notes": null
       },
-      "quality_notes": "International public beta launched in August 2026. Practical commercial terms and international pricing details remain incomplete/undisclosed.",
+      "quality_notes": "International public beta launched in August 2026; official pricing and commercial terms are partially unset or unannounced globally.",
       "confidence": 0.85,
       "_extracted_by": "gemini",
       "source_url": "https://qwenwork.aliyun.com/"
@@ -553,35 +549,34 @@
       "category": "Document Generation & AI Reports",
       "free_tier": {
         "available": true,
-        "credits": null,
-        "limits": "7 Document Generations"
+        "credits": "7 Document Generations",
+        "limits": null
       },
       "paid_pricing": {
         "cheapest_plan": null,
-        "notes": null
+        "notes": "Simple plans available based on pricing page."
       },
       "key_features": [
-        "Intelligent document creation",
-        "Integrate information from platforms like Google Docs and Slack",
-        "Generate McKinsey-quality reports in seconds",
-        "Automated document creation and review",
-        "AI Voice Agents development"
+        "Integrate data from multiple platforms like Google Docs or Slack",
+        "AI-powered McKinsey-quality reports generation",
+        "Automated document creation and review for Product Managers",
+        "AI Voice Agents"
       ],
       "output_formats": [],
       "support": {
         "channels": [],
         "notes": null
       },
-      "quality_notes": "Aims to generate McKinsey-quality reports and automated documents for product managers and teams.",
+      "quality_notes": "Aims to generate McKinsey-quality reports in seconds.",
       "confidence": 0.8,
       "_extracted_by": "gemini",
       "source_url": "https://watto.ai"
     },
     "Capitol AI": {
       "app_name": "Capitol AI",
-      "vendor": "Capitol AI",
+      "vendor": null,
       "website": "https://www.capitol.ai",
-      "category": "Enterprise AI Workflows & Research",
+      "category": "Enterprise AI Workflows & Decision Intelligence",
       "free_tier": {
         "available": false,
         "credits": null,
@@ -589,55 +584,56 @@
       },
       "paid_pricing": {
         "cheapest_plan": null,
-        "notes": "Pricing is not publicly listed on the page; requires requesting a demo."
+        "notes": "Custom pricing; requires contacting sales or requesting a demo."
       },
       "key_features": [
-        "Governed enterprise data access",
-        "Institutional workflow codification",
+        "Governed data access and lineage tracking",
+        "Institutional workflows and process codification",
         "Model independence and orchestration",
-        "Defensible artifacts with source lineage",
-        "Access control by source and workflow",
-        "Integration with internal systems, Google Drive, Amazon S3, and Microsoft Azure"
+        "Defensible and auditable artifacts generation",
+        "Connectors for internal systems, Google Drive, Amazon S3, and Microsoft Azure"
       ],
       "output_formats": [
-        "PowerPoint File",
-        "Auditable reports",
-        "Models and workflows"
+        "PowerPoint",
+        "Reports",
+        "Models",
+        "Workflows"
       ],
       "support": {
-        "channels": [],
-        "notes": "Contact/Demo request available"
+        "channels": [
+          "email"
+        ],
+        "notes": "Demo requests available via contact page."
       },
-      "quality_notes": "Designed for decision-grade consulting, finance, and enterprise knowledge work with strict data governance and lineage tracking.",
+      "quality_notes": "Focused on secure enterprise-grade workflows, decision-grade consulting, and auditable AI-generated artifacts.",
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://capitol.ai"
     },
     "Cobl.ai": {
       "app_name": "Cobl.ai",
-      "vendor": null,
+      "vendor": "Cobl.ai",
       "website": "https://www.cobl.ai",
-      "category": "Sales Proposal & RFP Generation / AI Sales Agent",
+      "category": "AI Sales Proposal & RFP Automation Software",
       "free_tier": {
         "available": true,
         "credits": null,
-        "limits": "Start free for a month, then pick a Pro credits plan or Enterprise."
+        "limits": "Start free for a month (or 15-day free trial)"
       },
       "paid_pricing": {
         "cheapest_plan": null,
-        "notes": "Pro credits plan based on deal volume, or Enterprise (custom pricing)."
+        "notes": "Pro credits plan that fits deal volume, plus Enterprise options available upon request."
       },
       "key_features": [
         "Deal workspaces",
         "Shared Drive and Personal Drive",
-        "Design systems from any document",
+        "Design systems generation from any document",
         "Document analytics",
-        "Full RFP response drafting",
+        "Full RFP response generation",
         "Excel editing",
         "Search across every document",
-        "Auto-sorting Drive",
-        "Sales proposal generation",
-        "Prospect and deal tracking"
+        "Self-sorting Drive",
+        "Multi-agent AI sales proposal automation"
       ],
       "output_formats": [
         "PDF",
@@ -656,26 +652,26 @@
       "app_name": "Google Gemini Docs",
       "vendor": "Google",
       "website": "https://one.google.com",
-      "category": "AI Productivity & Writing Assistant",
+      "category": "AI Assistant & Productivity",
       "free_tier": {
         "available": true,
         "credits": null,
-        "limits": "Standard usage limits for free Gemini app"
+        "limits": "15 GB of storage included with standard Google accounts"
       },
       "paid_pricing": {
-        "cheapest_plan": "$9.99/mo",
-        "notes": "Gemini in Docs, Vids & More requires the Google AI Pro plan at $19.99/mo; Google AI Plus ($9.99/mo) includes Gemini app access and Gmail, but Docs requires Pro."
+        "cheapest_plan": "$1.99/mo",
+        "notes": "Basic plan is $1.99/mo (100 GB). Google AI Plus is $9.99/mo (2 TB). Google AI Pro is $19.99/mo (5 TB) which includes Gemini in Docs, Vids & More."
       },
       "key_features": [
-        "Gemini in Google Docs",
-        "Create drafts, analyze data, and design content faster with AI",
-        "Direct preview and edit of generated files within chat",
-        "Side panel and bottom bar integration"
+        "Gemini app access",
+        "Gemini in Gmail, Docs, Vids & More",
+        "Google Flow with creative models",
+        "Gemini Notebook access",
+        "Shared storage up to 5 others"
       ],
       "output_formats": [
-        "Text documents",
-        "Presentations",
-        "Spreadsheets"
+        "Text",
+        "Documents"
       ],
       "support": {
         "channels": [
@@ -683,7 +679,7 @@
         ],
         "notes": null
       },
-      "quality_notes": "Integrated directly into Google Docs and Workspace suite, offering AI-powered drafting, content creation, and file editing.",
+      "quality_notes": "Integration of Google's Gemini AI directly into Google Workspace applications like Docs, Gmail, Drive, and Slides.",
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://one.google.com/about/plans"
@@ -692,32 +688,28 @@
       "app_name": "AI Doc Maker",
       "vendor": null,
       "website": "https://www.aidocmaker.com",
-      "category": "AI Document Generator",
+      "category": "AI Document Generation",
       "free_tier": {
         "available": true,
         "credits": null,
-        "limits": "Free downloads and free plans available"
+        "limits": "Free downloads available, no signup required for basic use"
       },
       "paid_pricing": {
         "cheapest_plan": null,
-        "notes": "Premium plans available for AI Document Editing."
+        "notes": "Premium plans available for AI document editing"
       },
       "key_features": [
-        "1-Click Generate",
         "Agentic AI that creates, refines, and manages documents autonomously",
-        "AI-Managed Workspace for organizing and refining files",
-        "AI PDF Maker & PDF Generator",
-        "AI Word Document Generator",
-        "AI Excel Sheet Generator with formulas, charts, and data tables",
-        "Chat with AI to edit and draft documents",
-        "File attachment support for importing content"
+        "AI-managed workspace for organizing and refining files",
+        "Learns from user chats over time",
+        "1-click document generation for reports, PDFs, Word, spreadsheets, and presentations",
+        "File attachment support to import content and generate new documents",
+        "Chat-based drafting and editing"
       ],
       "output_formats": [
         "PDF",
-        "Word",
         "DOCX",
         "XLSX",
-        "Spreadsheets",
         "HTML",
         "Slides"
       ],
@@ -725,7 +717,7 @@
         "channels": [],
         "notes": null
       },
-      "quality_notes": "Featured on OpenAI's ChatGPT Plugin Store and GPT Store, and covered by publications like Wired, PC Guide, and Geeky Gadgets.",
+      "quality_notes": null,
       "confidence": 0.95,
       "_extracted_by": "gemini",
       "source_url": "https://aidocmaker.com"
@@ -734,53 +726,32 @@
       "app_name": "PandaDoc",
       "vendor": "PandaDoc",
       "website": "https://www.pandadoc.com",
-      "category": "Document Automation & eSign",
+      "category": "Document Automation & E-Signatures",
       "free_tier": {
         "available": true,
         "credits": null,
-        "limits": "Create 5 documents per month"
+        "limits": null
       },
       "paid_pricing": {
-        "cheapest_plan": "$19 USD Seat cost per month",
-        "notes": "Prices exclude any applicable taxes. Some features require usage credits or are paid add-ons."
+        "cheapest_plan": null,
+        "notes": null
       },
       "key_features": [
-        "Rich media drag and drop document editor",
-        "Real-time tracking and notifications",
-        "Unlimited document uploads and e-Signatures (Starter and above)",
-        "Custom quotes and sales agreements",
-        "CRM integrations",
-        "Custom branding and content library",
-        "Deal rooms",
-        "Approval workflows",
-        "Web forms",
-        "Bulk send",
-        "CPQ (configure, price, quote)",
-        "Workflow automation",
-        "Smart content",
-        "Single sign-on (SSO)",
-        "Team workspaces",
-        "Notary",
-        "AI assistants via MCP (ChatGPT, Claude)"
+        "E-signatures",
+        "Document automation",
+        "Contract lifecycle management",
+        "Quoting"
       ],
-      "output_formats": [
-        "PDF",
-        "Word",
-        "Web forms"
-      ],
+      "output_formats": [],
       "support": {
-        "channels": [
-          "email",
-          "chat",
-          "help_center"
-        ],
-        "notes": "24/7 email and chat support provided."
+        "channels": [],
+        "notes": null
       },
-      "quality_notes": "Trusted for overall simplicity with strong ratings across G2, Capterra, and Trustpilot.",
-      "confidence": 0.95,
+      "quality_notes": "Page text was missing, so pricing details and features are derived exclusively from snippets.",
+      "confidence": 0.5,
       "_extracted_by": "gemini",
       "source_url": "https://www.pandadoc.com/pricing/"
     }
   },
-  "updated_at": "2026-11-17T12:16:23.285964+00:00"
+  "updated_at": "2026-11-18T12:02:16.450034+00:00"
 }
