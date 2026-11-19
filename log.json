@@ -3,6 +3,2048 @@
   "pinned": true,
   "days": [
     {
+      "date": "2026-11-19",
+      "mode": "watch",
+      "started_at": "2026-11-19T11:58:38.386246+00:00",
+      "finished_at": "2026-11-19T12:01:51.752000+00:00",
+      "searches": 60,
+      "updates": [
+        {
+          "app": "ChatGPT Work",
+          "change": "Paid pricing: Notes updated with specific Plus ($20/mo) and Pro ($100/mo) tier details"
+        },
+        {
+          "app": "ChatGPT Work",
+          "change": "New feature: Projects, scheduled tasks, and custom GPTs"
+        },
+        {
+          "app": "ChatGPT Work",
+          "change": "New feature: Deep research and memory context"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "Paid pricing: Wording updated for annual/monthly billing details and notes shortened"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "Key features: List reorganized to combine web/mobile chat, web search/files/code, and memory items, plus added Projects"
+        },
+        {
+          "app": "Claude Cowork",
+          "change": "Output formats: List updated to include Text and Artifacts while removing Documents, Spreadsheets, Slides, Designs, and Whiteboards"
+        },
+        {
+          "app": "Gamma",
+          "change": "Category: AI-powered platform for visual communication (Presentations, Websites, Documents, Social Media)"
+        },
+        {
+          "app": "Gamma",
+          "change": "Paid pricing: Cheapest plan notes updated"
+        },
+        {
+          "app": "Gamma",
+          "change": "Quality notes: SOC 2 Type II compliant. Rebuilt with Gamma 5 to improve generation quality."
+        },
+        {
+          "app": "Notion AI",
+          "change": "Paid pricing: Added credit allotments (1,500 Standard and 500 Select credits per month) to Business and Enterprise plans"
+        },
+        {
+          "app": "Notion AI",
+          "change": "Free tier limits: Trial AI capabilities text updated from \"Free and Plus plans\" to \"lower plans\""
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Paid pricing: US$144/year -> US$18 /month (or US$9/month with introductory discount)"
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Free tier limits: Updated wording on monthly AI allowance for Standard and Premium AI"
+        },
+        {
+          "app": "Canva Magic Write",
+          "change": "Output formats: Added Print-ready designs"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Free tier: now available via free trials"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Pricing notes: clarified billing terms and plan details for Acrobat Studio"
+        },
+        {
+          "app": "Adobe Acrobat AI",
+          "change": "Output formats: updated to include Web forms and Social content"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "Free tier: false -> true"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "New feature: Copilot Cowork"
+        },
+        {
+          "app": "Microsoft 365 Copilot",
+          "change": "Output formats: removed all items"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "Paid pricing notes: Silver and Gold monthly pricing updated"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "New feature: AI agents"
+        },
+        {
+          "app": "Jotform Document Generator",
+          "change": "Key features: Updated HIPAA availability details"
+        },
+        {
+          "app": "Slaide",
+          "change": "Removed: Microsoft Publisher file recovery/alternative"
+        },
+        {
+          "app": "Liner Write",
+          "change": "New feature: Connects agents to Slack, Notion, and GitHub"
+        },
+        {
+          "app": "Liner Write",
+          "change": "New feature: AI research with visible citations"
+        },
+        {
+          "app": "Liner Write",
+          "change": "Support: Added help center channel"
+        },
+        {
+          "app": "Skywork",
+          "change": "Vendor: Added Skywork AI"
+        },
+        {
+          "app": "Skywork",
+          "change": "Free tier: Added credits and limits information"
+        },
+        {
+          "app": "Skywork",
+          "change": "Paid pricing: Added credit allowance and 7-day trial detail"
+        },
+        {
+          "app": "Type",
+          "change": "Paid pricing: Added specific credit limits for Basic, Pro, and Max plans"
+        },
+        {
+          "app": "Type",
+          "change": "Free tier limits: Removed description detail"
+        },
+        {
+          "app": "Type",
+          "change": "Output formats: Removed document and file formats"
+        },
+        {
+          "app": "Sembly",
+          "change": "Free tier: 5 meeting hours -> Limited features available on the Free plan"
+        },
+        {
+          "app": "Sembly",
+          "change": "New features added including HD video recording, workspace integrations and MCP, and consent tracking"
+        },
+        {
+          "app": "Sembly",
+          "change": "Output formats changed from Text and Summary to .docx and .pptx"
+        },
+        {
+          "app": "QwenWork",
+          "change": "New feature: Consolidates three agent services into one product"
+        },
+        {
+          "app": "QwenWork",
+          "change": "Category: AI Work Platform & Agent -> Workplace AI Agent"
+        },
+        {
+          "app": "Watto AI",
+          "change": "Free tier: available (7 Document Generations) -> not available"
+        },
+        {
+          "app": "Watto AI",
+          "change": "New feature: Intelligent document creation"
+        },
+        {
+          "app": "Watto AI",
+          "change": "New feature: AI Voice Agents development"
+        },
+        {
+          "app": "Capitol AI",
+          "change": "Removed support channel: email"
+        },
+        {
+          "app": "Capitol AI",
+          "change": "Removed key feature: Connectors for internal systems, Google Drive, Amazon S3, and Microsoft Azure"
+        },
+        {
+          "app": "Capitol AI",
+          "change": "New key feature: Access control by source and workflow"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "New feature: Objection handling and answer generation"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "New feature: Account potential ranking and prospect tracking"
+        },
+        {
+          "app": "Cobl.ai",
+          "change": "Paid pricing: Added Pro credits plan as cheapest plan"
+        },
+        {
+          "app": "Google Gemini Docs",
+          "change": "New feature: Deep Research"
+        },
+        {
+          "app": "Google Gemini Docs",
+          "change": "New feature: Access to Gemini models such as Gemini 4 Argon"
+        },
+        {
+          "app": "Google Gemini Docs",
+          "change": "Output formats: Added Presentations, Spreadsheets"
+        },
+        {
+          "app": "AI Doc Maker",
+          "change": "New output formats: Audio, Word, Excel"
+        },
+        {
+          "app": "AI Doc Maker",
+          "change": "Updated key features list to highlight specific PDF, Word, and Excel generators"
+        },
+        {
+          "app": "AI Doc Maker",
+          "change": "Free tier limits description removed"
+        },
+        {
+          "app": "PandaDoc",
+          "change": "Free tier: limits added (Create 5 documents per month)"
+        },
+        {
+          "app": "PandaDoc",
+          "change": "Cheapest plan: None -> $19 USD Seat cost per month"
+        },
+        {
+          "app": "PandaDoc",
+          "change": "Support channels: Added email, chat, help_center"
+        }
+      ],
+      "new_competitors": [
+        {
+          "name": "Reducto",
+          "url": "https://www.ycombinator.com/companies/reducto",
+          "category": "Document Platform",
+          "one_liner": "The complete agentic document platform.",
+          "evidence": "Founded in 2023 and active/scaling as an agentic document platform."
+        },
+        {
+          "name": "Ondox",
+          "url": "https://www.ondox.ai/document-intake-automation/",
+          "category": "Document Automation",
+          "one_liner": "Automatically classify, extract and route incoming documents and emails.",
+          "evidence": "Featured as a modern AI document intake and routing solution."
+        },
+        {
+          "name": "goHeather",
+          "url": "https://www.goheather.io/ai-contract-generator",
+          "category": "Legal Document Generator",
+          "one_liner": "AI handles researching, retrieving templates, drafting, and delivering legal contracts.",
+          "evidence": "Specialized AI contract generator utilizing modern jurisdiction-aware templates."
+        }
+      ],
+      "apps_checked": [
+        {
+          "app_name": "ChatGPT Work",
+          "vendor": "OpenAI",
+          "website": "https://chatgpt.com/",
+          "category": "AI Assistant & Productivity",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited ChatGPT Work access on desktop"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$8 / month",
+            "notes": "ChatGPT Work is gated by your plan and metered against it. Higher tiers like Plus ($20/mo) and Pro (from $100/mo) expand access to desktop, web, and mobile, or offer longer sessions."
+          },
+          "key_features": [
+            "Unlimited text chats with GPT-6 (on free tier)",
+            "Advanced reasoning models with GPT-6",
+            "Projects, scheduled tasks, and custom GPTs",
+            "Codex access",
+            "ChatGPT Work access across desktop, web, and mobile",
+            "Deep research and memory context"
+          ],
+          "output_formats": [
+            "Text",
+            "Images",
+            "Voice"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://openai.com/chatgpt/pricing/"
+        },
+        {
+          "app_name": "Claude Cowork",
+          "vendor": "Anthropic",
+          "website": "https://claude.com",
+          "category": "AI Assistant & Productivity",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited usage every 5 hours and every week"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$17 per month (with annual subscription discount, billed up front at $200; or $20 if billed monthly)",
+            "notes": "Paid plans include Pro ($17-$20/mo), Max ($100/mo), and Ultra ($200/mo)."
+          },
+          "key_features": [
+            "Chat on web, desktop, and mobile",
+            "Hand off and schedule tasks",
+            "Web search, create files, and run code",
+            "Memory across conversations",
+            "Create Artifacts",
+            "Claude Design, Slides, Docs, Sheets, Whiteboards",
+            "Claude Code",
+            "Claude Science",
+            "Claude in Chrome and Microsoft 365",
+            "Projects"
+          ],
+          "output_formats": [
+            "Text",
+            "Files",
+            "Artifacts",
+            "Code"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "Claude Cowork has been merged into the main Claude chat interface and ecosystem.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.anthropic.com/pricing"
+        },
+        {
+          "app_name": "Gamma",
+          "vendor": null,
+          "website": "https://gamma.app",
+          "category": "AI-powered platform for visual communication (Presentations, Websites, Documents, Social Media)",
+          "free_tier": {
+            "available": true,
+            "credits": "400 credits at signup (do not refill)",
+            "limits": "Create up to 10 slides per prompt"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$9 / month (Plus plan, billed annually at $108; or $9/mo or similar depending on billing structure)",
+            "notes": "Plans include Plus ($9/mo), Pro ($18/mo), and Ultra ($90/mo), with business/team options available. Discounts available for annual billing."
+          },
+          "key_features": [
+            "Presentations, websites, documents, social media, and graphics creation via AI",
+            "Import from PDF & PPTX",
+            "Theme builder for custom branding",
+            "Advanced AI image and model support (Claude, ChatGPT, Gemini, Flux, etc.)",
+            "Detailed analytics and custom domains (higher tiers)"
+          ],
+          "output_formats": [
+            "PDF",
+            "PPTX",
+            "PNG",
+            "Google Slides"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": "SOC 2 Type II compliant. Rebuilt with Gamma 5 to improve generation quality.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://gamma.app/pricing"
+        },
+        {
+          "app_name": "Notion AI",
+          "vendor": "Notion Labs, Inc.",
+          "website": "https://www.notion.com",
+          "category": "Productivity & AI Workspace",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Trial AI capabilities available on lower plans"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$20 per seat / month (Business plan)",
+            "notes": "Standalone AI add-on was retired; AI features are bundled into Business ($20/seat/mo) and Enterprise plans, which include 1,500 Standard credits and 500 Select credits per month."
+          },
+          "key_features": [
+            "Notion Agent",
+            "Custom Agents",
+            "AI Meeting Notes",
+            "Enterprise Search",
+            "Database Autofill",
+            "Bring your own AI (BYOK)",
+            "Notion MCP",
+            "AI Command Center"
+          ],
+          "output_formats": [
+            "text",
+            "documents",
+            "meeting notes",
+            "database fields"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Customer success manager available on Enterprise plans."
+          },
+          "quality_notes": "Zero data retention with LLM providers on Enterprise plans. Offers Standard credits (Notion picks model) and Select credits (user picks model).",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.notion.com/pricing"
+        },
+        {
+          "app_name": "Canva Magic Write",
+          "vendor": "Canva",
+          "website": "https://www.canva.com",
+          "category": "AI Content Generation / Design",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited access to Standard and Premium AI with a monthly AI allowance"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$18 /month (or US$9/month with introductory discount)",
+            "notes": "Pro plan is US$18/month for one person (50% off first 3 months available); Business plan is US$25/month per person; Enterprise requires contacting sales."
+          },
+          "key_features": [
+            "Magic Write text generation",
+            "Unified Magic Studio console",
+            "AI-powered design and layout suggestions",
+            "Standard and Premium AI tools with shared monthly allowance",
+            "On-brand AI integration"
+          ],
+          "output_formats": [
+            "PDF",
+            "JPG",
+            "PNG",
+            "Print-ready designs"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Premium support and professional services available for Enterprise customers with 150+ contracted seats."
+          },
+          "quality_notes": "Part of Canva's consolidated Magic Studio console, which automatically determines which model to invoke based on user input and selected objects.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.canva.com/pricing/"
+        },
+        {
+          "app_name": "Adobe Acrobat AI",
+          "vendor": "Adobe",
+          "website": "https://www.adobe.com",
+          "category": "PDF & Document Productivity / AI Assistant",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Free trial available for Acrobat Pro and Acrobat Studio plans"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "US$14.99/mo",
+            "notes": "Acrobat Standard is US$14.99/mo, Acrobat Pro is US$19.99/mo, and Acrobat Studio (includes AI Assistant) is US$24.99/mo (annual, billed monthly)."
+          },
+          "key_features": [
+            "Create, edit, convert, export, and organize PDFs",
+            "Collect e-signatures and track responses",
+            "Fill, sign, and password-protect PDFs",
+            "Redact sensitive content",
+            "Create web forms",
+            "Turn scans into editable PDFs",
+            "Ask AI to edit, convert, and compress PDFs",
+            "Get summaries, insights, and answers from AI Assistant",
+            "Organize, share, and collaborate with PDF Spaces",
+            "Generate flyers, social content, and presentations from documents"
+          ],
+          "output_formats": [
+            "PDF",
+            "Editable PDFs",
+            "Web forms",
+            "Flyers",
+            "Social content",
+            "Presentations"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.adobe.com/acrobat/pricing.html"
+        },
+        {
+          "app_name": "Microsoft 365 Copilot",
+          "vendor": "Microsoft",
+          "website": "https://www.microsoft.com",
+          "category": "AI Productivity",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$21 a user a month",
+            "notes": "Business plan is $21/user/month ($18 promo for the first year) and Enterprise is $30/user/month, both on top of a Microsoft 365 plan."
+          },
+          "key_features": [
+            "Copilot Code",
+            "Copilot Home",
+            "Copilot Cowork",
+            "Copilot Autopilot",
+            "AI integrated into Microsoft 365 apps (Word, Excel, PowerPoint, Outlook, Teams)"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.microsoft.com/microsoft-365/copilot"
+        },
+        {
+          "app_name": "Jotform Document Generator",
+          "vendor": "Jotform",
+          "website": "https://www.jotform.com",
+          "category": "Form Builder & Document Generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "5 Forms, 100 Monthly Submissions, 1 User, 100 MB Available Space, 10,000 Monthly Form Views, 500 Total Submission Storage, 100 Fields per form, 10 Monthly Payment Submissions, 10 Monthly Signed Documents"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$34/month (Billed annually) or $39/month (Bronze plan)",
+            "notes": "Plans include Bronze ($39/mo or $34/mo billed annually), Silver ($49/mo or $39/mo billed annually), Gold ($129/mo or $99/mo billed annually), and Enterprise (Custom Price). Nonprofits and educational institutions receive up to 50% discounts on specific plans."
+          },
+          "key_features": [
+            "Online Form Builder",
+            "PDF customization",
+            "Workflows and automations",
+            "Payment submissions (Stripe ACH, etc.)",
+            "E-signatures and signed documents",
+            "AI form creation and AI agents",
+            "HIPAA-Enabled Features (available on Gold and Enterprise)"
+          ],
+          "output_formats": [
+            "PDF"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "help_center"
+            ],
+            "notes": "24/7 Customer Support available. Dedicated support included in Enterprise."
+          },
+          "quality_notes": "Trusted by over 40 million users. Offers a 30-day money-back guarantee.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.jotform.com/pricing/"
+        },
+        {
+          "app_name": "Slaide",
+          "vendor": null,
+          "website": "https://www.slaide.de",
+          "category": "AI Presentation Tools",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Pricing details require visiting review platforms or the official site as exact tier amounts are not provided in the snippets."
+          },
+          "key_features": [
+            "Chrome extension",
+            "ChatGPT and Claude connection",
+            "PDF and Word conversion",
+            "Collaboration",
+            "New editor",
+            "130 fonts"
+          ],
+          "output_formats": [
+            "PDF",
+            "Word"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "No pricing page text was provided; features extracted from the official changelog snippet.",
+          "confidence": 0.6,
+          "_extracted_by": "gemini",
+          "source_url": "https://slaide.com/pricing"
+        },
+        {
+          "app_name": "Liner Write",
+          "vendor": "Liner AI",
+          "website": "https://liner.com",
+          "category": "AI document generation/writing agent",
+          "free_tier": {
+            "available": true,
+            "credits": "100 credits per month",
+            "limits": "Free plan includes ads; no Agent credits specified"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "Pro: $17.99/month",
+            "notes": "Max plan is $35.99/month. Pro includes 1,000 Agent credits; Max includes 2,500 Agent credits; no ads on paid plans."
+          },
+          "key_features": [
+            "Generates business plans and proposals with claimed 93.7% accuracy",
+            "Automates business document creation",
+            "Connects agents to Slack, Notion, and GitHub",
+            "AI research with visible citations",
+            "Highlights, saves, and synthesizes information from web pages and PDFs"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Support available via support.liner.com help center."
+          },
+          "quality_notes": "Pricing page returned a 'Liner has moved' 404 at extraction time; details based on third-party snippets. Claims include 93.7% accuracy and a Newsweek AI Impact Award.",
+          "confidence": 0.35,
+          "_extracted_by": "deepseek",
+          "source_url": "https://getliner.com/pricing"
+        },
+        {
+          "app_name": "Skywork",
+          "vendor": "Skywork AI",
+          "website": "https://skywork.ai",
+          "category": "AI Productivity & Workflow Assistant",
+          "free_tier": {
+            "available": true,
+            "credits": "free credits",
+            "limits": "hidden caps behind the login wall"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19.99 Monthly Pro ($1 trial available)",
+            "notes": "$1 7-day trial offer, $19.99/month Pro plan, $149.99 Annual Pro plan, includes a 7,000-credit allowance."
+          },
+          "key_features": [
+            "AI agent features and workflow improvements",
+            "DeepResearch and project orchestration",
+            "Multi-skill expert toolkits (Research Paper, Product Manager, Teacher, Design, Sales, Social Media, Marketing Growth, Creative Writing, Data Collection)",
+            "Document, slide, poster, image, sheet, and video generation",
+            "Scheduled tasks and knowledge base management"
+          ],
+          "output_formats": [
+            "Websites",
+            "Slides",
+            "Documents",
+            "Posters",
+            "Images",
+            "Sheets",
+            "Videos"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.85,
+          "_extracted_by": "gemini",
+          "source_url": "https://skywork.ai/pricing"
+        },
+        {
+          "app_name": "Type",
+          "vendor": null,
+          "website": "https://type.ai",
+          "category": "AI Writing & Content Creation",
+          "free_tier": {
+            "available": true,
+            "credits": "Limited credits that never expire",
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$8/mo",
+            "notes": "Plans include Basic ($8/mo for 500,000 credits, billed annually as $96), Pro ($16/mo for 1,500,000 credits, billed annually as $192), and Max ($64/mo for 6,000,000 credits, billed annually as $768)."
+          },
+          "key_features": [
+            "Intelligent editor for long-form writing",
+            "AI writing, editing, and publishing features",
+            "Access to premium AI models",
+            "Document import and export supporting up to 150,000 words",
+            "Chat, image, audio, and video generation using credits",
+            "Private data policy (no AI training on user data)"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [
+              "email"
+            ],
+            "notes": "Hands-on, priority email support included with all paid plans."
+          },
+          "quality_notes": "Designed for long-form creative writing such as books, novels, screenplays, and stories. Offers a 30-day money-back guarantee on the first paid subscription.",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://type.ai/pricing"
+        },
+        {
+          "app_name": "Sembly",
+          "vendor": "Sembly AI",
+          "website": "https://www.sembly.ai",
+          "category": "AI Meeting Assistant",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Limited features available on the Free plan"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$8 per month (billed annually, Basic plan)",
+            "notes": "Plans include Basic ($10/mo normal, $8/mo discounted), Pro ($20/user/mo normal, $16/user/mo discounted), MAX ($30/user/mo normal, $24/user/mo discounted), and Enterprise with custom pricing."
+          },
+          "key_features": [
+            "Online meeting recording",
+            "Meeting notes and summaries",
+            "Multi-lingual transcription",
+            "Single and multi-meeting AI chat",
+            "Custom meeting notes templates",
+            "Risks, issues, and notable events tracking",
+            "Workspace integrations and MCP",
+            "Consent tracking",
+            "Unlimited meeting history",
+            "HIPAA compliance",
+            "Custom SSO",
+            "Audit log",
+            "HD video recording"
+          ],
+          "output_formats": [
+            ".docx",
+            ".pptx"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": "Includes Help Center and dedicated Success Manager for Enterprise plans."
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.sembly.ai/pricing/"
+        },
+        {
+          "app_name": "QwenWork",
+          "vendor": "Alibaba",
+          "website": "https://qwenwork.ai",
+          "category": "Workplace AI Agent",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Includes Personal and Enterprise plans, but specific international pricing has not been fully disclosed or is unset during public beta."
+          },
+          "key_features": [
+            "Workplace AI agent platform",
+            "Consolidates three agent services into one product",
+            "Acts across web browsers and local computers",
+            "Builds files and websites",
+            "Supports research, creation, data analysis, and agent-driven workflows"
+          ],
+          "output_formats": [
+            "files",
+            "websites"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "International edition launched in public beta on August 26, 2026. Practical commercial terms and international pricing remain incomplete in available sources.",
+          "confidence": 0.85,
+          "_extracted_by": "gemini",
+          "source_url": "https://qwenwork.aliyun.com/"
+        },
+        {
+          "app_name": "Watto AI",
+          "vendor": null,
+          "website": "https://www.watto.ai",
+          "category": "Document Creation & Automation",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": null
+          },
+          "key_features": [
+            "Intelligent document creation",
+            "Integrate information from different platforms like Google Docs or Slack",
+            "Generate high-quality reports in seconds",
+            "Automated document creation and review for Product Managers",
+            "AI Voice Agents development"
+          ],
+          "output_formats": [],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Aims to provide McKinsey-quality reports and automated document creation and review.",
+          "confidence": 0.7,
+          "_extracted_by": "gemini",
+          "source_url": "https://watto.ai"
+        },
+        {
+          "app_name": "Capitol AI",
+          "vendor": null,
+          "website": "https://www.capitol.ai",
+          "category": "Enterprise AI Workflows & Decision Intelligence",
+          "free_tier": {
+            "available": false,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Pricing is not publicly listed on the page; requires requesting a demo."
+          },
+          "key_features": [
+            "Governed data access and lineage tracking",
+            "Institutional workflow codification",
+            "Model independence and orchestration",
+            "Defensible and auditable artifacts generation",
+            "Access control by source and workflow"
+          ],
+          "output_formats": [
+            "Powerpoint",
+            "Reports",
+            "Models",
+            "Workflows"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "The provided page text is a marketing landing page for enterprise solutions and does not contain explicit pricing tiers or support channel details.",
+          "confidence": 0.85,
+          "_extracted_by": "gemini",
+          "source_url": "https://capitol.ai"
+        },
+        {
+          "app_name": "Cobl.ai",
+          "vendor": null,
+          "website": "https://www.cobl.ai",
+          "category": "AI Sales Agent & Proposal Generation",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Start free for a month (or 15-day free trial)"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "Pro credits plan",
+            "notes": "Scale with your deal volume; Enterprise plan also available."
+          },
+          "key_features": [
+            "Deal workspaces",
+            "Shared Drive and Personal Drive",
+            "Design systems from any document",
+            "Document analytics",
+            "Full RFP response drafting",
+            "Excel editing",
+            "Search across every document",
+            "Auto-sorting Drive",
+            "Objection handling and answer generation",
+            "Account potential ranking and prospect tracking"
+          ],
+          "output_formats": [
+            "PDF",
+            "Link"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": "Pricing page text lacked explicit numeric prices, mentioning free trials/months and Pro/Enterprise tiers instead.",
+          "confidence": 0.85,
+          "_extracted_by": "gemini",
+          "source_url": "https://cobl.ai"
+        },
+        {
+          "app_name": "Google Gemini Docs",
+          "vendor": "Google",
+          "website": "https://one.google.com",
+          "category": "AI Assistant & Productivity",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "All Google accounts come with up to 15 GB of storage; basic limits apply to Gemini app usage without a paid Google AI plan."
+          },
+          "paid_pricing": {
+            "cheapest_plan": "Basic (100 GB) at $1.99/mo; Google AI Plus (2 TB) at $9.99/mo; Google AI Pro (5 TB) at $19.99/mo (Gemini in Docs requires Google AI Pro or higher)",
+            "notes": "Prices are monthly. Annual options are also available."
+          },
+          "key_features": [
+            "Gemini in Gmail, Docs, Vids & More",
+            "Gemini app access with higher usage limits",
+            "Access to Gemini models such as Gemini 4 Argon",
+            "Deep Research",
+            "Google Flow with expanded access to creative models",
+            "Gemini Notebook with expanded access",
+            "YouTube Premium Lite Individual and Google Home Premium Standard (on higher plans)",
+            "Shared storage with up to 5 others"
+          ],
+          "output_formats": [
+            "Text",
+            "Documents",
+            "Presentations",
+            "Spreadsheets"
+          ],
+          "support": {
+            "channels": [
+              "help_center"
+            ],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://one.google.com/about/plans"
+        },
+        {
+          "app_name": "AI Doc Maker",
+          "vendor": null,
+          "website": "https://www.aidocmaker.com",
+          "category": "AI Document Generator",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": null
+          },
+          "paid_pricing": {
+            "cheapest_plan": null,
+            "notes": "Choose From Our Free and Premium Plans For AI Document Editing."
+          },
+          "key_features": [
+            "Free AI Document Generator",
+            "AI PDF Maker & AI PDF Generator",
+            "Flexible PDF Maker AI",
+            "Convert Text to PDF with AI",
+            "AI Word Document Generator",
+            "Online Document Maker",
+            "PDF Generator AI for Reports",
+            "Smart AI Document Creator",
+            "Powerful AI Excel Sheet Generator",
+            "Fast AI Spreadsheet Generator",
+            "AI-Managed Workspace",
+            "Agentic AI autonomous creation and refinement"
+          ],
+          "output_formats": [
+            "PDF",
+            "Word",
+            "Excel",
+            "Slides",
+            "Audio",
+            "DOCX",
+            "XLSX",
+            "HTML"
+          ],
+          "support": {
+            "channels": [],
+            "notes": null
+          },
+          "quality_notes": null,
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://aidocmaker.com"
+        },
+        {
+          "app_name": "PandaDoc",
+          "vendor": "PandaDoc",
+          "website": "https://www.pandadoc.com",
+          "category": "Document Automation & eSign",
+          "free_tier": {
+            "available": true,
+            "credits": null,
+            "limits": "Create 5 documents per month"
+          },
+          "paid_pricing": {
+            "cheapest_plan": "$19 USD Seat cost per month",
+            "notes": "Plans include Starter ($19/seat/mo), Business ($49/seat/mo), and Enterprise (custom pricing)."
+          },
+          "key_features": [
+            "Rich media drag and drop document editor",
+            "Real-time tracking and notifications",
+            "Unlimited document uploads and e-Signatures (Starter and above)",
+            "Custom quotes and sales agreements",
+            "CRM integrations",
+            "Custom branding and content library",
+            "Deal rooms",
+            "Approval workflows",
+            "CPQ (configure, price, quote)",
+            "Workflow automation",
+            "AI assistants via MCP (ChatGPT, Claude)"
+          ],
+          "output_formats": [
+            "PDF",
+            "Web forms"
+          ],
+          "support": {
+            "channels": [
+              "email",
+              "chat",
+              "help_center"
+            ],
+            "notes": "24/7 email and chat support available."
+          },
+          "quality_notes": "Trusted by users with high ratings on G2 (4.7/5), Capterra (4.5/5), and Trustpilot (4/5).",
+          "confidence": 0.95,
+          "_extracted_by": "gemini",
+          "source_url": "https://www.pandadoc.com/pricing/"
+        }
+      ],
+      "work_log": [
+        {
+          "kind": "search",
+          "query": "ChatGPT Work new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "ChatGPT Work pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://openai.com/chatgpt/pricing/",
+          "chars": 20279
+        },
+        {
+          "kind": "llm",
+          "task": "extract:ChatGPT Work",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:ChatGPT Work",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:ChatGPT Work",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:ChatGPT Work",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Claude Cowork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.anthropic.com/pricing",
+          "chars": 27201
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Claude Cowork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Claude Cowork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Claude Cowork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Claude Cowork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Gamma new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://gamma.app/pricing",
+          "chars": 7672
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Gamma",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Gamma",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Gamma",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Gamma",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.notion.com/pricing",
+          "chars": 23277
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Notion AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Notion AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Notion AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Notion AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Canva Magic Write pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.canva.com/pricing/",
+          "chars": 26061
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Canva Magic Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Canva Magic Write",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Canva Magic Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Canva Magic Write",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Adobe Acrobat AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.adobe.com/acrobat/pricing.html",
+          "chars": 67354
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Adobe Acrobat AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Adobe Acrobat AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Adobe Acrobat AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Adobe Acrobat AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Microsoft 365 Copilot pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.microsoft.com/microsoft-365/copilot",
+          "chars": 15389
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Microsoft 365 Copilot",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Microsoft 365 Copilot",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Microsoft 365 Copilot",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Microsoft 365 Copilot",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Jotform Document Generator pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.jotform.com/pricing/",
+          "chars": 20381
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Jotform Document Generator",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Jotform Document Generator",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Jotform Document Generator",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Jotform Document Generator",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Slaide new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Slaide pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://slaide.com/pricing",
+          "error": "500 Server Error: Internal Server Error for url: https://api.firecrawl.dev/v1/scrape"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Slaide",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Slaide",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Slaide",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Slaide",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Slaide",
+          "model": "deepseek",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Liner Write pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://getliner.com/pricing",
+          "chars": 148
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Liner Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Liner Write",
+          "model": "gemini",
+          "status": "failed",
+          "error": "Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google"
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Liner Write",
+          "model": "deepseek",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Liner Write",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Liner Write",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Skywork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Skywork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://skywork.ai/pricing",
+          "chars": 151618
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Skywork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Skywork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Skywork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Skywork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Type new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Type pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://type.ai/pricing",
+          "chars": 16812
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Type",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Type",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Type",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Type",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Sembly new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Sembly pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.sembly.ai/pricing/",
+          "chars": 15861
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Sembly",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Sembly",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Sembly",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Sembly",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "QwenWork pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://qwenwork.aliyun.com/",
+          "chars": 0
+        },
+        {
+          "kind": "llm",
+          "task": "extract:QwenWork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:QwenWork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:QwenWork",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:QwenWork",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Watto AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://watto.ai",
+          "chars": 0
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Watto AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Watto AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Watto AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Watto AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Capitol AI pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://capitol.ai",
+          "chars": 13547
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Capitol AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Capitol AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Capitol AI",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Capitol AI",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Cobl.ai pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://cobl.ai",
+          "chars": 28887
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Cobl.ai",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Cobl.ai",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Cobl.ai",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Cobl.ai",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Google Gemini Docs pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://one.google.com/about/plans",
+          "chars": 3651
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Google Gemini Docs",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:Google Gemini Docs",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Google Gemini Docs",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:Google Gemini Docs",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI Doc Maker pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://aidocmaker.com",
+          "chars": 21984
+        },
+        {
+          "kind": "llm",
+          "task": "extract:AI Doc Maker",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:AI Doc Maker",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:AI Doc Maker",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:AI Doc Maker",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc new update announcement 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "PandaDoc pricing or feature change 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "fetch",
+          "url": "https://www.pandadoc.com/pricing/",
+          "chars": 17896
+        },
+        {
+          "kind": "llm",
+          "task": "extract:PandaDoc",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "extract:PandaDoc",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "llm",
+          "task": "diff:PandaDoc",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "diff:PandaDoc",
+          "model": "gemini",
+          "status": "ok"
+        },
+        {
+          "kind": "search",
+          "query": "new AI document generator launched this week",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new AI writing assistant launch 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Product Hunt document tool this month",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI presentation tool new release",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI contract generator new launch",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "YC batch AI document startup",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI proposal software new tool 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "just launched AI doc app",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new entrant document automation",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI document startup funding this week",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "new AI spreadsheet tool 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI report generator launch this month",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Notion alternative new 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "Gamma alternative new tool",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI doc app Show HN 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI powerpoint generator new",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI resume tool new launch",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI invoice generator new 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI legal document startup 2026",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "search",
+          "query": "AI technical doc generator new",
+          "provider": "you.com",
+          "hits": 5
+        },
+        {
+          "kind": "llm",
+          "task": "competitor_scan",
+          "model": "nemotron",
+          "status": "failed",
+          "error": "Error code: 410 - {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'nvidia/nemotron-3-super-120b-a12b' has reached its end of life on 2026-10-03T09:00:00Z and is no longer "
+        },
+        {
+          "kind": "llm",
+          "task": "competitor_scan",
+          "model": "gemini",
+          "status": "ok"
+        }
+      ]
+    },
+    {
       "date": "2026-11-18",
       "mode": "watch",
       "started_at": "2026-11-18T12:02:16.450034+00:00",
