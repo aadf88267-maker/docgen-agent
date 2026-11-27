@@ -1,12 +1,12 @@
 {
   "month": "2026-11",
   "counts": {
-    "firecrawl": 520,
-    "exa": 4
+    "firecrawl": 540,
+    "exa": 19
   },
   "daily": {
     "firecrawl": 20,
-    "exa": 4
+    "exa": 15
   },
-  "daily_date": "2026-11-26"
+  "daily_date": "2026-11-27"
 }
